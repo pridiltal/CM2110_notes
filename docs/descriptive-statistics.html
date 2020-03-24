@@ -1,0 +1,2191 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Descriptive Statistics | CM 1110 Fundamentals of Mathematics and Statistics</title>
+  <meta name="description" content="Chapter 6 Descriptive Statistics | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Descriptive Statistics | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Descriptive Statistics | CM 1110 Fundamentals of Mathematics and Statistics" />
+  
+  
+  
+
+<meta name="author" content="Dr. Priyanga D. Talagala" />
+
+
+<meta name="date" content="2020-03-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="differentiation-and-integration.html"/>
+<link rel="next" href="sets-and-relations.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">CM 1110 Fundamentals of Mathematics and Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course Syllabus</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-requisites"><i class="fa fa-check"></i>Pre-requisites</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-outcomes"><i class="fa fa-check"></i>Learning Outcomes</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#outline-syllabus"><i class="fa fa-check"></i>Outline Syllabus</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method-of-assessment"><i class="fa fa-check"></i>Method of Assessment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecturer"><i class="fa fa-check"></i>Lecturer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="number-systems.html"><a href="number-systems.html"><i class="fa fa-check"></i><b>1</b> Number Systems</a><ul>
+<li class="chapter" data-level="1.1" data-path="number-systems.html"><a href="number-systems.html#main-types"><i class="fa fa-check"></i><b>1.1</b> Main types</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="number-systems.html"><a href="number-systems.html#complex-numbers"><i class="fa fa-check"></i><b>1.1.1</b> Complex numbers</a></li>
+<li class="chapter" data-level="1.1.2" data-path="number-systems.html"><a href="number-systems.html#imaginary-numbers"><i class="fa fa-check"></i><b>1.1.2</b> Imaginary numbers</a></li>
+<li class="chapter" data-level="1.1.3" data-path="number-systems.html"><a href="number-systems.html#real-numbers"><i class="fa fa-check"></i><b>1.1.3</b> Real numbers</a></li>
+<li class="chapter" data-level="1.1.4" data-path="number-systems.html"><a href="number-systems.html#rational-numbers"><i class="fa fa-check"></i><b>1.1.4</b> Rational numbers</a></li>
+<li class="chapter" data-level="1.1.5" data-path="number-systems.html"><a href="number-systems.html#irrational-numbers"><i class="fa fa-check"></i><b>1.1.5</b> Irrational numbers</a></li>
+<li class="chapter" data-level="1.1.6" data-path="number-systems.html"><a href="number-systems.html#integers"><i class="fa fa-check"></i><b>1.1.6</b> Integers</a></li>
+<li class="chapter" data-level="1.1.7" data-path="number-systems.html"><a href="number-systems.html#whole-numbers"><i class="fa fa-check"></i><b>1.1.7</b> Whole numbers</a></li>
+<li class="chapter" data-level="1.1.8" data-path="number-systems.html"><a href="number-systems.html#natural-numbers"><i class="fa fa-check"></i><b>1.1.8</b> Natural numbers</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="number-systems.html"><a href="number-systems.html#number-representations"><i class="fa fa-check"></i><b>1.2</b> Number representations</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="number-systems.html"><a href="number-systems.html#glossary-of-terms-used-in-the-positional-numeral-systems"><i class="fa fa-check"></i><b>1.2.1</b> Glossary of terms used in the positional numeral systems</a></li>
+<li class="chapter" data-level="1.2.2" data-path="number-systems.html"><a href="number-systems.html#decimal-number-system"><i class="fa fa-check"></i><b>1.2.2</b> Decimal Number System</a></li>
+<li class="chapter" data-level="1.2.3" data-path="number-systems.html"><a href="number-systems.html#binary-number-system"><i class="fa fa-check"></i><b>1.2.3</b> Binary Number System</a></li>
+<li class="chapter" data-level="1.2.4" data-path="number-systems.html"><a href="number-systems.html#octal-number-system"><i class="fa fa-check"></i><b>1.2.4</b> Octal Number System</a></li>
+<li class="chapter" data-level="1.2.5" data-path="number-systems.html"><a href="number-systems.html#hexadecimal-number-system"><i class="fa fa-check"></i><b>1.2.5</b> Hexadecimal Number System</a></li>
+<li class="chapter" data-level="1.2.6" data-path="number-systems.html"><a href="number-systems.html#binary-arithmetic"><i class="fa fa-check"></i><b>1.2.6</b> Binary Arithmetic</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2</b> Sequences and Series</a><ul>
+<li class="chapter" data-level="2.1" data-path="sequences-and-series.html"><a href="sequences-and-series.html#sequences"><i class="fa fa-check"></i><b>2.1</b> Sequences</a></li>
+<li class="chapter" data-level="2.2" data-path="sequences-and-series.html"><a href="sequences-and-series.html#series"><i class="fa fa-check"></i><b>2.2</b> Series</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-logic.html"><a href="introduction-to-logic.html"><i class="fa fa-check"></i><b>3</b> Introduction to Logic</a></li>
+<li class="chapter" data-level="4" data-path="boolean-algebra.html"><a href="boolean-algebra.html"><i class="fa fa-check"></i><b>4</b> Boolean Algebra</a></li>
+<li class="chapter" data-level="5" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html"><i class="fa fa-check"></i><b>5</b> Differentiation and Integration</a></li>
+<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#introduction-to-statistics"><i class="fa fa-check"></i><b>6.1</b> Introduction to Statistics</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#some-basic-terminologies-used-in-statistics"><i class="fa fa-check"></i><b>6.1.1</b> Some Basic Terminologies Used in Statistics</a></li>
+<li class="chapter" data-level="6.1.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#branches-of-statistics"><i class="fa fa-check"></i><b>6.1.2</b> Branches of Statistics</a></li>
+<li class="chapter" data-level="6.1.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#types-of-variables"><i class="fa fa-check"></i><b>6.1.3</b> Types of Variables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#scales-of-measurements"><i class="fa fa-check"></i><b>6.1.4</b> Scales of Measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#presentation-of-data"><i class="fa fa-check"></i><b>6.2</b> Presentation of Data</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tabular-presentations-of-data"><i class="fa fa-check"></i><b>6.2.1</b> Tabular Presentations of Data</a></li>
+<li class="chapter" data-level="6.2.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#graphic-presentations-of-data"><i class="fa fa-check"></i><b>6.2.2</b> Graphic Presentations of Data</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary-measures"><i class="fa fa-check"></i><b>6.3</b> Summary Measures</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>6.3.1</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="6.3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-variability"><i class="fa fa-check"></i><b>6.3.2</b> Measures of Variability</a></li>
+<li class="chapter" data-level="6.3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-shape"><i class="fa fa-check"></i><b>6.3.3</b> Measures of Shape</a></li>
+<li class="chapter" data-level="6.3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-association"><i class="fa fa-check"></i><b>6.3.4</b> Measures of Association</a></li>
+<li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tutorial"><i class="fa fa-check"></i><b>6.4</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#chapter-6-descriptive-statistics"><i class="fa fa-check"></i>Chapter 6: Descriptive Statistics</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sets-and-relations.html"><a href="sets-and-relations.html"><i class="fa fa-check"></i><b>7</b> Sets and Relations</a><ul>
+<li class="chapter" data-level="7.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#sample-spaces-and-events"><i class="fa fa-check"></i><b>7.2</b> Sample Spaces and Events</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#random-experiments"><i class="fa fa-check"></i><b>7.2.1</b> Random Experiments</a></li>
+<li class="chapter" data-level="7.2.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#outcomes"><i class="fa fa-check"></i><b>7.2.2</b> Outcomes</a></li>
+<li class="chapter" data-level="7.2.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#sample-space"><i class="fa fa-check"></i><b>7.2.3</b> Sample space</a></li>
+<li class="chapter" data-level="7.2.4" data-path="sets-and-relations.html"><a href="sets-and-relations.html#events-as-subsets-of-sample-spaces"><i class="fa fa-check"></i><b>7.2.4</b> Events as subsets of sample spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#event-operations"><i class="fa fa-check"></i><b>7.3</b> Event Operations</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#union"><i class="fa fa-check"></i><b>7.3.1</b> Union</a></li>
+<li class="chapter" data-level="7.3.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#intersection"><i class="fa fa-check"></i><b>7.3.2</b> Intersection</a></li>
+<li class="chapter" data-level="7.3.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#complement"><i class="fa fa-check"></i><b>7.3.3</b> Complement</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="sets-and-relations.html"><a href="sets-and-relations.html#tutorial-1"><i class="fa fa-check"></i><b>7.4</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="sets-and-relations.html"><a href="sets-and-relations.html#chapter-7-sets-and-relations"><i class="fa fa-check"></i>Chapter 7: Sets and Relations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>8</b> Probability</a><ul>
+<li class="chapter" data-level="8.1" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>8.1</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="probability.html"><a href="probability.html#basic-counting-principles"><i class="fa fa-check"></i><b>8.1.1</b> Basic Counting Principles</a></li>
+<li class="chapter" data-level="8.1.2" data-path="probability.html"><a href="probability.html#factorial-notation"><i class="fa fa-check"></i><b>8.1.2</b> Factorial Notation</a></li>
+<li class="chapter" data-level="8.1.3" data-path="probability.html"><a href="probability.html#permutations"><i class="fa fa-check"></i><b>8.1.3</b> Permutations</a></li>
+<li class="chapter" data-level="8.1.4" data-path="probability.html"><a href="probability.html#combinations"><i class="fa fa-check"></i><b>8.1.4</b> Combinations</a></li>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="probability.html"><a href="probability.html#axioms-of-probability"><i class="fa fa-check"></i><b>8.2</b> Axioms of probability</a></li>
+<li class="chapter" data-level="8.3" data-path="probability.html"><a href="probability.html#methods-for-determining-probability"><i class="fa fa-check"></i><b>8.3</b> Methods for determining Probability</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="probability.html"><a href="probability.html#classical-method"><i class="fa fa-check"></i><b>8.3.1</b> Classical Method</a></li>
+<li class="chapter" data-level="8.3.2" data-path="probability.html"><a href="probability.html#relative-frequency-method-empirical-or-objective-approach"><i class="fa fa-check"></i><b>8.3.2</b> Relative frequency method (Empirical or objective approach)</a></li>
+<li class="chapter" data-level="8.3.3" data-path="probability.html"><a href="probability.html#subjective-method"><i class="fa fa-check"></i><b>8.3.3</b> Subjective method</a></li>
+<li class="chapter" data-level="8.3.4" data-path="probability.html"><a href="probability.html#using-probability-models"><i class="fa fa-check"></i><b>8.3.4</b> Using probability models</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>8.4</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="probability.html"><a href="probability.html#independent-events"><i class="fa fa-check"></i><b>8.4.1</b> Independent events</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="probability.html"><a href="probability.html#rules-of-probability"><i class="fa fa-check"></i><b>8.5</b> Rules of Probability</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="probability.html"><a href="probability.html#complement-rule"><i class="fa fa-check"></i><b>8.5.1</b> Complement rule</a></li>
+<li class="chapter" data-level="8.5.2" data-path="probability.html"><a href="probability.html#addition-rule"><i class="fa fa-check"></i><b>8.5.2</b> Addition rule</a></li>
+<li class="chapter" data-level="8.5.3" data-path="probability.html"><a href="probability.html#multiplication-rule"><i class="fa fa-check"></i><b>8.5.3</b> Multiplication rule</a></li>
+<li class="chapter" data-level="8.5.4" data-path="probability.html"><a href="probability.html#the-law-of-total-probability"><i class="fa fa-check"></i><b>8.5.4</b> The law of total probability</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>8.6</b> Bayes’ Theorem</a></li>
+<li class="chapter" data-level="8.7" data-path="probability.html"><a href="probability.html#tutorial-2"><i class="fa fa-check"></i><b>8.7</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#chapter-8-probability"><i class="fa fa-check"></i>Chapter 8: Probability</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="random-variables.html"><a href="random-variables.html"><i class="fa fa-check"></i><b>9</b> Random Variables</a></li>
+<li class="chapter" data-level="10" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html"><i class="fa fa-check"></i><b>10</b> Correlation and Regression</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CM 1110 Fundamentals of Mathematics and Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="descriptive-statistics" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Descriptive Statistics</h1>
+
+<div id="introduction-to-statistics" class="section level2">
+<h2><span class="header-section-number">6.1</span> Introduction to Statistics</h2>
+<div id="some-basic-terminologies-used-in-statistics" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Some Basic Terminologies Used in Statistics</h3>
+<p><strong>i Population</strong></p>
+<ul>
+<li>The set of <strong>all</strong> possible elements in the universe of interest to the researcher</li>
+</ul>
+<p><strong>ii Sample</strong></p>
+<ul>
+<li>A Sample is a <strong>subset</strong> (a portion or part) of the population of interest</li>
+<li>The sample must be a representative of the population of interest</li>
+</ul>
+<p><strong>iii Element</strong></p>
+<ul>
+<li>Element is an <strong>entity or object</strong> which the information is collected.</li>
+<li><em>Eg: Student, household, farm, company, tomato plant</em></li>
+</ul>
+<p><strong>iv Variable</strong></p>
+<ul>
+<li>A variable is <strong>a feature characteristic which has different ‘values’ or categories for different elements</strong> (items/subjects/individuals)</li>
+<li><em>Eg: Gender of client, brand of mobile phones, risk level, number of emails received per day, age of client, income of client</em></li>
+</ul>
+<p><strong>v Data</strong></p>
+<ul>
+<li>Data are <strong>measurements or facts</strong> that are collected from a statistical unit/entity of interest</li>
+<li>We collect data on variables</li>
+<li>Data are raw numbers or facts that must be processed (analysed) to get useful information.</li>
+<li><p>We get information from data.</p></li>
+<li><p><em>Eg:</em></p></li>
+</ul>
+<p><strong><em>Variable:</em></strong> <em>Age (in years) of client</em></p>
+<p><strong><em>Data:</em></strong> <em>21, 45, 18, 32, 30, 22, 23, 27</em></p>
+<p><strong><em>Information:</em></strong></p>
+<p><em>The mean age is 27.25 years</em></p>
+<p><em>The minimum age is 18 years</em></p>
+<p><em>The range of ages is 18-45</em></p>
+<p><em>The percentage of clients below 25 years of age: 50%</em></p>
+<p><strong>vi Statistic</strong></p>
+<ul>
+<li><strong>Characteristic</strong> of a <strong>sample</strong></li>
+<li>The value which calculated based on sample data</li>
+</ul>
+<p><strong>vii Parameter</strong></p>
+<ul>
+<li><strong>Characteristic</strong> of a <strong>population</strong></li>
+<li>The value which calculated based on population data</li>
+</ul>
+<p><strong>viii Census</strong></p>
+<ul>
+<li>When a researcher <strong>gathers data from the whole population for a given measurement,</strong> it is called a census</li>
+</ul>
+<p><strong>ix Sampling</strong></p>
+<ul>
+<li>When a researcher <strong>gathers data from a sample of the population for a given measurement,</strong> it is called sampling</li>
+<li>The process of selecting a sample is also called sampling</li>
+</ul>
+<p><strong>Why take a sample instead of studying every member of the population ?</strong></p>
+<ul>
+<li>Prohibitive cost of census</li>
+<li>Destruction of item being studied may be required</li>
+<li>Not possible to test or inspect all members of a population being studied.</li>
+</ul>
+</div>
+<div id="branches-of-statistics" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Branches of Statistics</h3>
+<p><img src="figure/box1-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>i Descriptive Statistics</strong></p>
+<ul>
+<li>Descriptive statistics consists of organizing, summarizing and presenting data in an informative way.</li>
+<li>The main purpose of descriptive statistics is to provide an overview of the data collected.</li>
+<li>Descriptive statistics describes the data collected through frequency tables, graphs and summary measures (mean, variance, quartiles, etc.).</li>
+</ul>
+<p><strong>ii Inferential Statistics</strong></p>
+<ul>
+<li>In inferential statistics sample data are used to draw inferences (i.e. derive conclusions) or make predictions about the populations from which the sample has been taken.</li>
+<li>This includes methods used to make decisions, estimates, predictions or generalizations about a population based on a sample.</li>
+<li>This includes point estimations, interval estimation, test of hypotheses, regression analysis, time series analysis, multivariate analysis, etc.</li>
+</ul>
+</div>
+<div id="types-of-variables" class="section level3">
+<h3><span class="header-section-number">6.1.3</span> Types of Variables</h3>
+<p><img src="figure/box2-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div id="qualitative-quantitative-variables" class="section level4">
+<h4><span class="header-section-number">6.1.3.1</span> Qualitative / Quantitative Variables</h4>
+<p><strong>i Qualitative variable (Categorical variable)</strong></p>
+<ul>
+<li>The characteristic is a quality.</li>
+<li>The data are categories.</li>
+<li>They cannot be given numerical values.</li>
+<li>However, it may be given a numerical label</li>
+<li>Qualitative variables are sometimes referred as categorical variables.</li>
+<li><em>Eg:</em></li>
+</ul>
+<p><em>Gender:</em></p>
+<p><em>Age group:</em></p>
+<p><em>Education level:</em></p>
+<p><em>A/L stream:</em></p>
+<p><em>Degree type:</em></p>
+<p><em>Hair colour: </em></p>
+<p><em>FIT student batch:</em></p>
+<p><em>Undergraduate level:</em></p>
+<p><em>Grade that you can obtain for CM 1110/ CM1130</em></p>
+<p><strong>ii Quantitative variable </strong></p>
+<ul>
+<li>The characteristic is a quantity</li>
+<li>The data are numbers</li>
+<li>Quantitative data require numeric values that indicate how much or how many.</li>
+<li>They are obtained by counting or measuring with some scale</li>
+<li><em>Eg: </em></li>
+</ul>
+<p><em>Number of family members:</em></p>
+<p><em>Number of emails received per day:</em></p>
+<p><em>Weight of a student:</em></p>
+<p><em>Age:</em></p>
+<p><em>Credit balance in the SIM card:</em></p>
+<p><em>Time remaining in class:</em></p>
+<p><em>Temperature:</em></p>
+<p><em>Marks </em></p>
+</div>
+<div id="discrete-continuous-variables" class="section level4">
+<h4><span class="header-section-number">6.1.3.2</span> Discrete/ Continuous Variables</h4>
+<ul>
+<li>Quantitative variables can be classified as either discrete or continuous.</li>
+</ul>
+<p><strong>i Discrete Variables</strong></p>
+<ul>
+<li>Quantitative</li>
+<li>Usually the data are obtained by counting</li>
+<li>There are impossible values between any two possible values</li>
+<li><em>Eg:</em></li>
+</ul>
+<p><em>Number of family members:</em></p>
+<p><em>Number of emails received per day:</em></p>
+<p><strong>ii Continuous Variables</strong></p>
+<ul>
+<li>Quantitative</li>
+<li>Usually, the data are obtained by measuring with a scale</li>
+<li>There are no impossible values between any two possible values.(any value between any two possible values is also a possible value)</li>
+<li>i.e a continuous variable can take any value within a specified range.</li>
+<li><em>Eg:</em></li>
+</ul>
+<p><em>Weight of a student:</em></p>
+<p><em>Age:</em></p>
+<p><em>Credit balance in the SIM card:</em></p>
+<p><em>Time remaining in class:</em></p>
+<p><em>Temperature:</em></p>
+<p><em>Marks</em></p>
+</div>
+</div>
+<div id="scales-of-measurements" class="section level3">
+<h3><span class="header-section-number">6.1.4</span> Scales of Measurements</h3>
+<p><img src="figure/box3-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>There are four levels of measurements called, <strong>nominal, ordinal, interval and ratio.</strong></li>
+<li>Each levels has its own rules and restrictions</li>
+<li>Different levels of measurement contains different amount of information with respect to whatever the data are measuring</li>
+</ul>
+<p><strong>i Nominal Scale</strong></p>
+<ul>
+<li>Qualitative</li>
+<li>No order or ranking in categories.</li>
+<li>These categories have to be mutually exclusive, i.e. it should not be possible to place an individual or object in more than one category</li>
+<li>A name of a category can be substituted by a number, but it will be mere label and have no numerical meaning</li>
+</ul>
+<p><strong>ii Ordinal Scale</strong></p>
+<ul>
+<li>Qualitative</li>
+<li>Categories can be ordered or ranked</li>
+<li>A name of a category can be substituted by a number, but such a sequence does not indicate absolute quantities.</li>
+<li>Difference between any two numbers on the scale does not have a numerical meaningful.</li>
+<li>It cannot be assumed that the differences between adjacent numbers on the scale are equal.</li>
+</ul>
+<p><strong>iii Interval Scale</strong></p>
+<ul>
+<li>Quantitative</li>
+<li>Data can be ordered or ranked</li>
+<li>There is no absolute zero point. Zero is only an arbitrary point with which other values can compare</li>
+<li>Difference between two numbers is a meaningful numerical value</li>
+<li>Ration of two numbers is not a meaningful numerical value.</li>
+</ul>
+<p><strong>iv Ratio Scale</strong></p>
+<ul>
+<li>Quantitative</li>
+<li>Highest level of measurement</li>
+<li>There exist an absolute zero point (It has a true zero point)</li>
+<li>Ratio between different measurements is meaningful</li>
+</ul>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="presentation-of-data" class="section level2">
+<h2><span class="header-section-number">6.2</span> Presentation of Data</h2>
+<p>The sinking of the Titanic is one of the most infamous shipwrecks in history.</p>
+<p>On April 15, 1912, during her maiden voyage, the widely considered “unsinkable” RMS Titanic sank after colliding with an iceberg. Unfortunately, there weren’t enough lifeboats for everyone onboard, resulting in the death of 1502 out of 2224 passengers and crew</p>
+<p><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Here’s a quick summary of our variables:</p>
+<table>
+<colgroup>
+<col width="51%" />
+<col width="48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PassengerID</td>
+<td>Passenger ID (just a row number, so obviously not useful for prediction)</td>
+</tr>
+<tr class="even">
+<td>Survived</td>
+<td>Survived (1) or died (0)</td>
+</tr>
+<tr class="odd">
+<td>Pclass</td>
+<td>Passenger class (first, second or third)</td>
+</tr>
+<tr class="even">
+<td>Name</td>
+<td>Passenger name</td>
+</tr>
+<tr class="odd">
+<td>Gender</td>
+<td>Passenger Gender</td>
+</tr>
+<tr class="even">
+<td>Age</td>
+<td>Passenger age</td>
+</tr>
+<tr class="odd">
+<td>SibSp</td>
+<td>Number of siblings/spouses aboard</td>
+</tr>
+<tr class="even">
+<td>Parch</td>
+<td>Number of parents/children aboard</td>
+</tr>
+<tr class="odd">
+<td>Ticket</td>
+<td>Ticket number</td>
+</tr>
+<tr class="even">
+<td>Fare</td>
+<td>Fare</td>
+</tr>
+<tr class="odd">
+<td>Cabin</td>
+<td>Cabin</td>
+</tr>
+<tr class="even">
+<td>Embarked</td>
+<td>Port of embarkation (S = Southampton, C = Cherbourg, Q = Queenstown)</td>
+</tr>
+</tbody>
+</table>
+<div id="tabular-presentations-of-data" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Tabular Presentations of Data</h3>
+<p><strong>Raw Data</strong></p>
+<ul>
+<li>Raw data are collected data that have not been organized numerically</li>
+<li>Eg: Passenger age</li>
+</ul>
+<!-- dataset is from : https://www.kaggle.com/varimp/a-mostly-tidyverse-tour-of-the-titanic -->
+<pre><code>##   PassengerId Survived Pclass
+## 1           1        0      3
+## 2           2        1      1
+## 3           3        1      3
+## 4           4        1      1
+## 5           5        0      3
+## 6           6        0      3
+##                                                  Name    Sex Age SibSp Parch
+## 1                             Braund, Mr. Owen Harris   male  22     1     0
+## 2 Cumings, Mrs. John Bradley (Florence Briggs Thayer) female  38     1     0
+## 3                              Heikkinen, Miss. Laina female  26     0     0
+## 4        Futrelle, Mrs. Jacques Heath (Lily May Peel) female  35     1     0
+## 5                            Allen, Mr. William Henry   male  35     0     0
+## 6                                    Moran, Mr. James   male  NA     0     0
+##             Ticket    Fare Cabin Embarked
+## 1        A/5 21171  7.2500              S
+## 2         PC 17599 71.2833   C85        C
+## 3 STON/O2. 3101282  7.9250              S
+## 4           113803 53.1000  C123        S
+## 5           373450  8.0500              S
+## 6           330877  8.4583              Q</code></pre>
+<pre><code>##  [1] 22 38 26 35 35 NA 54  2 27 14  4 58 20 39 14 55  2 NA 31 NA 35 34 15 28  8
+## [26] 38 NA 19 NA NA 40 NA NA 66 28 42 NA 21 18 14</code></pre>
+<p><strong>An array</strong></p>
+<ul>
+<li>An array is an arrangement of raw numerical data in ascending or descending order of magnitude.</li>
+<li>Eg: Passenger age</li>
+</ul>
+<pre><code>##  [1]  2  2  4  8 14 14 14 15 18 19 20 21 22 26 27 28 28 31 34 35 35 35 38 38 39
+## [26] 40 42 54 55 58 66</code></pre>
+<p><strong>Frequency Table (Frequency Distributions)</strong></p>
+<ul>
+<li>A frequency table (frequency distribution) is a listing of the values a variable takes in a data set, along with how often (frequently) each value occurs</li>
+<li>frequency can be recorded as a
+<ul>
+<li><strong>frequency or count:</strong> the number of times a value occurs, or</li>
+<li><strong>percentage frequency:</strong> the percentage of times a value occurs</li>
+</ul></li>
+<li>Percentage frequency can be calculated as,</li>
+</ul>
+<p><span class="math display">\[Percentage frequency = \frac{a}{b} \times100 \%\]</span></p>
+<ul>
+<li>The objective of constructing a frequency table are as follows
+<ul>
+<li>to organize the data in a meaningful manner</li>
+<li>to determine the nature or shape of the distribution</li>
+<li>to draw charts and graphs for the presentation of data</li>
+<li>to facilitate computational procedures for measures of average and spread</li>
+<li>to make comparisons between different data sets</li>
+</ul></li>
+<li>There are two basic types of frequency tables
+<ol style="list-style-type: decimal">
+<li>Simple frequency tables (Ungrouped frequency distribution)</li>
+<li>Grouped frequency distribution</li>
+</ol></li>
+</ul>
+<div id="simple-frequency-table-ungrouped-frequency-distribution" class="section level4">
+<h4><span class="header-section-number">6.2.1.1</span> Simple frequency table (Ungrouped frequency distribution)</h4>
+<ul>
+<li>Each possible value or category is taken as a class</li>
+<li>More suitable for
+<ul>
+<li>Qualitative variables</li>
+<li>Discrete variables</li>
+</ul></li>
+<li>Sometimes construct for continuous variables when there is a small number of possible values between the minimum and maximum.</li>
+</ul>
+<p>Examples:</p>
+<p><strong>CASE I:</strong></p>
+<p>Example 1</p>
+<p>The native countries of 56 students from a certain education institute are as follows:</p>
+<pre><code>##  [1] &quot;SL&quot; &quot;BD&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;IN&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;BD&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;IN&quot;
+## [16] &quot;SL&quot; &quot;SL&quot; &quot;BD&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;MD&quot; &quot;SL&quot; &quot;SL&quot;
+## [31] &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;PK&quot; &quot;MD&quot; &quot;PK&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;PK&quot; &quot;MD&quot; &quot;SL&quot;
+## [46] &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;SL&quot; &quot;MD&quot; &quot;MD&quot;</code></pre>
+<p>BD- Bangladesh, IN-India, MD-Maldives, PK-Pakistan, SL- Sri Lanka</p>
+<p>Construct a frequency table</p>
+<pre><code>##  Native Country Count Percentage (%)
+##      Bangladesh     3          5.357
+##           India     2          3.571
+##        Maldives     5          8.929
+##        Pakistan     3          5.357
+##       Sri Lanka    43         76.786
+##           Total    56        100.000</code></pre>
+<p><strong>CASE II:</strong></p>
+<p>Example 2</p>
+<p>The grades of 30 students for Statistics are as follows:</p>
+<pre><code>##  [1] &quot;B&quot; &quot;C&quot; &quot;B&quot; &quot;D&quot; &quot;B&quot; &quot;C&quot; &quot;C&quot; &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;C&quot; &quot;B&quot; &quot;E&quot; &quot;B&quot; &quot;B&quot; &quot;D&quot; &quot;D&quot; &quot;F&quot; &quot;B&quot;
+## [20] &quot;D&quot; &quot;D&quot; &quot;A&quot; &quot;B&quot; &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;E&quot; &quot;A&quot; &quot;A&quot;</code></pre>
+<p>Construct a frequency table</p>
+<pre><code>##  Grade Count Percentage (%)
+##      A     5         17.241
+##      B    10         34.483
+##      C     6         20.690
+##      D     5         17.241
+##      E     2          6.897
+##      F     1          3.448
+##  Total    29        100.000</code></pre>
+<p><strong>CASE III:</strong></p>
+<p>Example 3</p>
+<p>The number of family members of a sample of undergraduates of Batch 19 are as follows:</p>
+<pre><code>##  [1] 7 5 3 4 5 4 3 6 4 4 5 2 7 4 5 6 4 4 3 5</code></pre>
+<p>Construct a frequency table</p>
+<pre><code>##  Number of family members Count Percentage (%)
+##                         2     1              5
+##                         3     3             15
+##                         4     7             35
+##                         5     5             25
+##                         6     2             10
+##                         7     2             10
+##                     Total    20            100</code></pre>
+<p><strong>CASE IV:</strong></p>
+<p>Example 4</p>
+<p>The ages (in years) of a sample of undergraduates of Batch 19 are as follows:</p>
+<pre><code>##  [1] 21 22 22 23 22 24 24 23 21 22 23 22 22 23 21 21 22 23 22 23</code></pre>
+<p>Construct a frequency table</p>
+<pre><code>##  Age (years) Count Percentage (%)
+##           21     4             20
+##           22     8             40
+##           23     6             30
+##           24     2             10
+##        Total    20            100</code></pre>
+</div>
+<div id="grouped-frequency-distribution" class="section level4">
+<h4><span class="header-section-number">6.2.1.2</span> Grouped frequency distribution</h4>
+<ul>
+<li>A grouped frequency distribution (table) is obtained by constructing classes (or intervals) for the data and then listing the corresponding number of values in each interval.</li>
+<li>Suitable for quantitative variables with large number of possible values in the range of data.</li>
+<li>Note that when items have been grouped in this way, their individual values are lost.</li>
+<li>When studying about frequency distributions it is very important to know the meaning of the following terms</li>
+</ul>
+<p><strong>i Class intervals</strong></p>
+<ul>
+<li>In a frequency distribution the total range of the observations are divided into a number of classes. Those are called <em>class intervals</em></li>
+<li>Eg: Class intervals: 10-14, 15-19, 20-24, …, 40-44</li>
+</ul>
+<p><strong>ii Class limits</strong></p>
+<ul>
+<li>Class limits are the smallest and largest piece of data value that can fall into a given class.</li>
+<li>In the class interval 10-14, the end numbers, 10 and 14, are called class limits</li>
+<li>The smaller number (10) is the <em>lower class limit</em></li>
+<li>The larger number (14) is the <em>upper class limit</em></li>
+</ul>
+<p><strong>iii Class boundaries</strong></p>
+<ul>
+<li>Class boundaries are obtained by adding the upper limit of one class interval to the lower limit of the next-higher class interval and dividing by 2.</li>
+<li>Class boundaries are also called <strong>True class limits</strong></li>
+<li>Class boundaries <strong>should not</strong> <em>coincide with actual observations</em></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Class interval</th>
+<th>Class boundaries</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10 - 14</td>
+<td>9.5 – 14.5</td>
+</tr>
+<tr class="even">
+<td>15 - 19</td>
+<td>14.5 – 19.5</td>
+</tr>
+<tr class="odd">
+<td>20 - 24</td>
+<td>19.5 – 24.5</td>
+</tr>
+<tr class="even">
+<td>25 - 29</td>
+<td>24.5 – 29.5</td>
+</tr>
+<tr class="odd">
+<td>30 - 34</td>
+<td>29.5 – 34.5</td>
+</tr>
+<tr class="even">
+<td>35 - 39</td>
+<td>34.5 – 39.5</td>
+</tr>
+<tr class="odd">
+<td>40 - 44</td>
+<td>39.5 – 44.5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>iv The size or width of a class interval</strong></p>
+<ul>
+<li>The size or width of a class interval is the difference between the <em>lower and upper class boundaries</em></li>
+<li>It is also referred to as the <em>class width, class size, or class length</em></li>
+<li>Eg: The class width for the class 10-14 is = 14.5-9.5 = 5</li>
+</ul>
+<p><strong>v The class mark ( Midpoint of the class)</strong></p>
+<ul>
+<li>Midpoint of the class</li>
+<li>Also called as <em>class midpoint</em></li>
+<li><span class="math inline">\(\text{Midpoint of the class} = \frac{\text{Lower limit} + \text{Upper limit}}{2}\)</span></li>
+</ul>
+<p>or</p>
+<ul>
+<li><span class="math inline">\(\text{Midpoint of the class} = \frac{\text{Lower boundary} + \text{Upper boundary}}{2}\)</span></li>
+</ul>
+<p><strong>vi Open class intervals</strong></p>
+<ul>
+<li><p>A class interval that, at least theoretically, has either no upper class limit or no lower class limit indicated is called an <em>open class interval</em></p></li>
+<li><p>For example, referring to age groups of individuals, the class interval “65 year and over” is an open class interval</p></li>
+</ul>
+<p><strong>Rules and Practices for constructing grouped frequency tables</strong></p>
+<ul>
+<li>Every data value should be in an interval</li>
+<li>The intervals should be mutually exclusive</li>
+<li>The classes of the distribution must be arrayed in size order.</li>
+<li>The number of classes not less than 5 or not greater than 15 is recommended.</li>
+<li>The following formula is often used to determine the number of classes:
+If n is the number of observations, then</li>
+</ul>
+<p><span class="math display">\[\text{Number of classes} = \sqrt{n}\]</span></p>
+<p><span class="math display">\[\text{Width of the class interval} = \frac{Range}{\sqrt{n}}= \frac{Min-Max}{\sqrt{n}}\]</span></p>
+<ul>
+<li>Data should be represented within classes having limits which the data can attain</li>
+<li>Classes should be continuous</li>
+<li>By convention, the beginning of the interval is given the appropriate exact value, rather than the end.<br />
+Eg: intervals of 0-49, 50-99,100-149 would be preferred over the intervals 1-50, 51-100, 101-150 etc.</li>
+<li>The number f observations falling into each category or class interval (class frequency) can be easily found using <em>tally marks</em>.</li>
+</ul>
+<p>Examples:</p>
+<p>In a grouped frequency distribution, class intervals can be constructed in different ways</p>
+<p>Example 1</p>
+<table>
+<thead>
+<tr class="header">
+<th>Class interval</th>
+<th>Number of students</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10 - 14</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>15 - 19</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>20 - 24</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>25 - 29</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>30 - 34</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>35 - 39</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>40 - 44</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Example 2</p>
+<table>
+<thead>
+<tr class="header">
+<th>Salary</th>
+<th>Number of employees</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0 – 1999</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>2000 – 3999</td>
+<td>31</td>
+</tr>
+<tr class="odd">
+<td>4000 – 5999</td>
+<td>18</td>
+</tr>
+<tr class="even">
+<td>6000 – 7999</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>8000 – 9999</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>10000 - 11999</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>12000 – 13999</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>14000 – 15999</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>16000 – 17999</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>18000 -19999</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>20000-21999</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Salary</th>
+<th>Number of employees</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0 – 1999</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>2000 – 3999</td>
+<td>31</td>
+</tr>
+<tr class="odd">
+<td>4000 – 5999</td>
+<td>18</td>
+</tr>
+<tr class="even">
+<td>6000 – 7999</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>8000 – 9999</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>10000 - 15999</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>16000 – 21999</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td>60</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example 3</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Salary</th>
+<th>Number of employees</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Less than 2000</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>2000 – 2999</td>
+<td>11</td>
+</tr>
+<tr class="odd">
+<td>3000 – 3999</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>4000 – 5999</td>
+<td>18</td>
+</tr>
+<tr class="odd">
+<td>6000 – 9999</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Greater than or equal to 10000</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>60</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="two-way-frequency-table" class="section level4">
+<h4><span class="header-section-number">6.2.1.3</span> Two-way frequency table</h4>
+<ul>
+<li>Cross tabulation, Cross classification table, Contingency table, Two-way table</li>
+<li>Display the relationship between two or more qualitative variables (categorical variables (nominal or ordinal))</li>
+</ul>
+<pre><code>## # A tibble: 2 x 4
+##   Survived First Second Third
+##   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 died        80     97   372
+## 2 Survived   136     87   119</code></pre>
+<pre><code>## # A tibble: 2 x 4
+##   Survived First Second Third
+##   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 died      0.37   0.53  0.76
+## 2 Survived  0.63   0.47  0.24</code></pre>
+</div>
+</div>
+<div id="graphic-presentations-of-data" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Graphic Presentations of Data</h3>
+<ul>
+<li>A diagram is a visual form for presentation of statistical data.</li>
+<li>The form of the diagram varies according to the nature of the data</li>
+</ul>
+<div id="describing-qualitative-data" class="section level4">
+<h4><span class="header-section-number">6.2.2.1</span> Describing Qualitative Data</h4>
+<ul>
+<li>Bar chart / Pie chart</li>
+<li>Suitable for
+<ul>
+<li>Qualitative variables (nominal or ordinal)</li>
+<li>Discrete variables (when the number of bars or number of different values is small)</li>
+</ul></li>
+</ul>
+<p><strong>I Bar Chart</strong></p>
+<ul>
+<li>A bar graph uses bars to represent discrete categories of data</li>
+<li>It can be drawn either on horizontal (more common) or vertical base</li>
+<li>A rectangle of equal width is drawn for each category</li>
+<li>The height (in vertical bar chart) or the length (in horizontal bar chart) of the rectangle is equal to the category’s <strong>frequency</strong> or <strong>percentage</strong>.</li>
+</ul>
+<p><img src="figure/box6-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>i Simple Bar Chart</strong></p>
+<ul>
+<li>Only one categorical variable can be presented</li>
+<li>Often used in conjunction with simple frequency tables</li>
+<li>The bars do not touch each other</li>
+<li>The gaps between adjacent bars are same in length</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Passenger class</th>
+<th align="right">Count</th>
+<th align="right">Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">First</td>
+<td align="right">216</td>
+<td align="right">24.242</td>
+</tr>
+<tr class="even">
+<td align="left">Second</td>
+<td align="right">184</td>
+<td align="right">20.651</td>
+</tr>
+<tr class="odd">
+<td align="left">Third</td>
+<td align="right">491</td>
+<td align="right">55.107</td>
+</tr>
+</tbody>
+</table>
+<p><img src="figure/box8-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="figure/box9-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>ii Component Bar Chart </strong></p>
+<ul>
+<li><strong>Sub divided bar chart/ Stacked bar chart</strong></li>
+<li>Use to compare two or more qualitative variables (nominal or ordinal)</li>
+<li>Often used in conjunction with two way tables</li>
+<li>Start by drawing a simple bar chart with the total figures.</li>
+<li>The bars are then divided into the component parts</li>
+<li>Can be drawn on absolute figures or percentages</li>
+<li>The various components should be kept in the same order in each bar</li>
+<li>To distinguish different components from one another, different colours or shades can be used</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Survived</th>
+<th align="right">First</th>
+<th align="right">Second</th>
+<th align="right">Third</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">died</td>
+<td align="right">80</td>
+<td align="right">97</td>
+<td align="right">372</td>
+</tr>
+<tr class="even">
+<td align="left">Survived</td>
+<td align="right">136</td>
+<td align="right">87</td>
+<td align="right">119</td>
+</tr>
+</tbody>
+</table>
+<p><img src="figure/box10-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>Percentage component bar chart</strong></p>
+<ul>
+<li>When sub-divided bar chart is drawn on percentage basis it is called percentage bar chart</li>
+<li>The various components are expressed as percentage to the total</li>
+<li>All bars are equal in height</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Survived</th>
+<th align="right">First</th>
+<th align="right">Second</th>
+<th align="right">Third</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">died</td>
+<td align="right">0.3703704</td>
+<td align="right">0.5271739</td>
+<td align="right">0.7576375</td>
+</tr>
+<tr class="even">
+<td align="left">Survived</td>
+<td align="right">0.6296296</td>
+<td align="right">0.4728261</td>
+<td align="right">0.2423625</td>
+</tr>
+</tbody>
+</table>
+<p><img src="figure/box11-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>iii Multiple Bar Chart</strong></p>
+<ul>
+<li>Compound bar chart/ Cluster bar chart</li>
+<li>Use to compare two or more qualitative variables (nominal or ordinal)</li>
+<li>Often used in conjunction with two way tables</li>
+<li>These bar charts are drawn side by side</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Survived</th>
+<th align="right">First</th>
+<th align="right">Second</th>
+<th align="right">Third</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">died</td>
+<td align="right">37.04</td>
+<td align="right">52.72</td>
+<td align="right">75.76</td>
+</tr>
+<tr class="even">
+<td align="left">Survived</td>
+<td align="right">62.96</td>
+<td align="right">47.28</td>
+<td align="right">24.24</td>
+</tr>
+</tbody>
+</table>
+<p><img src="figure/box12-1.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="describing-quantitative-data" class="section level4">
+<h4><span class="header-section-number">6.2.2.2</span> Describing Quantitative Data</h4>
+<ul>
+<li>Histogram/ Dot plot / Box plot/ Scatter plot</li>
+</ul>
+<p><strong>II Histogram</strong></p>
+<ul>
+<li>Histogram looks similar to bar chart since it also has bars.</li>
+<li>However, it is different from a bar chart in a number of aspects.</li>
+<li>One main difference is that in the histogram, the bars are drawn attached to each other; there are no gaps between bars like in a bar chart.</li>
+<li>Histogram is used to show the shape of the distribution of a <strong>continuous variable</strong>.</li>
+<li>However, the histogram is also used for discrete variables when the data are grouped in to class intervals.</li>
+<li>In a histogram, <strong>the area of a bar should be proportional to the frequency of the corresponding class.</strong></li>
+<li>If all the bars have the same width, then the height of a bar can represent the frequency.</li>
+<li>The bar corresponding to a class interval should be drawn from the lower class boundary to the upper class boundary. In this way there will be no gaps between the bars.</li>
+</ul>
+<p>Example: The marks(out of 50) of a group of students are recorded in the accompanying table. Draw a histogram for the data</p>
+<table>
+<thead>
+<tr class="header">
+<th>Marks</th>
+<th>Number of students</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10 - 14</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>15 - 19</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>20 - 24</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>25 - 29</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>30 - 34</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>35 - 39</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>40 - 44</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p><img src="figure/hist-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Example 2</p>
+<p><img src="figure/box18-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>III Frequency polygon</strong></p>
+<ul>
+<li>If the mid-point of the top of each block in a histogram is joined by a straight line, a frequency polygon is produced.</li>
+<li>This is done under the assumption that the frequencies in a class-interval are evenly distributed throughout the class</li>
+</ul>
+<p>Example: The marks(out of 50) of a group of students are recorded in the accompanying table. Draw a frequency polygon for the data</p>
+<table>
+<thead>
+<tr class="header">
+<th>Marks</th>
+<th>Number of students</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10 - 14</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>15 - 19</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>20 - 24</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>25 - 29</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>30 - 34</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>35 - 39</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>40 - 44</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p><img src="figure/hist2-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>IV Frequency curve</strong></p>
+<ul>
+<li>A frequency curve is drawn by smoothing the frequency polygon.</li>
+<li>It is smooth in such a way that the sharp turns are avoided</li>
+</ul>
+<p>Example: The marks(out of 50) of a group of students are recorded in the accompanying table. Draw a frequency curve for the data</p>
+<table>
+<thead>
+<tr class="header">
+<th>Marks</th>
+<th>Number of students</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10 - 14</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>15 - 19</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>20 - 24</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>25 - 29</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>30 - 34</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>35 - 39</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>40 - 44</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p><img src="figure/hist3-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>frequency curves arising in practice take on certain characteristics shapes as shown bellow</p>
+<p><img src="figure/shapes.png" width="100%" style="display: block; margin: auto;" /></p>
+<ol style="list-style-type: decimal">
+<li>The <strong>symmetrical</strong> or <strong>bell shaped</strong> frequency curves are characterized by the fact that observations equidistant from the central maximum have the same frequency. An important example is the normal curve.</li>
+<li>In the <strong>moderately asymmetrical</strong> or <strong>skewed</strong> frequency curves the tail of the curve to one side of the central maximum is longer than that to the other. If the longer tail occurs to the right the curve is said to be <strong>skewed to the right</strong> or to have <strong>positive skewness</strong>.While if the reverse is true the curve is said to be <strong>skewed to the left</strong> or to have <strong>negative skewness</strong>.</li>
+<li>In a <strong>J shaped</strong> or <strong>reverse J shaped</strong> curve a maximum occurs at one end.</li>
+<li>A <strong>U shaped</strong> frequency curve has maxima at both ends.</li>
+<li>A <strong>bimodal</strong> frequency curve has two maxima. These appear as two distinct peaks (local maxima) in the frequency curve.When the two modes are unequal the larger mode is known as the major mode and the other as the minor mode.</li>
+<li>A <strong>multimodal</strong> frequency curve has more than two maxima.</li>
+</ol>
+<p><strong>V Dot Plot</strong></p>
+<ul>
+<li>A dot plot is a method of presenting data which gives a rough but rapid visual appreciation of the way in which the data are distributed</li>
+<li>It consists of a horizontal line marked out with divisions of the scale on which the variable is being measured
+-This graph can be used to represent only the numerical data.</li>
+</ul>
+<p><img src="figure/dotplot-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>VI Box plot (Box and whisker plot)</strong></p>
+<ul>
+<li>Box plot is also a useful method of representing the behavior of a data set or comparing two or more data sets.</li>
+<li>Box plot is constructed by identifying five statistics from the data set as largest value, smallest values, median, Q1 and Q3.</li>
+</ul>
+<p><img src="figure/boxplot.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Example:</p>
+<p>Construct a box plot for the following data set (Marks of students)</p>
+<p><span class="math display">\[\text{52, 88, 56, 79, 72, 91,  85, 88, 68, 63, 76, 73, 86, 95, 12, 69}\]</span></p>
+<p>Xmin = 12 Xmax = 95 Q1 =64.25 Q2 = Median = 74.5 Q3 = 87.5</p>
+<p><img src="figure/box61-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="figure/boxplot-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="figure/boxplot2-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="figure/boxplot3-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>VII Violin plot</strong></p>
+<ul>
+<li>A violin plot is a method of plotting quantitative data.</li>
+<li>It is similar to a box plot, with the addition of a rotated kernel density plot on each side.</li>
+<li>Violin plots are similar to box plots, except that they also show the probability density of the data at different values, usually smoothed by a kernel density estimator.</li>
+</ul>
+<p><img src="figure/violin1-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="figure/violin2-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div id="summary-measures" class="section level2">
+<h2><span class="header-section-number">6.3</span> Summary Measures</h2>
+<ul>
+<li><p>Although frequency distribution serves useful purpose, there are many situations that require other types of data summarization.</p></li>
+<li><p>What we need in many instances is the ability to summarize the data by means of a single number called a descriptive measure.</p></li>
+<li><p>Descriptive measures may be computed from the data of a sample or the data of a population. To distinguish between them we have the following definitions.</p></li>
+</ul>
+<p><strong>Definitions</strong></p>
+<ul>
+<li><p>A descriptive measure computed from the data of a sample is called a <strong>statistic</strong>.</p></li>
+<li><p>A descriptive measure computed from the data of a population is called a <strong>parameter</strong>.</p></li>
+</ul>
+<div id="measures-of-central-tendency" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Measures of Central Tendency</h3>
+<ul>
+<li><p><strong>Measure of central tendency</strong> yield information about the center, or middle part, of a group of numbers.</p></li>
+<li><p>Eg: Mode, Median, Arithmetic Mean, Geometric mean, Harmonic Mean, Quadratic Mean, Quartiles, Deciles, and Percentiles</p></li>
+</ul>
+<div id="mode" class="section level4">
+<h4><span class="header-section-number">6.3.1.1</span> Mode</h4>
+<ul>
+<li><p>The Mode is the most frequently occuring value in a set of data</p></li>
+<li><p>Organizing the data into an ordered array (an ordering of the numbers from smallest to largest) helps to locate the mode.</p></li>
+<li><p>A series having only one mode is called as <strong>uni-modal</strong></p></li>
+<li><p>In the case of a tie for the most frequent occuring value, two modes are listed. Then the data are set to be <strong>bimodal</strong></p></li>
+<li><p>If a set of data is not exactly bimodal but contains two values that are more dominant than others, some researchers take the liberty of referring to the data set as bimodal even without an <em>exact tie</em> for the mode.</p></li>
+<li><p>Data sets with more than two modes are referred to as <strong>multimodal</strong>.</p></li>
+<li><p>The mode is an appropriate measure of central tendency for nominal-level data.</p></li>
+<li><p>The mode can be used to determine which category occurs most frequently.</p></li>
+</ul>
+<p><strong>For ungrouped data</strong></p>
+<p><strong>Example 01:</strong> Find mode of the following datasets</p>
+<p>Dataset 1: 12, 14, 10, 8, 6, 8, 15, 8</p>
+<p><img src="figure/mode1-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Dataset 2: 40, 44, 57, 48, 78</p>
+<p><img src="figure/mode2-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Dataset 3: 42, 45, 55, 50, 45, 40, 55, 45, 52, 55, 54</p>
+<p><img src="figure/mode3-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>For grouped frequency data</strong></p>
+<p><strong>Example 02:</strong> Find mode of the following data</p>
+<table>
+<thead>
+<tr class="header">
+<th>Marks</th>
+<th>Number of students</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>20</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>40</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>50</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>70</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Advantages and disadvantages of mode</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Easy to understand</li>
+<li>Easy to calculate</li>
+<li>Not affected by extreme values in the dataset</li>
+<li>Good for qualitative data</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Not suitable for further mathematical calculations</li>
+<li>There may be more than one mode for a given dataset</li>
+<li>It is not based upon all the observations</li>
+<li>In some cases, we may not be able to find a mode for a given dataset</li>
+</ul>
+</div>
+<div id="median" class="section level4">
+<h4><span class="header-section-number">6.3.1.2</span> Median</h4>
+<ul>
+<li><p>The median is the middle value in an ordered array of numbers.</p></li>
+<li><p>Median divides the series into equal parts</p></li>
+<li><p>The following steps are used to determine the median.</p></li>
+<li><p>STEP 1: Arrange the observations in an ordered data array.</p></li>
+<li><p>STEP 2: For an <strong>odd number</strong> of terms, find the middle term of the ordered array. It is the median.</p></li>
+<li><p>STEP 3: For an <strong>even number</strong> of terms, find the arithmetic mean of the middle two terms. This arithmetic mean is the median.</p></li>
+</ul>
+<p><span class="math display">\[Median = \text{the }(\frac{n+1}{2})\text{th item in the data array} \]</span></p>
+<ul>
+<li>The level of data measurement must be at least ordinal for a median to be meaningful.</li>
+</ul>
+<p><strong>Example 1:</strong> Find the median of the dataset 1, 8, 6, 3, 2</p>
+<p><img src="figure/median1-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 2:</strong> Find the median of the dataset 8, 9, 1, 2, 14, 12</p>
+<p><img src="figure/median2-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Advantages and disadvantages of median</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Simple to understand</li>
+<li>Easy to calculate</li>
+<li>Not affected by extreme values in the dataset</li>
+<li>Can be calculated even for qualitative variables (ordinal scale data)</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>It is not based upon all the observations</li>
+</ul>
+</div>
+<div id="arithmetic-mean" class="section level4">
+<h4><span class="header-section-number">6.3.1.3</span> Arithmetic Mean</h4>
+<ul>
+<li><p>The arithmetic mean (usually called mean) is the sum of all observations divided by the total number of observations.</p></li>
+<li><p>Population Mean</p>
+<ul>
+<li><p>The poupulation mean us represented by the Greek letter <span class="math inline">\(mu\)</span> (<span class="math inline">\(\mu\)</span>).</p></li>
+<li><p>Let, <span class="math inline">\(N\)</span> is the number of terms in the population.</p></li>
+</ul></li>
+</ul>
+<p><span class="math display">\[\mu = \frac{\sum{x}}{N}=\frac{x_1+x_2+x_3+...+x_N}{N}\]</span></p>
+<ul>
+<li><p>Sample Mean</p>
+<ul>
+<li>The sample mean is represented by <span class="math inline">\(\bar{x}\)</span></li>
+<li>Let, <span class="math inline">\(n\)</span> is the number of terms in the sample
+<span class="math display">\[\bar{x} = \frac{\sum{x}}{n}=\frac{x_1+x_2+x_3+...+x_n}{n}\]</span></li>
+</ul></li>
+<li><p>It is inappropriate to use the mean to analyse data that are not at least interval level in measurement.</p></li>
+</ul>
+<p><strong>Example 1:</strong> Calculate the mean from the following data</p>
+<table>
+<thead>
+<tr class="header">
+<th>Student</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Marks</td>
+<td>40</td>
+<td>50</td>
+<td>53</td>
+<td>78</td>
+<td>58</td>
+<td>60</td>
+<td>73</td>
+<td>35</td>
+<td>43</td>
+<td>48</td>
+</tr>
+</tbody>
+</table>
+<p><img src="figure/mean1-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Advantages and disadvantages of arithmetic mean</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Simple to understand</li>
+<li>Easy to calculate</li>
+<li>Based on all the observations</li>
+<li>Well defined</li>
+<li>Unique</li>
+<li>Can be used in further calculation</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Can be affected by extreme values in the dataset</li>
+<li>May lead to false conclusions</li>
+<li>Only applicable to quantitative data (not applicable to qualitative data)</li>
+</ul>
+<p><strong>Empirical relationship between mean, mode, median</strong></p>
+<ul>
+<li>In case of symmetrical distribution, mean, median and mode coincide <span class="math inline">\((mean = meadian= mode)\)</span></li>
+</ul>
+<p><img src="figure/box24%20-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>For a moderately asymmetrical distribution, the following relationship exists <span class="math inline">\(Mean – Mode = 3(Mean - Median)\)</span></li>
+</ul>
+<p><img src="figure/box25%20-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Choice between mean and median</strong></p>
+<ul>
+<li>Mean is very sensitive to outliers.Median is not sensitive to outliers</li>
+<li>When there are outliers in a data set, median is more appropriate than mean</li>
+</ul>
+</div>
+<div id="quartiles-deciles-and-percentiles" class="section level4">
+<h4><span class="header-section-number">6.3.1.4</span> Quartiles, Deciles and Percentiles</h4>
+<ul>
+<li>Median divides the data set into two equal parts.</li>
+<li>There are other values which divide the data set into a number of equal parts</li>
+<li>Those are Quartiles, Deciles and Percentiles</li>
+</ul>
+<p><strong><em>(a) Quartiles (Q) – Quartiles divide an array into four equal parts</em></strong></p>
+<p><span class="math display">\[Q_i = \text{the }\frac{i}{4}(n+1)\text{th item in the data array} \]</span></p>
+<p><strong><em>(b) Deciles (D) – Deciles divide an array into ten equal parts</em></strong></p>
+<p><span class="math display">\[D_i = \text{the }\frac{i}{10}(n+1)\text{th item in the data array} \]</span></p>
+<p><strong><em>(c) Percentiles (P) – Percentiles divide an array into 100 equal parts</em></strong></p>
+<p><span class="math display">\[P_i = \text{the }\frac{i}{100}(n+1)\text{th item in the data array} \]</span></p>
+</div>
+</div>
+<div id="measures-of-variability" class="section level3">
+<h3><span class="header-section-number">6.3.2</span> Measures of Variability</h3>
+<ul>
+<li><p>Measure of central tendency yield information about particular points of a data set.</p></li>
+<li><p>However, business researchers can use another group of analytic tools to describe a set of data.</p></li>
+<li><p>These tools are measures of variability, which describe the spread or the dispersion of a set of data.</p></li>
+<li><p>Using measures of variability in conjunction with measures of central tendency makes possible a more complete numerical description of the data.</p></li>
+<li><p>This section focuses on seven measures of variability for ungrouped data: range, interquartile range, variance, standard deviation, z score and coefficient of variation.</p></li>
+</ul>
+<div id="range" class="section level4">
+<h4><span class="header-section-number">6.3.2.1</span> Range</h4>
+<ul>
+<li>The range is the difference between the largest value of a data set and the smallest value.</li>
+</ul>
+<p><span class="math display">\[Range = Maximum - Minimum\]</span></p>
+<ul>
+<li><p>One important use of the range is in quality assurance, where the range is used to construct control charts</p></li>
+<li><p>Advantages and disadvantages of range</p></li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Easy to understand and calculate</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Consider only the highest and lowest values of the data and fails to take account of any other observations in the dataset</li>
+<li>Heavily influenced by extreme values</li>
+</ul>
+</div>
+<div id="interquartile-range-iqr" class="section level4">
+<h4><span class="header-section-number">6.3.2.2</span> Interquartile Range (IQR)</h4>
+<ul>
+<li><p>We use the interquartile range (IQR) to measure the spread of a data around the median (M).</p></li>
+<li><p>The interquartile range is the range of values between the first and third quartile.</p></li>
+<li><p>Essentially it is the range of the middle 50% of the data and is determined by computing the value of <span class="math inline">\(Q_3 - Q_1\)</span>.</p></li>
+<li><p>The interquartile range is especially useful in situations where data users are more interested in values towards the middle and less interested in extremes.</p></li>
+<li><p>The interquartile range is used in the construction of box and whisker plots.</p></li>
+<li><p>By eliminating the lowest 25% and the highest 25% of the items in a series, we are left with the central 50% , which are ordinarily free of extreme values.</p></li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Easy to understand and calculate</li>
+<li>Not influenced by extreme values</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Ignore the first <span class="math inline">\(25\%\)</span> and the last <span class="math inline">\(25\%\)</span> in the dataset</li>
+</ul>
+</div>
+<div id="variance-and-standard-deviation" class="section level4">
+<h4><span class="header-section-number">6.3.2.3</span> Variance and Standard Deviation</h4>
+<ul>
+<li>To measure the spread of data around the mean, we use the standard deviation (S).</li>
+<li>The variance and standard deviation are two very popular measures of dispersion.</li>
+<li>These measures are not meaningful unless the data are at least interval-level data.</li>
+<li>Their formulations are categorized into whether to evaluate from a population or from a sample.</li>
+</ul>
+<p><em>NOTE</em></p>
+<ul>
+<li><p>Sum of deviations from the arithmetic mean is always zero.
+<span class="math display">\[{\sum{(x-\mu)} = 0}\]</span></p></li>
+<li><p>This property requires considering the alternative ways to obtain measure of variability.</p></li>
+</ul>
+<div id="variance" class="section level5">
+<h5><span class="header-section-number">6.3.2.3.1</span> Variance</h5>
+<ul>
+<li><p>The <strong>variance</strong> is the average of the squared deviations about the mean for a set of numbers.</p></li>
+<li><p>The population variance is denoted by <span class="math inline">\(\sigma^2\)</span></p></li>
+</ul>
+<p><span class="math display">\[\sigma^2 = \frac{\sum(x-\mu)^2}{N}\]</span></p>
+<ul>
+<li><p><em>The sum of the squared deviations about the mean of a set of values</em> - called the <strong>sum of squares of</strong> <span class="math inline">\(x\)</span> and sometimes abbreviated as <span class="math inline">\(SS_x\)</span></p></li>
+<li><p>Because the variance is computed from squared deviations, the final result is expressed in terms of squared units of measurements.</p></li>
+<li><p>Statistics measured in squared units are problematic to interpret.</p></li>
+</ul>
+</div>
+<div id="standard-deviation" class="section level5">
+<h5><span class="header-section-number">6.3.2.3.2</span> Standard Deviation</h5>
+<ul>
+<li><p>The standard deviation is the square root of the variance.</p></li>
+<li><p>The population standard deviation is denoted by <span class="math inline">\(\sigma\)</span></p></li>
+</ul>
+<p><span class="math display">\[\sigma = \sqrt{\frac{\sum(x-\mu)^2}{N}}=\sqrt{\sigma^2}\]</span></p>
+<ul>
+<li>One feature of standard deviation that distinguishes it from a variance is that the standard deviation is expressed in the same units as the raw data, whereas the variance is expressed in those units squared.</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Based on all the observations</li>
+<li>Since this is based on arithmetic mean, it has all the merits of it</li>
+<li>The most important and widely used measure of dispersion</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Not easy to understand and difficult to calculate</li>
+<li>Gives more weight to extreme values, because the values are squared up</li>
+</ul>
+</div>
+</div>
+<div id="empirical-rule" class="section level4">
+<h4><span class="header-section-number">6.3.2.4</span> Empirical Rule</h4>
+<ul>
+<li><p>The empirical rule is an important rule of thumb that is used to state the approximate percentage of values that lie within a given number of standard deviations from the mean of a set of data <strong>if the data are normally distributed</strong></p></li>
+<li><p>The empirical rule is used only for three numbers of standard deviations: <span class="math inline">\(1\sigma\)</span>, <span class="math inline">\(2\sigma\)</span>, <span class="math inline">\(3\sigma\)</span></p></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Distance from the mean</th>
+<th>Values within distance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mu\pm1\sigma\)</span></td>
+<td><span class="math inline">\(68\%\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mu\pm2\sigma\)</span></td>
+<td><span class="math inline">\(95\%\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mu\pm3\sigma\)</span></td>
+<td><span class="math inline">\(99.7\%\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><img src="figure/emp%20-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>If a set of data is normally distributed, or bell shaped, approximately <span class="math inline">\(68\%\)</span> of the data values are within one standard deviation of the mean, <span class="math inline">\(95\%\)</span> are within two standard deviations, and almost <span class="math inline">\(100\%\)</span> are within three standard deviations.</li>
+</ul>
+</div>
+<div id="population-versus-sample-variance-and-standard-deviations" class="section level4">
+<h4><span class="header-section-number">6.3.2.5</span> Population versus sample variance and standard deviations</h4>
+<ul>
+<li><p>The sample variance is denoted by <span class="math inline">\(s^2\)</span> and the sample standard deviation by <span class="math inline">\(s\)</span>.</p></li>
+<li><p>The main use for sample variances and standard deviations is as estimators of population variances and standard deviations.</p></li>
+<li><p>Thus, computation of the sample variance and standard deviation differs slightly from computation of the population variance and standard deviation.</p></li>
+<li><p>Both the sample variance and sample standard deviation use <span class="math inline">\(n-1\)</span>int he denominator instead of <span class="math inline">\(n\)</span> because using <span class="math inline">\(n\)</span> in the denominator of a sample variance results in a statistic that tends to underestimate the population variance.</p></li>
+<li><p>While discussion of the properties of <em>good estimator</em> is beyond the scope of this course, one of the properties of a good estimator is being <em>unbiased</em>.</p></li>
+<li><p>Whereas, using <span class="math inline">\(n\)</span> in the denominator of the sample variance makes it a <em>biased</em> estimator, using <span class="math inline">\(n-1\)</span> allows it to be an <em>unbiased</em> estimator, which is a desirable property in inferential statistics.</p></li>
+</ul>
+<p><strong>Sample variance</strong></p>
+<p><span class="math display">\[s^2 = \frac{\sum{(x-\bar{x})^2}}{n-1}\]</span></p>
+<p><strong>Sample standard deviation</strong></p>
+<p><span class="math display">\[s = \sqrt{\frac{\sum{(x-\bar{x})^2}}{n-1}}= \sqrt{s^2}\]</span></p>
+</div>
+<div id="computational-formulas-for-variance-and-standard-deviation" class="section level4">
+<h4><span class="header-section-number">6.3.2.6</span> Computational formulas for variance and standard deviation</h4>
+<ul>
+<li><p>An alternative method of computing variance and standard deviation, sometimes referred to as the computational method or shortcut method, is available.</p></li>
+<li><p>Algebraically,</p></li>
+</ul>
+<p><span class="math display">\[\sum{(x-\mu)^2}= \sum{x^2}- \frac{(\sum x)^2}{N}\]</span></p>
+<p><img src="figure/variance1-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>and</p>
+<p><span class="math display">\[\sum{(x-\bar{x})^2}= \sum{x^2}- \frac{(\sum x)^2}{n}\]</span></p>
+<p><img src="figure/variance2-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Substituting these equivalent expressions into the original formulas for variance and standard deviation yields the following computational formulas.</li>
+</ul>
+<p><strong>Computational formula for population variance and standard deviation</strong></p>
+<p><span class="math display">\[\sigma^2 = \frac{\sum{x^2}- \frac{(\sum x)^2}{N}}{N}\]</span></p>
+<p><span class="math display">\[\sigma = \sqrt{\sigma^2}\]</span></p>
+<p><strong>Computational formula for sample variance and standard deviation</strong></p>
+<p><span class="math display">\[s^2 = \frac{\sum{x^2}- \frac{(\sum x)^2}{n}}{n-1}\]</span></p>
+<p><span class="math display">\[s = \sqrt{s^2}\]</span></p>
+<ul>
+<li>For situations in which the mean is already computed or is given, alternative forms of these formulas are:</li>
+</ul>
+<p><span class="math display">\[\sigma^2 = \frac{\sum{x^2}-N\mu^2}{N}\]</span></p>
+<p><span class="math display">\[s^2 = \frac{\sum{x^2}-n(\bar{x})^2}{n-1}\]</span></p>
+</div>
+<div id="coefficient-of-variation" class="section level4">
+<h4><span class="header-section-number">6.3.2.7</span> Coefficient of variation</h4>
+<ul>
+<li><p>In general, for two variables measured with he same units (eg: two groups of people both weighed in kg), the group with the larger variance and standard deviation has n=more variability among their scores.</p></li>
+<li><p>The unit of measure affects the size od the variance.</p></li>
+<li><p>The same population weights, expressed in ‘grams’ rather than kg would have a larger variance and standard deviation.</p></li>
+<li><p>The <em>coefficient of variation</em>, a measure of relative variability gets around this difficulty and makes it possible to compare variability across variables measured in different units.</p></li>
+<li><p>The coefficient of variation is the ratio of the standard deviation to the mean, expressed as a percentage and is denoted CV.</p></li>
+</ul>
+<p><span class="math display">\[CV = \frac{\sigma}{\mu}(100)\]</span></p>
+<p><strong>Using median and quartile deviation</strong></p>
+<p><span class="math display">\[CV = \frac{\frac{Q_3 - Q_1}{2}}{Median}(100)\]</span></p>
+<ul>
+<li><p>The coefficient of variation essentially is a relative comparison of a standard deviation to its mean.</p></li>
+<li><p>The coefficient of variation can be useful in comparing standard deviations that have been computed from data with different means.</p></li>
+<li><p>The choice of whether to use a coefficient of variation or raw standard deviations to compare multiple standard deviations is a matter of preference</p></li>
+<li><p>The coefficient of variation also provides and optional method of interpreting the value of a standard deviation.</p></li>
+</ul>
+</div>
+</div>
+<div id="measures-of-shape" class="section level3">
+<h3><span class="header-section-number">6.3.3</span> Measures of Shape</h3>
+<ul>
+<li><p>Measures of shape are tools that can be used to describe the shape of a distribution of data.</p></li>
+<li><p>In this section, we examine two measures of shapes: skewness and Kurtosis.</p></li>
+</ul>
+<div id="skewness" class="section level4">
+<h4><span class="header-section-number">6.3.3.1</span> Skewness</h4>
+<ul>
+<li><p>A distribution of data in which the right half is a mirror image of the left half is said to be <em>symmetrical.</em></p></li>
+<li><p>One example of a symmetrical distribution is the normal distribution, or bell curve.</p></li>
+<li><p><strong>Skewness</strong> is a measure of symmetry, or more precisely, the lack of symmetry</p></li>
+<li><p>The measures of asymmetry are called as measures of skewness.</p></li>
+<li><p>The skewed portion is the long, thin part of the curve</p></li>
+</ul>
+<p><strong>Skewness and the relationship of the mean, median and mode</strong></p>
+<ul>
+<li><p>The concept of skewness helps us to understand the relationship between the mean, median and mode.</p></li>
+<li><p>In a unimodal distribution (distribution with a single peak or mode) that is skewed, the mode is the apex (high point) of the curve and the median is the middle value.</p></li>
+<li><p>The mean tends to be located toward the tail of the distribution, because the mean is affected by all values, including the extreme ones.</p></li>
+<li><p>A bell-shaped or normal distribution with the mean, median and mode all at the centre of the distribution has no skewness.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-23"></span>
+<img src="figure/skewness.jpg" alt="Relationship of mean, median and mode for different types of skewness" width="100%" />
+<p class="caption">
+Figure 6.1: Relationship of mean, median and mode for different types of skewness
+</p>
+</div>
+<div id="pearsonian-coefficient-of-skewness" class="section level5">
+<h5><span class="header-section-number">6.3.3.1.1</span> Pearsonian coefficient of skewness</h5>
+<ul>
+<li>This coefficient compares the mean and median in light of the magnitude of the standard deviation</li>
+</ul>
+<p><span class="math display">\[S_k = \frac{3(\mu-M_d)}{\sigma}\]</span></p>
+<p>where <span class="math inline">\(S_k\)</span> = coefficient of skewness, <span class="math inline">\(M_d\)</span> = median</p>
+<ul>
+<li><p>Note that if the distribution is symmetrical, the mean and median are the same value and hence the coefficient of skewness is equal to zero.</p></li>
+<li><p>If the value of <span class="math inline">\(S_k\)</span> is positive, the distribution is positively skewed.</p></li>
+<li><p>If the value of <span class="math inline">\(S_k\)</span> is negative, the distribution is negatively skewed.</p></li>
+<li><p>The greater the magnitude of <span class="math inline">\(S_k\)</span>, the more skewed is the distribution.</p></li>
+</ul>
+</div>
+</div>
+<div id="kurtosis" class="section level4">
+<h4><span class="header-section-number">6.3.3.2</span> Kurtosis</h4>
+<ul>
+<li><p>Kurtosis describes the amount of peakedness of a distribution.</p></li>
+<li><p><strong>Kurtosis</strong> is a measure of whether the data are peaked or flat relative to a normal distribution</p></li>
+<li><p>Distributions that are high and thin are referred to as <strong>leptokurtic</strong> distributions.</p></li>
+<li><p>Distributions that are flat and spread out are referred to as <strong>platykurtic</strong> distributions.</p></li>
+<li><p>Between the above two types are distributions that are more ‘normal’ in shape, referred to as <strong>mesokurtic</strong> distributions</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
+<img src="figure/kurtosis.png" alt="Types of kurtosis" width="100%" />
+<p class="caption">
+Figure 6.2: Types of kurtosis
+</p>
+</div>
+</div>
+</div>
+<div id="measures-of-association" class="section level3">
+<h3><span class="header-section-number">6.3.4</span> Measures of Association</h3>
+<ul>
+<li>Many times in business it is important to explore the relationship between two numerical variables</li>
+<li>Measures of association are statistics that yeild information about the relatedness of numerical variables.</li>
+<li>In this section, we discuss only one measure of association, correlation, and d so only for two numerical variables.</li>
+</ul>
+<div id="scatter-plot" class="section level4">
+<h4><span class="header-section-number">6.3.4.1</span> Scatter plot</h4>
+<ul>
+<li>A scatter plot is a two dimensional graph of pairs of points from <strong>two numerical</strong> variables</li>
+<li>In a quantitative bi-variate dataset, we have a <span class="math inline">\((x,y)\)</span> pair for each sampling unit, where <span class="math inline">\(x\)</span> denotes the independent variable and <span class="math inline">\(y\)</span> denotes the dependent variable.</li>
+<li>Each <span class="math inline">\((x,y)\)</span> pair can be considered as a point on the Cartesian plan.</li>
+<li>Scatter plot is a plot of all the <span class="math inline">\((x,y)\)</span> pairs in the dataset.</li>
+<li>The purpose of scatter plot is to illustrate any relationship between two quantitative variables.
+<ul>
+<li>If the variables are related, what kind of relationship it is, linear or nonlinear?</li>
+<li>If the relationship is linear, the scatter plot will show whether it is negative or positive.</li>
+</ul></li>
+</ul>
+<p><strong>Example:</strong> <em>Edgar Anderson’s Iris Data</em></p>
+<p>This famous (Fisher’s or Anderson’s) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.</p>
+<p><img src="figure/scatterplot-1.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="correlation" class="section level4">
+<h4><span class="header-section-number">6.3.4.2</span> Correlation</h4>
+<ul>
+<li>Correlation is a measure of the degree of relatedness of two or more variables.</li>
+<li>Several measures of correlation are available , the selection of which depends mostly on the level of data being analysed.</li>
+<li>Ideally, researchers would like to calculate <span class="math inline">\(\rho\)</span>, the <strong>population</strong> coefficient of correlation.</li>
+<li>However, because researchers virtually always deal with sample data, this section introduces a widely used sample coefficient of correlation, <span class="math inline">\(r\)</span>.</li>
+<li>This measure is applicable <strong>only if both variables being analysed have at least an interval level of data</strong></li>
+</ul>
+<p><strong>Pearson product-moment correlation coefficient</strong> (<span class="math inline">\(r\)</span>)</p>
+<ul>
+<li>The statistic <span class="math inline">\(r\)</span> is the Pearson product-moment correlation coefficient, named after Karl Pearson (1857 - 1936).</li>
+<li>The tern <span class="math inline">\(r\)</span> is a measure of the <strong>linear</strong> correlation of two variables.</li>
+<li>It is a number that ranges from -1 to 0 to +1, representing th strength of the linear relationship between the variables.</li>
+<li>An <span class="math inline">\(r\)</span> value of <span class="math inline">\(+1\)</span> denotes a perfect <strong>linear</strong> positive relationship between two variables.</li>
+<li>An <span class="math inline">\(r\)</span> value of <span class="math inline">\(-1\)</span> denotes a perfect <strong>linear</strong> negative relationship between two variables, which indicates an inverse relationship between two variables: as one variable gets larger, the other gets smaller.</li>
+<li>An <span class="math inline">\(r\)</span> value of 0 means no <strong>linear</strong> relationship is present between the two variables.</li>
+</ul>
+<p><span class="math display">\[ r = \frac{\sum(x-\bar{x})(y-\bar{y})}{\sqrt{\sum(x-\bar{x})^2\sum(y-\bar{y})^2}}\]</span></p>
+<p><span class="math display">\[ r = \frac{\sum{xy} - \frac{(\sum x\sum y)}{n}}{\sqrt{[\sum{x^2- \frac{(\sum{x})^2}{n}}][\sum y^2-\frac{(\sum y)^2}{n}]}}\]</span></p>
+<ul>
+<li>Examples: Following figure shows five different degrees of correlation:</li>
+</ul>
+<p><img src="figure/cor-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>NOTE</strong></p>
+<ul>
+<li>When <span class="math inline">\(r=0\)</span>, it signifies there is <strong>no linear</strong> relationship between the two variables. (There can be a non-linear relationship, Figure (e))</li>
+<li>Figure (e): There is a very strong curvilinear relationship. But there is <strong>no linear</strong> relationship.</li>
+</ul>
+</div>
+</div>
+<div id="references" class="section level3 unnumbered">
+<h3>References</h3>
+<p>Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., &amp; Harris, M. (2007). <em>Australasian business statistics</em>. John Wiley &amp; Sons.</p>
+<div style="page-break-after: always;"></div>
+
+</div>
+</div>
+<div id="tutorial" class="section level2">
+<h2><span class="header-section-number">6.4</span> Tutorial</h2>
+<div id="chapter-6-descriptive-statistics" class="section level3 unnumbered">
+<h3>Chapter 6: Descriptive Statistics</h3>
+<ol style="list-style-type: decimal">
+<li>A power company in Sri Lanka designs and manufactures power distribution switchboards for hospitals, bridges, airports, highways and water treatment plants. Power company marketing director wants to determine client satisfaction with their products and services. He developed a questionnaire that yields a satisfaction score between 0 and 100 for participant responses. A random sample of 50 of the company’s 1000 clients is asked to complete a satisfaction survey. The satisfaction scores for the 50 participants are averaged to produce a mean satisfaction score.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What is the objective of this study?</li>
+<li>What is the population for this study?</li>
+<li>What is the sample for this study?</li>
+<li>What is the statistic for this study?</li>
+<li>What would be a parameter for this study?</li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>Determine the type and the scale of measurement of the following variables</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>The time required to produce an item on an assembly line</li>
+<li>the number of litres of milk a family drinks in a week</li>
+<li>The ranking of 50 students in your class after their overall performance have been designated as excellent, good, satisfactory or poor</li>
+<li>The telephone area code of clients in Australia</li>
+<li>The age of each of your batch mates</li>
+<li>The sales at the local pizza restaurant each month</li>
+<li>A student index number</li>
+<li>The response time of emergency services</li>
+<li>The number of tickets sold at a ticket counter on any given day</li>
+<li>Monthly maximum air temperature</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li><p>The grades of 30 students for Statistics are as follows:</p>
+<p>B, C, B, D, B, C, C, A , B, C,</p>
+<p>C, B, E, B, B, D, D, F, B, D,</p>
+<p>D, A, B, A, B, C, E, A, A, E</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Construct a frequency table with suitable values (eg: absolute frequency, relative frequency, cumulative frequency, cumulative relative frequency)</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li><p>The gender type of a group of 10 students are as follows:</p>
+<p>Male, Female, Female, Male, Female
+Female, Male, Male, Female, Female</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Construct a frequency table with suitable values (eg: absolute frequency, relative frequency, cumulative frequency, cumulative relative frequency )</li>
+</ol>
+<ol start="5" style="list-style-type: decimal">
+<li>In a study conducted to investigate the relationship between delivery time and computer-assisted ordering, the following data were gathered from a sample of 40 firms, that 16 use computer-assisted ordering, while 24 do not. Furthermore, past data are used to categorize each firm’s delivery times below the industry average, equal to the industry average, or above the industry average. The results obtained are given in the table below.</li>
+</ol>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="21%" />
+<col width="22%" />
+<col width="17%" />
+<col width="21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Computer Assisted Ordering</th>
+<th>Delivery Time Below Industry Average</th>
+<th>Delivery Time Equal to Industry Average</th>
+<th>Delivery Time Above industry Average</th>
+<th>Row Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No</td>
+<td>4</td>
+<td>12</td>
+<td>8</td>
+<td>24</td>
+</tr>
+<tr class="even">
+<td>Yes</td>
+<td>10</td>
+<td>4</td>
+<td>2</td>
+<td>16</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>14</td>
+<td>16</td>
+<td>10</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: lower-alpha">
+<li>For each row and column total, calculate the corresponding row or column percentage.</li>
+<li>For each cell, calculate the corresponding cell, row, and column percentages.</li>
+<li>Carry out graphical analysis to investigate the relationship between delivery-time performance and computer-assisted ordering.</li>
+<li>What conclusions can be made about the nature of the relationship?</li>
+</ol>
+<ol start="6" style="list-style-type: decimal">
+<li></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Giving suitable examples distinguish between multiple bar chart and a component bar chart.</li>
+<li>Write down advantages and disadvantages of each chart and when they should be used</li>
+</ol>
+<ol start="7" style="list-style-type: decimal">
+<li>In a study conducted to investigate the effect of wearing helmets in riding motorcycles to reduce the head injuries, the following data were gathered by investigating 151 motorcycle accidents reported during last 10 month period. Out of the total number of cases (151) investigated, only 102 people were wearing helmets properly at the time of the accidents. Out of them, only 9 got severe head injuries. The rest got either minor head injuries or no head injuries at all. Among 49 who were not wearing helmets at the time of the accident, 15 got server head injuries and the rest got minor head injuries or no head injuries at all.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>Use an appropriate table to represent the above data and state what conclusions can be drawn from it</p></li>
+<li><p>Carry out a suitable graphical analysis to investigate the effect of wearing helmets in riding motorcycles to reduce the head injuries.</p></li>
+</ol>
+<ol start="8" style="list-style-type: decimal">
+<li>The table below shows a frequency distribution of the weekly wages of 65 employees at the ABC Company. With reference to this table,</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Wages (in $)</th>
+<th>Number of Employees</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>250.00 - 259.99</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>260.00 - 269.99</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>270.00 - 279.99</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>280.00 - 289.99</td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>290.00 - 299.99</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>300.00 - 309.99</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>310.00 - 319.99</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td>65</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: lower-alpha">
+<li>Construct a histogram</li>
+<li>Construct a frequency polygon</li>
+<li>Construct a frequency curve</li>
+<li>State what conclusions can be drawn from the above graphical analysis</li>
+</ol>
+<ol start="9" style="list-style-type: decimal">
+<li>The contribution of the agriculture, industrial, and service sector to the Gross Domestic Product (GDP) for each province in Sri Lanka is given in the table below. It is required to investigate whether the contributions are varying from province to province. What kind of graph you would suggest for representing data to serve the purpose. Justify your answer. Sketch the proposed graph.</li>
+</ol>
+<p><img src="figure/C6T1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ol start="10" style="list-style-type: decimal">
+<li>Marks of 16 students are given below.</li>
+</ol>
+<p><span class="math display">\[\text{52, 88, 56, 79, 72, 91,  85, 88, 68, 63, 76, 73, 86, 95, 12, 69}\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Find the quartile of the distribution and interpret the values</li>
+<li>Construct a box plot for the data set</li>
+<li>Are there outliers in the data set?</li>
+</ol>
+<ol start="11" style="list-style-type: decimal">
+<li>Listed below, ordered from smallest to largest, is the time in days the customers take to pay their invoices.</li>
+</ol>
+<p><span class="math display">\[13, 13, 13, 20, 26, 27, 31, 34, 34, 34, 35, 35, 36, 37, 38, 41, 41, 41, 45, 47, 47, 47, 50, 51, 53, 54, 56, 62, 67, 82\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Determine the median</li>
+<li>Determine the first and third quartiles</li>
+<li>Determine the 2nd decile and the 8th decile</li>
+<li>Determine the 67th percentile</li>
+</ol>
+<ol start="12" style="list-style-type: decimal">
+<li></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What are outliers?</li>
+<li>Which of the following is/are unaffected by outliers? Underline the correct answer/ answers.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Mean</li>
+<li>Median</li>
+<li>Mode</li>
+<li>Range</li>
+<li>Standard deviation</li>
+<li>Inter-quartile range</li>
+</ol>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Some summary measures of a variable is given below.
+Descriptive Statistics:</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>N</th>
+<th>Mean</th>
+<th>StDev</th>
+<th>Minimum</th>
+<th>Q1</th>
+<th>Median</th>
+<th>Q3</th>
+<th>Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>50</td>
+<td>5.389</td>
+<td>0.997</td>
+<td>3.150</td>
+<td>4.658</td>
+<td>5.350</td>
+<td>6.020</td>
+<td>8.600</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Are there outliers in this data set? YES/NO
+Justify your answer using a box plot</li>
+</ol>
+<ol start="13" style="list-style-type: decimal">
+<li><p>The mean and the standard deviation of 250 observations of a variable X are 62.1 and 4.3 respectively. However, in a re-scrutinizing process, it was found that the observations 72 and 81 were incorrectly recorded as 92 and 87. Find the correct mean and standard deviation of the data set.</p></li>
+<li><p>The weekly sales from a sample of AB company were organized into a frequency distribution. The mean of weekly sales was computed to be $105,900, the median $105,000, and the mode $104,500</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Sketch the sales in the form of a smoothed frequency polygon. Note the location of the mean, median and mode on the X-axis</li>
+<li>Is the distribution symmetrical, positively skewed, or negatively skewed? Explain.</li>
+</ol>
+<ol start="15" style="list-style-type: decimal">
+<li>Compare the variation of the annual incomes of executives with the variation of the incomes of unskilled employees. The sample information is given below.</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th><span class="math inline">\(\bar{x}\)</span></th>
+<th><span class="math inline">\(SD\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Executives</td>
+<td>500,000</td>
+<td>50,000</td>
+</tr>
+<tr class="even">
+<td>Unskilled employees</td>
+<td>22,000</td>
+<td>2,200</td>
+</tr>
+</tbody>
+</table>
+<ol start="16" style="list-style-type: decimal">
+<li>Marks for the course module AB and the corresponding lecture attendance of 10 students are given below</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Student Number</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Marks in course module AB</td>
+<td>84</td>
+<td>51</td>
+<td>91</td>
+<td>60</td>
+<td>68</td>
+<td>89</td>
+<td>98</td>
+<td>58</td>
+<td>53</td>
+<td>47</td>
+</tr>
+<tr class="even">
+<td>Lecture attendance</td>
+<td>13</td>
+<td>6</td>
+<td>15</td>
+<td>4</td>
+<td>12</td>
+<td>14</td>
+<td>15</td>
+<td>10</td>
+<td>11</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: lower-alpha">
+<li>Draw a scatter plot for the above data</li>
+<li>Calculate the coefficient of correlation</li>
+<li>Comment on the relationship between the marks and the lecture attendance</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Data source: <a href="https://www.kaggle.com/varimp/a-mostly-tidyverse-tour-of-the-titanic" class="uri">https://www.kaggle.com/varimp/a-mostly-tidyverse-tour-of-the-titanic</a><a href="descriptive-statistics.html#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="differentiation-and-integration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sets-and-relations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-Descriptive_Statistics.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+# Estimations
+
+## Point Estimation
+
+### Methods of finding point estimators
+
+### Methods of evaluating point estimators
+
+## Interval Estimation
+
+### Interpretation of confidence intervals
+
+### Methods of finding interval estimators
+
+### Methods of evaluating interval estimators

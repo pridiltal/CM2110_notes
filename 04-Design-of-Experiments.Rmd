@@ -1,0 +1,7 @@
+# Design of Experiments
+
+## ntroduction to experimental design
+
+## Basic principles of experimental design
+
+## Completely randomized design

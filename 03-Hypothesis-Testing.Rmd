@@ -1,0 +1,11 @@
+# Hypothesis Testing
+
+## Null and alternative hypotheses
+
+## Errors in testing hypotheses-type I and type II error
+
+## Significance level, size, power of a test
+
+## Formulation of hypotheses
+
+## Methods of testing hypotheses

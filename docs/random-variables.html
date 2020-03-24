@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Random Variables | CM 1110 Fundamentals of Mathematics and Statistics</title>
+  <meta name="description" content="Chapter 9 Random Variables | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Random Variables | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Random Variables | CM 1110 Fundamentals of Mathematics and Statistics" />
+  
+  
+  
+
+<meta name="author" content="Dr. Priyanga D. Talagala" />
+
+
+<meta name="date" content="2020-03-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="probability.html"/>
+<link rel="next" href="correlation-and-regression.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">CM 1110 Fundamentals of Mathematics and Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course Syllabus</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-requisites"><i class="fa fa-check"></i>Pre-requisites</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-outcomes"><i class="fa fa-check"></i>Learning Outcomes</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#outline-syllabus"><i class="fa fa-check"></i>Outline Syllabus</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method-of-assessment"><i class="fa fa-check"></i>Method of Assessment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecturer"><i class="fa fa-check"></i>Lecturer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="number-systems.html"><a href="number-systems.html"><i class="fa fa-check"></i><b>1</b> Number Systems</a><ul>
+<li class="chapter" data-level="1.1" data-path="number-systems.html"><a href="number-systems.html#main-types"><i class="fa fa-check"></i><b>1.1</b> Main types</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="number-systems.html"><a href="number-systems.html#complex-numbers"><i class="fa fa-check"></i><b>1.1.1</b> Complex numbers</a></li>
+<li class="chapter" data-level="1.1.2" data-path="number-systems.html"><a href="number-systems.html#imaginary-numbers"><i class="fa fa-check"></i><b>1.1.2</b> Imaginary numbers</a></li>
+<li class="chapter" data-level="1.1.3" data-path="number-systems.html"><a href="number-systems.html#real-numbers"><i class="fa fa-check"></i><b>1.1.3</b> Real numbers</a></li>
+<li class="chapter" data-level="1.1.4" data-path="number-systems.html"><a href="number-systems.html#rational-numbers"><i class="fa fa-check"></i><b>1.1.4</b> Rational numbers</a></li>
+<li class="chapter" data-level="1.1.5" data-path="number-systems.html"><a href="number-systems.html#irrational-numbers"><i class="fa fa-check"></i><b>1.1.5</b> Irrational numbers</a></li>
+<li class="chapter" data-level="1.1.6" data-path="number-systems.html"><a href="number-systems.html#integers"><i class="fa fa-check"></i><b>1.1.6</b> Integers</a></li>
+<li class="chapter" data-level="1.1.7" data-path="number-systems.html"><a href="number-systems.html#whole-numbers"><i class="fa fa-check"></i><b>1.1.7</b> Whole numbers</a></li>
+<li class="chapter" data-level="1.1.8" data-path="number-systems.html"><a href="number-systems.html#natural-numbers"><i class="fa fa-check"></i><b>1.1.8</b> Natural numbers</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="number-systems.html"><a href="number-systems.html#number-representations"><i class="fa fa-check"></i><b>1.2</b> Number representations</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="number-systems.html"><a href="number-systems.html#glossary-of-terms-used-in-the-positional-numeral-systems"><i class="fa fa-check"></i><b>1.2.1</b> Glossary of terms used in the positional numeral systems</a></li>
+<li class="chapter" data-level="1.2.2" data-path="number-systems.html"><a href="number-systems.html#decimal-number-system"><i class="fa fa-check"></i><b>1.2.2</b> Decimal Number System</a></li>
+<li class="chapter" data-level="1.2.3" data-path="number-systems.html"><a href="number-systems.html#binary-number-system"><i class="fa fa-check"></i><b>1.2.3</b> Binary Number System</a></li>
+<li class="chapter" data-level="1.2.4" data-path="number-systems.html"><a href="number-systems.html#octal-number-system"><i class="fa fa-check"></i><b>1.2.4</b> Octal Number System</a></li>
+<li class="chapter" data-level="1.2.5" data-path="number-systems.html"><a href="number-systems.html#hexadecimal-number-system"><i class="fa fa-check"></i><b>1.2.5</b> Hexadecimal Number System</a></li>
+<li class="chapter" data-level="1.2.6" data-path="number-systems.html"><a href="number-systems.html#binary-arithmetic"><i class="fa fa-check"></i><b>1.2.6</b> Binary Arithmetic</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2</b> Sequences and Series</a><ul>
+<li class="chapter" data-level="2.1" data-path="sequences-and-series.html"><a href="sequences-and-series.html#sequences"><i class="fa fa-check"></i><b>2.1</b> Sequences</a></li>
+<li class="chapter" data-level="2.2" data-path="sequences-and-series.html"><a href="sequences-and-series.html#series"><i class="fa fa-check"></i><b>2.2</b> Series</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-logic.html"><a href="introduction-to-logic.html"><i class="fa fa-check"></i><b>3</b> Introduction to Logic</a></li>
+<li class="chapter" data-level="4" data-path="boolean-algebra.html"><a href="boolean-algebra.html"><i class="fa fa-check"></i><b>4</b> Boolean Algebra</a></li>
+<li class="chapter" data-level="5" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html"><i class="fa fa-check"></i><b>5</b> Differentiation and Integration</a></li>
+<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#introduction-to-statistics"><i class="fa fa-check"></i><b>6.1</b> Introduction to Statistics</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#some-basic-terminologies-used-in-statistics"><i class="fa fa-check"></i><b>6.1.1</b> Some Basic Terminologies Used in Statistics</a></li>
+<li class="chapter" data-level="6.1.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#branches-of-statistics"><i class="fa fa-check"></i><b>6.1.2</b> Branches of Statistics</a></li>
+<li class="chapter" data-level="6.1.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#types-of-variables"><i class="fa fa-check"></i><b>6.1.3</b> Types of Variables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#scales-of-measurements"><i class="fa fa-check"></i><b>6.1.4</b> Scales of Measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#presentation-of-data"><i class="fa fa-check"></i><b>6.2</b> Presentation of Data</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tabular-presentations-of-data"><i class="fa fa-check"></i><b>6.2.1</b> Tabular Presentations of Data</a></li>
+<li class="chapter" data-level="6.2.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#graphic-presentations-of-data"><i class="fa fa-check"></i><b>6.2.2</b> Graphic Presentations of Data</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary-measures"><i class="fa fa-check"></i><b>6.3</b> Summary Measures</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>6.3.1</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="6.3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-variability"><i class="fa fa-check"></i><b>6.3.2</b> Measures of Variability</a></li>
+<li class="chapter" data-level="6.3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-shape"><i class="fa fa-check"></i><b>6.3.3</b> Measures of Shape</a></li>
+<li class="chapter" data-level="6.3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-association"><i class="fa fa-check"></i><b>6.3.4</b> Measures of Association</a></li>
+<li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tutorial"><i class="fa fa-check"></i><b>6.4</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#chapter-6-descriptive-statistics"><i class="fa fa-check"></i>Chapter 6: Descriptive Statistics</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sets-and-relations.html"><a href="sets-and-relations.html"><i class="fa fa-check"></i><b>7</b> Sets and Relations</a><ul>
+<li class="chapter" data-level="7.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#sample-spaces-and-events"><i class="fa fa-check"></i><b>7.2</b> Sample Spaces and Events</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#random-experiments"><i class="fa fa-check"></i><b>7.2.1</b> Random Experiments</a></li>
+<li class="chapter" data-level="7.2.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#outcomes"><i class="fa fa-check"></i><b>7.2.2</b> Outcomes</a></li>
+<li class="chapter" data-level="7.2.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#sample-space"><i class="fa fa-check"></i><b>7.2.3</b> Sample space</a></li>
+<li class="chapter" data-level="7.2.4" data-path="sets-and-relations.html"><a href="sets-and-relations.html#events-as-subsets-of-sample-spaces"><i class="fa fa-check"></i><b>7.2.4</b> Events as subsets of sample spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#event-operations"><i class="fa fa-check"></i><b>7.3</b> Event Operations</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#union"><i class="fa fa-check"></i><b>7.3.1</b> Union</a></li>
+<li class="chapter" data-level="7.3.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#intersection"><i class="fa fa-check"></i><b>7.3.2</b> Intersection</a></li>
+<li class="chapter" data-level="7.3.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#complement"><i class="fa fa-check"></i><b>7.3.3</b> Complement</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="sets-and-relations.html"><a href="sets-and-relations.html#tutorial-1"><i class="fa fa-check"></i><b>7.4</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="sets-and-relations.html"><a href="sets-and-relations.html#chapter-7-sets-and-relations"><i class="fa fa-check"></i>Chapter 7: Sets and Relations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>8</b> Probability</a><ul>
+<li class="chapter" data-level="8.1" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>8.1</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="probability.html"><a href="probability.html#basic-counting-principles"><i class="fa fa-check"></i><b>8.1.1</b> Basic Counting Principles</a></li>
+<li class="chapter" data-level="8.1.2" data-path="probability.html"><a href="probability.html#factorial-notation"><i class="fa fa-check"></i><b>8.1.2</b> Factorial Notation</a></li>
+<li class="chapter" data-level="8.1.3" data-path="probability.html"><a href="probability.html#permutations"><i class="fa fa-check"></i><b>8.1.3</b> Permutations</a></li>
+<li class="chapter" data-level="8.1.4" data-path="probability.html"><a href="probability.html#combinations"><i class="fa fa-check"></i><b>8.1.4</b> Combinations</a></li>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="probability.html"><a href="probability.html#axioms-of-probability"><i class="fa fa-check"></i><b>8.2</b> Axioms of probability</a></li>
+<li class="chapter" data-level="8.3" data-path="probability.html"><a href="probability.html#methods-for-determining-probability"><i class="fa fa-check"></i><b>8.3</b> Methods for determining Probability</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="probability.html"><a href="probability.html#classical-method"><i class="fa fa-check"></i><b>8.3.1</b> Classical Method</a></li>
+<li class="chapter" data-level="8.3.2" data-path="probability.html"><a href="probability.html#relative-frequency-method-empirical-or-objective-approach"><i class="fa fa-check"></i><b>8.3.2</b> Relative frequency method (Empirical or objective approach)</a></li>
+<li class="chapter" data-level="8.3.3" data-path="probability.html"><a href="probability.html#subjective-method"><i class="fa fa-check"></i><b>8.3.3</b> Subjective method</a></li>
+<li class="chapter" data-level="8.3.4" data-path="probability.html"><a href="probability.html#using-probability-models"><i class="fa fa-check"></i><b>8.3.4</b> Using probability models</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>8.4</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="probability.html"><a href="probability.html#independent-events"><i class="fa fa-check"></i><b>8.4.1</b> Independent events</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="probability.html"><a href="probability.html#rules-of-probability"><i class="fa fa-check"></i><b>8.5</b> Rules of Probability</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="probability.html"><a href="probability.html#complement-rule"><i class="fa fa-check"></i><b>8.5.1</b> Complement rule</a></li>
+<li class="chapter" data-level="8.5.2" data-path="probability.html"><a href="probability.html#addition-rule"><i class="fa fa-check"></i><b>8.5.2</b> Addition rule</a></li>
+<li class="chapter" data-level="8.5.3" data-path="probability.html"><a href="probability.html#multiplication-rule"><i class="fa fa-check"></i><b>8.5.3</b> Multiplication rule</a></li>
+<li class="chapter" data-level="8.5.4" data-path="probability.html"><a href="probability.html#the-law-of-total-probability"><i class="fa fa-check"></i><b>8.5.4</b> The law of total probability</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>8.6</b> Bayes’ Theorem</a></li>
+<li class="chapter" data-level="8.7" data-path="probability.html"><a href="probability.html#tutorial-2"><i class="fa fa-check"></i><b>8.7</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#chapter-8-probability"><i class="fa fa-check"></i>Chapter 8: Probability</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="random-variables.html"><a href="random-variables.html"><i class="fa fa-check"></i><b>9</b> Random Variables</a></li>
+<li class="chapter" data-level="10" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html"><i class="fa fa-check"></i><b>10</b> Correlation and Regression</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CM 1110 Fundamentals of Mathematics and Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="random-variables" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Random Variables</h1>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="correlation-and-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/09-Random_Variables.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Sets and Relations | CM 1110 Fundamentals of Mathematics and Statistics</title>
+  <meta name="description" content="Chapter 7 Sets and Relations | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Sets and Relations | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Sets and Relations | CM 1110 Fundamentals of Mathematics and Statistics" />
+  
+  
+  
+
+<meta name="author" content="Dr. Priyanga D. Talagala" />
+
+
+<meta name="date" content="2020-03-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="descriptive-statistics.html"/>
+<link rel="next" href="probability.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">CM 1110 Fundamentals of Mathematics and Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course Syllabus</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-requisites"><i class="fa fa-check"></i>Pre-requisites</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-outcomes"><i class="fa fa-check"></i>Learning Outcomes</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#outline-syllabus"><i class="fa fa-check"></i>Outline Syllabus</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method-of-assessment"><i class="fa fa-check"></i>Method of Assessment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecturer"><i class="fa fa-check"></i>Lecturer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="number-systems.html"><a href="number-systems.html"><i class="fa fa-check"></i><b>1</b> Number Systems</a><ul>
+<li class="chapter" data-level="1.1" data-path="number-systems.html"><a href="number-systems.html#main-types"><i class="fa fa-check"></i><b>1.1</b> Main types</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="number-systems.html"><a href="number-systems.html#complex-numbers"><i class="fa fa-check"></i><b>1.1.1</b> Complex numbers</a></li>
+<li class="chapter" data-level="1.1.2" data-path="number-systems.html"><a href="number-systems.html#imaginary-numbers"><i class="fa fa-check"></i><b>1.1.2</b> Imaginary numbers</a></li>
+<li class="chapter" data-level="1.1.3" data-path="number-systems.html"><a href="number-systems.html#real-numbers"><i class="fa fa-check"></i><b>1.1.3</b> Real numbers</a></li>
+<li class="chapter" data-level="1.1.4" data-path="number-systems.html"><a href="number-systems.html#rational-numbers"><i class="fa fa-check"></i><b>1.1.4</b> Rational numbers</a></li>
+<li class="chapter" data-level="1.1.5" data-path="number-systems.html"><a href="number-systems.html#irrational-numbers"><i class="fa fa-check"></i><b>1.1.5</b> Irrational numbers</a></li>
+<li class="chapter" data-level="1.1.6" data-path="number-systems.html"><a href="number-systems.html#integers"><i class="fa fa-check"></i><b>1.1.6</b> Integers</a></li>
+<li class="chapter" data-level="1.1.7" data-path="number-systems.html"><a href="number-systems.html#whole-numbers"><i class="fa fa-check"></i><b>1.1.7</b> Whole numbers</a></li>
+<li class="chapter" data-level="1.1.8" data-path="number-systems.html"><a href="number-systems.html#natural-numbers"><i class="fa fa-check"></i><b>1.1.8</b> Natural numbers</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="number-systems.html"><a href="number-systems.html#number-representations"><i class="fa fa-check"></i><b>1.2</b> Number representations</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="number-systems.html"><a href="number-systems.html#glossary-of-terms-used-in-the-positional-numeral-systems"><i class="fa fa-check"></i><b>1.2.1</b> Glossary of terms used in the positional numeral systems</a></li>
+<li class="chapter" data-level="1.2.2" data-path="number-systems.html"><a href="number-systems.html#decimal-number-system"><i class="fa fa-check"></i><b>1.2.2</b> Decimal Number System</a></li>
+<li class="chapter" data-level="1.2.3" data-path="number-systems.html"><a href="number-systems.html#binary-number-system"><i class="fa fa-check"></i><b>1.2.3</b> Binary Number System</a></li>
+<li class="chapter" data-level="1.2.4" data-path="number-systems.html"><a href="number-systems.html#octal-number-system"><i class="fa fa-check"></i><b>1.2.4</b> Octal Number System</a></li>
+<li class="chapter" data-level="1.2.5" data-path="number-systems.html"><a href="number-systems.html#hexadecimal-number-system"><i class="fa fa-check"></i><b>1.2.5</b> Hexadecimal Number System</a></li>
+<li class="chapter" data-level="1.2.6" data-path="number-systems.html"><a href="number-systems.html#binary-arithmetic"><i class="fa fa-check"></i><b>1.2.6</b> Binary Arithmetic</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2</b> Sequences and Series</a><ul>
+<li class="chapter" data-level="2.1" data-path="sequences-and-series.html"><a href="sequences-and-series.html#sequences"><i class="fa fa-check"></i><b>2.1</b> Sequences</a></li>
+<li class="chapter" data-level="2.2" data-path="sequences-and-series.html"><a href="sequences-and-series.html#series"><i class="fa fa-check"></i><b>2.2</b> Series</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-logic.html"><a href="introduction-to-logic.html"><i class="fa fa-check"></i><b>3</b> Introduction to Logic</a></li>
+<li class="chapter" data-level="4" data-path="boolean-algebra.html"><a href="boolean-algebra.html"><i class="fa fa-check"></i><b>4</b> Boolean Algebra</a></li>
+<li class="chapter" data-level="5" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html"><i class="fa fa-check"></i><b>5</b> Differentiation and Integration</a></li>
+<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#introduction-to-statistics"><i class="fa fa-check"></i><b>6.1</b> Introduction to Statistics</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#some-basic-terminologies-used-in-statistics"><i class="fa fa-check"></i><b>6.1.1</b> Some Basic Terminologies Used in Statistics</a></li>
+<li class="chapter" data-level="6.1.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#branches-of-statistics"><i class="fa fa-check"></i><b>6.1.2</b> Branches of Statistics</a></li>
+<li class="chapter" data-level="6.1.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#types-of-variables"><i class="fa fa-check"></i><b>6.1.3</b> Types of Variables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#scales-of-measurements"><i class="fa fa-check"></i><b>6.1.4</b> Scales of Measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#presentation-of-data"><i class="fa fa-check"></i><b>6.2</b> Presentation of Data</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tabular-presentations-of-data"><i class="fa fa-check"></i><b>6.2.1</b> Tabular Presentations of Data</a></li>
+<li class="chapter" data-level="6.2.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#graphic-presentations-of-data"><i class="fa fa-check"></i><b>6.2.2</b> Graphic Presentations of Data</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary-measures"><i class="fa fa-check"></i><b>6.3</b> Summary Measures</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>6.3.1</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="6.3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-variability"><i class="fa fa-check"></i><b>6.3.2</b> Measures of Variability</a></li>
+<li class="chapter" data-level="6.3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-shape"><i class="fa fa-check"></i><b>6.3.3</b> Measures of Shape</a></li>
+<li class="chapter" data-level="6.3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-association"><i class="fa fa-check"></i><b>6.3.4</b> Measures of Association</a></li>
+<li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tutorial"><i class="fa fa-check"></i><b>6.4</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#chapter-6-descriptive-statistics"><i class="fa fa-check"></i>Chapter 6: Descriptive Statistics</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sets-and-relations.html"><a href="sets-and-relations.html"><i class="fa fa-check"></i><b>7</b> Sets and Relations</a><ul>
+<li class="chapter" data-level="7.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#sample-spaces-and-events"><i class="fa fa-check"></i><b>7.2</b> Sample Spaces and Events</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#random-experiments"><i class="fa fa-check"></i><b>7.2.1</b> Random Experiments</a></li>
+<li class="chapter" data-level="7.2.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#outcomes"><i class="fa fa-check"></i><b>7.2.2</b> Outcomes</a></li>
+<li class="chapter" data-level="7.2.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#sample-space"><i class="fa fa-check"></i><b>7.2.3</b> Sample space</a></li>
+<li class="chapter" data-level="7.2.4" data-path="sets-and-relations.html"><a href="sets-and-relations.html#events-as-subsets-of-sample-spaces"><i class="fa fa-check"></i><b>7.2.4</b> Events as subsets of sample spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#event-operations"><i class="fa fa-check"></i><b>7.3</b> Event Operations</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#union"><i class="fa fa-check"></i><b>7.3.1</b> Union</a></li>
+<li class="chapter" data-level="7.3.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#intersection"><i class="fa fa-check"></i><b>7.3.2</b> Intersection</a></li>
+<li class="chapter" data-level="7.3.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#complement"><i class="fa fa-check"></i><b>7.3.3</b> Complement</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="sets-and-relations.html"><a href="sets-and-relations.html#tutorial-1"><i class="fa fa-check"></i><b>7.4</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="sets-and-relations.html"><a href="sets-and-relations.html#chapter-7-sets-and-relations"><i class="fa fa-check"></i>Chapter 7: Sets and Relations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>8</b> Probability</a><ul>
+<li class="chapter" data-level="8.1" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>8.1</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="probability.html"><a href="probability.html#basic-counting-principles"><i class="fa fa-check"></i><b>8.1.1</b> Basic Counting Principles</a></li>
+<li class="chapter" data-level="8.1.2" data-path="probability.html"><a href="probability.html#factorial-notation"><i class="fa fa-check"></i><b>8.1.2</b> Factorial Notation</a></li>
+<li class="chapter" data-level="8.1.3" data-path="probability.html"><a href="probability.html#permutations"><i class="fa fa-check"></i><b>8.1.3</b> Permutations</a></li>
+<li class="chapter" data-level="8.1.4" data-path="probability.html"><a href="probability.html#combinations"><i class="fa fa-check"></i><b>8.1.4</b> Combinations</a></li>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="probability.html"><a href="probability.html#axioms-of-probability"><i class="fa fa-check"></i><b>8.2</b> Axioms of probability</a></li>
+<li class="chapter" data-level="8.3" data-path="probability.html"><a href="probability.html#methods-for-determining-probability"><i class="fa fa-check"></i><b>8.3</b> Methods for determining Probability</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="probability.html"><a href="probability.html#classical-method"><i class="fa fa-check"></i><b>8.3.1</b> Classical Method</a></li>
+<li class="chapter" data-level="8.3.2" data-path="probability.html"><a href="probability.html#relative-frequency-method-empirical-or-objective-approach"><i class="fa fa-check"></i><b>8.3.2</b> Relative frequency method (Empirical or objective approach)</a></li>
+<li class="chapter" data-level="8.3.3" data-path="probability.html"><a href="probability.html#subjective-method"><i class="fa fa-check"></i><b>8.3.3</b> Subjective method</a></li>
+<li class="chapter" data-level="8.3.4" data-path="probability.html"><a href="probability.html#using-probability-models"><i class="fa fa-check"></i><b>8.3.4</b> Using probability models</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>8.4</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="probability.html"><a href="probability.html#independent-events"><i class="fa fa-check"></i><b>8.4.1</b> Independent events</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="probability.html"><a href="probability.html#rules-of-probability"><i class="fa fa-check"></i><b>8.5</b> Rules of Probability</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="probability.html"><a href="probability.html#complement-rule"><i class="fa fa-check"></i><b>8.5.1</b> Complement rule</a></li>
+<li class="chapter" data-level="8.5.2" data-path="probability.html"><a href="probability.html#addition-rule"><i class="fa fa-check"></i><b>8.5.2</b> Addition rule</a></li>
+<li class="chapter" data-level="8.5.3" data-path="probability.html"><a href="probability.html#multiplication-rule"><i class="fa fa-check"></i><b>8.5.3</b> Multiplication rule</a></li>
+<li class="chapter" data-level="8.5.4" data-path="probability.html"><a href="probability.html#the-law-of-total-probability"><i class="fa fa-check"></i><b>8.5.4</b> The law of total probability</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>8.6</b> Bayes’ Theorem</a></li>
+<li class="chapter" data-level="8.7" data-path="probability.html"><a href="probability.html#tutorial-2"><i class="fa fa-check"></i><b>8.7</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#chapter-8-probability"><i class="fa fa-check"></i>Chapter 8: Probability</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="random-variables.html"><a href="random-variables.html"><i class="fa fa-check"></i><b>9</b> Random Variables</a></li>
+<li class="chapter" data-level="10" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html"><i class="fa fa-check"></i><b>10</b> Correlation and Regression</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CM 1110 Fundamentals of Mathematics and Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sets-and-relations" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Sets and Relations</h1>
+
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">7.1</span> Introduction</h2>
+<ul>
+<li>Everyday we hear, or make statements to convey ideas about possibilities of occurring events.
+<ul>
+<li>Which lottery gives me the highest <strong>chance</strong> of winning?</li>
+<li>What are <strong>odds</strong> of our cricket team winning the next world cup?</li>
+<li>What is the <strong>chance</strong> of getting an A+ for CM1110?</li>
+</ul></li>
+<li>In order to make decisions or take actions, we need to <strong>quantify the possibility</strong> of occurrence of an event. For this, we use the term <strong>probability</strong>.</li>
+<li>Probability is a <strong>quantitative measure</strong> of uncertainty, a <strong>number</strong> that conveys the strength of our belief in the occurrence of an uncertain event.</li>
+<li>The likelihood of an outcome is quantified by assigning a number from the interval [0, 1] to the outcome (or a percentage from 0 to 100%).</li>
+<li>Higher numbers indicate that the outcome is more likely than lower numbers.</li>
+<li>A probability of 0 indicates an outcome will not occur.</li>
+<li>A probability of 1 indicates that an outcome will occur with certainty.</li>
+</ul>
+</div>
+<div id="sample-spaces-and-events" class="section level2">
+<h2><span class="header-section-number">7.2</span> Sample Spaces and Events</h2>
+<div id="random-experiments" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> Random Experiments</h3>
+<ul>
+<li>Statisticians use the word <strong>experiment</strong> to describe any process that generates a set of data.</li>
+<li>An experiment usually involves observing or counting or measuring. For example;
+<ul>
+<li>we might classify items coming off an assembly line as defective or non-defective</li>
+<li>we may record the number of accidents that occur monthly at the Katubedda junction, hoping to justify the installation of a traffic light;</li>
+<li>or we may be interested in the volume of gas released in a chemical reaction when the concentration of an acid is varied.</li>
+</ul></li>
+<li>An experiment that is repeatable in an identical fashion is called a <strong>random experiment</strong> or a <strong>probability experiment</strong>.</li>
+<li>Random experiment is an activity that leads to the occurrence of one of several possible outcomes which is not likely to be known until its completion, that is, the outcome is not perfectly predictable. This process has the properties that,
+<ul>
+<li>All possible outcomes can be specified in advance.</li>
+<li>It can be repeated in an <strong>identical manner.</strong></li>
+<li>The same outcome may not occur on various repetitions so that the actual outcome is not known in advance.</li>
+</ul></li>
+</ul>
+<p><em>Examples</em></p>
+<ul>
+<li>Tossing a coin.</li>
+<li>Throwing a die (or several dice)</li>
+<li>Drawing cards from a pack</li>
+<li>Launching of missile and observing its velocity at specified times.</li>
+</ul>
+</div>
+<div id="outcomes" class="section level3">
+<h3><span class="header-section-number">7.2.2</span> Outcomes</h3>
+<ul>
+<li>The result of a <strong>single experiment</strong> is called an outcome.</li>
+<li>It can be instrument reading, counts, “yes” or “no” answers, values obtained through extensive calculations etc.</li>
+<li>To model and analyze a random experiment, we must understand the set of possible outcomes from the experiment.</li>
+</ul>
+</div>
+<div id="sample-space" class="section level3">
+<h3><span class="header-section-number">7.2.3</span> Sample space</h3>
+<ul>
+<li>The set of all possible outcomes of a random experiment is called the <strong>sample space</strong> of the experiment.</li>
+<li>We denote the sample space by <span class="math inline">\(\Omega\)</span>.</li>
+<li>Each outcome in a sample space is called an <strong>element</strong> of the sample space or simply a <strong>sample point</strong>.</li>
+</ul>
+<p><strong>Activity 01</strong>
+<em>Write down the corresponding sample space of the following experiments?</em></p>
+<p><strong>Example 01:</strong> A player rolls a die.</p>
+<p><img src="figure/box71a-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 02:</strong> A player rolls two dice.</p>
+<p><img src="figure/box71b-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 03:</strong> A quality control engineer of a certain company takes a random sample of 4 products as the products come off its production line and counts the number of defective products in the sample.</p>
+<p><img src="figure/box71c-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 04:</strong> A quality control engineer of a certain company takes a random sample of 4 products as products come off its production line and determines whether each product is defective or non-defective</p>
+<p><img src="figure/box71d-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 05:</strong> A company produces a certain type of car batteries. If a battery has a voltage that is outside certain limits, that battery is characterized as bad (B); if the battery has a voltage within the prescribed limits it is characterized as good (G). A quality inspector selects batteries one by one as they come off the production line and tests them until he gets a bad battery. He uses this data to estimate the proportion of bad batteries produced by the company.</p>
+<p><img src="figure/box71e-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 06:</strong> An experiment consists of measuring the lifetime of a bulb.</p>
+<p><img src="figure/box71f-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>A sample space is often defined based on the objectives of the analysis.</li>
+<li>The following example illustrates several alternatives</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>Consider an experiment that selects a digital camera and records the recycle time of a flash (the time taken to ready the camera for another flash). The possible values for recycle time can vary according to the resolution of the timer and on the minimum and maximum recycle times.</p>
+<p>However, since the time is positive we can define the sample space as simply the positive real line</p>
+<p><strong><em>Case I</em></strong></p>
+<p><strong><em>Case II</em></strong> If it is known that all recycle times are between 1.0 and 5.5 seconds, the sample space can be written as</p>
+<p><strong><em>Case III</em></strong> If the objective of the analysis is to consider only whether the recycle time is low, medium or high, the sample space can be written as a set of three outcomes</p>
+<p><strong><em>Case IV</em></strong> If the objective is only to evaluate whether or not a particular camera confirms to a minimum recycle time specification, the sample space can be written as a set of two outcomes</p>
+<ul>
+<li>The number of outcomes in the sample space can be <strong>finite</strong> or <strong>infinite</strong>.</li>
+<li>Infinite sample spaces can be <strong>countable</strong> or <strong>uncountable</strong>.</li>
+<li>A sample space is countable if the outcomes can be associated with the integers <span class="math inline">\(1, 2,3,\dots\)</span>.</li>
+<li>If the sample space contains a finite number of elements or an infinite though countable number of elements, it is said to be <strong>discrete</strong>.</li>
+<li>The outcomes of some experiments are neither finite nor countably infinite, it is said to be <strong>continuous</strong>.<br />
+</li>
+<li>In the above Example, the choice <span class="math inline">\(\Omega = \{x | x \geq 0\}\)</span> is an example of a continuous sample space,</li>
+<li><span class="math inline">\(\Omega = \{yes, no\}\)</span> is a discrete sample space.</li>
+<li>As mentioned, the best choice of a sample space depends on the objectives of the study.</li>
+</ul>
+</div>
+<div id="events-as-subsets-of-sample-spaces" class="section level3">
+<h3><span class="header-section-number">7.2.4</span> Events as subsets of sample spaces</h3>
+<ul>
+<li><strong>An event is a subset of the sample space of a random experiment</strong></li>
+<li>Events are usually denoted by capital English letters A, B, C, D, E etc.</li>
+<li>An event containing only one outcome is called a <strong>simple event</strong>.</li>
+<li>An event containing more than one outcome is called a <strong>compound event</strong>.</li>
+</ul>
+<p><strong>Activity 02</strong>
+<em>Express the following events as subsets of the sample spaces. Decide whether each event is simple or compound. (No need to calculate probabilities yet.)</em></p>
+<p><strong>Example 07:</strong> A player rolls a die.</p>
+<ol style="list-style-type: lower-alpha">
+<li>A = the event of getting 3</li>
+<li>B = the event of getting an even number</li>
+<li>C = the event of getting a number less than 4</li>
+<li>D = the event of getting 2 or 5</li>
+</ol>
+<p><img src="figure/box72a-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 08:</strong> A player rolls two dice.</p>
+<ol style="list-style-type: lower-alpha">
+<li>A = The event that one number is even.</li>
+<li>B = The event that sum of the two numbers is odd</li>
+<li>C = The event that the numbers are equal</li>
+<li>D = The event of getting 2 and 5</li>
+<li>E = The event of getting 2 or 5</li>
+</ol>
+<p><img src="figure/box72b-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 09:</strong> Consider Example 03 in Activity 01,</p>
+<ol style="list-style-type: lower-alpha">
+<li>E = the event that sample contains more than 2 defective products.</li>
+<li>F = the event that the sample contains only two defective products.</li>
+</ol>
+<p><img src="figure/box72c-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 10:</strong> Consider Example 04 in Activity 01</p>
+<ol style="list-style-type: lower-alpha">
+<li>G = the event that sample contains more than 2 defective products.</li>
+<li>H = the event that the sample contains two defective products.</li>
+</ol>
+<p><img src="figure/box72d-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 11:</strong> Consider Example 05 in Activity 01,</p>
+<ol style="list-style-type: lower-alpha">
+<li>I = the event that number of good batteries before a bad battery is 3.</li>
+<li>J = the event that the number of good batteries before a bad battery is less than 3.</li>
+</ol>
+<p><img src="figure/box72e-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 12:</strong> Consider Example 06 in Activity 01,</p>
+<ol style="list-style-type: lower-alpha">
+<li>A = the event that bulb burns for at least 25 hours but burns out before 50 hours.</li>
+</ol>
+<p><img src="figure/box72f-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="event-operations" class="section level2">
+<h2><span class="header-section-number">7.3</span> Event Operations</h2>
+<ul>
+<li>We can describe new events from combinations of existing events.</li>
+<li>Because events are subsets, we can use basic set operations to form other events of interest.</li>
+<li>Some of the basic set operations are summarized here in terms of events:</li>
+</ul>
+<p><strong>Venn diagrams</strong></p>
+<ul>
+<li>Diagrams are often used to portray relationships between sets, and these diagrams are also used to describe relationships between events.</li>
+<li>We can use Venn diagrams to represent a sample space and events in a sample space.</li>
+</ul>
+<div id="union" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> Union</h3>
+<ul>
+<li>Let A and B be two events.</li>
+<li>The set of outcomes that belong to <strong>either only A or only B or to both A and B,</strong> is called the <strong>union</strong> of the two events.</li>
+<li>It is denoted by <span class="math inline">\(A \cup B\)</span>.</li>
+</ul>
+<p><span class="math display">\[A \cup B = \{\omega\in \Omega: \omega \in A \text{ or } \omega\in B\}\]</span>
+<img src="figure/box71-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Shaded set in the Venn diagram represents the event <span class="math inline">\(A \cup B\)</span></li>
+</ul>
+</div>
+<div id="intersection" class="section level3">
+<h3><span class="header-section-number">7.3.2</span> Intersection</h3>
+<ul>
+<li>Let A and B be two sets.</li>
+<li>The set of outcomes that belong to <strong>sets A and B both</strong> is called the intersection of the two events.</li>
+<li>It is denoted by <span class="math inline">\(A \cap B\)</span>.</li>
+</ul>
+<p><span class="math display">\[A \cap B = \{\omega\in \Omega: \omega \in A \text{ and } \omega\in B\}\]</span></p>
+<p><img src="figure/box72-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Shaded set in the Venn diagram represents the event <span class="math inline">\(A \cap B\)</span></li>
+</ul>
+<div id="mutually-exclusive-events" class="section level4">
+<h4><span class="header-section-number">7.3.2.1</span> Mutually exclusive events</h4>
+<ul>
+<li>If the events A and B cannot occur together, in other words if <span class="math inline">\(A \cap B\)</span> cannot occur, then the events A and B are said to be <strong>disjoint</strong> or <strong>mutually exclusive</strong>.</li>
+</ul>
+<p><img src="figure/box73-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>If A and B are mutually exclusive, then we denote the intersection as
+<span class="math display">\[A \cap B = \{\} \text { or }  A \cap B = \phi.\]</span></li>
+</ul>
+</div>
+</div>
+<div id="complement" class="section level3">
+<h3><span class="header-section-number">7.3.3</span> Complement</h3>
+<ul>
+<li>The set of outcomes that are in sample space <span class="math inline">\((\Omega)\)</span> but not in A is called the compliment of A.</li>
+<li>It is denoted by <span class="math inline">\(A^\prime\)</span> or <span class="math inline">\(A^c\)</span> or <span class="math inline">\(\bar{A}\)</span></li>
+</ul>
+<p><span class="math display">\[A^\prime = \{\omega \in \Omega: \omega \notin A\}.\]</span></p>
+<p><img src="figure/box74-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+
+</div>
+</div>
+<div id="tutorial-1" class="section level2">
+<h2><span class="header-section-number">7.4</span> Tutorial</h2>
+<div id="chapter-7-sets-and-relations" class="section level3 unnumbered">
+<h3>Chapter 7: Sets and Relations</h3>
+<ol style="list-style-type: decimal">
+<li>Which of these sets are equal?</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\{r,t,s\}\)</span></li>
+<li><span class="math inline">\(\{s,t,r,s\}\)</span></li>
+<li><span class="math inline">\(\{t,s,t,r\}\)</span></li>
+<li><span class="math inline">\(\{s,r,s,t\}\)</span>)</li>
+</ol>
+<ol style="list-style-type: lower-roman">
+<li>Only b and d are equal</li>
+<li>Only b,c and d are equal</li>
+<li>They are all equal</li>
+<li>None of them are equal</li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(A=\{1,3,5\}\)</span> and <span class="math inline">\(B=\{2,4,6\}\)</span></li>
+</ol>
+<p>Then</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(A\cap B = 0\)</span></li>
+<li><span class="math inline">\(A\cap B = \phi\)</span></li>
+<li><span class="math inline">\(A\cap B = \{\}\)</span></li>
+<li><span class="math inline">\(A\cap B = \{1,2,3,4,5,6\}\)</span>)</li>
+</ol>
+<ol style="list-style-type: lower-roman">
+<li>Only d is correct</li>
+<li>Only b is correct</li>
+<li>Only b and c are correct</li>
+<li>Only a, b and c are correct</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>Find the elements of the set <span class="math inline">\(A=\{\{1,2,3\}, \{4,5\}, \{6,7,8\}\}\)</span> and determine whether each of the following is true or false</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Statement</th>
+<th>True</th>
+<th>False</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a. <span class="math inline">\(1\in A\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>b. <span class="math inline">\(\{1,2,3\}\subseteq A\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>c. <span class="math inline">\(\{6,7,8\}\in A\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>d. <span class="math inline">\(\{\{4,5\}\}\subseteq A\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>e. <span class="math inline">\(\phi\in A\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>f. <span class="math inline">\(\phi\subseteq A\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>g. <span class="math inline">\((4,5)\in A\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: decimal">
+<li>A player rolls a die.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What is the sample space of this experiment?</li>
+<li>Write down the following events as subsets of the sample space. Decide whether each event is simple or compound.</li>
+</ol>
+<ol style="list-style-type: lower-roman">
+<li>A = the event of getting 3</li>
+<li>B = the event of getting 7</li>
+<li>C = the event of getting a number less than 4</li>
+<li>D = the event of getting an even number</li>
+<li>E = the event of getting 2 or 5</li>
+</ol>
+<ol start="5" style="list-style-type: decimal">
+<li>A player rolls two dies</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What is the sample space of this experiment?</li>
+<li>Write down the following events as subsets of the sample space. Decide whether each event is simple or compound.</li>
+</ol>
+<ol style="list-style-type: lower-roman">
+<li>A= the event that one number is even</li>
+<li>B= the event that sum of the two numbers is odd</li>
+<li>C= the event that the numbers are equal</li>
+<li>D= the event of getting 2 and 5</li>
+<li>E= the event of getting 2 or 5</li>
+</ol>
+<ol start="6" style="list-style-type: decimal">
+<li>A player rolls three dies</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What is the sample space of this experiment? (Use set builder form of a set to represent the sample space)</li>
+<li>Write down the following events as subsets of the sample space. Decide whether each event is simple or compound</li>
+</ol>
+<ol style="list-style-type: lower-roman">
+<li>A = the event of getting all the numbers greater than 4</li>
+<li>B = the event that only two numbers are equal</li>
+<li>C = the event of getting two even numbers</li>
+</ol>
+<ol start="7" style="list-style-type: decimal">
+<li>A company produces a certain type of car batteries. If a battery has a voltage that is outside certain limits, that battery is characterized as bad (B); if the battery has a voltage within the prescribed limits it is characterized as good (G). A quality inspector selects batteries one by one as they come off the production line and tests them until he gets a bad battery. He uses this data to estimate the proportion of bad batteries produced by the company.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What is the sample space of this experiment</li>
+<li>Write down the following events as subsets of the sample space. Decide whether each event is simple or compound.</li>
+</ol>
+<ol style="list-style-type: lower-roman">
+<li>I = the event that number of good batteries before a bad battery is 3.</li>
+<li>J = the event that the number of good batteries before a bad battery is less
+than 3.</li>
+</ol>
+<ol start="8" style="list-style-type: decimal">
+<li>A doctor observes the lifetime of leukemia patients after being treated with a newly developed treatment.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What is the sample space of this experiment?</li>
+<li>Write down the following event as subsets of the sample space. Decide whether it is
+simple or compound.</li>
+</ol>
+<ol style="list-style-type: lower-roman">
+<li>K= the event that a randomly selected patient lives more than 10 years</li>
+</ol>
+<ol start="9" style="list-style-type: decimal">
+<li>Three students are selected at random from the class. Let
+P1 = the event that the first student pass
+P2 = the event that the second student pass
+P3 = the event that the third student pass Write the following events using the above events.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>The event that all three students pass</li>
+<li>The event that all three students fails</li>
+<li>The event that only 2 of the three students pass after the treatments</li>
+</ol>
+<ol start="10" style="list-style-type: decimal">
+<li>Identify the events of interest as subsets of the sample space. A box contains one ticket with number 1 on it, 2 tickets with number 2, 3 tickets with number 3, 4 tickets with number 4, 5 tickets with number 5, and 6 tickets with number 6. A ticket is taken randomly from the box</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>A = The event of getting an even number?</li>
+<li>B = The event of getting a number less than 5?</li>
+<li>C = The event of getting an even number less than 5?</li>
+<li>Express C in terms of A and B using event operations</li>
+<li>) D = The event of getting an even number or a number less than 5?</li>
+<li>Express D in terms of A and B using event operations</li>
+<li>Express, E= the event of getting an odd number, using the above defined event or events</li>
+</ol>
+<ol start="11" style="list-style-type: decimal">
+<li>Three components are connected to form a system as shown in figure (a). Because the components in the 2-3 subsystem are connected in parallel, that subsystem will function if at least one of the two individual components functions. For the entire system to function, component 1 must function and so must be 2-3 subsystem.</li>
+</ol>
+<p><img src="figure/Chapter7a.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Each component is either in working condition (s) or not working condition (f) at any time.
+Let
+<span class="math inline">\(W1 =\)</span> The event that component 1 is in working condition
+<span class="math inline">\(W2 =\)</span> The event that component 2 is in working condition
+<span class="math inline">\(W3 =\)</span> The event that component 3 is in working condition
+<span class="math inline">\(W =\)</span> The event that the system is in working condition</p>
+<ol style="list-style-type: lower-alpha">
+<li>Write the above events as subsets of the sample space. (b) Write the following events.</li>
+</ol>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(W3^\prime\)</span></li>
+<li><span class="math inline">\(W1 \cap W2\)</span></li>
+<li><span class="math inline">\(W2 \cup W3\)</span></li>
+<li><span class="math inline">\(W1 \cap (W2 \cup W3)\)</span></li>
+</ol>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Express <span class="math inline">\(W\)</span> in terms of <span class="math inline">\(W1, W2\)</span> and <span class="math inline">\(W3\)</span> using event operations.</li>
+</ol>
+<ol start="12" style="list-style-type: decimal">
+<li>Three products are selected at random, from a production line. Each product is either defective or non defective. Let
+<span class="math inline">\(D1 =\)</span> The event that the first item is defective
+<span class="math inline">\(D2 =\)</span> The event that the second item is defective
+<span class="math inline">\(D3 =\)</span> The event that the third item is defective
+<span class="math inline">\(E =\)</span> The event that two of the three products are defective Express E in terms of <span class="math inline">\(D1, D2\)</span> and <span class="math inline">\(D3\)</span> using event operations</li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="descriptive-statistics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="probability.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-settheory.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

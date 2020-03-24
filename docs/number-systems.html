@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Number Systems | CM 1110 Fundamentals of Mathematics and Statistics</title>
+  <meta name="description" content="Chapter 1 Number Systems | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Number Systems | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Number Systems | CM 1110 Fundamentals of Mathematics and Statistics" />
+  
+  
+  
+
+<meta name="author" content="Dr. Priyanga D. Talagala" />
+
+
+<meta name="date" content="2020-03-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="sequences-and-series.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">CM 1110 Fundamentals of Mathematics and Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course Syllabus</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-requisites"><i class="fa fa-check"></i>Pre-requisites</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-outcomes"><i class="fa fa-check"></i>Learning Outcomes</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#outline-syllabus"><i class="fa fa-check"></i>Outline Syllabus</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method-of-assessment"><i class="fa fa-check"></i>Method of Assessment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecturer"><i class="fa fa-check"></i>Lecturer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="number-systems.html"><a href="number-systems.html"><i class="fa fa-check"></i><b>1</b> Number Systems</a><ul>
+<li class="chapter" data-level="1.1" data-path="number-systems.html"><a href="number-systems.html#main-types"><i class="fa fa-check"></i><b>1.1</b> Main types</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="number-systems.html"><a href="number-systems.html#complex-numbers"><i class="fa fa-check"></i><b>1.1.1</b> Complex numbers</a></li>
+<li class="chapter" data-level="1.1.2" data-path="number-systems.html"><a href="number-systems.html#imaginary-numbers"><i class="fa fa-check"></i><b>1.1.2</b> Imaginary numbers</a></li>
+<li class="chapter" data-level="1.1.3" data-path="number-systems.html"><a href="number-systems.html#real-numbers"><i class="fa fa-check"></i><b>1.1.3</b> Real numbers</a></li>
+<li class="chapter" data-level="1.1.4" data-path="number-systems.html"><a href="number-systems.html#rational-numbers"><i class="fa fa-check"></i><b>1.1.4</b> Rational numbers</a></li>
+<li class="chapter" data-level="1.1.5" data-path="number-systems.html"><a href="number-systems.html#irrational-numbers"><i class="fa fa-check"></i><b>1.1.5</b> Irrational numbers</a></li>
+<li class="chapter" data-level="1.1.6" data-path="number-systems.html"><a href="number-systems.html#integers"><i class="fa fa-check"></i><b>1.1.6</b> Integers</a></li>
+<li class="chapter" data-level="1.1.7" data-path="number-systems.html"><a href="number-systems.html#whole-numbers"><i class="fa fa-check"></i><b>1.1.7</b> Whole numbers</a></li>
+<li class="chapter" data-level="1.1.8" data-path="number-systems.html"><a href="number-systems.html#natural-numbers"><i class="fa fa-check"></i><b>1.1.8</b> Natural numbers</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="number-systems.html"><a href="number-systems.html#number-representations"><i class="fa fa-check"></i><b>1.2</b> Number representations</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="number-systems.html"><a href="number-systems.html#glossary-of-terms-used-in-the-positional-numeral-systems"><i class="fa fa-check"></i><b>1.2.1</b> Glossary of terms used in the positional numeral systems</a></li>
+<li class="chapter" data-level="1.2.2" data-path="number-systems.html"><a href="number-systems.html#decimal-number-system"><i class="fa fa-check"></i><b>1.2.2</b> Decimal Number System</a></li>
+<li class="chapter" data-level="1.2.3" data-path="number-systems.html"><a href="number-systems.html#binary-number-system"><i class="fa fa-check"></i><b>1.2.3</b> Binary Number System</a></li>
+<li class="chapter" data-level="1.2.4" data-path="number-systems.html"><a href="number-systems.html#octal-number-system"><i class="fa fa-check"></i><b>1.2.4</b> Octal Number System</a></li>
+<li class="chapter" data-level="1.2.5" data-path="number-systems.html"><a href="number-systems.html#hexadecimal-number-system"><i class="fa fa-check"></i><b>1.2.5</b> Hexadecimal Number System</a></li>
+<li class="chapter" data-level="1.2.6" data-path="number-systems.html"><a href="number-systems.html#binary-arithmetic"><i class="fa fa-check"></i><b>1.2.6</b> Binary Arithmetic</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2</b> Sequences and Series</a><ul>
+<li class="chapter" data-level="2.1" data-path="sequences-and-series.html"><a href="sequences-and-series.html#sequences"><i class="fa fa-check"></i><b>2.1</b> Sequences</a></li>
+<li class="chapter" data-level="2.2" data-path="sequences-and-series.html"><a href="sequences-and-series.html#series"><i class="fa fa-check"></i><b>2.2</b> Series</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-logic.html"><a href="introduction-to-logic.html"><i class="fa fa-check"></i><b>3</b> Introduction to Logic</a></li>
+<li class="chapter" data-level="4" data-path="boolean-algebra.html"><a href="boolean-algebra.html"><i class="fa fa-check"></i><b>4</b> Boolean Algebra</a></li>
+<li class="chapter" data-level="5" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html"><i class="fa fa-check"></i><b>5</b> Differentiation and Integration</a></li>
+<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#introduction-to-statistics"><i class="fa fa-check"></i><b>6.1</b> Introduction to Statistics</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#some-basic-terminologies-used-in-statistics"><i class="fa fa-check"></i><b>6.1.1</b> Some Basic Terminologies Used in Statistics</a></li>
+<li class="chapter" data-level="6.1.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#branches-of-statistics"><i class="fa fa-check"></i><b>6.1.2</b> Branches of Statistics</a></li>
+<li class="chapter" data-level="6.1.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#types-of-variables"><i class="fa fa-check"></i><b>6.1.3</b> Types of Variables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#scales-of-measurements"><i class="fa fa-check"></i><b>6.1.4</b> Scales of Measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#presentation-of-data"><i class="fa fa-check"></i><b>6.2</b> Presentation of Data</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tabular-presentations-of-data"><i class="fa fa-check"></i><b>6.2.1</b> Tabular Presentations of Data</a></li>
+<li class="chapter" data-level="6.2.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#graphic-presentations-of-data"><i class="fa fa-check"></i><b>6.2.2</b> Graphic Presentations of Data</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary-measures"><i class="fa fa-check"></i><b>6.3</b> Summary Measures</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>6.3.1</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="6.3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-variability"><i class="fa fa-check"></i><b>6.3.2</b> Measures of Variability</a></li>
+<li class="chapter" data-level="6.3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-shape"><i class="fa fa-check"></i><b>6.3.3</b> Measures of Shape</a></li>
+<li class="chapter" data-level="6.3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-association"><i class="fa fa-check"></i><b>6.3.4</b> Measures of Association</a></li>
+<li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tutorial"><i class="fa fa-check"></i><b>6.4</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#chapter-6-descriptive-statistics"><i class="fa fa-check"></i>Chapter 6: Descriptive Statistics</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sets-and-relations.html"><a href="sets-and-relations.html"><i class="fa fa-check"></i><b>7</b> Sets and Relations</a><ul>
+<li class="chapter" data-level="7.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#sample-spaces-and-events"><i class="fa fa-check"></i><b>7.2</b> Sample Spaces and Events</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#random-experiments"><i class="fa fa-check"></i><b>7.2.1</b> Random Experiments</a></li>
+<li class="chapter" data-level="7.2.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#outcomes"><i class="fa fa-check"></i><b>7.2.2</b> Outcomes</a></li>
+<li class="chapter" data-level="7.2.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#sample-space"><i class="fa fa-check"></i><b>7.2.3</b> Sample space</a></li>
+<li class="chapter" data-level="7.2.4" data-path="sets-and-relations.html"><a href="sets-and-relations.html#events-as-subsets-of-sample-spaces"><i class="fa fa-check"></i><b>7.2.4</b> Events as subsets of sample spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#event-operations"><i class="fa fa-check"></i><b>7.3</b> Event Operations</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#union"><i class="fa fa-check"></i><b>7.3.1</b> Union</a></li>
+<li class="chapter" data-level="7.3.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#intersection"><i class="fa fa-check"></i><b>7.3.2</b> Intersection</a></li>
+<li class="chapter" data-level="7.3.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#complement"><i class="fa fa-check"></i><b>7.3.3</b> Complement</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="sets-and-relations.html"><a href="sets-and-relations.html#tutorial-1"><i class="fa fa-check"></i><b>7.4</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="sets-and-relations.html"><a href="sets-and-relations.html#chapter-7-sets-and-relations"><i class="fa fa-check"></i>Chapter 7: Sets and Relations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>8</b> Probability</a><ul>
+<li class="chapter" data-level="8.1" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>8.1</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="probability.html"><a href="probability.html#basic-counting-principles"><i class="fa fa-check"></i><b>8.1.1</b> Basic Counting Principles</a></li>
+<li class="chapter" data-level="8.1.2" data-path="probability.html"><a href="probability.html#factorial-notation"><i class="fa fa-check"></i><b>8.1.2</b> Factorial Notation</a></li>
+<li class="chapter" data-level="8.1.3" data-path="probability.html"><a href="probability.html#permutations"><i class="fa fa-check"></i><b>8.1.3</b> Permutations</a></li>
+<li class="chapter" data-level="8.1.4" data-path="probability.html"><a href="probability.html#combinations"><i class="fa fa-check"></i><b>8.1.4</b> Combinations</a></li>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="probability.html"><a href="probability.html#axioms-of-probability"><i class="fa fa-check"></i><b>8.2</b> Axioms of probability</a></li>
+<li class="chapter" data-level="8.3" data-path="probability.html"><a href="probability.html#methods-for-determining-probability"><i class="fa fa-check"></i><b>8.3</b> Methods for determining Probability</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="probability.html"><a href="probability.html#classical-method"><i class="fa fa-check"></i><b>8.3.1</b> Classical Method</a></li>
+<li class="chapter" data-level="8.3.2" data-path="probability.html"><a href="probability.html#relative-frequency-method-empirical-or-objective-approach"><i class="fa fa-check"></i><b>8.3.2</b> Relative frequency method (Empirical or objective approach)</a></li>
+<li class="chapter" data-level="8.3.3" data-path="probability.html"><a href="probability.html#subjective-method"><i class="fa fa-check"></i><b>8.3.3</b> Subjective method</a></li>
+<li class="chapter" data-level="8.3.4" data-path="probability.html"><a href="probability.html#using-probability-models"><i class="fa fa-check"></i><b>8.3.4</b> Using probability models</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>8.4</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="probability.html"><a href="probability.html#independent-events"><i class="fa fa-check"></i><b>8.4.1</b> Independent events</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="probability.html"><a href="probability.html#rules-of-probability"><i class="fa fa-check"></i><b>8.5</b> Rules of Probability</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="probability.html"><a href="probability.html#complement-rule"><i class="fa fa-check"></i><b>8.5.1</b> Complement rule</a></li>
+<li class="chapter" data-level="8.5.2" data-path="probability.html"><a href="probability.html#addition-rule"><i class="fa fa-check"></i><b>8.5.2</b> Addition rule</a></li>
+<li class="chapter" data-level="8.5.3" data-path="probability.html"><a href="probability.html#multiplication-rule"><i class="fa fa-check"></i><b>8.5.3</b> Multiplication rule</a></li>
+<li class="chapter" data-level="8.5.4" data-path="probability.html"><a href="probability.html#the-law-of-total-probability"><i class="fa fa-check"></i><b>8.5.4</b> The law of total probability</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>8.6</b> Bayes’ Theorem</a></li>
+<li class="chapter" data-level="8.7" data-path="probability.html"><a href="probability.html#tutorial-2"><i class="fa fa-check"></i><b>8.7</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#chapter-8-probability"><i class="fa fa-check"></i>Chapter 8: Probability</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="random-variables.html"><a href="random-variables.html"><i class="fa fa-check"></i><b>9</b> Random Variables</a></li>
+<li class="chapter" data-level="10" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html"><i class="fa fa-check"></i><b>10</b> Correlation and Regression</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CM 1110 Fundamentals of Mathematics and Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="number-systems" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Number Systems</h1>
+<!--  Butenko, S., & Pardalos, P. M. (2014). Numerical methods and optimization: An introduction. CRC Press.-->
+
+<p>Numbers can be classified according to how they are represented or according to the properties that they have.</p>
+<div id="main-types" class="section level2">
+<h2><span class="header-section-number">1.1</span> Main types</h2>
+<p><img src="figure/1-numbertypes.png" width="100%" style="display: block; margin: auto;" /></p>
+<div id="complex-numbers" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Complex numbers</h3>
+<ul>
+<li>Every number in number system is considered as a complex number</li>
+<li>A number of the form <span class="math inline">\(a+ib\)</span> is called a complex number when <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are real numbers and <span class="math inline">\(i=\sqrt{-1}\)</span>.</li>
+<li>For a given complex number, <span class="math inline">\(a+ib\)</span>, ‘<span class="math inline">\(a\)</span>’ is known as the real part and ‘<span class="math inline">\(b\)</span>’ is known as the imaginary part.</li>
+<li>If <span class="math inline">\(a=0\)</span>, the number <span class="math inline">\(ib\)</span> is said to be purely imaginary, if <span class="math inline">\(b=0\)</span> the number <span class="math inline">\(a\)</span> is real.</li>
+<li>A pair of complex number <span class="math inline">\(a+ib\)</span> and <span class="math inline">\(a-ib\)</span> are said to be conjugate of each other.</li>
+</ul>
+<p><strong>Show that the sum and product of a complex number and its conjugate complex are both real.</strong></p>
+<p><img src="figure/NSbox1a-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Let <span class="math inline">\(a+ib\)</span> and <span class="math inline">\(c+id\)</span> be two complex numbers. Then</li>
+</ul>
+<p><strong>Addition.</strong> <span class="math inline">\((a+ib) + (c+id)= (a+c)+i(b+d)\)</span></p>
+<p><strong>Subtraction</strong> <span class="math inline">\((a+ib) - (c+id)= (a-c)+i(b-d)\)</span></p>
+<p><strong>Multiplication</strong> <span class="math inline">\((a+ib) \times (c+id)= ac-bd+i(ad+bc)\)</span></p>
+<p><strong>Addition.</strong> <span class="math inline">\(\frac{a+ib}{c+id}= \frac{a+ib}{c+id}.\frac{c-id}{c-id}= \frac{ac+bd}{c^2+d^2}+i\frac{bc-ad}{c^2+d^2}\)</span></p>
+<ul>
+<li>Complex numbers are denoted by <span class="math inline">\(\mathbb{C}\)</span>.</li>
+</ul>
+</div>
+<div id="imaginary-numbers" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Imaginary numbers</h3>
+<ul>
+<li>A number that does not exist in the number line is known as imaginary number.</li>
+<li>For example, square root of negative numbers are imaginary numbers. It is denoted by <span class="math inline">\(i\)</span>.
+i.e <span class="math display">\[\sqrt{-1}=i\]</span> 
+<span class="math display">\[i^{2} = – 1\]</span></li>
+<li>So there is no real number <span class="math inline">\(i\)</span> that satisfies the above equation.</li>
+<li>The quantity, <span class="math inline">\(i\)</span> is called the unit imaginary number.</li>
+</ul>
+<p><strong>Geometrical Representation of imaginary numbers</strong></p>
+<p><img src="figure/1-ImgNum.png" width="50%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Let OA be positive numbers which is represented by <span class="math inline">\(x\)</span> and <span class="math inline">\(OA^\prime\)</span> by <span class="math inline">\(-x\)</span>.</li>
+<li>And <span class="math inline">\(-x= (i)^2x=i(ix)\)</span> is on <span class="math inline">\(OX^{\prime}\)</span>.</li>
+<li>According to the above expression, the multiplication of the real number <span class="math inline">\(x\)</span> by <span class="math inline">\(i\)</span> twice amounts is equivalent to the rotation of OA through two right angles to reach <span class="math inline">\(OA^\prime\)</span>.</li>
+<li>Therefore, the multiplication of <span class="math inline">\(x\)</span> by <span class="math inline">\(i\)</span> is equivalent to the rotation of <span class="math inline">\(x\)</span> through one right angle to reach <span class="math inline">\(OA^{\prime\prime}\)</span>.</li>
+<li>Therefore, y-axis is known as imaginary axis.</li>
+<li>Multiplication by <span class="math inline">\(i\)</span> rotates its direction through right angle.</li>
+</ul>
+</div>
+<div id="real-numbers" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> Real numbers</h3>
+<ul>
+<li>All numbers that can be represented on the number line are known as real numbers.</li>
+<li>The real numbers is the set of numbers containing all of the rational numbers and all of the irrational numbers.</li>
+<li>Real Numbers are denoted by <span class="math inline">\(\mathbb{R}\)</span>.</li>
+</ul>
+</div>
+<div id="rational-numbers" class="section level3">
+<h3><span class="header-section-number">1.1.4</span> Rational numbers</h3>
+<ul>
+<li>Rational Numbers are denoted by <span class="math inline">\(\mathbb{Q}\)</span></li>
+<li>A rational number is defined as number of the form <span class="math inline">\(x/y\)</span> where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are integers and <span class="math inline">\(y \neq 0\)</span>.</li>
+<li>The set of rational numbers encloses the set of integers and fractions.</li>
+<li><p>The rational numbers that are not integral will have decimal values. These values can be of two types</p>
+<ul>
+<li>Terminating decimal fractions (finite decimal factors): For example <span class="math inline">\(1/5 = 0.5\)</span> , <span class="math inline">\(13/5 = 2.6\)</span>.</li>
+<li>Non Terminating decimal fractions. The non terminating decimal fractions having two types:
+<ol style="list-style-type: lower-roman">
+<li>Non terminating periodic fractions</li>
+<li>Non terminating non periodic fractions</li>
+</ol></li>
+</ul></li>
+</ul>
+<p><em>i) Non terminating periodic fractions</em></p>
+<ol style="list-style-type: lower-alpha">
+<li>These are non terminating decimal fractions of the type <span class="math inline">\(a.b1b2b3b4b5 .....bmb1b2b3b4b5 .....bm\)</span></li>
+<li><p>Examples</p>
+<p><span class="math inline">\(19/6 = 3.16666666.....\)</span></p>
+<p><span class="math inline">\(18/7 = 2.57142857142857.......\)</span></p>
+<p><span class="math inline">\(21/9= 2.3333.......\)</span></p></li>
+</ol>
+<p><em>ii) Non terminating non periodic fractions</em></p>
+<ol style="list-style-type: lower-alpha">
+<li>These are non terminating and there is no periodic decimal places for that number.</li>
+<li>i.e <span class="math inline">\(a.b1b2b3b4b5 .....bmc1c2.........\)</span></li>
+<li>for example 6.789542587436512……….</li>
+</ol>
+<ul>
+<li><strong>So from above terminating and non terminating periodic fraction numbers belongs to rational numbers.</strong></li>
+</ul>
+</div>
+<div id="irrational-numbers" class="section level3">
+<h3><span class="header-section-number">1.1.5</span> Irrational numbers</h3>
+<ul>
+<li>Irrational numbers are denoted by <span class="math inline">\(\mathbb{I}\)</span></li>
+<li>Irrational numbers are consisted with <strong>non terminating and non periodic fractions</strong>.</li>
+<li>i.e irrational number is a number that cannot be written as a ratio <span class="math inline">\(x/y\)</span> form (or fraction).</li>
+<li>In decimal form, it never ends or repeats.</li>
+<li>Examples for irrational numbers are <span class="math inline">\(\sqrt{2} = 1.414213......\)</span>, <span class="math inline">\(\pi = 3.14159265.......\)</span>, <span class="math inline">\(\sqrt{3}\)</span>, <span class="math inline">\(\sqrt{5}\)</span> etc.</li>
+</ul>
+</div>
+<div id="integers" class="section level3">
+<h3><span class="header-section-number">1.1.6</span> Integers</h3>
+<ul>
+<li>All numbers that do not have the decimal places in them are called integers.</li>
+<li><span class="math inline">\(\mathbb{Z} = \{...,-5,-4,-3,-2,-1,0,1,2,3,4,5,...\}\)</span></li>
+<li>i.e it may be positive or negative or zero.</li>
+<li>Integers are denoted by <span class="math inline">\(\mathbb{Z}\)</span>.</li>
+<li>Any integers are added, subtracted, or multiplied the result is always is an integer.</li>
+<li>When any integers multiplied , each of the multiplied integer is called a factor or divisor of the resulting product.</li>
+</ul>
+</div>
+<div id="whole-numbers" class="section level3">
+<h3><span class="header-section-number">1.1.7</span> Whole numbers</h3>
+<ul>
+<li>The set of whole numbers means narrator numbers and <span class="math inline">\(0\)</span></li>
+<li>Whole numbers = <span class="math inline">\(\mathbb{W} = \{ 0,1,2,3,4,5,6,7,8,...\}\)</span></li>
+</ul>
+</div>
+<div id="natural-numbers" class="section level3">
+<h3><span class="header-section-number">1.1.8</span> Natural numbers</h3>
+<ul>
+<li>The counting numbers start with 1 and their end is not defined.</li>
+<li>i.e <span class="math inline">\(\mathbb{N} =\{1,2,3,4,...\}\)</span></li>
+</ul>
+<p><strong>Reading :</strong></p>
+<p>Dass, H. K. (2008). ‘Complex Numbers’, <em>Advanced Engineering Mathematics</em>. S. Chand Publishing. pp. 474-520.</p>
+</div>
+</div>
+<div id="number-representations" class="section level2">
+<h2><span class="header-section-number">1.2</span> Number representations</h2>
+<div id="glossary-of-terms-used-in-the-positional-numeral-systems" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Glossary of terms used in the positional numeral systems</h3>
+<p><img src="figure/NSbox1-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li><p>There are various types of the number system in mathematics.</p></li>
+<li><p>The four most common number system types are:</p>
+<ul>
+<li>Decimal number system (Base- 10)</li>
+<li>Binary number system (Base- 2)</li>
+<li>Octal number system (Base-8)</li>
+<li>Hexadecimal number system (Base- 16)</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>System</th>
+<th>Radix/ Base</th>
+<th>Digits</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Binary</td>
+<td>2</td>
+<td>0 1</td>
+</tr>
+<tr class="even">
+<td>Octal</td>
+<td>8</td>
+<td>0 1 2 3 4 5 6 7</td>
+</tr>
+<tr class="odd">
+<td>Decimal</td>
+<td>10</td>
+<td>0 1 2 3 4 5 6 7 8 9</td>
+</tr>
+<tr class="even">
+<td>Hexadecimal</td>
+<td>16</td>
+<td>0 1 2 3 4 5 6 7 8 9 A B C D E F</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="decimal-number-system" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Decimal Number System</h3>
+<ul>
+<li><p>The Decimal number system is a number of base or radix equal to 10.</p></li>
+<li><p>To determine the actual number in each position, take the number that appears in the position and multiply it by <span class="math inline">\(10^x\)</span>, where <span class="math inline">\(x\)</span> is the power representation.</p></li>
+</ul>
+<p><strong>Example 1: The value of the combination of symbols 453 is determined by adding the weights of each position as</strong></p>
+<p><span class="math display">\[4\times10^2+5\times10^1+3\times10^0\]</span>
+<span class="math display">\[= 4\times100 + 5\times10+3\times1\]</span>
+Or <span class="math display">\[= 400+50+3 = 453\]</span></p>
+<p><strong>Example 2: The value of the combination of symbols 369.54 is determined by adding the weights of each position as</strong></p>
+<p><span class="math display">\[3\times10^2+6\times10^1+9\times10^0+5\times10^{-1}+4\times10^{-2}\]</span>
+Or <span class="math display">\[= 300 + 60+9+\frac{5}{10}+\frac{4}{100}\]</span>
+Or <span class="math display">\[= 300 + 60+9+0.5+0.04= 369.54\]</span></p>
+</div>
+<div id="binary-number-system" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Binary Number System</h3>
+<ul>
+<li>The binary number system is a number system of base or radix equal to 2.</li>
+<li>In the binary number system, there are two symbols to represent number: 0 and 1</li>
+<li>When the symbols 0 an 1 are used to represent binary number, each symbol is called a binary digit or a bit.</li>
+<li>Therefore, the binary number 1011 is a four-digit number or a 4-bit binary number.</li>
+</ul>
+<div id="binary-to-decimal-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.3.1</span> Binary-to-Decimal Conversion</h4>
+<ul>
+<li>Multiply binary digit (1 or 0) in each position by the weight of the position and add the results.</li>
+</ul>
+<p><strong>Example 1: Convert the binary number 11010 to its decimal equivalent</strong></p>
+<p><img src="figure/NSbox2-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 2: Convert the binary number 0.011 to its decimal equivalent</strong></p>
+<p><img src="figure/NSbox3-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 3: Convert the binary number 110.011 to its decimal equivalent</strong></p>
+<p><img src="figure/NSbox4-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="decimal-to-binary-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.3.2</span> Decimal-to-Binary Conversion</h4>
+<ul>
+<li>To convert decimal numbers to their binary equivalent, the following procedures are employed:</li>
+</ul>
+<div id="whole-number-conversion-repeated-division-by-2" class="section level5">
+<h5><span class="header-section-number">1.2.3.2.1</span> Whole number conversion: Repeated division by 2</h5>
+<ul>
+<li>The remainder resulting from each division forms binary number.</li>
+<li>The first remainder to be produced is called the least significant bit (LSB) and the last remainder is called most significant bit (MSB).</li>
+</ul>
+<p><strong>Example 1: Convert the decimal number 17 to binary</strong></p>
+<p><img src="figure/NSbox5-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="fractional-number-conversion-repeated-multiplication-by-2" class="section level5">
+<h5><span class="header-section-number">1.2.3.2.2</span> Fractional number conversion: Repeated multiplication by 2</h5>
+<ul>
+<li>Multiply any factional part repeatedly by 2.</li>
+<li>The equivalent binary number is formed from the 1 or 0 in the units position (<span class="math inline">\(10^0\)</span> position).</li>
+</ul>
+<p><strong>Example 1: Convert the decimal number 0.625 to binary</strong></p>
+<p><img src="figure/NSbox6-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Sometimes it will be necessary to terminate the multiplication when an acceptable degree of accuracy is obtained. Then the resulted binary number will be an approximation.</li>
+</ul>
+<p><strong>Example 2: Convert the decimal number 0.6375 to binary</strong></p>
+<p><img src="figure/NSbox7-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>We see that it continues in this way and does not terminate.</li>
+<li>So, <span class="math inline">\(0.6375_{10} = (0.1010001101....)_{2}\)</span>.</li>
+<li><p>If we discard all the bits after the 7th bit, then we get the approximate representation <span class="math inline">\(0.6375_{10} \approx (0.1010001)_{2},\)</span> committing an error amounting to
+<span class="math display">\[0.6375_{10} -(0.1010001)_{2}= 0.6375_{10} -0.6328125_{10}= (.0046875)_{10},\]</span>
+which is known as <strong><em>round-off error</em></strong>.</p></li>
+<li><p>Although, strictly, this is <em>chopping-off error</em>, it is generally, termed as <em>round-off error</em>.</p></li>
+</ul>
+<p><strong>Example 3: Convert the decimal number 49.683 to binary</strong></p>
+<p><img src="figure/NSbox8-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+</div>
+<div id="octal-number-system" class="section level3">
+<h3><span class="header-section-number">1.2.4</span> Octal Number System</h3>
+<ul>
+<li>The octal system is a number system of base or radix equal to 8.</li>
+</ul>
+<div id="octal-to-decimal-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.4.1</span> Octal-to-Decimal Conversion</h4>
+<p><strong>Example 1: Convert the following octal numbers to their decimal equivalent</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(35_8\)</span></li>
+<li><span class="math inline">\(100_8\)</span></li>
+<li><span class="math inline">\(0.24_8\)</span></li>
+</ol>
+<p><img src="figure/NSbox9-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="decimal-to-octal-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.4.2</span> Decimal-to-Octal Conversion</h4>
+<ul>
+<li>To convert decimal numbers to their octal equivalent, the following procedures are employed:</li>
+</ul>
+<div id="whole-number-conversion-repeated-division-by-8" class="section level5">
+<h5><span class="header-section-number">1.2.4.2.1</span> Whole number conversion: Repeated division by 8</h5>
+<p><strong>Example 1: Convert the decimal number 245 to octal equivalent</strong></p>
+<p><img src="figure/NSbox10-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="fractional-number-conversion-repeated-multiplication-by-8" class="section level5">
+<h5><span class="header-section-number">1.2.4.2.2</span> Fractional number conversion: Repeated multiplication by 8</h5>
+<p><strong>Example 2: Convert the decimal fraction 0.432 to octal equivalent</strong></p>
+<p><img src="figure/NSbox11-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>This conversion to octal is not precise as there is a remainder.</li>
+<li>If greater accuracy is required, continue multiplying by 8 to obtain more octal digits.</li>
+</ul>
+<p><strong>Example 3: Convert the decimal number 419.95 to octal equivalent</strong></p>
+<p><img src="figure/NSbox12-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="octal-to-binary-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.4.3</span> Octal-to-Binary Conversion</h4>
+<p><strong>Octal and binary number correspondence</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Octal</th>
+<th>Binary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>000</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>001</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>010</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>011</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>101</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>110</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>111</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>To convert from octal to binary, simply replace each octal digit with the corresponding three-digit binary number.</li>
+</ul>
+<p><strong>Example 1: Convert the following octal numbers to their binary equivalent</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(247_8\)</span></li>
+<li><span class="math inline">\(124.375_8\)</span></li>
+</ol>
+<p><img src="figure/NSbox131-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="binary-to-octal-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.4.4</span> Binary-to-Octal Conversion</h4>
+<ul>
+<li>To convert from binary to octal, subdivide the number into groups of three bits, proceeding both left and right from the binary point, and if necessary padding the last group with zero. The octal representation of each group gives the required octal number.</li>
+</ul>
+<p><strong>Example 1: Convert the binary number 11010101.01101 to its octal equivalent</strong></p>
+<p><img src="figure/NSbox13-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="hexadecimal-number-system" class="section level3">
+<h3><span class="header-section-number">1.2.5</span> Hexadecimal Number System</h3>
+<ul>
+<li>The Hexadecimal system is a number system of base or radix equal to 16.</li>
+<li>Hexadecimal is similar to the octal numeral system because each can be easily compared to the binary numeral system.</li>
+<li>Example values of hexadecimal numbers converted into binary, octal and decimal.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Hexadecimal</th>
+<th>Binary</th>
+<th>Octal</th>
+<th>Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0000</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0001</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>0010</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>0011</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>0100</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>0101</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>0110</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>0111</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>1000</td>
+<td>10</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>1001</td>
+<td>11</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>A</td>
+<td>1010</td>
+<td>12</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>1011</td>
+<td>13</td>
+<td>11</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>1100</td>
+<td>14</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>1101</td>
+<td>15</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>1110</td>
+<td>16</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>1111</td>
+<td>17</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<div id="hexadecimal-to-decimal-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.5.1</span> Hexadecimal-to-Decimal Conversion</h4>
+<p><strong>Example 1: Convert the following octal numbers to their decimal equivalent</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(C7_{16}\)</span></li>
+<li><span class="math inline">\(2F_{16}\)</span></li>
+</ol>
+<p><img src="figure/NSbox14-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="decimal-to-hexadecimal-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.5.2</span> Decimal-to-Hexadecimal Conversion</h4>
+<ul>
+<li>To convert decimal numbers to their hexadecimal equivalent, the following procedures are employed:</li>
+</ul>
+<div id="whole-number-conversion-repeated-division-by-16" class="section level5">
+<h5><span class="header-section-number">1.2.5.2.1</span> Whole number conversion: Repeated division by 16</h5>
+<p><strong>Example 1: Convert the decimal number 245 to Hexadecimal equivalent</strong></p>
+<p><img src="figure/NSbox15-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="fractional-number-conversion-repeated-multiplication-by-16" class="section level5">
+<h5><span class="header-section-number">1.2.5.2.2</span> Fractional number conversion: Repeated multiplication by 16</h5>
+<p><strong>Example 2: Convert the decimal fraction 0.0738 to Hexadecimal equivalent</strong></p>
+<p><img src="figure/NSbox16-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 3: Convert the decimal number 420.0095 to Hexadecimal equivalent</strong></p>
+<p><img src="figure/NSbox17-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="hexadecimal-to-binary-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.5.3</span> Hexadecimal-to-Binary Conversion</h4>
+<ul>
+<li>To convert from Hexadecimal to binary, simply replace each Hexadecimal digit with the corresponding four-digit binary number.</li>
+</ul>
+<p><strong>Example 1: Convert the following Hexadecimal numbers to their binary equivalent</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(7B_{16}\)</span></li>
+<li><span class="math inline">\(6D.8C_{16}\)</span></li>
+</ol>
+<p><img src="figure/NSbox18-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="binary-to-hexadecimal-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.5.4</span> Binary-to-Hexadecimal Conversion</h4>
+<ul>
+<li>To convert from binary to Hexadecimal, subdivide the number into groups of four bits. The hexadecimal representation of each group then gives the hexadecimal representation.</li>
+</ul>
+<p><strong>Example 1: Convert the binary number 11010101.01101 to its Hexadecimal equivalent</strong></p>
+<p><img src="figure/NSbox19-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="octal-to-hexadecimal-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.5.5</span> Octal-to-Hexadecimal Conversion</h4>
+<ul>
+<li>First convert octal to binary, and then convert binary to hexadecimal.</li>
+</ul>
+<p><strong>Example 1: Convert the octal number 365.52 to its Hexadecimal equivalent</strong></p>
+<p><img src="figure/NSbox20-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="hexadecimal-to-octal-conversion" class="section level4">
+<h4><span class="header-section-number">1.2.5.6</span> Hexadecimal-to-octal conversion</h4>
+<ul>
+<li>First convert Hexadecimal to binary, and then convert binary to octal.</li>
+</ul>
+<p><strong>Example 1: Convert the octal number D2B.284 to its Hexadecimal equivalent</strong></p>
+<p><img src="figure/NSbox21-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="binary-arithmetic" class="section level3">
+<h3><span class="header-section-number">1.2.6</span> Binary Arithmetic</h3>
+<p>The arithmetic operations: addition, subtraction, multiplication and division of binary numbers follow the rules as summarized below</p>
+<table>
+<thead>
+<tr class="header">
+<th>Addition</th>
+<th>Subtraction</th>
+<th>Multiplication</th>
+<th>Division</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(0+0 = 0\)</span></td>
+<td><span class="math inline">\(0-0=0\)</span></td>
+<td><span class="math inline">\(0\times0=0\)</span></td>
+<td><span class="math inline">\(\frac{0}{1} = 0\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(0+1 = 1\)</span></td>
+<td><span class="math inline">\(1-0=1\)</span></td>
+<td><span class="math inline">\(0\times1=0\)</span></td>
+<td><span class="math inline">\(\frac{1}{1} = 1\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1+0 = 1\)</span></td>
+<td><span class="math inline">\(1-1 = 0\)</span></td>
+<td><span class="math inline">\(1\times0=0\)</span></td>
+<td><span class="math inline">\(\frac{0}{0} = undefined\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1+1 = 10\)</span></td>
+<td><span class="math inline">\(1-0 = 10-1 =1\)</span></td>
+<td><span class="math inline">\(1\times1=1\)</span></td>
+<td><span class="math inline">\(\frac{1}{0} = undefined\)</span></td>
+</tr>
+</tbody>
+</table>
+<div id="binary-addition" class="section level4">
+<h4><span class="header-section-number">1.2.6.1</span> Binary Addition</h4>
+<p><strong>Example 1: Add (a) 111 and 101 (b) 1010, 1001 and 1101</strong></p>
+<p><img src="figure/NSbox22-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="binary-subtraction" class="section level4">
+<h4><span class="header-section-number">1.2.6.2</span> Binary Subtraction</h4>
+<p><strong>Example 1: Perform the following subtractions</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(11- 01\)</span> (b) <span class="math inline">\(11-10\)</span> (c) <span class="math inline">\(100-011\)</span></li>
+</ol>
+<p><img src="figure/NSbox23-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>When subtracting a larger number from a smaller number, the output will be negative.</li>
+<li>To perform this subtraction, subtract the smaller number from the larger number and prefix the output with the sign of the larger number.</li>
+</ul>
+<p><strong>Example 2: Perform the following subtraction 101 - 111</strong></p>
+<p><img src="figure/NSbox24-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="binary-multiplication" class="section level4">
+<h4><span class="header-section-number">1.2.6.3</span> Binary multiplication</h4>
+<p><strong>Example 1: Multiply the following binary numbers</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(101\times11\)</span> (b) <span class="math inline">\(1101\times10\)</span> (c) <span class="math inline">\(1010\times101\)</span></li>
+<li><span class="math inline">\(1011\times1010\)</span></li>
+</ol>
+<p><img src="figure/NSbox25-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Multiplication of factional numbers is perform in the same manner as with decimal factional numbers.</li>
+</ul>
+<p><strong>Example 2: Perform the binary multiplication</strong> <span class="math inline">\(0.01\times11\)</span></p>
+<p><img src="figure/NSbox26-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="binary-division" class="section level4">
+<h4><span class="header-section-number">1.2.6.4</span> Binary Division</h4>
+<p><strong>Example 1: Perform the following binary division</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(110\div11\)</span> (b) <span class="math inline">\(1100\div11\)</span> (c) <span class="math inline">\(1111\div110\)</span> (d) <span class="math inline">\(1100\div101\)</span></li>
+</ol>
+<p><img src="figure/NSbox27-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="figure/NSbox28-1.png" width="100%" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sequences-and-series.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-Number_Systems.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

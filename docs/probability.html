@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 Probability | CM 1110 Fundamentals of Mathematics and Statistics</title>
+  <meta name="description" content="Chapter 8 Probability | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 Probability | CM 1110 Fundamentals of Mathematics and Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Probability | CM 1110 Fundamentals of Mathematics and Statistics" />
+  
+  
+  
+
+<meta name="author" content="Dr. Priyanga D. Talagala" />
+
+
+<meta name="date" content="2020-03-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sets-and-relations.html"/>
+<link rel="next" href="random-variables.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">CM 1110 Fundamentals of Mathematics and Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course Syllabus</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-requisites"><i class="fa fa-check"></i>Pre-requisites</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-outcomes"><i class="fa fa-check"></i>Learning Outcomes</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#outline-syllabus"><i class="fa fa-check"></i>Outline Syllabus</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#method-of-assessment"><i class="fa fa-check"></i>Method of Assessment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecturer"><i class="fa fa-check"></i>Lecturer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="number-systems.html"><a href="number-systems.html"><i class="fa fa-check"></i><b>1</b> Number Systems</a><ul>
+<li class="chapter" data-level="1.1" data-path="number-systems.html"><a href="number-systems.html#main-types"><i class="fa fa-check"></i><b>1.1</b> Main types</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="number-systems.html"><a href="number-systems.html#complex-numbers"><i class="fa fa-check"></i><b>1.1.1</b> Complex numbers</a></li>
+<li class="chapter" data-level="1.1.2" data-path="number-systems.html"><a href="number-systems.html#imaginary-numbers"><i class="fa fa-check"></i><b>1.1.2</b> Imaginary numbers</a></li>
+<li class="chapter" data-level="1.1.3" data-path="number-systems.html"><a href="number-systems.html#real-numbers"><i class="fa fa-check"></i><b>1.1.3</b> Real numbers</a></li>
+<li class="chapter" data-level="1.1.4" data-path="number-systems.html"><a href="number-systems.html#rational-numbers"><i class="fa fa-check"></i><b>1.1.4</b> Rational numbers</a></li>
+<li class="chapter" data-level="1.1.5" data-path="number-systems.html"><a href="number-systems.html#irrational-numbers"><i class="fa fa-check"></i><b>1.1.5</b> Irrational numbers</a></li>
+<li class="chapter" data-level="1.1.6" data-path="number-systems.html"><a href="number-systems.html#integers"><i class="fa fa-check"></i><b>1.1.6</b> Integers</a></li>
+<li class="chapter" data-level="1.1.7" data-path="number-systems.html"><a href="number-systems.html#whole-numbers"><i class="fa fa-check"></i><b>1.1.7</b> Whole numbers</a></li>
+<li class="chapter" data-level="1.1.8" data-path="number-systems.html"><a href="number-systems.html#natural-numbers"><i class="fa fa-check"></i><b>1.1.8</b> Natural numbers</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="number-systems.html"><a href="number-systems.html#number-representations"><i class="fa fa-check"></i><b>1.2</b> Number representations</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="number-systems.html"><a href="number-systems.html#glossary-of-terms-used-in-the-positional-numeral-systems"><i class="fa fa-check"></i><b>1.2.1</b> Glossary of terms used in the positional numeral systems</a></li>
+<li class="chapter" data-level="1.2.2" data-path="number-systems.html"><a href="number-systems.html#decimal-number-system"><i class="fa fa-check"></i><b>1.2.2</b> Decimal Number System</a></li>
+<li class="chapter" data-level="1.2.3" data-path="number-systems.html"><a href="number-systems.html#binary-number-system"><i class="fa fa-check"></i><b>1.2.3</b> Binary Number System</a></li>
+<li class="chapter" data-level="1.2.4" data-path="number-systems.html"><a href="number-systems.html#octal-number-system"><i class="fa fa-check"></i><b>1.2.4</b> Octal Number System</a></li>
+<li class="chapter" data-level="1.2.5" data-path="number-systems.html"><a href="number-systems.html#hexadecimal-number-system"><i class="fa fa-check"></i><b>1.2.5</b> Hexadecimal Number System</a></li>
+<li class="chapter" data-level="1.2.6" data-path="number-systems.html"><a href="number-systems.html#binary-arithmetic"><i class="fa fa-check"></i><b>1.2.6</b> Binary Arithmetic</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2</b> Sequences and Series</a><ul>
+<li class="chapter" data-level="2.1" data-path="sequences-and-series.html"><a href="sequences-and-series.html#sequences"><i class="fa fa-check"></i><b>2.1</b> Sequences</a></li>
+<li class="chapter" data-level="2.2" data-path="sequences-and-series.html"><a href="sequences-and-series.html#series"><i class="fa fa-check"></i><b>2.2</b> Series</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-logic.html"><a href="introduction-to-logic.html"><i class="fa fa-check"></i><b>3</b> Introduction to Logic</a></li>
+<li class="chapter" data-level="4" data-path="boolean-algebra.html"><a href="boolean-algebra.html"><i class="fa fa-check"></i><b>4</b> Boolean Algebra</a></li>
+<li class="chapter" data-level="5" data-path="differentiation-and-integration.html"><a href="differentiation-and-integration.html"><i class="fa fa-check"></i><b>5</b> Differentiation and Integration</a></li>
+<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#introduction-to-statistics"><i class="fa fa-check"></i><b>6.1</b> Introduction to Statistics</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#some-basic-terminologies-used-in-statistics"><i class="fa fa-check"></i><b>6.1.1</b> Some Basic Terminologies Used in Statistics</a></li>
+<li class="chapter" data-level="6.1.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#branches-of-statistics"><i class="fa fa-check"></i><b>6.1.2</b> Branches of Statistics</a></li>
+<li class="chapter" data-level="6.1.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#types-of-variables"><i class="fa fa-check"></i><b>6.1.3</b> Types of Variables</a></li>
+<li class="chapter" data-level="6.1.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#scales-of-measurements"><i class="fa fa-check"></i><b>6.1.4</b> Scales of Measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#presentation-of-data"><i class="fa fa-check"></i><b>6.2</b> Presentation of Data</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tabular-presentations-of-data"><i class="fa fa-check"></i><b>6.2.1</b> Tabular Presentations of Data</a></li>
+<li class="chapter" data-level="6.2.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#graphic-presentations-of-data"><i class="fa fa-check"></i><b>6.2.2</b> Graphic Presentations of Data</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary-measures"><i class="fa fa-check"></i><b>6.3</b> Summary Measures</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>6.3.1</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="6.3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-variability"><i class="fa fa-check"></i><b>6.3.2</b> Measures of Variability</a></li>
+<li class="chapter" data-level="6.3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-shape"><i class="fa fa-check"></i><b>6.3.3</b> Measures of Shape</a></li>
+<li class="chapter" data-level="6.3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-association"><i class="fa fa-check"></i><b>6.3.4</b> Measures of Association</a></li>
+<li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tutorial"><i class="fa fa-check"></i><b>6.4</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#chapter-6-descriptive-statistics"><i class="fa fa-check"></i>Chapter 6: Descriptive Statistics</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sets-and-relations.html"><a href="sets-and-relations.html"><i class="fa fa-check"></i><b>7</b> Sets and Relations</a><ul>
+<li class="chapter" data-level="7.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#sample-spaces-and-events"><i class="fa fa-check"></i><b>7.2</b> Sample Spaces and Events</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#random-experiments"><i class="fa fa-check"></i><b>7.2.1</b> Random Experiments</a></li>
+<li class="chapter" data-level="7.2.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#outcomes"><i class="fa fa-check"></i><b>7.2.2</b> Outcomes</a></li>
+<li class="chapter" data-level="7.2.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#sample-space"><i class="fa fa-check"></i><b>7.2.3</b> Sample space</a></li>
+<li class="chapter" data-level="7.2.4" data-path="sets-and-relations.html"><a href="sets-and-relations.html#events-as-subsets-of-sample-spaces"><i class="fa fa-check"></i><b>7.2.4</b> Events as subsets of sample spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#event-operations"><i class="fa fa-check"></i><b>7.3</b> Event Operations</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="sets-and-relations.html"><a href="sets-and-relations.html#union"><i class="fa fa-check"></i><b>7.3.1</b> Union</a></li>
+<li class="chapter" data-level="7.3.2" data-path="sets-and-relations.html"><a href="sets-and-relations.html#intersection"><i class="fa fa-check"></i><b>7.3.2</b> Intersection</a></li>
+<li class="chapter" data-level="7.3.3" data-path="sets-and-relations.html"><a href="sets-and-relations.html#complement"><i class="fa fa-check"></i><b>7.3.3</b> Complement</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="sets-and-relations.html"><a href="sets-and-relations.html#tutorial-1"><i class="fa fa-check"></i><b>7.4</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="sets-and-relations.html"><a href="sets-and-relations.html#chapter-7-sets-and-relations"><i class="fa fa-check"></i>Chapter 7: Sets and Relations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>8</b> Probability</a><ul>
+<li class="chapter" data-level="8.1" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>8.1</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="probability.html"><a href="probability.html#basic-counting-principles"><i class="fa fa-check"></i><b>8.1.1</b> Basic Counting Principles</a></li>
+<li class="chapter" data-level="8.1.2" data-path="probability.html"><a href="probability.html#factorial-notation"><i class="fa fa-check"></i><b>8.1.2</b> Factorial Notation</a></li>
+<li class="chapter" data-level="8.1.3" data-path="probability.html"><a href="probability.html#permutations"><i class="fa fa-check"></i><b>8.1.3</b> Permutations</a></li>
+<li class="chapter" data-level="8.1.4" data-path="probability.html"><a href="probability.html#combinations"><i class="fa fa-check"></i><b>8.1.4</b> Combinations</a></li>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="probability.html"><a href="probability.html#axioms-of-probability"><i class="fa fa-check"></i><b>8.2</b> Axioms of probability</a></li>
+<li class="chapter" data-level="8.3" data-path="probability.html"><a href="probability.html#methods-for-determining-probability"><i class="fa fa-check"></i><b>8.3</b> Methods for determining Probability</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="probability.html"><a href="probability.html#classical-method"><i class="fa fa-check"></i><b>8.3.1</b> Classical Method</a></li>
+<li class="chapter" data-level="8.3.2" data-path="probability.html"><a href="probability.html#relative-frequency-method-empirical-or-objective-approach"><i class="fa fa-check"></i><b>8.3.2</b> Relative frequency method (Empirical or objective approach)</a></li>
+<li class="chapter" data-level="8.3.3" data-path="probability.html"><a href="probability.html#subjective-method"><i class="fa fa-check"></i><b>8.3.3</b> Subjective method</a></li>
+<li class="chapter" data-level="8.3.4" data-path="probability.html"><a href="probability.html#using-probability-models"><i class="fa fa-check"></i><b>8.3.4</b> Using probability models</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>8.4</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="probability.html"><a href="probability.html#independent-events"><i class="fa fa-check"></i><b>8.4.1</b> Independent events</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="probability.html"><a href="probability.html#rules-of-probability"><i class="fa fa-check"></i><b>8.5</b> Rules of Probability</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="probability.html"><a href="probability.html#complement-rule"><i class="fa fa-check"></i><b>8.5.1</b> Complement rule</a></li>
+<li class="chapter" data-level="8.5.2" data-path="probability.html"><a href="probability.html#addition-rule"><i class="fa fa-check"></i><b>8.5.2</b> Addition rule</a></li>
+<li class="chapter" data-level="8.5.3" data-path="probability.html"><a href="probability.html#multiplication-rule"><i class="fa fa-check"></i><b>8.5.3</b> Multiplication rule</a></li>
+<li class="chapter" data-level="8.5.4" data-path="probability.html"><a href="probability.html#the-law-of-total-probability"><i class="fa fa-check"></i><b>8.5.4</b> The law of total probability</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>8.6</b> Bayes’ Theorem</a></li>
+<li class="chapter" data-level="8.7" data-path="probability.html"><a href="probability.html#tutorial-2"><i class="fa fa-check"></i><b>8.7</b> Tutorial</a><ul>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#chapter-8-probability"><i class="fa fa-check"></i>Chapter 8: Probability</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="random-variables.html"><a href="random-variables.html"><i class="fa fa-check"></i><b>9</b> Random Variables</a></li>
+<li class="chapter" data-level="10" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html"><i class="fa fa-check"></i><b>10</b> Correlation and Regression</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CM 1110 Fundamentals of Mathematics and Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="probability" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Probability</h1>
+
+<div id="counting-techniques" class="section level2">
+<h2><span class="header-section-number">8.1</span> Counting Techniques</h2>
+<ul>
+<li>This section develops some techniques for determining, without direct enumeration, the number of possible outcomes of a particular experiment or event or the number of elements in a particular set.</li>
+<li>These methods are referred to as <strong>counting techniques</strong>.</li>
+</ul>
+<div id="basic-counting-principles" class="section level3">
+<h3><span class="header-section-number">8.1.1</span> Basic Counting Principles</h3>
+<ul>
+<li>Sum Rule Principle</li>
+<li>Product Rule Principle / Multiplication Rule Principle</li>
+</ul>
+<div id="sum-rule-principle" class="section level4">
+<h4><span class="header-section-number">8.1.1.1</span> Sum Rule Principle</h4>
+<p><strong>Example 1:</strong> Suppose there are 8 male professors (say A, B, C, D, E, F, G and H) and 5 female professors (say J, K, L, M, N) teaching a language class. How many ways are there, a student can choose a language professor?</p>
+<p><img src="figure/box81-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 2:</strong> Suppose there are 3 different mystery novels, 5 different romance novels, and 4 different adventure novels on a bookshelf. How many different ways are there to choose one of the novels?</p>
+<p><img src="figure/box82-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Sum Rule Principle:</strong> Suppose an event <span class="math inline">\(E_1\)</span> can occur in <span class="math inline">\(n_1\)</span> ways, a second event <span class="math inline">\(E_2\)</span> can occur in <span class="math inline">\(n_2\)</span> ways, a third event <span class="math inline">\(E_3\)</span> can occur in <span class="math inline">\(n_3\)</span> ways and so on, and suppose no two of the events can occur simultaneously (at the same time). Then one of the events can occur in <span class="math inline">\(n_1 + n_2 + n_3 + \dots\)</span> ways</p>
+<p><em>This principle can be stated in terms of sets as follows,</em></p>
+<p><strong>Sum Rule Principle:</strong> Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive events (disjoint events). Then: <span class="math display">\[n(A \cup B)   = n(A) + n(B)\]</span></p>
+</div>
+<div id="product-rule-principle-multiplication-rule" class="section level4">
+<h4><span class="header-section-number">8.1.1.2</span> Product Rule Principle / Multiplication Rule</h4>
+<p><strong>Example 3:</strong> The design for a Website is to consist of four colors, three fonts, and three positions for an image. Draw a tree diagram for the different types of designs.</p>
+<p><img src="figure/box83-1.png" width="100%" style="display: block; margin: auto;" />
+- How many different designs are possible?</p>
+<ul>
+<li>The above tree diagram describes the sample space of all possible designs.</li>
+<li>The size of the sample space equals the number of branches in the last level of the tree, and this quantity equals <span class="math inline">\(4 \times 3 \times 3 = 36\)</span>. - This leads to the following useful result.</li>
+</ul>
+<p><strong>Product Rule Principle / Multiplication Rule:</strong> Assume an operation can be described as a sequence of k steps, and
+- the number of ways of completing step 1 is <span class="math inline">\(n_1\)</span>, and
+- the number of ways of completing step 2 is <span class="math inline">\(n_2\)</span> for each way of completing step 1, and
+- the number of ways of completing step 3 is <span class="math inline">\(n_3\)</span> for each way of completing step 2, and so forth.
+The total number of ways of completing the operation is <span class="math inline">\(n_1\times n_2 \times \dots \times n_k\)</span></p>
+<p><strong>Example 4:</strong> Suppose a password consists of 4 characters, the first 2 being simple letters in the English alphabet and the last 2 being digits. Find the number of</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Passwords</p></li>
+<li><p>Passwords beginning with a vowel</p></li>
+</ol>
+<p><strong>Example 5:</strong> There are 5 bus lines from city A to city B, 2 bus lines from city B to city C and 3 bus lines from city C to city D. Find the number of ways a person can travel by bus from city A to city D.</p>
+<p><strong>Example 6:</strong> There are five gates in a school. No student leaves the school from the gate he entered. Find the number of ways a student can enter and leave the school</p>
+</div>
+</div>
+<div id="factorial-notation" class="section level3">
+<h3><span class="header-section-number">8.1.2</span> Factorial Notation</h3>
+<ul>
+<li>The product of the positive integers from 1 to n inclusive occurs very often in mathematics and hence it is denoted by the special symbol <span class="math inline">\(n!\)</span>, read “n factorial”. That is
+<span class="math display">\[n! = 1\times2\times3\times \dots \times(n-2)\times(n-1)\times n = n\times (n-1)\times(n-2)\times\dots \times 3 \times 2 \times 1 \]</span></li>
+</ul>
+<p><strong>NOTE</strong></p>
+<p><span class="math display">\[0! = 1\]</span>
+<span class="math display">\[1! = 1\]</span>
+<strong>Examples 7:</strong>
+(a) <span class="math inline">\(2!=\)</span><br />
+(b) <span class="math inline">\(4!=\)</span><br />
+(c) <span class="math inline">\(\frac{8!}{6!}\)</span>
+(d) Represent <span class="math inline">\(\frac{12.11.10}{3.2.1}\)</span> in terms of factorial notation.</p>
+</div>
+<div id="permutations" class="section level3">
+<h3><span class="header-section-number">8.1.3</span> Permutations</h3>
+<p>Permutation is an arrangement of all or part of a set of objects. Here the order is important</p>
+<p><img src="figure/Permutations.png" width="100%" style="display: block; margin: auto;" /></p>
+<div id="case-i-permutations-of-n-distinct-objects-taken-all-at-a-time" class="section level4">
+<h4><span class="header-section-number">8.1.3.1</span> Case I: Permutations of n distinct objects (taken all at a time)</h4>
+<p><strong>Example 8:</strong> Find the number of “three-letter words (not necessary to have a meaning)” that can be formed using the letters of the word “TWO”, without repetitions.</p>
+<p><img src="figure/box84-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Using multiplication rule:</p>
+<p><img src="figure/box85-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Permutations of n distinct objects (taken all at time): </strong></p>
+<p><em>The number of permutations of n different elements is</em> <span class="math inline">\(n!\)</span> <em>where</em>
+<span class="math display">\[n! = n \times (n-1)\times(n-2)\times \dots \times 2 \times1\]</span></p>
+<p><strong>NOTE</strong></p>
+<ul>
+<li>This result follows from the multiplication rule. - A permutation can be constructed by selecting the element to be placed in the first position of the sequence from the n elements, then selecting the element for the second position from the remaining <span class="math inline">\((n-1)\)</span> elements, then selecting the element for the third position from the remaining <span class="math inline">\((n-2)\)</span> elements, and so forth.</li>
+</ul>
+<p><strong>Example 9:</strong> Find the number of ways that 4 people can sit in a row of 4 seats</p>
+<p><img src="figure/box86-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="case-ii-permutations-of-similar-objects-taken-all-at-a-time" class="section level4">
+<h4><span class="header-section-number">8.1.3.2</span> Case II: Permutations of similar objects (taken all at a time)</h4>
+<p><strong>Example 10:</strong> Find the number of “three-letter words (not necessary to have a meaning)” that can be formed using the letters of the word “TOO”.</p>
+<p><img src="figure/box87-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Permutations of Similar Objects (taken all at a time):</strong></p>
+<p><em>The number of permutations of n</em> <span class="math inline">\((=n_1 + n_2 + n_3 + \dots + n_k)\)</span> objects in which <span class="math inline">\(n_1\)</span> are alike, <span class="math inline">\(n_2\)</span> are alike, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(n_k\)</span> are alike, is
+<span class="math display">\[\frac{n!}{n_1!n_2!\dots n_k!}\]</span></p>
+<p><strong>Example 11:</strong> Find the number of “ten-letter words (not necessary to have a meaning)” that can be formed using the letters of the word “STATISTICS”.</p>
+<p><img src="figure/box88-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>In some situations, we are interested in the number of arrangements of only some of the elements of a set.</li>
+<li>Case III and Case IV address this particular situation.</li>
+</ul>
+</div>
+<div id="case-iii-permutations-of-n-objects-taken-r-at-a-time-where-rleq-n-with-replacement" class="section level4">
+<h4><span class="header-section-number">8.1.3.3</span> Case III: Permutations of n objects taken r at a time (where <span class="math inline">\(r\leq n\)</span>) (WITH Replacement)</h4>
+<ul>
+<li>Here the element is replaced in the set before the next element is chosen.</li>
+<li>Since there are <span class="math inline">\(n\)</span> different ways to choose each element (repetitions are allowed), the product rule principle tells us that there are
+<span class="math display">\[n.n.n\dots n = n^r\]</span>
+different ordered possibilities of size <span class="math inline">\(r\)</span>.</li>
+</ul>
+<p><strong>Example 12:</strong> How many “three digit numbers” can be made with the four digits 3, 5, 7 and 8 (A digit can be used as much as you can)</p>
+<p><img src="figure/box89-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="case-iv-permutations-of-n-objects-taken-r-at-a-time-where-r-leq-n-without-replacement" class="section level4">
+<h4><span class="header-section-number">8.1.3.4</span> Case IV: Permutations of n objects taken r at a time (where <span class="math inline">\(r \leq n\)</span>) (WITHOUT Replacement)</h4>
+<ul>
+<li>Here the element is not replaced in the set before the next element is chosen.</li>
+<li>Thus, there are no repetitions in the ordered sample.</li>
+<li>Accordingly, an ordered sample of size $r4 without replacement is simply an <span class="math inline">\(r\)</span> permutation of the elements in the set with <span class="math inline">\(n\)</span> elements.</li>
+<li>In other words, by the product rule, the first element can be chosen in <span class="math inline">\(n\)</span> ways, the second in <span class="math inline">\((n-1)\)</span> ways, and so on
+<span class="math display">\[n.(n-1)(n-2)\dots (n-r+1) = \frac{n.(n-1)(n-2)\dots (n-r+1).(n-r)!}{(n-r)!} = \frac{n!}{(n-r)!} = ^nP_r\]</span></li>
+</ul>
+<p><strong>NOTE</strong></p>
+<p>Consider the case that <span class="math inline">\(n = r\)</span>. we get</p>
+<p><span class="math display">\[^nP_r=\frac{n!}{(n-n)!} = \frac{n!}{0!} = \frac{n!}{1}=n!\]</span></p>
+<p><strong>Example 13:</strong> How many “three digit numbers” can be made with the four digits 3, 5, 7 and 8 (without repetition)</p>
+<p><strong>Example 14:</strong> A printed circuit board has eight different locations in which a component can be placed. If four different components are to be placed on the board, how many different designs are possible?</p>
+</div>
+</div>
+<div id="combinations" class="section level3">
+<h3><span class="header-section-number">8.1.4</span> Combinations</h3>
+<ul>
+<li>Another counting problem of interest is the number of subsets of <span class="math inline">\(r\)</span> elements that can be selected from a set of <span class="math inline">\(n\)</span> elements.</li>
+<li>These are called <strong>combinations</strong>.</li>
+<li><p>Here, <strong>order is not important</strong>.</p></li>
+<li>For example, the combinations of the letters a, b, c, d taken three at a time are <span class="math inline">\(\{a,b,c\}, \{a,b,d\}, \{a,c,d\}, \{b,c,d\}\)</span> or simply <span class="math inline">\(abc, abd, acd, bcd\)</span></li>
+<li>Observe that the following combinations are equal:
+<span class="math display">\[abc, acb, bac, bca, cab, cba\]</span></li>
+<li>That is, each denotes the same set <span class="math inline">\(\{a, b, c\}\)</span>.</li>
+<li><p>The number of combinations of <span class="math inline">\(n\)</span> objects taken <span class="math inline">\(r\)</span> at a time will be denoted by <span class="math inline">\(^nC_r\)</span>.</p></li>
+</ul>
+<p>Before we derive the general formula for <span class="math inline">\(^nC_r\)</span> , we consider a particular case.</p>
+<p><strong>Example:</strong> Find the number of combinations of four objects a, b, c, d taken three at a time.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Combinations</th>
+<th>Permutations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\{a,b,c\}\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\{a,b,d\}\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\{a,c,d\}\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\{b,c,d\}\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>As can be seen in the above table, each combination consisting of three objects determines <span class="math inline">\(3! = 6\)</span> permutations of the objects in the combination.</li>
+<li>Thus, the number of combinations multiplied by <span class="math inline">\(3!\)</span> equals the number of permutations.</li>
+<li>That is,
+<span class="math display">\[^4C_3\times 3! = ^4P_3\]</span>
+<span class="math display">\[^4C_3 = \frac{^4P_3}{3!}\]</span>
+But we know <span class="math inline">\(^4p_3 = \frac{4!}{(4-3)!}=\frac{4!}{1!} = 2.3.4 = 24\)</span> and <span class="math inline">\(3!=6\)</span>.</li>
+</ul>
+<p>Thus
+<span class="math display">\[^4C_3 = \frac{24}{6} = 4\]</span>
+which is noted in the above table.</p>
+<p><strong>Formula for</strong> <span class="math inline">\(^nC_r\)</span></p>
+<p>Since any combination of <span class="math inline">\(n\)</span> objects taken <span class="math inline">\(r\)</span> at a time determines <span class="math inline">\(r!\)</span> permutations of the objects in the combination, we can conclude that
+<span class="math display">\[^nC_r\times r! = ^nP_r.\]</span></p>
+<p>Thus we obtain the following formula for <span class="math inline">\(^nC_r\)</span> as</p>
+<p><span class="math display">\[^nC_r\times = \frac{^nP_r}{r!} = \frac{\frac{n!}{(n-r)!}}{r!} = \frac{n!}{r!(n-r)!}.\]</span></p>
+<p><strong>Example 15:</strong> In a small company there are 8 executive managers. How many ways are there to select 3 executive managers to form a new committee?</p>
+<p><img src="figure/box891-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>If Mr. Perera must be one of the 3, how many ways are there to form a new committee of 3?</p>
+<p><img src="figure/box891a-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 16:</strong> A printed circuit board has eight different locations in which a component can be placed. If five identical components are to be placed on the board, how many different designs are possible?</p>
+<p><img src="figure/box892-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 17:</strong> In a small company there are 7 women and 5 men. A committee of 3 women and 2 men are to be selected. How many different possibilities are there to select a committee?</p>
+<p><img src="figure/box893-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="summary" class="section level3 unnumbered">
+<h3>Summary</h3>
+<p><strong>Sum Rule Principle:</strong></p>
+<p>Suppose an event <span class="math inline">\(E_1\)</span> can occur in <span class="math inline">\(n_1\)</span> ways, a second event <span class="math inline">\(E_2\)</span> can occur in <span class="math inline">\(n_2\)</span> ways, a third event <span class="math inline">\(E_3\)</span> can occur in <span class="math inline">\(n_3\)</span> ways and so on, and suppose no two of the events can occur simultaneously (at the same time ).
+Then one of the events can occur in <span class="math inline">\(n_1 + n_2 + n_3 + \dots\)</span> ways</p>
+<p><strong>Product Rule Principle / Multiplication Rule</strong></p>
+<p>Assume an operation can be described as a sequence of <span class="math inline">\(k\)</span> steps, and
+- the number of ways of completing step 1 is <span class="math inline">\(n_1\)</span>, and
+- the number of ways of completing step 2 is <span class="math inline">\(n_2\)</span> for each way of completing step 1, and
+- the number of ways of completing step 3 is <span class="math inline">\(n_3\)</span> for each way of completing step 2, and so forth.</p>
+<p>The total number of ways of completing the operation is <span class="math inline">\(n_1 \times n_2 \times \dots \times n_k\)</span></p>
+<p><strong>Permutations</strong></p>
+<p><img src="figure/Permutations.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><span class="math display">\[n!\quad\quad \quad \quad \quad \quad  \frac{n!}{n_1!n_2!\dots n_k!}\quad\quad \quad \quad \quad \quad n^r\quad \quad \quad \quad  \quad \quad ^nP_r = \frac{n!}{(n-r)!}\]</span></p>
+<p><strong>Number of combinations of <span class="math inline">\(n\)</span> objects taken</strong> <span class="math inline">\(r\)</span> <strong>at a time</strong> <span class="math inline">\(( r \leq n)\)</span></p>
+<p><span class="math display">\[^nC_r = \frac{n!}{r!(n-r)!}\]</span></p>
+</div>
+</div>
+<div id="axioms-of-probability" class="section level2">
+<h2><span class="header-section-number">8.2</span> Axioms of probability</h2>
+<p><img src="figure/Axioms.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Probability</strong> of an event quantifies the <strong>uncertainty</strong>, randomness, or the possibility of occurrence the event.</li>
+<li>The probability of event E is usually denoted by <span class="math inline">\(P(E)\)</span>.</li>
+<li>Mathematically, the function <span class="math inline">\(P(.)\)</span> is a set function defined from sample space <span class="math inline">\((\Omega)\)</span> to <span class="math inline">\([0, 1]\)</span> interval, satisfying the following properties.</li>
+<li><p>These are called the <strong>‘axioms of probability’</strong>.</p></li>
+<li><strong>Axiom 1:</strong> For any event <span class="math inline">\(A\)</span>, <span class="math inline">\(P(A) \geq 0\)</span></li>
+<li><strong>Axiom 2:</strong> <span class="math inline">\(P(\Omega) = 1\)</span></li>
+<li><strong>Axiom 3:</strong>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(A_1, A_2, \dots, A_k\)</span> is a finite collection of mutually exclusive events, then <span class="math display">\[P(A_1\cup A_2\cup \dots \cup A_k)= \sum_{i=1}^kP(A_i)\]</span></li>
+<li>If <span class="math inline">\(A_1, A_2, \dots\)</span> is an infinite collection of mutually exclusive events, then
+<span class="math display">\[P(A_1\cup A_2\cup \dots)= \sum_{i=1}^\infty P(A_i)\]</span></li>
+</ol></li>
+</ul></li>
+</ul>
+<p><strong>NOTE</strong></p>
+<ul>
+<li>Axioms 1 and 2 imply that for any event <span class="math inline">\(E\)</span>, <span class="math inline">\(0 \leq P (E) \leq 1\)</span>.</li>
+<li><span class="math inline">\(P (E) = 1 \iff\)</span> the event E is certain to occur.</li>
+<li><span class="math inline">\(P (E) = 1 \iff\)</span> the event E cannot occur.</li>
+</ul>
+</div>
+<div id="methods-for-determining-probability" class="section level2">
+<h2><span class="header-section-number">8.3</span> Methods for determining Probability</h2>
+<ul>
+<li>There are several ways for determining the probability of events.</li>
+<li>Usually we use the following methods to obtain the probability of events.
+<ul>
+<li>Classical method</li>
+<li>Relative frequency method (Empirical approach)</li>
+<li>Subjective method</li>
+<li>Using probability models</li>
+</ul></li>
+</ul>
+<div id="classical-method" class="section level3">
+<h3><span class="header-section-number">8.3.1</span> Classical Method</h3>
+<ul>
+<li>In the classical method, the probability of an event is calculated based on the sample space.</li>
+<li>In this method no need to carry out any experiment. It is enough to know the sample space</li>
+<li>Let <span class="math inline">\(E\)</span> be an event of the sample space <span class="math inline">\(\Omega\)</span>. Suppose that
+<ul>
+<li>the sample space is finite, and</li>
+<li>all the outcomes in the sample space are equally likely.</li>
+</ul></li>
+</ul>
+<p>Then, the probability of event <span class="math inline">\(E\)</span> is given by</p>
+<p><span class="math display">\[ P(E) = \frac{\text{Number of outcomes in E}}{\text{Number of outcomes in } \Omega} = \frac{n(E)}{n(\Omega)}\]</span></p>
+<p><strong>NOTE:</strong></p>
+<ul>
+<li>For calculating probability using the classical method, knowledge on counting techniques is helpful.</li>
+</ul>
+<p><strong>Activity 01</strong></p>
+<p>Consider the following problems. Is it possible to use the classical method to calculate the probabilities of the event interest in these problems? Calculate the probabilities using classical method if possible.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>A fair coin is tossed. What is the probability of getting a head?</p></li>
+<li><p>Two fair dice are rolled. What is the probability that the sum of two numbers is odd?</p></li>
+<li><p>A random sample of 4 products is taken from a production line. What is the probability that sample will contain more than 1 defective product?</p></li>
+<li><p>The carton of 12 eggs is randomly selected. What is the probability that carton will have more than 4 brown eggs?</p></li>
+<li><p>A one liter bottle of lemonade is selected randomly. What is the probability that the bottle will contain more than 900 ml?</p></li>
+<li><p>What is the probability that at least 1 call will come to my mobile phone during the lecture?</p></li>
+</ol>
+<p><strong>Activity 02</strong></p>
+<p>A box contains 3 white balls and 2 black balls. Two balls are taken from this box.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Write down the sample space</p></li>
+<li><p>Are the outcomes of your sample space equally likely?</p></li>
+<li><p>Can you write the sample space so that outcomes will be equally likely?</p></li>
+<li><p>Find the probability of getting one white ball and one black ball</p></li>
+</ol>
+</div>
+<div id="relative-frequency-method-empirical-or-objective-approach" class="section level3">
+<h3><span class="header-section-number">8.3.2</span> Relative frequency method (Empirical or objective approach)</h3>
+<ul>
+<li>Consider an experiment that can be repeatedly performed in an identical and independent fashion, and let <span class="math inline">\(E\)</span> be an event consisting of a ﬁxed set of outcomes of the experiment.</li>
+<li>If the experiment is performed <span class="math inline">\(k\)</span> times, on some of the replications the event <span class="math inline">\(E\)</span> will occur, and on others, <span class="math inline">\(E\)</span> will not occur.<br />
+</li>
+<li>Let <span class="math inline">\(freq (E)\)</span> be the number of replications on which <span class="math inline">\(E\)</span> occurs.</li>
+<li>Then the ratio <span class="math inline">\(\frac{freq (E)}k\)</span> is called the <strong>relative frequency</strong> of event <span class="math inline">\(E\)</span> in a sequence of <span class="math inline">\(k\)</span> replications.</li>
+<li>Empirical evidence, based on the results of many such sequences of repeatable experiments, indicates that the relative frequency stabilizes as <span class="math inline">\(k\)</span> is increased.</li>
+<li>This limiting relative frequency is equal to the probability of the event. That is,</li>
+</ul>
+<p><span class="math display">\[P(E) = \lim \limits_{k \to \infty}\frac{freq(E)}{k}....................(1)\]</span></p>
+<p><strong>Example</strong></p>
+<ul>
+<li>A population contained an unknown proportion of defective items</li>
+<li>The following experiment was repeated: one item was selected randomly, and determined whether it was defective or not.</li>
+<li>An event <span class="math inline">\(E\)</span> was defined to have occurred if the selected item was defective.</li>
+<li>The relative frequency of event <span class="math inline">\(E\)</span> was calculated at each replication.</li>
+<li>The following figure shows that the relative frequency stabilizes around 0.3.</li>
+<li>Therefore, the probability of event <span class="math inline">\(E\)</span> is 0.3.</li>
+</ul>
+<p><img src="figure/rfrq-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Therefore, the probability of an event <span class="math inline">\(E\)</span> related to a random experiment can be interpreted as the <strong>"approximate proportion</strong> of times that E occurs if we repeat the experiment <strong>very large number of times"</strong>.</li>
+<li>For example, the quality control engineer can say that the probability that a randomly selected product from his production process is defective with probability 0.3.</li>
+<li>It means that if we examine <strong>a very large number</strong> of products from his production process, the proportion of defective items will be approximately <span class="math inline">\(30\%\)</span>.</li>
+<li>The relative frequency notion of probability given by eq. (1), is not practically applicable directly because in order to determine the probability we need to do the experiment <em>inﬁnitely many times</em>.</li>
+<li>However, as we can see from above graph the relative frequency is approximately equal to the limit when <span class="math inline">\(k\)</span> is <strong>large</strong> enough.</li>
+<li>Therefore we can use the relative frequency notion to obtain an <strong>‘estimate’</strong> for the probability of the event <span class="math inline">\(E\)</span>.</li>
+<li>That is, if the number of trials, <span class="math inline">\(k\)</span>, is sufficiently large, then the observed relative frequency becomes close to the probability <span class="math inline">\(P(E)\)</span>, or</li>
+</ul>
+<p><span class="math display">\[P(E) \approx \frac{\text{Number of times the event E occurs}}{\text{Number of trials}}= \frac{freq(E)}{k}\]</span></p>
+<ul>
+<li>This idea is used in practice, by using large data sets to estimate probability.</li>
+<li>Such probability is called <strong>empirical probability</strong>.</li>
+<li>This is also referred to as an <strong>objective approach</strong> because it depends on a property of the experiment rather than any particular individual concerned with the experiment.</li>
+</ul>
+<p><strong>Activity 03</strong></p>
+<p>In a large manufacturing company, there are 2500 employees. An opinion survey was conducted on 960 randomly selected employees regarding three types of bonus schemes. Employees were divided into four categories, namely, laborers, clerical, technical and executives. The results obtained by ways of opinion survey are presented in the following table.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Bonus scheme</th>
+<th>Laborer</th>
+<th>Clerk</th>
+<th>Technician</th>
+<th>Executive</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Type X</td>
+<td>190</td>
+<td>82</td>
+<td>23</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Type Y</td>
+<td>243</td>
+<td>44</td>
+<td>78</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Type Z</td>
+<td>197</td>
+<td>44</td>
+<td>34</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Let</p>
+<p>X be the even that a randomly selected employee with type X bonus scheme
+Y be the even that a randomly selected employee with type Y bonus scheme
+Z be the even that a randomly selected employee with type Z bonus scheme</p>
+<p>Let</p>
+<p>L be the event that a randomly selected employee is a Laborer
+C be the event that a randomly selected employee is a Clerk
+T be the event that a randomly selected employee is a Technician
+E be the event that a randomly selected employee is an Executive</p>
+<ol style="list-style-type: upper-roman">
+<li>Then write the following events in words</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(C^\prime\)</span></li>
+<li><span class="math inline">\(C \cap X\)</span></li>
+<li><span class="math inline">\(L \cup T\)</span></li>
+<li><span class="math inline">\(C^\prime \cap Z\)</span></li>
+</ol>
+<ol start="2" style="list-style-type: upper-roman">
+<li>If a sample is selected at random, determine the following probabilities:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(P(X)\)</span></li>
+<li><span class="math inline">\(P(L)\)</span></li>
+<li><span class="math inline">\(P(C^\prime)\)</span></li>
+<li><span class="math inline">\(P(C \cap X)\)</span></li>
+<li><span class="math inline">\(P( L \cup T)\)</span></li>
+<li><span class="math inline">\(P(C^\prime \cap Z)\)</span></li>
+</ol>
+</div>
+<div id="subjective-method" class="section level3">
+<h3><span class="header-section-number">8.3.3</span> Subjective method</h3>
+<ul>
+<li>A subjective probability reflects a person’s opinion about the likelihood of an event.</li>
+<li>These probabilities are personal and they will differ between people.</li>
+<li>Assigning subjective probabilities to events is hard as these guesses are often based on their personal experiences and evaluation of related facts.</li>
+<li>Subjective interpretation of probability is used for problems in which it is difficult to imagine a repetition of an experiment.</li>
+<li>These are ‘one shot’ situations.</li>
+<li>For example,
+<ul>
+<li>A sports writer may say that the probability that Sri Lanka will win the next T20 World Cup is 0.6</li>
+<li>A surgeon may guess that the probability of recovery after a heart surgery for certain person is about 0.5</li>
+<li>A seismologist might say that there is an 80% probability that an earthquake will occur in a certain area</li>
+</ul></li>
+<li>One major shortcoming of subjective probability is that the probability of the same event can vary from person to person and the accuracy of these probabilities cannot be checked.</li>
+</ul>
+</div>
+<div id="using-probability-models" class="section level3">
+<h3><span class="header-section-number">8.3.4</span> Using probability models</h3>
+<ul>
+<li>In this method, the event of interest is expressed in terms of a “random variable” and the probability is calculated using a suitable mathematical function derived based on data. This method will be discussed later.</li>
+</ul>
+</div>
+</div>
+<div id="conditional-probability" class="section level2">
+<h2><span class="header-section-number">8.4</span> Conditional Probability</h2>
+<ul>
+<li>Let <span class="math inline">\(A\)</span> be an event of the sample space <span class="math inline">\(\Omega\)</span> of an experiment.</li>
+<li><p>Then <span class="math inline">\(P(A)\)</span> is called the unconditional probability or simply the probability of event <span class="math inline">\(A\)</span>. - Then, <span class="math inline">\(P(A)\)</span> is equal to the sum of probability of each outcome in <span class="math inline">\(A\)</span>.</p></li>
+<li>Now suppose that the experiment has been carried out and we are told that the outcome is an element of another event <span class="math inline">\(B\)</span> (But we are not told the exact outcome).</li>
+<li>In other words, we are told that event <span class="math inline">\(B\)</span> has occurred. Then, what is the probability that event <span class="math inline">\(A\)</span> has occurred?</li>
+<li>The probability of an event <span class="math inline">\(A\)</span> occurring when it is known that some event <span class="math inline">\(B\)</span> has occurred is called a <strong>conditional probability</strong> and is denoted by <span class="math inline">\(P(A|B)\)</span>.</li>
+<li><p>The symbol <span class="math inline">\(P(A|B)\)</span> is usually read <strong>“the probability that A occurs given that B occurs”</strong> or simply <strong>“the probability of A, given B.”</strong></p></li>
+</ul>
+<p><strong>Activity 01</strong></p>
+<p>A box contains 3 white balls and 2 black balls. Two balls are taken one after the other without replacement.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that the first ball is white?</li>
+<li>If the first ball is white, what is the probability that the second ball is black?</li>
+<li>Show all the possible outcomes and probabilities of the above experiment in a tree diagram.</li>
+<li>Identify the unconditional probabilities and conditional probabilities from the given information.</li>
+<li>What is the probability that the second ball is black?</li>
+</ol>
+<p><strong>Definition - Conditional Probability</strong></p>
+<p><strong>Let A and B be two events. The probability that event A occurs given that event B has occurred is called the conditional probability of A given B. It is denoted by</strong> <span class="math inline">\(P(A|B)\)</span> <strong>and defined as</strong>
+<span class="math display">\[P(A|B) = \frac{P(A ∩ B)}{P(B)}, \text{ when }P(B) \neq 0\]</span></p>
+<div id="independent-events" class="section level3">
+<h3><span class="header-section-number">8.4.1</span> Independent events</h3>
+<ul>
+<li>Two events A and B are said to be independent, if the occurrence of A does not depend on the occurrence of B.</li>
+</ul>
+<p><span class="math display">\[\text{A and B are independent} \iff P(A|B) = P(A) \text{ and } P(B|A) = P(B)\]</span></p>
+<p><strong>Activity 02</strong></p>
+<p>A box contains 3 white balls and 2 black balls. Two balls are taken one after the other with replacement.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that the first ball is white?</li>
+<li>If the first ball is white, what is the probability that the second ball is black?</li>
+<li>If the first ball is black, what is the probability that the second ball is black?</li>
+<li>What is the probability that the second ball is black?</li>
+</ol>
+</div>
+</div>
+<div id="rules-of-probability" class="section level2">
+<h2><span class="header-section-number">8.5</span> Rules of Probability</h2>
+<ul>
+<li>Probability rules are used for calculating the probabilities of events that are expressed in terms of other events with set operations.</li>
+</ul>
+<div id="complement-rule" class="section level3">
+<h3><span class="header-section-number">8.5.1</span> Complement rule</h3>
+<ul>
+<li>Let <span class="math inline">\(E\)</span> be an event, Then <span class="math inline">\(P(E^\prime) = 1 –P(E)\)</span></li>
+</ul>
+</div>
+<div id="addition-rule" class="section level3">
+<h3><span class="header-section-number">8.5.2</span> Addition rule</h3>
+<ul>
+<li>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two events. Then,
+<span class="math display">\[P(A \cup B) = P(A) + P(B) – P(A \cap B)\]</span></li>
+<li>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, then <span class="math inline">\(P(A \cap B) = 0\)</span> and, therefore,
+<span class="math display">\[P(A \cup B) = P(A) + P(B)\]</span></li>
+</ul>
+</div>
+<div id="multiplication-rule" class="section level3">
+<h3><span class="header-section-number">8.5.3</span> Multiplication rule</h3>
+<ul>
+<li>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be two events. Then,
+<span class="math display">\[P(A \cap B) = P(A|B)P(B) = P(B|A)P(A)\]</span>
+<span class="math display">\[\text{A and B are independent } \iff P(A|B) = P(A) \text{ and } P(B|A) = P(B)\]</span>
+<span class="math display">\[\text{A and B are independent} \iff P(A \cap B) = P(A) P(B)\]</span></li>
+</ul>
+</div>
+<div id="the-law-of-total-probability" class="section level3">
+<h3><span class="header-section-number">8.5.4</span> The law of total probability</h3>
+<p><img src="figure/totprob.png" width="70%" style="display: block; margin: auto;" />
+<span class="math display">\[A_1\cup A_2\cup \dots \cup A_n = \Omega, \text{ all mutually disjoint}\]</span></p>
+<ul>
+<li>Let <span class="math inline">\(A_1, A_2, \dots A_n\)</span> be mutually exclusive and exhaustive events. Then, for any event <span class="math inline">\(B\)</span>,
+<span class="math display">\[P(B) = P(B \cap A_1) + P(B \cap A_2) + \dots + P(B \cap A_n)\]</span>
+<span class="math display">\[P(B) = P(B|A_1) P(A_1) + P(B|A_2) P(A_2) +\dots+ P(B|A_n) P(A_n)\]</span></li>
+</ul>
+</div>
+</div>
+<div id="bayes-theorem" class="section level2">
+<h2><span class="header-section-number">8.6</span> Bayes’ Theorem</h2>
+<ul>
+<li>Let <span class="math inline">\(A_1, A_2, \dots,A_n\)</span> be mutually exclusive and exhaustive events, and <span class="math inline">\(B\)</span> be any event.</li>
+</ul>
+<p>Then for <span class="math inline">\(i = 1, 2, \dots, n\)</span>.</p>
+<p><span class="math display">\[P(A_i|B) = \frac{P(A_i \cap B)}{P(B)}\]</span></p>
+<p><span class="math display">\[P(A_i|B) = \frac{P(B|A_i)P(A_i)}{P(B)}\]</span></p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="tutorial-2" class="section level2">
+<h2><span class="header-section-number">8.7</span> Tutorial</h2>
+<div id="chapter-8-probability" class="section level3 unnumbered">
+<h3>Chapter 8: Probability</h3>
+<ol style="list-style-type: decimal">
+<li><p>A professor is giving ten true-false questions (10 marks for a correct answer). If a student guesses on each question, how many different ways could the ten questions be answered?</p></li>
+<li><p>A security supervisor of a large corporation wishes to issue each employee an identity card with one English letter followed by two digits.</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>How many different ID cards could be made</li>
+<li>How many identity cards will have the same two numbers</li>
+<li>How many identity cards will have first number greater than the second number</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>In a small company there are 5 executive managers. Two of them are males and 3 are females. Three executive managers are to be selected for a committee.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>How many different ways are there to select three executive managers for the committee?</li>
+<li>How many different ways are there to select three executive managers for the committee while satisfying the following conditions?</li>
+<li>All in the committee will be females</li>
+</ol>
+<ol start="2" style="list-style-type: lower-roman">
+<li>Two will be females and one will be a male</li>
+<li>Two will be males and one will be a female</li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sets-and-relations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="random-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-Probability.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

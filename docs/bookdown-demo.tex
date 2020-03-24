@@ -1,0 +1,284 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={CM 2110 Calculus and Statistical Distributions},
+            pdfauthor={Dr.~Priyanga D. Talagala},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[CO,CE]{Prepared by Dr. Priyanga D. Talagala}
+\fancyfoot[LE,RO]{\thepage}
+\usepackage{wrapfig}
+\usepackage{floatrow}
+\floatplacement{figure}{H}
+\floatplacement{table}{H}
+\makeatletter\renewcommand*{\fps@figure}{H}\makeatother
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{CM 2110 Calculus and Statistical Distributions}
+\author{Dr.~Priyanga D. Talagala}
+\date{2020-03-25}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{course-syllabus}{%
+\chapter*{Course Syllabus}\label{course-syllabus}}
+\addcontentsline{toc}{chapter}{Course Syllabus}
+
+\hypertarget{pre-requisites}{%
+\section*{Pre-requisites}\label{pre-requisites}}
+\addcontentsline{toc}{section}{Pre-requisites}
+
+CM 1110
+
+\textbf{Remark:}
+
+\emph{This course module contains two main sections: (1) mathematics and (2) statistics. This syllabus is designed for the statistics section. Lectures for mathematics section and statistics section are conducted by two lecturers as two separate sub modules (1.5 hour lectures/Week). End Semester Examination is conducted as a single examination.}
+
+\hypertarget{learning-outcomes}{%
+\section*{Learning Outcomes}\label{learning-outcomes}}
+\addcontentsline{toc}{section}{Learning Outcomes}
+
+On successful completion of this module, students will be able to plan more carefully the design of experiment in advance which provide evidence for or against theories of cause and effect and make inferences about population characteristics based on sample information and thereby solve data analysis problems in different application domains.
+
+\hypertarget{outline-syllabus}{%
+\section*{Outline Syllabus}\label{outline-syllabus}}
+\addcontentsline{toc}{section}{Outline Syllabus}
+
+\begin{itemize}
+\tightlist
+\item
+  Functions of Several Variables
+\item
+  Linear Algebra
+\item
+  Coordinate Systems \& Vectors
+\item
+  Differential Equations
+\item
+  \textbf{Statistical Distributions}
+\item
+  \textbf{Estimation}
+\item
+  \textbf{Hypothesis Testing}
+\item
+  \textbf{Design of Experiments}
+\end{itemize}
+
+\hypertarget{method-of-assessment}{%
+\section*{Method of Assessment}\label{method-of-assessment}}
+\addcontentsline{toc}{section}{Method of Assessment}
+
+\begin{itemize}
+\tightlist
+\item
+  Mid-semester examination
+\item
+  End-semester examination
+\end{itemize}
+
+\hypertarget{recommended-texts}{%
+\section*{Recommended Texts}\label{recommended-texts}}
+\addcontentsline{toc}{section}{Recommended Texts}
+
+\begin{itemize}
+\tightlist
+\item
+  Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn.
+  (Reprint). Tata McGraw-Hill Pub. Co.~Ltd.~
+\item
+  Montgomery, D. C. (2017). Design and analysis of experiments. John wiley \& sons.
+\end{itemize}
+
+\hypertarget{lecturer}{%
+\section*{Lecturer}\label{lecturer}}
+\addcontentsline{toc}{section}{Lecturer}
+
+Dr.~Priyanga D. Talagala
+
+\hypertarget{schedule}{%
+\section*{Schedule}\label{schedule}}
+\addcontentsline{toc}{section}{Schedule}
+
+Lectures:
+
+\begin{itemize}
+\tightlist
+\item
+  Monday {[}1.15 pm - 4.30 pm{]}
+\end{itemize}
+
+Tutorial:
+
+\begin{itemize}
+\tightlist
+\item
+  Thursday {[}1.15 pm - 4.30 pm{]}
+\end{itemize}
+
+Consultation time:
+
+\begin{itemize}
+\tightlist
+\item
+  Tuesday {[}11.30 am to 12.30 pm{]}
+\end{itemize}
+
+\hypertarget{statistical-distributions}{%
+\chapter{Statistical Distributions}\label{statistical-distributions}}
+
+\pagenumbering{arabic}
+
+\hypertarget{random-variable}{%
+\section{Random variable}\label{random-variable}}
+
+\hypertarget{probability-mass-function}{%
+\section{Probability mass function}\label{probability-mass-function}}
+
+\hypertarget{probability-density-function}{%
+\section{Probability density function}\label{probability-density-function}}
+
+\hypertarget{cumulative-distribution-function}{%
+\section{Cumulative distribution function}\label{cumulative-distribution-function}}
+
+\hypertarget{descriptive-properties-of-distributions}{%
+\section{Descriptive properties of distributions}\label{descriptive-properties-of-distributions}}
+
+\hypertarget{models-for-discrete-distributions}{%
+\section{Models for discrete distributions}\label{models-for-discrete-distributions}}
+
+\hypertarget{models-for-continuous-distributions}{%
+\section{Models for continuous distributions}\label{models-for-continuous-distributions}}
+
+\hypertarget{estimations}{%
+\chapter{Estimations}\label{estimations}}
+
+\hypertarget{point-estimation}{%
+\section{Point Estimation}\label{point-estimation}}
+
+\hypertarget{methods-of-finding-point-estimators}{%
+\subsection{Methods of finding point estimators}\label{methods-of-finding-point-estimators}}
+
+\hypertarget{methods-of-evaluating-point-estimators}{%
+\subsection{Methods of evaluating point estimators}\label{methods-of-evaluating-point-estimators}}
+
+\hypertarget{interval-estimation}{%
+\section{Interval Estimation}\label{interval-estimation}}
+
+\hypertarget{interpretation-of-confidence-intervals}{%
+\subsection{Interpretation of confidence intervals}\label{interpretation-of-confidence-intervals}}
+
+\hypertarget{methods-of-finding-interval-estimators}{%
+\subsection{Methods of finding interval estimators}\label{methods-of-finding-interval-estimators}}
+
+\hypertarget{methods-of-evaluating-interval-estimators}{%
+\subsection{Methods of evaluating interval estimators}\label{methods-of-evaluating-interval-estimators}}
+
+\hypertarget{hypothesis-testing}{%
+\chapter{Hypothesis Testing}\label{hypothesis-testing}}
+
+\hypertarget{null-and-alternative-hypotheses}{%
+\section{Null and alternative hypotheses}\label{null-and-alternative-hypotheses}}
+
+\hypertarget{errors-in-testing-hypotheses-type-i-and-type-ii-error}{%
+\section{Errors in testing hypotheses-type I and type II error}\label{errors-in-testing-hypotheses-type-i-and-type-ii-error}}
+
+\hypertarget{significance-level-size-power-of-a-test}{%
+\section{Significance level, size, power of a test}\label{significance-level-size-power-of-a-test}}
+
+\hypertarget{formulation-of-hypotheses}{%
+\section{Formulation of hypotheses}\label{formulation-of-hypotheses}}
+
+\hypertarget{methods-of-testing-hypotheses}{%
+\section{Methods of testing hypotheses}\label{methods-of-testing-hypotheses}}
+
+\hypertarget{design-of-experiments}{%
+\chapter{Design of Experiments}\label{design-of-experiments}}
+
+\hypertarget{ntroduction-to-experimental-design}{%
+\section{ntroduction to experimental design}\label{ntroduction-to-experimental-design}}
+
+\hypertarget{basic-principles-of-experimental-design}{%
+\section{Basic principles of experimental design}\label{basic-principles-of-experimental-design}}
+
+\hypertarget{completely-randomized-design}{%
+\section{Completely randomized design}\label{completely-randomized-design}}
+
+\bibliography{book.bib,packages.bib}
+
+\end{document}
