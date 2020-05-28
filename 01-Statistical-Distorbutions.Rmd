@@ -25,6 +25,43 @@ library(tidyverse)
 
 \pagenumbering{arabic}
 
+## Recap: CM 1110-Probability {-}
+
+### Axioms of probability {-}
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/Axioms.png")
+```
+
+
+- **Probability** of an event quantifies the **uncertainty**, randomness, or the possibility of occurrence the event. 
+- The probability of event E is usually denoted by $P(E)$.
+- Mathematically, the function $P(.)$ is a set function defined from sample space $(\Omega)$ to $[0, 1]$ interval, satisfying the following properties. 
+- These are called the **'axioms of probability'**.
+
+- **Axiom 1:** For any event $A$, $P(A) \geq 0$
+- **Axiom 2:** $P(\Omega) = 1$
+- **Axiom 3:** 
+   - (a) If $A_1, A_2, \dots, A_k$ is a finite collection of mutually exclusive events, then \[P(A_1\cup A_2\cup \dots \cup A_k)= \sum_{i=1}^kP(A_i)\]
+	   (b) If $A_1, A_2, \dots$ is an infinite collection of mutually exclusive events, then 
+\[P(A_1\cup A_2\cup \dots)= \sum_{i=1}^\infty P(A_i)\]
+
+**NOTE**
+
+- Axioms 1 and 2 imply that for any event $E$, $0 \leq P (E) \leq 1$.
+- $P (E) = 1 \iff$ the event E is certain to occur.
+-	$P (E) = 1 \iff$ the event E cannot occur.
+
+### Methods for determining Probability {-}
+
+- There are several ways for determining the probability of events. 
+- Usually we use the following methods to obtain the probability of events.
+    - Classical method
+    - Relative frequency method (Empirical approach)
+    - Subjective method
+    - **Using probability models**
+
+\newpage
 
 ## Random Variable
 
@@ -35,17 +72,20 @@ library(tidyverse)
 
 **Definition 1: Random Variable**
 
-A **random variable** is a function from a sample space $S$ into the real numbers (*i.e.* $X:S \rightarrow \Re$)
+Let $\Omega$ be a sample space. Let $X$ be a function from $\Omega$  to $\Re$ (*i.e.* $X:\Omega \rightarrow \Re$). Then $X$ is called a random variable.
+
+<!--**random variable** is a function from a sample space $S$ into the real numbers (*i.e.* $X:S \rightarrow \Re$)-->
 
 ```{r   out.width = "50%", echo = FALSE, fig.align='center'}
 knitr::include_graphics("figure/Ch1_F1.png")
 ```
 
-<!--A random variable assigns a real number to each outcome of a sample space.
--->
--	In other words, to each one of the outcomes of an experiment or a sample point $\omega_i$, of the sample spaces, there is a unique real number $x_i$, known as the value of the random variable $X$.
+- A random variable assigns a real number to each outcome of a sample space.
+-	In other words, to each outcome of an experiment or a sample point $\omega_i$, of the sample spaces, there is a unique real number $x_i$, known as the value of the random variable $X$.
 - The range of the random variable is called the *induced sample space*. 
 - *A note on notation:* Random variables will always denoted with uppercase letters and the realized values of the random variable (or its range) will be denoted by the corresponding lowercase letters. Thus, the random variable $X$ can take the value $x$. 
+- Each outcome of a sample space occurs with a certain probability. Therefore,  each possible value of a random variable is associated with a probability. 
+- Any events of a sample space can be written in terms of a suitably defined random variable. 
 
 ### Types of Random Variables
 
@@ -56,17 +96,22 @@ knitr::include_graphics("figure/Ch1_F1.png")
 #### Discrete Random Variable
 
 - If the induced sample space is discrete, then the random variable is called a **discrete random variable**.
-- A random variable ($X$) is said to be discrete if it takes only a finite; or an infinite but countable number of values.
-- Examples: The following are discrete random variables:
+<!--- A random variable ($X$) is said to be discrete if it takes only a finite; or an infinite but countable number of values.-->
+<!-- Examples: The following are discrete random variables:
   -	Number of children per family 
   -	Attendance of CM 2110 lectures
   -	GPA credit value that you can obtain for CM 2110
   -	The number of machine breakdowns during a given day in a company
+-->
 
 *Example 01*
-Consider the experiment of tossing a coin
+Consider the experiment of tossing a coin.  Express the following events using a suitably defined random variable
 
-```{r Ch1box1, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+$H=$ *The event of getting a head*
+
+$T=$ *The event of getting a tail*
+
+```{r Ch1box1, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
 library(ggplot2)
 
 ggplot()+
@@ -77,9 +122,15 @@ ggplot()+
 
 *Example 02*
 
-Consider the experiment of rolling of a single dice 
+Consider the experiment of rolling of a die.  Express the following events using a suitably defined random variable
 
-```{r Ch1box2, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+$A=$ *The event that the number faced up is less than 5*
+
+$B=$ *The event that the number faced up is even*
+
+$C=$ *The event that the number faced up is is 2 or 5*
+
+```{r Ch1box2, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
 library(ggplot2)
 
 ggplot()+
@@ -88,12 +139,20 @@ ggplot()+
 
 ```
 
+\newpage
+
 *Example 03*
 
-Consider the experiment of tossing two coins and count the number of heads turn up head
- 
+Consider the experiment of tossing a coin 10 times. Then the sample space $\Omega$ contains $2^{10} = 1024$ outcomes. Each outcome is a sequence of 10 H's and T's.
 
-```{r Ch1box3, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+Express the following events in terms of a suitably defined random variable.
+
+$D=$ *The event that the number of heads is 5*
+
+$E=$ *The event that the number of tails is less than 4*
+
+ 
+```{r Ch1box3, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
 library(ggplot2)
 
 ggplot()+
@@ -105,18 +164,22 @@ ggplot()+
 #### Continuous Random Variable
 
 - If the induced sample space is continuous, then the random variable is called a **continuous random variable.**
-- A continuous random variable is a random variable that can take on any value in a given interval.
+<!--- A continuous random variable is a random variable that can take on any value in a given interval.
 -	Random variables which consist of measurements are usually continuous. 
 - For example
   -	height of a student in this class 
   -	the current measured in a thin copper wire in milliamperes
   -	Life time of a mobile phone battery
   -	SGPA of a level 2 student
+-->
 
 *Example 04*
 
-Lifetime of a bulb
+Consider the experiment of measuring the lifetime (in hours) of a randomly selected bulb.  Express the following events in terms of a suitably defined random variable. 
  
+$F=$ *The event that the lifetime is less than 300 hours*
+
+$G=$ *The event that the lifetime is 1000 hours*
 
 ```{r Ch1box4, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
 library(ggplot2)
@@ -129,6 +192,7 @@ ggplot()+
 
 
 ## Probability Mass Function
+\label{sec:pmf}
 
 **Definition 2: Discrete density function of a discrete random variable**
 
@@ -143,6 +207,10 @@ P(X=x) & \text{if } x=x_j, j=1,2,\dots,n,\dots\\
 \end{equation}
 
 is defined to be the discrete density function of $X$.
+
+
+<!-- - The function that gives the probability of each possible value of a discrete random variable is called its probability mass function-->
+
 
 - The values of a discrete random variable are often called *mass points.*
 - $f_X(x)$ denotes the *mass* associated with the *mass point* $x_j$.
@@ -159,6 +227,20 @@ is defined to be the discrete density function of $X$.
 
 
 ### Representations of Probability Mass Functions
+
+*Example 05*
+
+Consider the experiment of tossing a fair coin.  Let 
+
+\begin{equation}
+X =
+\begin{cases} 
+0 & \text{if the outcome is a Tail }\\
+0 & \text{if the outcome is a Head}
+\end{cases}
+\end{equation}
+
+Find the probability mass function of $X$. Is $X$ discrete or continuous?
 
 #### Using a table
 
@@ -194,6 +276,31 @@ ggplot()+
 ```
 
 ## Probability density function
+
+- Let $X$ be a continuous random variable.
+
+- Then, it is not possible to define a pmf $f_x$ with properties mentioned in Section \ref{sec:pmf}. **Why?**
+
+- Instead, we can find a function $f_x$ with the some different properties.
+
+- Probability density function (pdf) of a continuous random variable is a function that describes the relative likelihood for this random variable to occur at a given point.
+
+### Properties of a Probability Density Function
+
+Let $X$ be a continuous random variable with probability density function $f_x$. Then,
+
+1. For any $x\in \Re$, $f_X(x) \geq0$.
+2. Let $E$ be an event and $I= \{X(\omega):\omega \in E\}.$ Then $P(E) = P(X\in I) = \int_If_X(x)dx.$
+3. Let $R = \{X(\omega):\omega \in \Omega\}.$ Then $\int_\Re f_X(x)dx= 1.$
+
+
+### Existence of pdf
+
+- To see the existence of such a function, consider a continuous random variable $X$,
+- Suppose that we have a very large number of observations, $N$, of $X$, measured to high accuracy (large number of decimal places). 
+- consider the following grouped frequency table and the histogram constructed from those data. 
+- The height of the bar on a class interval of this histogram is equal to the relative frequency per unit in that class interval. 
+\newpage
 
 ## Cumulative distribution function
 

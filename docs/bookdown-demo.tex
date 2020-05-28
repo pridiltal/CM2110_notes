@@ -88,7 +88,7 @@
 
 \title{CM 2110 Calculus and Statistical Distributions}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-05-28}
+\date{2020-05-29}
 
 \begin{document}
 \maketitle
@@ -207,6 +207,84 @@ Consultation time:
 
 \pagenumbering{arabic}
 
+\hypertarget{recap-cm-1110-probability}{%
+\section*{Recap: CM 1110-Probability}\label{recap-cm-1110-probability}}
+\addcontentsline{toc}{section}{Recap: CM 1110-Probability}
+
+\hypertarget{axioms-of-probability}{%
+\subsection*{Axioms of probability}\label{axioms-of-probability}}
+\addcontentsline{toc}{subsection}{Axioms of probability}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Axioms} \end{center}
+
+\begin{itemize}
+\item
+  \textbf{Probability} of an event quantifies the \textbf{uncertainty}, randomness, or the possibility of occurrence the event.
+\item
+  The probability of event E is usually denoted by \(P(E)\).
+\item
+  Mathematically, the function \(P(.)\) is a set function defined from sample space \((\Omega)\) to \([0, 1]\) interval, satisfying the following properties.
+\item
+  These are called the \textbf{`axioms of probability'}.
+\item
+  \textbf{Axiom 1:} For any event \(A\), \(P(A) \geq 0\)
+\item
+  \textbf{Axiom 2:} \(P(\Omega) = 1\)
+\item
+  \textbf{Axiom 3:}
+
+  \begin{itemize}
+  \item
+    \begin{enumerate}
+    \def\labelenumi{(\alph{enumi})}
+    \tightlist
+    \item
+      If \(A_1, A_2, \dots, A_k\) is a finite collection of mutually exclusive events, then \[P(A_1\cup A_2\cup \dots \cup A_k)= \sum_{i=1}^kP(A_i)\]
+    \item
+      If \(A_1, A_2, \dots\) is an infinite collection of mutually exclusive events, then
+      \[P(A_1\cup A_2\cup \dots)= \sum_{i=1}^\infty P(A_i)\]
+    \end{enumerate}
+  \end{itemize}
+\end{itemize}
+
+\textbf{NOTE}
+
+\begin{itemize}
+\tightlist
+\item
+  Axioms 1 and 2 imply that for any event \(E\), \(0 \leq P (E) \leq 1\).
+\item
+  \(P (E) = 1 \iff\) the event E is certain to occur.
+\item
+  \(P (E) = 1 \iff\) the event E cannot occur.
+\end{itemize}
+
+\hypertarget{methods-for-determining-probability}{%
+\subsection*{Methods for determining Probability}\label{methods-for-determining-probability}}
+\addcontentsline{toc}{subsection}{Methods for determining Probability}
+
+\begin{itemize}
+\tightlist
+\item
+  There are several ways for determining the probability of events.
+\item
+  Usually we use the following methods to obtain the probability of events.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Classical method
+  \item
+    Relative frequency method (Empirical approach)
+  \item
+    Subjective method
+  \item
+    \textbf{Using probability models}
+  \end{itemize}
+\end{itemize}
+
+\newpage
+
 \hypertarget{random-variable}{%
 \section{Random Variable}\label{random-variable}}
 
@@ -224,18 +302,24 @@ Consultation time:
 
 \textbf{Definition 1: Random Variable}
 
-A \textbf{random variable} is a function from a sample space \(S\) into the real numbers (\emph{i.e.} \(X:S \rightarrow \Re\))
+Let \(\Omega\) be a sample space. Let \(X\) be a function from \(\Omega\) to \(\Re\) (\emph{i.e.} \(X:\Omega \rightarrow \Re\)). Then \(X\) is called a random variable.
 
 \begin{center}\includegraphics[width=0.5\linewidth]{figure/Ch1_F1} \end{center}
 
 \begin{itemize}
 \tightlist
 \item
-  In other words, to each one of the outcomes of an experiment or a sample point \(\omega_i\), of the sample spaces, there is a unique real number \(x_i\), known as the value of the random variable \(X\).
+  A random variable assigns a real number to each outcome of a sample space.
+\item
+  In other words, to each outcome of an experiment or a sample point \(\omega_i\), of the sample spaces, there is a unique real number \(x_i\), known as the value of the random variable \(X\).
 \item
   The range of the random variable is called the \emph{induced sample space}.
 \item
   \emph{A note on notation:} Random variables will always denoted with uppercase letters and the realized values of the random variable (or its range) will be denoted by the corresponding lowercase letters. Thus, the random variable \(X\) can take the value \(x\).
+\item
+  Each outcome of a sample space occurs with a certain probability. Therefore, each possible value of a random variable is associated with a probability.
+\item
+  Any events of a sample space can be written in terms of a suitably defined random variable.
 \end{itemize}
 
 \hypertarget{types-of-random-variables}{%
@@ -262,38 +346,40 @@ A \textbf{random variable} is a function from a sample space \(S\) into the real
 \tightlist
 \item
   If the induced sample space is discrete, then the random variable is called a \textbf{discrete random variable}.
-\item
-  A random variable (\(X\)) is said to be discrete if it takes only a finite; or an infinite but countable number of values.
-\item
-  Examples: The following are discrete random variables:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Number of children per family
-  \item
-    Attendance of CM 2110 lectures
-  \item
-    GPA credit value that you can obtain for CM 2110
-  \item
-    The number of machine breakdowns during a given day in a company
-  \end{itemize}
 \end{itemize}
 
 \emph{Example 01}
-Consider the experiment of tossing a coin
+Consider the experiment of tossing a coin. Express the following events using a suitably defined random variable
+
+\(H=\) \emph{The event of getting a head}
+
+\(T=\) \emph{The event of getting a tail}
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box1-1} \end{center}
 
 \emph{Example 02}
 
-Consider the experiment of rolling of a single dice
+Consider the experiment of rolling of a die. Express the following events using a suitably defined random variable
+
+\(A=\) \emph{The event that the number faced up is less than 5}
+
+\(B=\) \emph{The event that the number faced up is even}
+
+\(C=\) \emph{The event that the number faced up is is 2 or 5}
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box2-1} \end{center}
 
+\newpage
+
 \emph{Example 03}
 
-Consider the experiment of tossing two coins and count the number of heads turn up head
+Consider the experiment of tossing a coin 10 times. Then the sample space \(\Omega\) contains \(2^{10} = 1024\) outcomes. Each outcome is a sequence of 10 H's and T's.
+
+Express the following events in terms of a suitably defined random variable.
+
+\(D=\) \emph{The event that the number of heads is 5}
+
+\(E=\) \emph{The event that the number of tails is less than 4}
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box3-1} \end{center}
 
@@ -304,34 +390,22 @@ Consider the experiment of tossing two coins and count the number of heads turn 
 \tightlist
 \item
   If the induced sample space is continuous, then the random variable is called a \textbf{continuous random variable.}
-\item
-  A continuous random variable is a random variable that can take on any value in a given interval.
-\item
-  Random variables which consist of measurements are usually continuous.
-\item
-  For example
-
-  \begin{itemize}
-  \tightlist
-  \item
-    height of a student in this class
-  \item
-    the current measured in a thin copper wire in milliamperes
-  \item
-    Life time of a mobile phone battery
-  \item
-    SGPA of a level 2 student
-  \end{itemize}
 \end{itemize}
 
 \emph{Example 04}
 
-Lifetime of a bulb
+Consider the experiment of measuring the lifetime (in hours) of a randomly selected bulb. Express the following events in terms of a suitably defined random variable.
+
+\(F=\) \emph{The event that the lifetime is less than 300 hours}
+
+\(G=\) \emph{The event that the lifetime is 1000 hours}
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box4-1} \end{center}
 
 \hypertarget{probability-mass-function}{%
 \section{Probability Mass Function}\label{probability-mass-function}}
+
+\label{sec:pmf}
 
 \textbf{Definition 2: Discrete density function of a discrete random variable}
 
@@ -382,6 +456,20 @@ is defined to be the discrete density function of \(X\).
 \hypertarget{representations-of-probability-mass-functions}{%
 \subsection{Representations of Probability Mass Functions}\label{representations-of-probability-mass-functions}}
 
+\emph{Example 05}
+
+Consider the experiment of tossing a fair coin. Let
+
+\begin{equation}
+X =
+\begin{cases} 
+0 & \text{if the outcome is a Tail }\\
+0 & \text{if the outcome is a Head}
+\end{cases}
+\end{equation}
+
+Find the probability mass function of \(X\). Is \(X\) discrete or continuous?
+
 \hypertarget{using-a-table}{%
 \subsubsection{Using a table}\label{using-a-table}}
 
@@ -399,6 +487,49 @@ is defined to be the discrete density function of \(X\).
 
 \hypertarget{probability-density-function}{%
 \section{Probability density function}\label{probability-density-function}}
+
+\begin{itemize}
+\item
+  Let \(X\) be a continuous random variable.
+\item
+  Then, it is not possible to define a pmf \(f_x\) with properties mentioned in Section \ref{sec:pmf}. \textbf{Why?}
+\item
+  Instead, we can find a function \(f_x\) with the some different properties.
+\item
+  Probability density function (pdf) of a continuous random variable is a function that describes the relative likelihood for this random variable to occur at a given point.
+\end{itemize}
+
+\hypertarget{properties-of-a-probability-density-function}{%
+\subsection{Properties of a Probability Density Function}\label{properties-of-a-probability-density-function}}
+
+Let \(X\) be a continuous random variable with probability density function \(f_x\). Then,
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  For any \(x\in \Re\), \(f_X(x) \geq0\).
+\item
+  Let \(E\) be an event and \(I= \{X(\omega):\omega \in E\}.\) Then \(P(E) = P(X\in I) = \int_If_X(x)dx.\)
+\item
+  Let \(R = \{X(\omega):\omega \in \Omega\}.\) Then \(\int_\Re f_X(x)dx= 1.\)
+\end{enumerate}
+
+\hypertarget{existence-of-pdf}{%
+\subsection{Existence of pdf}\label{existence-of-pdf}}
+
+\begin{itemize}
+\tightlist
+\item
+  To see the existence of such a function, consider a continuous random variable \(X\),
+\item
+  Suppose that we have a very large number of observations, \(N\), of \(X\), measured to high accuracy (large number of decimal places).
+\item
+  consider the following grouped frequency table and the histogram constructed from those data.
+\item
+  The height of the bar on a class interval of this histogram is equal to the relative frequency per unit in that class interval.
+  \newpage
+\end{itemize}
 
 \hypertarget{cumulative-distribution-function}{%
 \section{Cumulative distribution function}\label{cumulative-distribution-function}}

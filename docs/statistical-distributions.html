@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-05-28" />
+<meta name="date" content="2020-05-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -79,6 +79,10 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="statistical-distributions.html"><a href="statistical-distributions.html"><i class="fa fa-check"></i><b>1</b> Statistical Distributions</a><ul>
+<li class="chapter" data-level="" data-path="statistical-distributions.html"><a href="statistical-distributions.html#recap-cm-1110-probability"><i class="fa fa-check"></i>Recap: CM 1110-Probability</a><ul>
+<li class="chapter" data-level="" data-path="statistical-distributions.html"><a href="statistical-distributions.html#axioms-of-probability"><i class="fa fa-check"></i>Axioms of probability</a></li>
+<li class="chapter" data-level="" data-path="statistical-distributions.html"><a href="statistical-distributions.html#methods-for-determining-probability"><i class="fa fa-check"></i>Methods for determining Probability</a></li>
+</ul></li>
 <li class="chapter" data-level="1.1" data-path="statistical-distributions.html"><a href="statistical-distributions.html#random-variable"><i class="fa fa-check"></i><b>1.1</b> Random Variable</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="statistical-distributions.html"><a href="statistical-distributions.html#types-of-random-variables"><i class="fa fa-check"></i><b>1.1.1</b> Types of Random Variables</a></li>
 </ul></li>
@@ -86,7 +90,10 @@
 <li class="chapter" data-level="1.2.1" data-path="statistical-distributions.html"><a href="statistical-distributions.html#properties-of-a-probability-mass-function"><i class="fa fa-check"></i><b>1.2.1</b> Properties of a Probability Mass Function</a></li>
 <li class="chapter" data-level="1.2.2" data-path="statistical-distributions.html"><a href="statistical-distributions.html#representations-of-probability-mass-functions"><i class="fa fa-check"></i><b>1.2.2</b> Representations of Probability Mass Functions</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="statistical-distributions.html"><a href="statistical-distributions.html#probability-density-function"><i class="fa fa-check"></i><b>1.3</b> Probability density function</a></li>
+<li class="chapter" data-level="1.3" data-path="statistical-distributions.html"><a href="statistical-distributions.html#probability-density-function"><i class="fa fa-check"></i><b>1.3</b> Probability density function</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="statistical-distributions.html"><a href="statistical-distributions.html#properties-of-a-probability-density-function"><i class="fa fa-check"></i><b>1.3.1</b> Properties of a Probability Density Function</a></li>
+<li class="chapter" data-level="1.3.2" data-path="statistical-distributions.html"><a href="statistical-distributions.html#existence-of-pdf"><i class="fa fa-check"></i><b>1.3.2</b> Existence of pdf</a></li>
+</ul></li>
 <li class="chapter" data-level="1.4" data-path="statistical-distributions.html"><a href="statistical-distributions.html#cumulative-distribution-function"><i class="fa fa-check"></i><b>1.4</b> Cumulative distribution function</a></li>
 <li class="chapter" data-level="1.5" data-path="statistical-distributions.html"><a href="statistical-distributions.html#descriptive-properties-of-distributions"><i class="fa fa-check"></i><b>1.5</b> Descriptive properties of distributions</a></li>
 <li class="chapter" data-level="1.6" data-path="statistical-distributions.html"><a href="statistical-distributions.html#models-for-discrete-distributions"><i class="fa fa-check"></i><b>1.6</b> Models for discrete distributions</a></li>
@@ -136,6 +143,49 @@
 <div id="statistical-distributions" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Statistical Distributions</h1>
 
+<div id="recap-cm-1110-probability" class="section level2 unnumbered">
+<h2>Recap: CM 1110-Probability</h2>
+<div id="axioms-of-probability" class="section level3 unnumbered">
+<h3>Axioms of probability</h3>
+<p><img src="figure/Axioms.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Probability</strong> of an event quantifies the <strong>uncertainty</strong>, randomness, or the possibility of occurrence the event.</li>
+<li>The probability of event E is usually denoted by <span class="math inline">\(P(E)\)</span>.</li>
+<li>Mathematically, the function <span class="math inline">\(P(.)\)</span> is a set function defined from sample space <span class="math inline">\((\Omega)\)</span> to <span class="math inline">\([0, 1]\)</span> interval, satisfying the following properties.</li>
+<li><p>These are called the <strong>‘axioms of probability’</strong>.</p></li>
+<li><strong>Axiom 1:</strong> For any event <span class="math inline">\(A\)</span>, <span class="math inline">\(P(A) \geq 0\)</span></li>
+<li><strong>Axiom 2:</strong> <span class="math inline">\(P(\Omega) = 1\)</span></li>
+<li><strong>Axiom 3:</strong>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(A_1, A_2, \dots, A_k\)</span> is a finite collection of mutually exclusive events, then <span class="math display">\[P(A_1\cup A_2\cup \dots \cup A_k)= \sum_{i=1}^kP(A_i)\]</span></li>
+<li>If <span class="math inline">\(A_1, A_2, \dots\)</span> is an infinite collection of mutually exclusive events, then
+<span class="math display">\[P(A_1\cup A_2\cup \dots)= \sum_{i=1}^\infty P(A_i)\]</span></li>
+</ol></li>
+</ul></li>
+</ul>
+<p><strong>NOTE</strong></p>
+<ul>
+<li>Axioms 1 and 2 imply that for any event <span class="math inline">\(E\)</span>, <span class="math inline">\(0 \leq P (E) \leq 1\)</span>.</li>
+<li><span class="math inline">\(P (E) = 1 \iff\)</span> the event E is certain to occur.</li>
+<li><span class="math inline">\(P (E) = 1 \iff\)</span> the event E cannot occur.</li>
+</ul>
+</div>
+<div id="methods-for-determining-probability" class="section level3 unnumbered">
+<h3>Methods for determining Probability</h3>
+<ul>
+<li>There are several ways for determining the probability of events.</li>
+<li>Usually we use the following methods to obtain the probability of events.
+<ul>
+<li>Classical method</li>
+<li>Relative frequency method (Empirical approach)</li>
+<li>Subjective method</li>
+<li><strong>Using probability models</strong></li>
+</ul></li>
+</ul>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
 <div id="random-variable" class="section level2">
 <h2><span class="header-section-number">1.1</span> Random Variable</h2>
 <ul>
@@ -145,14 +195,16 @@
 <li>This is more useful when the original sample space contains qualitative outcomes.</li>
 </ul>
 <p><strong>Definition 1: Random Variable</strong></p>
-<p>A <strong>random variable</strong> is a function from a sample space <span class="math inline">\(S\)</span> into the real numbers (<em>i.e.</em> <span class="math inline">\(X:S \rightarrow \Re\)</span>)</p>
+<p>Let <span class="math inline">\(\Omega\)</span> be a sample space. Let <span class="math inline">\(X\)</span> be a function from <span class="math inline">\(\Omega\)</span> to <span class="math inline">\(\Re\)</span> (<em>i.e.</em> <span class="math inline">\(X:\Omega \rightarrow \Re\)</span>). Then <span class="math inline">\(X\)</span> is called a random variable.</p>
+<!--**random variable** is a function from a sample space $S$ into the real numbers (*i.e.* $X:S \rightarrow \Re$)-->
 <p><img src="figure/Ch1_F1.png" width="50%" style="display: block; margin: auto;" /></p>
-<!--A random variable assigns a real number to each outcome of a sample space.
--->
 <ul>
-<li>In other words, to each one of the outcomes of an experiment or a sample point <span class="math inline">\(\omega_i\)</span>, of the sample spaces, there is a unique real number <span class="math inline">\(x_i\)</span>, known as the value of the random variable <span class="math inline">\(X\)</span>.</li>
+<li>A random variable assigns a real number to each outcome of a sample space.</li>
+<li>In other words, to each outcome of an experiment or a sample point <span class="math inline">\(\omega_i\)</span>, of the sample spaces, there is a unique real number <span class="math inline">\(x_i\)</span>, known as the value of the random variable <span class="math inline">\(X\)</span>.</li>
 <li>The range of the random variable is called the <em>induced sample space</em>.</li>
 <li><em>A note on notation:</em> Random variables will always denoted with uppercase letters and the realized values of the random variable (or its range) will be denoted by the corresponding lowercase letters. Thus, the random variable <span class="math inline">\(X\)</span> can take the value <span class="math inline">\(x\)</span>.</li>
+<li>Each outcome of a sample space occurs with a certain probability. Therefore, each possible value of a random variable is associated with a probability.</li>
+<li>Any events of a sample space can be written in terms of a suitably defined random variable.</li>
 </ul>
 <div id="types-of-random-variables" class="section level3">
 <h3><span class="header-section-number">1.1.1</span> Types of Random Variables</h3>
@@ -166,48 +218,58 @@
 <div id="discrete-random-variable" class="section level4">
 <h4><span class="header-section-number">1.1.1.1</span> Discrete Random Variable</h4>
 <ul>
-<li>If the induced sample space is discrete, then the random variable is called a <strong>discrete random variable</strong>.</li>
-<li>A random variable (<span class="math inline">\(X\)</span>) is said to be discrete if it takes only a finite; or an infinite but countable number of values.</li>
-<li>Examples: The following are discrete random variables:
-<ul>
-<li>Number of children per family</li>
-<li>Attendance of CM 2110 lectures</li>
-<li>GPA credit value that you can obtain for CM 2110</li>
-<li>The number of machine breakdowns during a given day in a company</li>
-</ul></li>
+<li>If the induced sample space is discrete, then the random variable is called a <strong>discrete random variable</strong>.
+<!--- A random variable ($X$) is said to be discrete if it takes only a finite; or an infinite but countable number of values.-->
+<!-- Examples: The following are discrete random variables:
+  - Number of children per family 
+  - Attendance of CM 2110 lectures
+  - GPA credit value that you can obtain for CM 2110
+  - The number of machine breakdowns during a given day in a company
+--></li>
 </ul>
 <p><em>Example 01</em>
-Consider the experiment of tossing a coin</p>
+Consider the experiment of tossing a coin. Express the following events using a suitably defined random variable</p>
+<p><span class="math inline">\(H=\)</span> <em>The event of getting a head</em></p>
+<p><span class="math inline">\(T=\)</span> <em>The event of getting a tail</em></p>
 <p><img src="figure/Ch1box1-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><em>Example 02</em></p>
-<p>Consider the experiment of rolling of a single dice</p>
+<p>Consider the experiment of rolling of a die. Express the following events using a suitably defined random variable</p>
+<p><span class="math inline">\(A=\)</span> <em>The event that the number faced up is less than 5</em></p>
+<p><span class="math inline">\(B=\)</span> <em>The event that the number faced up is even</em></p>
+<p><span class="math inline">\(C=\)</span> <em>The event that the number faced up is is 2 or 5</em></p>
 <p><img src="figure/Ch1box2-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
 <p><em>Example 03</em></p>
-<p>Consider the experiment of tossing two coins and count the number of heads turn up head</p>
+<p>Consider the experiment of tossing a coin 10 times. Then the sample space <span class="math inline">\(\Omega\)</span> contains <span class="math inline">\(2^{10} = 1024\)</span> outcomes. Each outcome is a sequence of 10 H’s and T’s.</p>
+<p>Express the following events in terms of a suitably defined random variable.</p>
+<p><span class="math inline">\(D=\)</span> <em>The event that the number of heads is 5</em></p>
+<p><span class="math inline">\(E=\)</span> <em>The event that the number of tails is less than 4</em></p>
 <p><img src="figure/Ch1box3-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="continuous-random-variable" class="section level4">
 <h4><span class="header-section-number">1.1.1.2</span> Continuous Random Variable</h4>
 <ul>
-<li>If the induced sample space is continuous, then the random variable is called a <strong>continuous random variable.</strong></li>
-<li>A continuous random variable is a random variable that can take on any value in a given interval.</li>
-<li>Random variables which consist of measurements are usually continuous.</li>
-<li>For example
-<ul>
-<li>height of a student in this class</li>
-<li>the current measured in a thin copper wire in milliamperes</li>
-<li>Life time of a mobile phone battery</li>
-<li>SGPA of a level 2 student</li>
-</ul></li>
+<li>If the induced sample space is continuous, then the random variable is called a <strong>continuous random variable.</strong>
+<!--- A continuous random variable is a random variable that can take on any value in a given interval.
+-   Random variables which consist of measurements are usually continuous. 
+- For example
+  - height of a student in this class 
+  - the current measured in a thin copper wire in milliamperes
+  - Life time of a mobile phone battery
+  - SGPA of a level 2 student
+--></li>
 </ul>
 <p><em>Example 04</em></p>
-<p>Lifetime of a bulb</p>
+<p>Consider the experiment of measuring the lifetime (in hours) of a randomly selected bulb. Express the following events in terms of a suitably defined random variable.</p>
+<p><span class="math inline">\(F=\)</span> <em>The event that the lifetime is less than 300 hours</em></p>
+<p><span class="math inline">\(G=\)</span> <em>The event that the lifetime is 1000 hours</em></p>
 <p><img src="figure/Ch1box4-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 </div>
 <div id="probability-mass-function" class="section level2">
 <h2><span class="header-section-number">1.2</span> Probability Mass Function</h2>
+<p></p>
 <p><strong>Definition 2: Discrete density function of a discrete random variable</strong></p>
 <p>If <span class="math inline">\(X\)</span> is a discrete random variable with distinct values <span class="math inline">\(x_1, x_2, \dots, x_n, \dots,\)</span> then the function, denoted by <span class="math inline">\(f_X(.)\)</span> and defined by</p>
 <p><span class="math display">\[\begin{equation}
@@ -218,6 +280,7 @@ P(X=x) &amp; \text{if } x=x_j, j=1,2,\dots,n,\dots\\
 \end{cases}
 \end{equation}\]</span></p>
 <p>is defined to be the discrete density function of <span class="math inline">\(X\)</span>.</p>
+<!-- - The function that gives the probability of each possible value of a discrete random variable is called its probability mass function-->
 <ul>
 <li>The values of a discrete random variable are often called <em>mass points.</em></li>
 <li><span class="math inline">\(f_X(x)\)</span> denotes the <em>mass</em> associated with the <em>mass point</em> <span class="math inline">\(x_j\)</span>.</li>
@@ -237,6 +300,16 @@ P(X=x) &amp; \text{if } x=x_j, j=1,2,\dots,n,\dots\\
 </div>
 <div id="representations-of-probability-mass-functions" class="section level3">
 <h3><span class="header-section-number">1.2.2</span> Representations of Probability Mass Functions</h3>
+<p><em>Example 05</em></p>
+<p>Consider the experiment of tossing a fair coin. Let</p>
+<p><span class="math display">\[\begin{equation}
+X =
+\begin{cases} 
+0 &amp; \text{if the outcome is a Tail }\\
+0 &amp; \text{if the outcome is a Head}
+\end{cases}
+\end{equation}\]</span></p>
+<p>Find the probability mass function of <span class="math inline">\(X\)</span>. Is <span class="math inline">\(X\)</span> discrete or continuous?</p>
 <div id="using-a-table" class="section level4">
 <h4><span class="header-section-number">1.2.2.1</span> Using a table</h4>
 <p><img src="figure/Ch1box5-1.png" width="100%" style="display: block; margin: auto;" /></p>
@@ -253,6 +326,31 @@ P(X=x) &amp; \text{if } x=x_j, j=1,2,\dots,n,\dots\\
 </div>
 <div id="probability-density-function" class="section level2">
 <h2><span class="header-section-number">1.3</span> Probability density function</h2>
+<ul>
+<li><p>Let <span class="math inline">\(X\)</span> be a continuous random variable.</p></li>
+<li><p>Then, it is not possible to define a pmf <span class="math inline">\(f_x\)</span> with properties mentioned in Section . <strong>Why?</strong></p></li>
+<li><p>Instead, we can find a function <span class="math inline">\(f_x\)</span> with the some different properties.</p></li>
+<li><p>Probability density function (pdf) of a continuous random variable is a function that describes the relative likelihood for this random variable to occur at a given point.</p></li>
+</ul>
+<div id="properties-of-a-probability-density-function" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Properties of a Probability Density Function</h3>
+<p>Let <span class="math inline">\(X\)</span> be a continuous random variable with probability density function <span class="math inline">\(f_x\)</span>. Then,</p>
+<ol style="list-style-type: decimal">
+<li>For any <span class="math inline">\(x\in \Re\)</span>, <span class="math inline">\(f_X(x) \geq0\)</span>.</li>
+<li>Let <span class="math inline">\(E\)</span> be an event and <span class="math inline">\(I= \{X(\omega):\omega \in E\}.\)</span> Then <span class="math inline">\(P(E) = P(X\in I) = \int_If_X(x)dx.\)</span></li>
+<li>Let <span class="math inline">\(R = \{X(\omega):\omega \in \Omega\}.\)</span> Then <span class="math inline">\(\int_\Re f_X(x)dx= 1.\)</span></li>
+</ol>
+</div>
+<div id="existence-of-pdf" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Existence of pdf</h3>
+<ul>
+<li>To see the existence of such a function, consider a continuous random variable <span class="math inline">\(X\)</span>,</li>
+<li>Suppose that we have a very large number of observations, <span class="math inline">\(N\)</span>, of <span class="math inline">\(X\)</span>, measured to high accuracy (large number of decimal places).</li>
+<li>consider the following grouped frequency table and the histogram constructed from those data.</li>
+<li>The height of the bar on a class interval of this histogram is equal to the relative frequency per unit in that class interval.
+</li>
+</ul>
+</div>
 </div>
 <div id="cumulative-distribution-function" class="section level2">
 <h2><span class="header-section-number">1.4</span> Cumulative distribution function</h2>
