@@ -20,16 +20,178 @@ opts_chunk$set(
 
 
 library(tidyverse)
-library(janitor)
 
 ```
 
 \pagenumbering{arabic}
 
 
-## Random variable
+## Random Variable
 
-## Probability mass function
+-	Some sample spaces contain quantitative (numerical) outcomes, others contain qualitative outcomes.
+-	Often it is convenient to work with sample spaces containing numerical outcomes.
+-	A function that maps the original sample space into the real numbers is called a 'random variable'.
+-	This is more useful when the original sample space contains qualitative outcomes.
+
+**Definition 1: Random Variable**
+
+A **random variable** is a function from a sample space $S$ into the real numbers (*i.e.* $X:S \rightarrow \Re$)
+
+```{r   out.width = "50%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/Ch1_F1.png")
+```
+
+<!--A random variable assigns a real number to each outcome of a sample space.
+-->
+-	In other words, to each one of the outcomes of an experiment or a sample point $\omega_i$, of the sample spaces, there is a unique real number $x_i$, known as the value of the random variable $X$.
+- The range of the random variable is called the *induced sample space*. 
+- *A note on notation:* Random variables will always denoted with uppercase letters and the realized values of the random variable (or its range) will be denoted by the corresponding lowercase letters. Thus, the random variable $X$ can take the value $x$. 
+
+### Types of Random Variables
+
+- A random variable is of two types
+  - Discrete Random Variable
+  - Continuous Random Variable
+
+#### Discrete Random Variable
+
+- If the induced sample space is discrete, then the random variable is called a **discrete random variable**.
+- A random variable ($X$) is said to be discrete if it takes only a finite; or an infinite but countable number of values.
+- Examples: The following are discrete random variables:
+  -	Number of children per family 
+  -	Attendance of CM 2110 lectures
+  -	GPA credit value that you can obtain for CM 2110
+  -	The number of machine breakdowns during a given day in a company
+
+*Example 01*
+Consider the experiment of tossing a coin
+
+```{r Ch1box1, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+*Example 02*
+
+Consider the experiment of rolling of a single dice 
+
+```{r Ch1box2, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+*Example 03*
+
+Consider the experiment of tossing two coins and count the number of heads turn up head
+ 
+
+```{r Ch1box3, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+#### Continuous Random Variable
+
+- If the induced sample space is continuous, then the random variable is called a **continuous random variable.**
+- A continuous random variable is a random variable that can take on any value in a given interval.
+-	Random variables which consist of measurements are usually continuous. 
+- For example
+  -	height of a student in this class 
+  -	the current measured in a thin copper wire in milliamperes
+  -	Life time of a mobile phone battery
+  -	SGPA of a level 2 student
+
+*Example 04*
+
+Lifetime of a bulb
+ 
+
+```{r Ch1box4, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+## Probability Mass Function
+
+**Definition 2: Discrete density function of a discrete random variable**
+
+If $X$ is a discrete random variable with distinct values $x_1, x_2, \dots, x_n, \dots,$ then the function, denoted by $f_X(.)$ and defined by
+
+\begin{equation}
+f_X(x) =
+\begin{cases} 
+P(X=x) & \text{if } x=x_j, j=1,2,\dots,n,\dots\\
+0 & \text{if } x \neq x_j
+\end{cases}
+\end{equation}
+
+is defined to be the discrete density function of $X$.
+
+- The values of a discrete random variable are often called *mass points.*
+- $f_X(x)$ denotes the *mass* associated with the *mass point* $x_j$.
+- ***Probability mass function*** *discrete frequency function* and *probability function* are other terms used in place of *discrete density function*
+- Probability function gives the measure of probability for different values of $X$.
+
+### Properties of a Probability Mass Function
+
+- Let $X$ be a discrete random variable with probability mass function $f_X(x)$. Then,
+
+1. For any $x\in \Re$, $0\leq f_X(x) \leq 1.$
+2. Let $E$ be an event and $I= \{X(\omega):\omega \in E\}.$ Then $P(E) = P(X\in I) = \sum_{x \in I}f_X(x).$
+3. Let $R = \{X(\omega):\omega \in \Omega\}.$ Then $\sum_{x\in \Re} f_X(x) = 1.$
+
+
+### Representations of Probability Mass Functions
+
+#### Using a table
+
+```{r Ch1box5, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+#### Using a function
+
+```{r Ch1box6, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+#### Using a graph
+
+```{r Ch1box7, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
 
 ## Probability density function
 
