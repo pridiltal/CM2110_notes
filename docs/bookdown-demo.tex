@@ -486,7 +486,7 @@ Find the probability mass function of \(X\). Is \(X\) discrete or continuous?
 \begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box7-1} \end{center}
 
 \hypertarget{probability-density-function}{%
-\section{Probability density function}\label{probability-density-function}}
+\section{Probability Density Function}\label{probability-density-function}}
 
 \begin{itemize}
 \item
@@ -501,6 +501,8 @@ Find the probability mass function of \(X\). Is \(X\) discrete or continuous?
 
 \hypertarget{properties-of-a-probability-density-function}{%
 \subsection{Properties of a Probability Density Function}\label{properties-of-a-probability-density-function}}
+
+\label{sec:pdfproperties}
 
 Let \(X\) be a continuous random variable with probability density function \(f_x\). Then,
 
@@ -528,11 +530,216 @@ Let \(X\) be a continuous random variable with probability density function \(f_
   consider the following grouped frequency table and the histogram constructed from those data.
 \item
   The height of the bar on a class interval of this histogram is equal to the relative frequency per unit in that class interval.
-  \newpage
+\end{itemize}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+Interval & Class boundaries & Class frequency & Height of the bar & Area of the bar\tabularnewline
+\midrule
+\endhead
+\(I_1\) & \(x_1 -\delta x/2, x_1+\delta x/2\) & \(n_1\) & \(\frac{n_1}{\delta x*N}\) & \(\frac{n1}{N}\)\tabularnewline
+\(I_2\) & \(x_2 -\delta x/2, x_2+\delta x/2\) & \(n_2\) & \(\frac{n_2}{\delta x*N}\) & \(\frac{n2}{N}\)\tabularnewline
+\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\)\tabularnewline
+\(I_k\) & \(x_k -\delta x/2, x_k+\delta x/2\) & \(n_k\) & \(\frac{n_k}{\delta x*N}\) & \(\frac{nk}{N}\)\tabularnewline
+Total & & & &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{figure}
+
+{\centering \includegraphics{figure/hist-1} 
+
+}
+
+\caption{Histograms with different class intervals and a possible model for the pdf}\label{fig:hist}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Then, for the \(i^{th}\) interval,
+\end{itemize}
+
+\[P(x_i - \frac{\delta x}{2} \leq X \leq x_i + \frac{\delta x}{2}) \approx \text{Area of the bar} \]
+and therefore
+
+\[\text{Height of the bar} \approx \frac{\text{Area of the bar}}{\delta x} \approx \frac{ P(x_i - \frac{\delta x}{2} \leq X \leq x_i + \frac{\delta x}{2})}{\delta x}  \]
+
+\begin{itemize}
+\item
+  Therefore, the height of a bar represents the \emph{probability density} in that class interval.
+\item
+  When \(\delta x \rightarrow0\), it will allow us to approximate the histogram by a smooth curve as in Figure \ref{fig:hist} (d).
+\item
+  As the are under each histogram is 1, the area under the curve is also 1
+\item
+  For any point \(x\),
+\end{itemize}
+
+\[\text{The height of the curve} \approx \lim \limits_{\delta x \to 0} \frac{P(x_i-\frac{\delta x}{2} \leq X \leq x_i+\frac{\delta x}{2})}{\delta x} \]
+
+will represent the \textbf{the probability density at point} \(x\).
+
+\begin{itemize}
+\item
+  Let the above smooth curve be denoted by \(f_X\).
+\item
+  Then, \(f_X\) has the properties mentioned in Section \ref{sec:pdfproperties}.
+\item
+  The function is called the \textbf{probability density function of}
+  \(X\).
+\item
+  \textbf{NOTE} Here \(f_X(x)\) represents \textbf{Probability density} \emph{at point} \(x\). Not \emph{Probability at point} \(x\).
+\end{itemize}
+
+\hypertarget{calculation-of-probability-using-pdf}{%
+\subsection{Calculation of Probability using pdf}\label{calculation-of-probability-using-pdf}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(c,d \in \Re\) such that \(c\leq d\). Then,
+\end{itemize}
+
+\[P(c\leq X \leq d) = \int_c^d f_X(x)dx\]
+
+\begin{figure}
+
+{\centering \includegraphics{figure/hist2-1} 
+
+}
+
+\caption{Histograms with different class intervals and a possible model for the pdf}\label{fig:hist2}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{NOTE:} if \(X\) is a continuous random variable with the p.d.f \(f_X\), then for any \(k \in \Re\),
+\end{itemize}
+
+\[P(X=k) = P(k\leq X\leq k)=\int_k^kf_X(x)dx = 0\]
+
+\begin{itemize}
+\tightlist
+\item
+  Therefore, for a continuous random variable \(X\),
+  \[P(c<X<d) = P(c\leq X<d) =  P(c < X\leq d)=  P(c \leq X\leq d)= \int_c^df_X(x)dx\]
 \end{itemize}
 
 \hypertarget{cumulative-distribution-function}{%
-\section{Cumulative distribution function}\label{cumulative-distribution-function}}
+\section{Cumulative Distribution Function}\label{cumulative-distribution-function}}
+
+\begin{itemize}
+\tightlist
+\item
+  There are many problems in which it is of interest to know the probability that the values of a random variable is less than or equal to some real number \(x\).
+\end{itemize}
+
+\textbf{Definition 3: Cumulative distribution function}
+
+The \emph{cumulative distibution function} or \(cdf\) of a random variable \(X\), denoted by \(F_X(x)\), is defined by
+
+\[F_x(x) = P(X\leq x), \text{ for all } x \]
+
+\begin{itemize}
+\tightlist
+\item
+  Therefore, if \(X\) is a discrete random variable, the cdf is given by,
+\end{itemize}
+
+\[F_X(x)=\sum_{t\leq x}f_X(t), \text{ } -\infty < x<\infty\]
+
+where \(f_X(t)\) is the value of the pmf of \(X\) at \(t\).
+
+\hypertarget{relationship-between-cdf-and-pdf}{%
+\subsection{Relationship between cdf and pdf}\label{relationship-between-cdf-and-pdf}}
+
+\begin{itemize}
+\tightlist
+\item
+  If \(X\) is a continuous random variable, the cdf is given by,
+\end{itemize}
+
+\[F_X(x) = \int_{-\infty}^{x}f_X(t)dt \text{  } -\infty <x<\infty\]
+where \(f_X(t)\) is the value of the pdf of \(X\) at \(t\). (Here \(t\) is a dummy integration variable).
+
+\begin{itemize}
+\tightlist
+\item
+  Conversely,
+\end{itemize}
+
+\[f_X(x)= \frac{dF_X(x)}{dx}\]
+
+\emph{Example 06}
+
+An owner of a software engineering company is interested in knowing how many years his employees stay with his company. Let \(X\) be the number of years an employee will stay with the company. Over the years, he has established the following probability distribution:
+
+\newpage
+
+\begin{longtable}[]{@{}llllllll@{}}
+\toprule
+\(x\) & 1 & 2 & 3 & 4 & 5 & 6 & 7\tabularnewline
+\midrule
+\endhead
+\(f_X(x) = P(X=x)\) & 0.1 & 0.05 & 0.1 & ? & 0.3 & 0.2 & 0.1\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find \(f_X(4)\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box8-1} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Find \(P(X<4)\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box9-1} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Find \(P(X\leq4)\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box10-1} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Draw the probability mass function of \(X\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box11-1} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Draw the cumulative distribution function of \(X\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box12-1} \end{center}
+
+\hypertarget{properties-of-a-cumulative-distribution-function-of-a-discrete-random-variable}{%
+\subsection{\texorpdfstring{Properties of a cumulative distribution function of a \textbf{Discrete random variable}}{Properties of a cumulative distribution function of a Discrete random variable}}\label{properties-of-a-cumulative-distribution-function-of-a-discrete-random-variable}}
+
+\newpage
 
 \hypertarget{descriptive-properties-of-distributions}{%
 \section{Descriptive properties of distributions}\label{descriptive-properties-of-distributions}}

@@ -13,13 +13,13 @@ opts_chunk$set(
   cache = FALSE,
   external = TRUE,
   dev = "png",
-  fig.height = 16,
-  fig.width = 10,
-  out.width = "0.8\\textwidth"
+  fig.height = 5,
+  fig.width = 10
 )
 
 
 library(tidyverse)
+library(ggpubr)
 
 ```
 
@@ -275,7 +275,7 @@ ggplot()+
 
 ```
 
-## Probability density function
+## Probability Density Function
 
 - Let $X$ be a continuous random variable.
 
@@ -286,6 +286,8 @@ ggplot()+
 - Probability density function (pdf) of a continuous random variable is a function that describes the relative likelihood for this random variable to occur at a given point.
 
 ### Properties of a Probability Density Function
+\label{sec:pdfproperties}
+
 
 Let $X$ be a continuous random variable with probability density function $f_x$. Then,
 
@@ -300,9 +302,213 @@ Let $X$ be a continuous random variable with probability density function $f_x$.
 - Suppose that we have a very large number of observations, $N$, of $X$, measured to high accuracy (large number of decimal places). 
 - consider the following grouped frequency table and the histogram constructed from those data. 
 - The height of the bar on a class interval of this histogram is equal to the relative frequency per unit in that class interval. 
+
+
+Interval | Class boundaries | Class frequency | Height of the bar | Area of the bar
+---------|-----------------|-----------------|-------------------| ---------------
+$I_1$| $x_1 -\delta x/2, x_1+\delta x/2$ | $n_1$ | $\frac{n_1}{\delta x*N}$ |  $\frac{n1}{N}$
+$I_2$| $x_2 -\delta x/2, x_2+\delta x/2$ | $n_2$ | $\frac{n_2}{\delta x*N}$ |  $\frac{n2}{N}$
+$\vdots$| $\vdots$ |$\vdots$| $\vdots$| $\vdots$
+$I_k$| $x_k -\delta x/2, x_k+\delta x/2$ | $n_k$ | $\frac{n_k}{\delta x*N}$ |  $\frac{nk}{N}$ 
+  | Total|  |  | 
+
+
+```{r hist, fig.cap="Histograms with different class intervals and a possible model for the pdf", fig.height=15, fig.width=25}
+set.seed(123)
+data <- data.frame(x= c(rnorm(10000,45,10), rnorm(20000,90,10))) 
+
+
+p1 <- data %>%
+  ggplot(aes(x, ..density..)) +
+  geom_histogram(bins= 10)+
+  geom_density(colour= "red", size= 2)+
+  ggtitle("(a)") +
+  ylab("Probability density")
+
+p2 <- data %>%
+  ggplot(aes(x, ..density..)) +
+  geom_histogram(bins= 20)+
+  geom_density(colour= "red",  size= 2)+
+  ggtitle("(a)") +
+  ylab("Probability density")
+
+p3 <- data %>%
+  ggplot(aes(x, ..density..)) +
+  geom_histogram(bins=40)+
+  geom_density(colour= "red",  size= 2)+
+  ggtitle("(a)") +
+  ylab("Probability density")
+
+p4 <- data %>%
+  ggplot(aes(x, ..density..)) +
+  geom_histogram(bins= 100)+
+  geom_density(colour= "red", size = 2)+
+  ggtitle("(a)") +
+  ylab("Probability density")
+
+p<- ggarrange(ggarrange(p1,p2,ncol = 2) , ggarrange(p3,p4, ncol = 2), nrow= 2)
+print(p)
+```
+
+- Then, for the $i^{th}$ interval, 
+
+$$P(x_i - \frac{\delta x}{2} \leq X \leq x_i + \frac{\delta x}{2}) \approx \text{Area of the bar} $$
+ and therefore
+ 
+$$\text{Height of the bar} \approx \frac{\text{Area of the bar}}{\delta x} \approx \frac{ P(x_i - \frac{\delta x}{2} \leq X \leq x_i + \frac{\delta x}{2})}{\delta x}  $$
+
+- Therefore, the height of a bar represents the *probability density* in that class interval.
+
+- When $\delta x \rightarrow0$, it will allow us to approximate the histogram by a smooth curve as in Figure \ref{fig:hist} (d). 
+
+- As the are under each histogram is 1, the area under the curve is also 1
+
+- For any point $x$, 
+
+$$\text{The height of the curve} \approx \lim \limits_{\delta x \to 0} \frac{P(x_i-\frac{\delta x}{2} \leq X \leq x_i+\frac{\delta x}{2})}{\delta x} $$
+
+will represent the **the probability density at point** $x$. 
+
+- Let the above smooth curve be denoted  by $f_X$.
+- Then, $f_X$ has the properties mentioned in Section \ref{sec:pdfproperties}.
+- The function is called the **probability density function of**
+$X$.
+
+- **NOTE** Here $f_X(x)$ represents **Probability density** *at point* $x$. Not *Probability at point* $x$.
+
+
+<!--The shape of the density function $f_x$ of a continuous random variable $X$ is approximately the same as the smoothed histogram from a very large data set $X$-->
+
+
+### Calculation of Probability using pdf
+
+- Let $c,d \in \Re$ such that $c\leq d$. Then,
+
+$$P(c\leq X \leq d) = \int_c^d f_X(x)dx$$
+
+```{r hist2, fig.cap="Histograms with different class intervals and a possible model for the pdf"}
+set.seed(123)
+data <- data.frame(x= c(rnorm(10000,45,10), rnorm(20000,90,10))) 
+
+dat <- with(density(data$x), data.frame(x, y))
+p<- ggplot(data = dat, mapping = aes(x = x, y = y)) +
+    geom_line()+
+    geom_area(mapping = aes(x = ifelse(x>50 & x< 80 , x, 0)), fill = "darkblue") +
+    xlim(2, 128)+
+  ylab("f(x)")
+
+print(p)
+```
+
+
+- **NOTE:** if $X$ is a continuous random variable with the p.d.f $f_X$, then for any $k \in \Re$,
+
+$$P(X=k) = P(k\leq X\leq k)=\int_k^kf_X(x)dx = 0$$
+
+- Therefore, for a continuous random variable $X$, 
+$$P(c<X<d) = P(c\leq X<d) =  P(c < X\leq d)=  P(c \leq X\leq d)= \int_c^df_X(x)dx$$
+
+
+## Cumulative Distribution Function
+
+- There are many problems in which it is of interest to know the probability that the values of a random variable is less than or equal to some real number $x$.
+
+**Definition 3: Cumulative distribution function**
+
+The *cumulative distibution function* or $cdf$ of a random variable $X$, denoted by $F_X(x)$, is defined by 
+
+$$F_x(x) = P(X\leq x), \text{ for all } x $$
+
+- Therefore, if $X$ is a discrete random variable, the cdf is given by,
+
+$$F_X(x)=\sum_{t\leq x}f_X(t), \text{ } -\infty < x<\infty$$
+
+where $f_X(t)$ is the value of the pmf of $X$ at $t$.
+
+
+### Relationship between cdf and pdf 
+
+- If $X$ is a continuous random variable, the cdf is given by, 
+
+$$F_X(x) = \int_{-\infty}^{x}f_X(t)dt \text{  } -\infty <x<\infty$$
+where $f_X(t)$ is the value of the pdf of $X$ at $t$. (Here $t$ is a dummy integration variable).
+
+- Conversely,
+
+$$f_X(x)= \frac{dF_X(x)}{dx}$$
+
+*Example 06*
+
+An owner of a  software engineering company is interested in knowing how many years his employees stay with his company. Let $X$ be the number of years an employee will stay with the company. Over the years, he has established the following probability distribution:
+
 \newpage
 
-## Cumulative distribution function
+$x$	|1|	2|	3|	4|	5|	6|	7
+--|---|---|---|---|---|---|---
+ $f_X(x) = P(X=x)$|0.1	|0.05|	0.1|?|0.3|	0.2|	0.1
+
+1. Find $f_X(4)$
+
+```{r Ch1box8, out.width='100%', fig.asp=.5, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+2. Find $P(X<4)$
+
+```{r Ch1box9, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+3. Find $P(X\leq4)$
+
+```{r Ch1box10, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+4. Draw the probability mass function of $X$
+
+```{r Ch1box11, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+5. Draw the cumulative distribution function of $X$
+
+```{r Ch1box12, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+### Properties of a cumulative distribution function of a **Discrete random variable**
+
+
+
+\newpage
 
 ## Descriptive properties of distributions
 
