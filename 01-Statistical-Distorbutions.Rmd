@@ -50,7 +50,7 @@ knitr::include_graphics("figure/Axioms.png")
 
 - Axioms 1 and 2 imply that for any event $E$, $0 \leq P (E) \leq 1$.
 - $P (E) = 1 \iff$ the event E is certain to occur.
--	$P (E) = 1 \iff$ the event E cannot occur.
+-	$P (E) = 0 \iff$ the event E cannot occur.
 
 ### Methods for determining Probability {-}
 
@@ -128,7 +128,7 @@ $A=$ *The event that the number faced up is less than 5*
 
 $B=$ *The event that the number faced up is even*
 
-$C=$ *The event that the number faced up is is 2 or 5*
+$C=$ *The event that the number faced up is 2 or 5*
 
 ```{r Ch1box2, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
 library(ggplot2)
@@ -236,7 +236,7 @@ Consider the experiment of tossing a fair coin.  Let
 X =
 \begin{cases} 
 0 & \text{if the outcome is a Tail }\\
-0 & \text{if the outcome is a Head}
+1 & \text{if the outcome is a Head}
 \end{cases}
 \end{equation}
 
@@ -361,7 +361,7 @@ $$\text{Height of the bar} \approx \frac{\text{Area of the bar}}{\delta x} \appr
 
 - When $\delta x \rightarrow0$, it will allow us to approximate the histogram by a smooth curve as in Figure \ref{fig:hist} (d). 
 
-- As the are under each histogram is 1, the area under the curve is also 1
+- As the area under each histogram is 1, the area under the curve is also 1
 
 - For any point $x$, 
 
@@ -386,7 +386,7 @@ $X$.
 
 $$P(c\leq X \leq d) = \int_c^d f_X(x)dx$$
 
-```{r hist2, fig.cap="Histograms with different class intervals and a possible model for the pdf"}
+```{r hist2, fig.cap="$P(c\\leq x \\leq d = \\int_c^d f_X(x)dx$"}
 set.seed(123)
 data <- data.frame(x= c(rnorm(10000,45,10), rnorm(20000,90,10))) 
 
@@ -503,15 +503,761 @@ ggplot()+
 
 ```
 
+```{r Ch1box13, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
 
-### Properties of a cumulative distribution function of a **Discrete random variable**
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
 
+```
+
+### Properties of a cumulative distribution function of a Discrete random variable
+
+
+*Example 07*
+
+\begin{equation}
+f_X(x) =
+\begin{cases} 
+\frac{1}{25}x & 0\leq x < 5\\
+\frac{2}{5}- \frac{1}{25}x & 5\leq x \leq 10\\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+
+1. Find the CDF of $X$
+2. Find $P(X\leq 8)$
+3. Find $P(3\leq X\leq 8)$
+
+
+\newpage
+1. 
+
+\newpage
+
+
+## Expectations and Moments
+
+<!-- Casella pg 55-->
+
+### Expectation
+
+- The expected value, or expectation of a random variable is merely its average value. 
+
+- By weighting the values of the random variable according to the probability distribution, we can obtain a number that summarizes a typical or expected value of an observation of the random variable.
+
+**Definition 4: Expected value**
+
+Let $X$ be a random variable. The *expected value* or *mean* of a random variable $g(X)$, denoted by $E[g(x)],$ is
+
+\begin{equation}
+E[g(x)] =
+\begin{cases} 
+\sum_{x}g(x) f_X(x) & \text{if } X \text{ is a discrete random variable with pmf }  f_X(x) \\
+\int_x g(x) f_X(x)dx & \text{if } X \text{ is a continuous random variable with pdf }  f_X(x)
+\end{cases}
+\end{equation}
+
+<!--Casella pg 57-->
+
+- The mean of a random variable gives a measure of *central location* of the density of $X$.
+
+- The process of taking expectations is a linear operation.
+
+- For any constants $a$ and $b$, 
+$$E(aX+b) = aE(X)+b$$
+
+#### Properties of expected value
+<!-- mood pg 70-, casella pg 57-->
+
+**Theorem**
+
+a. $E(c) = c$ for a constant $c$
+b. $E[cg(X)] = cE[g(X)]$ for a constant $c$
+c. $E[c_1g_1(X)+c_2g_2(X)]= c_1E[g_1(X)]+c_2E[g_2(X)]$
+d. If $g_1(x) \geq 0$ for all $x$, then $E[g_1(X)] \geq 0$
+e. If $g_1(x) \geq g_2(x)$ for all $x$, then $E[g_1(X)] \geq E[g_2(X)]$
+f. If $a\leq g_1(x) \leq b$ for all $x$, then $a\leq E[g_1(X)] \leq b$
+g. If $X$ and $Y$ are two **independent** random variables, then $E(X \times Y) = E(X)\times E(Y)$
+
+
+*Example 08*
+
+Random variable $X$ has the following pmf
+
+\begin{equation}
+f_X(x) =
+\begin{cases} 
+0.2 &  x =2\\
+0.3 &  x =4\\
+0.4 &  x =5\\
+0.1 &  x =7
+\end{cases}
+\end{equation}
+
+1. Find $E(X)$
+2. Find $E(X^2)$
+3. Find $E\left( \frac{1}{X}\right)$
+4. Find $E(2X+3X^2-5)$
+
+```{r Ch1box15, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+\newpage 
+
+### Moments
+
+- The various moments of a distribution are an important class of expectation
+
+<!-- Mood pg 73-->
+
+**Definition 5: Moments**
+
+If $X$ is a random variable, the $r$*th moment of* $X$, usually denoted by $\mu_r^\prime,$ is defined as
+
+$$\mu_r^\prime = E(X^r).$$
+
+if the expectation exists.
+
+- Note that $\mu_1^\prime = E(X)= \mu,$ the mean of $X$.
+
+
+**Definition 6: Central moments**
+
+
+If $X$ is a random variable, the $r$*th central moment of* $X$ *about* $a$ is defined as $E[(x-a)^r]$.
+
+
+If $a= E(X) = \mu,$ we have the $r$*th central moment of* $X$, *about* $E(X)$, denoted by $\mu_r,$ which is 
+$$\mu_r=E[(X-E(X))^r] = E[(X-\mu)^r] .$$
+
+- Find $\mu_1$
+
+\newpage 
+
+**Definition 7: Variance**
+<!-- Casella pg 59-, mood 70-->
+
+If $X$ is a random variable, $Var(X)= E[(X-E(X))^2]= E(X^2) - [E(X)]^2$ provided $E(X^2)$ exists.
+
+```{r Ch1box16, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+- The *variance* of a random variable $X$ is its second central moment, $Var(X) = E[(X-E(X))^2]= E[(X-\mu)^2]$
+
+- The positive square root of $Var(X)$ is the *standard deviation* of $X$
+
+<!-- mood 67-->
+
+- The *variance* of a random variable gives a measure of the degree of spread of a distribution around its mean. 
+
+- Let $X$ be a random variable, and let $\mu$ be $E(X).$ the *variance* of $X$, denoted by $\sigma^2$ of $Var(X),$ is defined by
+
+
+\begin{equation}
+Var(X) =
+\begin{cases} 
+\sum_{x}(x-\mu)^2f_X(x) & \text{if } X \text{ is  discrete with mass points }  x_!, x_2, \dots, x_j\dots \\
+\int_x (x-\mu)^2 f_X(x)dx & \text{if } X \text{ is continuous with probability density function }  f_X(x)
+\end{cases}
+\end{equation}
+
+#### Properties of variance of a random variable
+<!-- mood pg 70-, casella pg 57-->
+
+**Theorem**
+
+a. If $c$ is a constant, then $V(cX) = c^2V(X)$ 
+b. $V(c) = 0$, Variance of a constant is zero. 
+c. If $X$ is a random variable and $c$ is a constant, then $V(c+X) = V(X)$
+d. If $a$ and $b$ are constants, then $V(aX+b)= a^2V(X)$
+e. If $X$ and $Y$ are two independent random variables, then
+   i. $V(X+Y) = V(X) + V(Y)$
+   ii. $V(X-Y) = V(X) + V(Y)$
+
+
+
+```{r Ch1box14, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
 
 
 \newpage
 
-## Descriptive properties of distributions
+## Models for Discrete Distributions
 
-## Models for discrete distributions
+### Discrete Uniform Distribution
+<!--Casella page 86-->
+A random variable $X$ has a *discrete uniform* $(1, N)$ distribution if 
+$$f_X(x)= P(X=x)=\frac{1}{N}, \;\; x=1,2,\dots, N$$
+where $N$ is a specified integer.
 
-## Models for continuous distributions
+- The distribution puts equal mass on each of the outcomes $1,2,\dots, N.$
+
+- If $X$ ha s a discrete uniform distribution, then $E(X) = (N+1)/2$ and $Var(X) = (N^2-1)/12.$
+
+### Bernoulli Distribution
+
+**Bernoulli Trial**
+
+A random experiment of which the outcome can be classified into two categories is called a *Bernoulli trial*
+
+- In general, the results of a Bernoulli Trial are called 'success' and 'failure'. We denote these results by $S$ and $F$, respectively.
+
+- Consider a Bernoulli trial. Let 
+
+\begin{equation}
+X=
+\begin{cases} 
+0 & \text{if the Bernoulli trial results in a failure } \\
+1 & \text{if the Bernoulli trial results in a success} 
+\end{cases}
+\end{equation}
+
+- Suppose that the probability of a ''success' in any Bernoulli trial is $\theta.$
+
+- Then $X$ is said to have a Bernoulli distribution with probability mass function
+
+$f_X(x)= P(X=x)=\theta^x(1-\theta)^{1-x}, \;\;x=0,1$
+
+- This is denoted as $X \sim Bernoulli(\theta).$
+
+- If $X$ has a Bernoulli distribution, then  $E(X) = \theta$ and $Var(X) = \theta(1-\theta)$
+
+### Binomial Distribution
+
+<!--Mood page 89-->
+- A random experiment with the following properties is called a 'Binomial experiment'
+
+1. The random experiment consists of  a sequence of $n$ trials, where $n$ is fixed in advance of the random experiment.
+
+2. Each trial can result in one of the same two possible outcomes: "success" $(S)$ or "failure" $(F)$
+
+3. The trials are independent. Therefore the outcome of any particular trial does not influence the outcome of any other trial.
+
+4. The probability of "success" is the same for each trial. Let this probability is $\theta.$
+
+**Binomial distribution**
+
+- Consider a binomial experiment with $n$ trials and probability $\theta$ of a success.
+
+A random variable $X$ is defined to have a *binomial distribution* if the discrete density function of $X$ is given by 
+$$f_X(x)= P(X=x)= {n\choose x}\theta ^x(1-\theta)^{n-x} , \;\; x=0,1,2,\dots, n$$
+
+- This is denoted as $X \sim Bin(n,\theta).$
+
+- If $X$ has a binomial distribution, then  $E(X) = n\theta$ and $Var(X) = n\theta(1-\theta)$
+
+- The binomial distribution reduces to the Bernoulli distribution when $n=1.$
+
+### Geometric Distribution
+
+- Consider a sequence of independent Bernoulli trials whose  probability of "success" for each trial is $\theta$.
+
+- Let $X= \text{Number of failures before the first success}$
+
+- Then, $X$ is said to have a Geometric distribution with parameter $\theta.$
+
+- The probability mass function is given by 
+$$f_X(x)= P(X=x)= \theta (1-\theta)^x , \;\; x=0,1,2,\dots$$
+
+- This is denoted as $X \sim Geometric(\theta).$
+
+- If $X$ has a geometric distribution, then  $E(X) = (1-\theta)/\theta$ and $Var(X) = (1-\theta)/\theta^2$
+<!-- Mood page 101-->
+
+- A random variable $X$ that has a geometric distribution is often referred to as a discrete *waiting-time* random variable. It represents how long (in terms of number of failures) one has to wait for a "success."
+
+### Negative Binomial Distribution
+
+- Consider a sequence of independent Bernoulli trials whose  probability of "success" for each trial is $\theta$.
+
+- Let $X= \text{Number of failures before the rth success}$
+
+- Then, $X$ is said to have a Negative Binomial distribution with parameter $\theta.$
+
+- The probability mass function is given by 
+$$f_X(x)= P(X=x)= {x+r-1\choose r-1} \theta^r (1-\theta)^x , \;\; x=0,1,2,\dots$$
+
+- This is denoted as $X \sim negbin(r,\theta).$
+
+- If $X$ has a Negative Binomial distribution, then  $E(X) = r(1-\theta)/\theta$ and $Var(X) = r(1-\theta)/\theta^2$
+
+- If in the negative binomial distribution $r=1$, then the negative binomial density specializes to the geometric density. <!-- mood page 99-->
+
+### Hypergeometric Distribution
+
+- Suppose a population of size $N$ has $M$ individuals of a certain kind ("success").
+
+- A sample of $n$ items is taken from this population without replacement.
+
+- Let $X$ be the number of successes in the sample. 
+
+- Then, $X$ is said to have a hypergeometric distribution.
+
+- The probability mass function is given by 
+$$f_X(x)= P(X=x)= \frac{{M\choose x}{N-M\choose n-x}}{{N \choose n}}  , \;\; x=0,1,2,\dots, n$$
+
+- Hypergeometric distribution can be used as a model for the number of "successes" in a sample of size $n$ if the sampling is done without replacement from a relatively small population. 
+
+- If $X$ has a Hypergeometric  distribution, then  $E(X) = n.\frac{M}{N}$ and $Var(X) = n\frac{M}{N}\left(1-\frac{M}{N}\right)\left(\frac{N-n}{N-1}\right)$
+
+
+### Poisson Distribution
+
+- The Poisson distribution provides a realistic probability model for the number of events in a given period of time, space, region or length. 
+
+- Example:
+    - The number of fatal traffic accidents per week in a given city
+    - The number of emails per hour coming into the company of a large business
+    - the number of defect per unit of some material
+    
+- Poisson distribution is suitable if the following conditions hold.
+   1. the number of events within non-overlapping time intervals are independent.
+   2. Let $t$ be a fixed time point. For a small time interval $\delta t$, the probability of exactly one event happening in the interval $[t,t+\delta t]$ is approximately proportional to the length $\delta t$ of the interval. *i.e.,*  
+   
+$$\frac{P(\text{exactly one event in }[t,t+\delta t])}{\delta t} \to \text{a positive constant}$$
+as $\delta t \to 0.$
+   
+   
+  3. Let $t$ be a fixed time point. For a small time interval $\delta t$, the probability of more than one event happening in the interval $[t,t+\delta t]$ is negligible. *i.e.,*  
+   
+$$\frac{P(\text{more than one event in }[t,t+\delta t])}{\delta t} \to 0$$
+as $\delta t \to 0.$
+   
+   
+- Let $X$ be the number of events during a time interval.
+- Suppose that the average number of events during the interested time interval is $\lambda (>0).$
+- Then, the distribution of $X$ can be modeled by a Poisson Distribution with the probability mass function,
+
+$$f_X(x)= P(X=x)= \frac{e^{-\lambda} (\lambda)^x}{x!}  , \;\; x=0,1,2,\dots$$
+- This is denoted as $X \sim Poisson(\lambda).$
+ 
+- If $X$ has a Poisson distribution, then  $E(X) = \lambda$ and $Var(X) = \lambda$
+
+- The Poisson distribution can be used for counts of some sort of a given area, space, region, volume or length as well.
+
+*Example 09*
+
+Phone calls arrive at a switchboard at an average rate of 2.0 calls per minute.
+
+If the number of calls in any time interval follows the Poisson distribution, then
+
+$X =$ number of phone calls in a given minute.
+$X \sim  Poisson(\; )$      
+
+$Y =$ number of phone calls in a given hour.
+$Y \sim  Poisson ( \;)$
+
+$W =$ number of phone calls in a 15 seconds.
+$W \sim  Poisson (\;)$
+
+
+\newpage
+## Models for Continuous Distributions
+
+### Uniform Distribution
+
+- The continuous uniform distribution is defined by spreading mass uniformly over an interval $[a,b]$.
+
+-	A random variable $X$ is said to have a  uniform distribution in $(a,b)$ if its probability density function is given by
+$$f_X(x) = \frac{1}{b-a};\; a\leq x\leq b$$
+
+- This is denoted as $X\sim U(a,b)$   or    $X \sim Unif(a, b)$
+
+- It is easy to check $\int_a^bf(x) dx =1$.
+
+- We also have 
+$$E(X) = \int_a^b\frac{x}{b-a}dx = \frac{a+b}{2}$$
+
+$$Var(X) =  \frac{(b-a)^2}{12}$$
+
+
+```{r unif, fig.cap="Uniform probabiity density", fig.height = 3, fig.width = 4}
+set.seed(123)
+data <- data.frame(x=c(runif(10000,10,100)))
+
+p1 <- data %>%
+  ggplot(aes(x, ..density..)) +
+  geom_histogram(bins= 20)
+
+print(p1)
+```
+
+### Normal Distribution (Gaussian Distribution)
+
+- One commonly used bell shaped curve is called the normal distribution. 
+
+- Many techniques use din applied statistics are based upon the normal distribution.
+
+- The normal distribution has two parameters, usually denoted by $\mu$ and $\sigma^2$, which are its mean and variance.
+
+- A random variable $X$ is said to have a normal distribution with location parameter $\mu$  and scale parameter $\sigma$, if its probability density function is given by,
+
+$$f_X(x)=f_X(x;\mu, \sigma)= \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2};\;\; -\infty<x<\infty$$
+
+- This is denoted by $X \sim N(\mu, \sigma^2)$.
+
+- The normal density function is **symmetric around** the location parameter $\mu$.
+
+- The **dispersion of the distribution** depends on the scale parameter  $\sigma$. 
+
+- If $X$ is a normal random variable, $E(X) = \mu$ and $Vax(X) = \sigma^2$
+
+```{r norm, fig.cap="Normal distribution for different $\\mu$ and $\\sigma$", fig.height=15, fig.width=25}
+set.seed(123)
+data <- data.frame(x1= c(rnorm(1000000,2,0.3)), x2= c(rnorm(1000000,0,0.2)), x3= c(rnorm(1000000,0,0.5)), x4= c(rnorm(1000000,0,1))) 
+
+
+p1 <- data %>%
+  ggplot(aes(x1, ..density..)) +
+  geom_density(colour= "red", size= 1)+
+  ylab("Probability density")
+
+p2<- p1+ 
+  geom_density(data = data, aes(x2, ..density..), colour= "blue", size= 1)
+
+p3<- p2+ 
+  geom_density(data = data, aes(x3, ..density..), colour= "green", size= 1)
+
+p4<- p3+ 
+  geom_density(data = data, aes(x4, ..density..), colour= "purple", size= 1)+
+  geom_vline(xintercept=0)
+  
+
+print(p4)
+```
+
+```{r norm2, fig.cap="$P(a< X < b = \\int_a^b f_X(x)dx$"}
+set.seed(123)
+data <- data.frame(x= c(rnorm(1000000,45,10)) )
+
+dat <- with(density(data$x), data.frame(x, y))
+p<- ggplot(data = dat, mapping = aes(x = x, y = y)) +
+    geom_line()+
+    geom_area(mapping = aes(x = ifelse(x>50 & x< 60 , x, 0)), fill = "darkblue") +
+    xlim(2, 90)+
+  ylab("f(x)")
+
+print(p)
+```
+
+$$P(a<X<b)=\int_a^b \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}dx$$
+
+-	Evaluating of this integration is somewhat tedious
+- 	When we calculate this type of probabilities of normal distribution manually, it is convenient to use a normal probability table.
+
+
+#### Standard Normal Distribution 
+
+-	Normal distribution with $\mu =0$ and  $\sigma = 1$  is called the **standard normal distribution**.
+- A random variable with standard normal distribution is usually denoted by $Z$.
+- The probability density function of standard normal distribution is denoted by $\phi$ 
+-	If $Z\sim N(0,1)$, then
+
+$$\phi_Z(z) = \frac{1}{\sqrt{2 \pi}}e^{-\frac{1}{2}z^2};\;\; -\infty< z< \infty$$
+
+ 
+- Probabilities related to Z can be found by using standard normal probability table.
+
+\newpage 
+
+*Example 10*
+
+Let $Z$ be a standard normal random variable. Calculate probabilities given in table below. 
+
+No. |Calculate this probability | Answer
+----|---------------------------|---------
+1   | 	$P(Z < 0)$              | 
+2	  |   $P(Z < 2.02)$           |
+3   | 	$P(Z > 0.95)$           | 
+4	  |   $P(Z > -1.48)$          | 
+5	  |   $P(Z < -1.76)$          | 
+6	  |   $P(Z < 1.7)$            | 
+7	  |   $P(Z < -0.33)$          | 
+8   |	  $P(0.94 < Z < 2.41)$    | 
+9	  |   $P(-2.41 < Z < -0.94)$  |
+10	|   $P(-2.96 < Z < 1.05)$   |
+
+
+
+
+\newpage
+Example contd...
+
+
+\newpage
+**Cumulative Standard Normal Distribution**
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/ztable.png")
+```
+
+\newpage
+
+$Z_\alpha$ **Notation**
+
+- $Z_\alpha$  denotes the value such that  $P(Z\geq Z_\alpha) = \alpha$
+- Here $\alpha$ represents a probability.
+- Therfore $0\leq \alpha \leq 1$
+
+*Example 11* 
+
+Find $Z_{0.025}$''
+
+```{r norm3, fig.cap="$P(a< X < b = \\int_a^b f_X(x)dx$"}
+set.seed(123)
+data <- data.frame(x= c(rnorm(10000000,0,1)) )
+
+dat <- with(density(data$x), data.frame(x, y))
+p<- ggplot(data = dat, mapping = aes(x = x, y = y)) +
+    geom_line()+
+    geom_area(mapping = aes(x = ifelse(x>1.96 & x< 5 , x, 0)), fill = "darkblue") +
+    xlim(-4, 4)+
+   ylim(0, 0.43)+
+  ylab("f(x)") + 
+  xlab("z")
+
+print(p)
+```
+
+*Example 12* 
+
+Find the following values
+
+   1) $Z_{0.01}$
+   2) $Z_{0.05}$
+   3) $Z_{0.9}$
+   4) $Z_{0.975}$
+   5) $Z_{0.85}$
+
+ 
+\newpage
+Example contd ...
+ 
+
+
+\newpage 
+\pagenumbering{arabic}
+## Tutorial {-}
+
+1. Consider the experiment of taking two products randomly form a production line and determine whether each is defective or not. Express the following events using a suitably defined random variable. 
+
+$D_0=$ *The event that both products are non defective*
+
+$D_1=$ *The event that one product is defective*
+
+$D_2=$ *The event that both products are defective*
+
+$E=$ *The event that at least one product is defective*
+
+2. Let X be a random variable with the following probability distribution
+ 
+$x$ |1	|1.5|	2	|2.5|	3	|other
+---|---|---|---|---|---|--- 
+$f_X(x)$|$k$|	$2k$|	$4k$	|$2k$|$k$	|0
+
+ (a)	Find the value of $k$
+ (b)	Find $P(X = 2.5)$
+ (c)	Calculate $P (X \geq 1.75)$
+
+
+3. The sample space of a random experiment is $\{a, b, c, d, e, f\}$, and each outcome is equally likely. A random variable $X$ is defined as follows:
+
+Outcome |	$a$	| $b$ |	$c$ |	$d$ |	$e$ |	$f$
+---|---|---|---|---|---|---
+$x$ |	0|	0	|1.5|	1.5|	2	|3
+
+Determine the probability mass function of $X$. Use the probability mass function to determine the following probabilities:
+
+ (a) $P(X = 1.5)$ 
+ (b) $P(0.5 < X < 2.7)$
+ (c) $P(X > 3)$ 
+ (d) $P(0 \leq X < 2)$
+ (e) $P(X = 0 \text{ or } X = 2)$
+
+
+4. Verify that the following function is a probability mass function, and determine the requested probabilities.
+
+$$f_X(x)=\frac{8}{7} \left(\frac{1}{2} \right)^x, \text{ x= 1,2,3 }$$
+ 
+ (a) $P(X \leq 1)$
+ (b) $P(X > 1)$
+ (c) $P (2 < X < 6)$ 
+ (d) $P(X \leq 1 \text{ or } X > 1)$
+
+
+5. A disk drive manufacturer sells storage devices with capacities of one terabyte, 500 gigabytes, and 100 gigabytes with probabilities 0.5, 0.3, and 0.2, respectively. The revenues associated with the sales in that year are estimated to be \$50 million, \$25 million, and \$10 million, respectively. Let $X$ denotes the revenue of storage devices during that year. 
+
+ (a)	Determine the probability mass function of $X$.
+ (b)	Calculate the probability of getting more than \$20 million of revenue during that year.  
+ (c)	Determine the cumulative distribution function of $X$
+
+
+6. Consider the following cumulative distribution function:
+
+\begin{equation}
+F_X(x) =
+\begin{cases} 
+0 & x<-2\\
+0.2 & -2 \leq x< 0\\
+0.7 & 0\leq x<2\\
+1 & 2 \leq x
+\end{cases}
+\end{equation}
+
+
+
+a)	Draw the plot of  $F_X(x)$
+b)	Discuss the properties of  $F_X(x)$ (eg: whether it is discrete or continuous, whether it is decreasing or increasing function etc. )
+c)	Determine the probability mass function of $X$ from the above cumulative distribution function:
+d)	Plot the probability mass function of $X$
+
+7. The number of e-mail messages received per hour varies from 10 to 16 with the following probabilities 
+
+$x =$  number of messages|	10	|11	|12	|13|	14|	15|16
+-----------|------|------|------|------|------|------|------
+$P(X=x)$|	0.08|	0.15|	0.1	|0.2	|0.1|	0.07|0.3
+
+a)	Let $X$ be the number of e-mail messages received per hour. Find the probability mass function of X
+b)	Determine the mean and standard deviation of the number of messages received per hour
+
+8. According to past data, twenty percent of all telephones of a certain type are submitted for service while under warranty. Of these, $60\%$ can be repaired whereas the other $40\%$ must be replaced with new units. If a company purchases ten of these telephones, what is the probability that
+
+a)	two telephones will be submitted for service under warranty?
+b)	at most 3 telephones will be submitted for service under warranty?
+c)	two telephones will end up being replaced under warranty?
+d)	one telephone will end up being repaired under warranty?
+ 
+9. Each sample of water has a $10\%$ chance of containing a particular organic pollutant. Assume that the samples are independent with regard to the presence of the pollutant. Find the probability that in the next 18 samples, exactly 2 contain the pollutant
+
+a)	Define a suitable random variable for the above question 
+b)	Find the distribution of that random variable
+c)	Find the probability that in the next 18 samples, exactly 2 contain the pollutant
+
+10. The space shuttle flight control system called Primary Avionics Software Set (PASS) uses four independent computers working in parallel. At each critical step, the computers “vote” to determine the appropriate step. The probability that a computer will ask for a roll to the left when a roll to the right is appropriate is 0.0001. Let $X$ denotes the number of computers that vote for a left roll when a right roll is appropriate.
+
+a)	What is the probability mass function of $X$?
+b)	What are the mean and variance of $X$?
+
+11. A University lecturer never finishes his lecture before the end of the hour and always finishes his lectures within 2 minutes after the hour. Let $X$ = the time that elapses between the end of the hour and the end of the lecture and suppose the pdf of $X$ is
+                       
+ \begin{equation}
+f_X(x) =
+\begin{cases} 
+kx^2 & 0\leq  x\leq 2\\
+0 & otherwise
+\end{cases}
+\end{equation}
+
+a)	Find the value of $k$ and draw the density curve.
+b)	What is the probability that the lecture ends within 1 min of the end of the hour?
+c)	What is the probability that the lecture continues beyond the hour for between 60 and 90 sec?
+d)	What is the probability that the lecture continues for at least 90 sec beyond the end of the hour?
+
+12. The daily sales of gasoline are uniformly distributed between 2,000 and 5,000 gallons. Find the probability that sales are:
+
+a)	between 2,500 and 3,000 gallon
+b)	more than 4000 gallons
+c)	exactly 2500 gallons
+
+13. Suppose $X$ has a continuous uniform distribution over the interval $[-1,1]$.  Determine the following:
+
+(a) Mean, variance, and standard deviation of $X$
+(b) Value for $k$ such that $P(-k < X < k ) = 0.90$
+(c) Cumulative distribution function
+
+14. Suppose that the time it takes a data collection operator to fill out an electronic form for a database is uniformly between 1.5 and 2.2 minutes.
+
+a) What are the mean and variance of the time it takes an operator to fill out the form?
+b) What is the probability that it will take less than two minutes to fill out the form?
+c) Determine the cumulative distribution function of the time it takes to fill out the form.
+
+
+15. An electronic product contains 40 integrated circuits. The probability that any integrated circuit is defective is 0.01, and the integrated circuits are independent. The product operates only if there are no defective integrated circuits. What is the probability that the product operates?
+
+16. A bag of 200 chocolate chips is dumped into a batch of cookies dough. 40 cookies are made from such a batch of dough. What is the probability that a randomly selected cookie has at least 4 chocolate chips?
+
+17. For the case of the thin copper wire, suppose that the number of flaws follows a Poisson distribution with a mean of 2.3 flaws per millimeter.
+
+a)	Determine the probability of exactly two flaws in 1 millimeter of wire.
+
+b)	Determine the probability of 10 flaws in 5 millimeters of wire
+
+
+18. Contamination is a problem in the manufacture of magnetic storage disks. Assume that the number of particles of contamination that occur on a disk surface has a Poisson distribution, and the average number of particles per square centimeter of media surface is 0.1. The area of a disk under study is 100 square centimeters.
+
+a)	Determine the probability that 12 particles occur in the area of a disk under study.
+
+b)	Determine the probability that zero particles occur in the area of the disk under study.
+
+c)	Determine the probability that 12 or fewer particles occur in the area of the disk under study
+
+19. The number of surface flaws in plastic panels used in the interior of automobiles has a Poisson distribution with a mean of 0.05 flaw per square foot of plastic panel. Assume that an automobile interior contains 10 square feet of plastic panel. 
+
+a) What is the probability that there are no surface flaws in an auto's interior?
+
+b) If 10 cars are sold to a rental company, what is the probability that none of the 10 cars has any surface flaws?
+
+c) If 10 cars are sold to a rental company, what is the probability that at most 1 car has any surface flaws?
+
+
+20. Cabs pass your workplace according to a Poisson process with a mean of five cabs per hour. Suppose that you exit the workplace at 6:00 p.m. Determine the following: 
+
+a) Probability that you wait more than 10 minutes for a cab.
+
+b) Probability that you wait fewer than 20 minutes for a cab.
+
+
+\newpage
+
+11. An electronic product contains 40 integrated circuits. The probability that any integrated circuit is defective is 0.01, and the integrated circuits are independent. The product operates only if there are no defective integrated circuits. What is the probability that the product operates?
+
+
+
+
+<!-- Activity 2.1.3 Thi note-->
+
+7. A person must take two buses to go to work. From the past experience, he knows that a bus can come at any time within 6 minutes. Also, the probability that a bus comes within any period of the same length is the same. Hence, it is reasonable to assume the following probability density function for the waiting time $X$ (in minutes) for a bus
+
+$f_X(x) = \frac{1}{6}, \;\;0<x<6.$
+
+Then the total waiting time $T$ at both bus-stops has the following density function
+
+\begin{equation}
+f_T(t) =
+\begin{cases} 
+\frac{t}{36} & 0\leq t \leq 6\\
+\frac{1}{3}- \frac{t}{36} & 6\leq t \leq 12
+\end{cases}
+\end{equation}
+
+a) Verify that each of above function is a proper density function
+b) What is the probability that the waiting time at the first bus-stop will be less than 2 minutes?
+c) What is the probability that the waiting time at the first bus-stop will be less than 2 minutes and the waiting time at the second 
+
+
+\newpage
+
+Name | Notation | Discrete density functions | Parameter Space | Mean| Variance
+---------|---------|-----------|--------|-----------
+Discrete Uniform | $f(x) = \frac{1}{N},\;\;x=1,2,\dots, N$ | $N=1,2,\dots$ | $\frac{N+1}{2}$ | $\frac{N^2-1}{12}$
+Bernoulli| $f(x) = \theta^x (1-\theta)^{1-x}\;\; x=0,1$ | $0\leq \theta \leq 1$ | $\theta$ | $\theta (1-\theta)$

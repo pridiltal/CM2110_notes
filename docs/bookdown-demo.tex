@@ -88,7 +88,7 @@
 
 \title{CM 2110 Calculus and Statistical Distributions}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-05-29}
+\date{2020-06-26}
 
 \begin{document}
 \maketitle
@@ -256,7 +256,7 @@ Consultation time:
 \item
   \(P (E) = 1 \iff\) the event E is certain to occur.
 \item
-  \(P (E) = 1 \iff\) the event E cannot occur.
+  \(P (E) = 0 \iff\) the event E cannot occur.
 \end{itemize}
 
 \hypertarget{methods-for-determining-probability}{%
@@ -365,7 +365,7 @@ Consider the experiment of rolling of a die. Express the following events using 
 
 \(B=\) \emph{The event that the number faced up is even}
 
-\(C=\) \emph{The event that the number faced up is is 2 or 5}
+\(C=\) \emph{The event that the number faced up is 2 or 5}
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box2-1} \end{center}
 
@@ -464,7 +464,7 @@ Consider the experiment of tossing a fair coin. Let
 X =
 \begin{cases} 
 0 & \text{if the outcome is a Tail }\\
-0 & \text{if the outcome is a Head}
+1 & \text{if the outcome is a Head}
 \end{cases}
 \end{equation}
 
@@ -571,7 +571,7 @@ and therefore
 \item
   When \(\delta x \rightarrow0\), it will allow us to approximate the histogram by a smooth curve as in Figure \ref{fig:hist} (d).
 \item
-  As the are under each histogram is 1, the area under the curve is also 1
+  As the area under each histogram is 1, the area under the curve is also 1
 \item
   For any point \(x\),
 \end{itemize}
@@ -609,7 +609,7 @@ will represent the \textbf{the probability density at point} \(x\).
 
 }
 
-\caption{Histograms with different class intervals and a possible model for the pdf}\label{fig:hist2}
+\caption{$P(c\leq x \leq d = \int_c^d f_X(x)dx$}\label{fig:hist2}
 \end{figure}
 
 \begin{itemize}
@@ -736,19 +736,1145 @@ An owner of a software engineering company is interested in knowing how many yea
 
 \begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box12-1} \end{center}
 
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box13-1} \end{center}
+
 \hypertarget{properties-of-a-cumulative-distribution-function-of-a-discrete-random-variable}{%
-\subsection{\texorpdfstring{Properties of a cumulative distribution function of a \textbf{Discrete random variable}}{Properties of a cumulative distribution function of a Discrete random variable}}\label{properties-of-a-cumulative-distribution-function-of-a-discrete-random-variable}}
+\subsection{Properties of a cumulative distribution function of a Discrete random variable}\label{properties-of-a-cumulative-distribution-function-of-a-discrete-random-variable}}
+
+\emph{Example 07}
+
+\begin{equation}
+f_X(x) =
+\begin{cases} 
+\frac{1}{25}x & 0\leq x < 5\\
+\frac{2}{5}- \frac{1}{25}x & 5\leq x \leq 10\\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find the CDF of \(X\)
+\item
+  Find \(P(X\leq 8)\)
+\item
+  Find \(P(3\leq X\leq 8)\)
+\end{enumerate}
 
 \newpage
 
-\hypertarget{descriptive-properties-of-distributions}{%
-\section{Descriptive properties of distributions}\label{descriptive-properties-of-distributions}}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+\end{enumerate}
+
+\newpage
+
+\hypertarget{expectations-and-moments}{%
+\section{Expectations and Moments}\label{expectations-and-moments}}
+
+\hypertarget{expectation}{%
+\subsection{Expectation}\label{expectation}}
+
+\begin{itemize}
+\item
+  The expected value, or expectation of a random variable is merely its average value.
+\item
+  By weighting the values of the random variable according to the probability distribution, we can obtain a number that summarizes a typical or expected value of an observation of the random variable.
+\end{itemize}
+
+\textbf{Definition 4: Expected value}
+
+Let \(X\) be a random variable. The \emph{expected value} or \emph{mean} of a random variable \(g(X)\), denoted by \(E[g(x)],\) is
+
+\begin{equation}
+E[g(x)] =
+\begin{cases} 
+\sum_{x}g(x) f_X(x) & \text{if } X \text{ is a discrete random variable with pmf }  f_X(x) \\
+\int_x g(x) f_X(x)dx & \text{if } X \text{ is a continuous random variable with pdf }  f_X(x)
+\end{cases}
+\end{equation}
+
+\begin{itemize}
+\item
+  The mean of a random variable gives a measure of \emph{central location} of the density of \(X\).
+\item
+  The process of taking expectations is a linear operation.
+\item
+  For any constants \(a\) and \(b\),
+  \[E(aX+b) = aE(X)+b\]
+\end{itemize}
+
+\hypertarget{properties-of-expected-value}{%
+\subsubsection{Properties of expected value}\label{properties-of-expected-value}}
+
+\textbf{Theorem}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(E(c) = c\) for a constant \(c\)
+\item
+  \(E[cg(X)] = cE[g(X)]\) for a constant \(c\)
+\item
+  \(E[c_1g_1(X)+c_2g_2(X)]= c_1E[g_1(X)]+c_2E[g_2(X)]\)
+\item
+  If \(g_1(x) \geq 0\) for all \(x\), then \(E[g_1(X)] \geq 0\)
+\item
+  If \(g_1(x) \geq g_2(x)\) for all \(x\), then \(E[g_1(X)] \geq E[g_2(X)]\)
+\item
+  If \(a\leq g_1(x) \leq b\) for all \(x\), then \(a\leq E[g_1(X)] \leq b\)
+\item
+  If \(X\) and \(Y\) are two \textbf{independent} random variables, then \(E(X \times Y) = E(X)\times E(Y)\)
+\end{enumerate}
+
+\emph{Example 08}
+
+Random variable \(X\) has the following pmf
+
+\begin{equation}
+f_X(x) =
+\begin{cases} 
+0.2 &  x =2\\
+0.3 &  x =4\\
+0.4 &  x =5\\
+0.1 &  x =7
+\end{cases}
+\end{equation}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find \(E(X)\)
+\item
+  Find \(E(X^2)\)
+\item
+  Find \(E\left( \frac{1}{X}\right)\)
+\item
+  Find \(E(2X+3X^2-5)\)
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box15-1} \end{center}
+
+\newpage
+
+\hypertarget{moments}{%
+\subsection{Moments}\label{moments}}
+
+\begin{itemize}
+\tightlist
+\item
+  The various moments of a distribution are an important class of expectation
+\end{itemize}
+
+\textbf{Definition 5: Moments}
+
+If \(X\) is a random variable, the \(r\)\emph{th moment of} \(X\), usually denoted by \(\mu_r^\prime,\) is defined as
+
+\[\mu_r^\prime = E(X^r).\]
+
+if the expectation exists.
+
+\begin{itemize}
+\tightlist
+\item
+  Note that \(\mu_1^\prime = E(X)= \mu,\) the mean of \(X\).
+\end{itemize}
+
+\textbf{Definition 6: Central moments}
+
+If \(X\) is a random variable, the \(r\)\emph{th central moment of} \(X\) \emph{about} \(a\) is defined as \(E[(x-a)^r]\).
+
+If \(a= E(X) = \mu,\) we have the \(r\)\emph{th central moment of} \(X\), \emph{about} \(E(X)\), denoted by \(\mu_r,\) which is
+\[\mu_r=E[(X-E(X))^r] = E[(X-\mu)^r] .\]
+
+\begin{itemize}
+\tightlist
+\item
+  Find \(\mu_1\)
+\end{itemize}
+
+\newpage
+
+\textbf{Definition 7: Variance}
+
+If \(X\) is a random variable, \(Var(X)= E[(X-E(X))^2]= E(X^2) - [E(X)]^2\) provided \(E(X^2)\) exists.
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box16-1} \end{center}
+
+\begin{itemize}
+\item
+  The \emph{variance} of a random variable \(X\) is its second central moment, \(Var(X) = E[(X-E(X))^2]= E[(X-\mu)^2]\)
+\item
+  The positive square root of \(Var(X)\) is the \emph{standard deviation} of \(X\)
+\end{itemize}
+
+\begin{itemize}
+\item
+  The \emph{variance} of a random variable gives a measure of the degree of spread of a distribution around its mean.
+\item
+  Let \(X\) be a random variable, and let \(\mu\) be \(E(X).\) the \emph{variance} of \(X\), denoted by \(\sigma^2\) of \(Var(X),\) is defined by
+\end{itemize}
+
+\begin{equation}
+Var(X) =
+\begin{cases} 
+\sum_{x}(x-\mu)^2f_X(x) & \text{if } X \text{ is  discrete with mass points }  x_!, x_2, \dots, x_j\dots \\
+\int_x (x-\mu)^2 f_X(x)dx & \text{if } X \text{ is continuous with probability density function }  f_X(x)
+\end{cases}
+\end{equation}
+
+\hypertarget{properties-of-variance-of-a-random-variable}{%
+\subsubsection{Properties of variance of a random variable}\label{properties-of-variance-of-a-random-variable}}
+
+\textbf{Theorem}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  If \(c\) is a constant, then \(V(cX) = c^2V(X)\)
+\item
+  \(V(c) = 0\), Variance of a constant is zero.
+\item
+  If \(X\) is a random variable and \(c\) is a constant, then \(V(c+X) = V(X)\)
+\item
+  If \(a\) and \(b\) are constants, then \(V(aX+b)= a^2V(X)\)
+\item
+  If \(X\) and \(Y\) are two independent random variables, then
+
+  \begin{enumerate}
+  \def\labelenumii{\roman{enumii}.}
+  \tightlist
+  \item
+    \(V(X+Y) = V(X) + V(Y)\)
+  \item
+    \(V(X-Y) = V(X) + V(Y)\)
+  \end{enumerate}
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box14-1} \end{center}
+
+\newpage
 
 \hypertarget{models-for-discrete-distributions}{%
-\section{Models for discrete distributions}\label{models-for-discrete-distributions}}
+\section{Models for Discrete Distributions}\label{models-for-discrete-distributions}}
+
+\hypertarget{discrete-uniform-distribution}{%
+\subsection{Discrete Uniform Distribution}\label{discrete-uniform-distribution}}
+
+A random variable \(X\) has a \emph{discrete uniform} \((1, N)\) distribution if
+\[f_X(x)= P(X=x)=\frac{1}{N}, \;\; x=1,2,\dots, N\]
+where \(N\) is a specified integer.
+
+\begin{itemize}
+\item
+  The distribution puts equal mass on each of the outcomes \(1,2,\dots, N.\)
+\item
+  If \(X\) ha s a discrete uniform distribution, then \(E(X) = (N+1)/2\) and \(Var(X) = (N^2-1)/12.\)
+\end{itemize}
+
+\hypertarget{bernoulli-distribution}{%
+\subsection{Bernoulli Distribution}\label{bernoulli-distribution}}
+
+\textbf{Bernoulli Trial}
+
+A random experiment of which the outcome can be classified into two categories is called a \emph{Bernoulli trial}
+
+\begin{itemize}
+\item
+  In general, the results of a Bernoulli Trial are called `success' and `failure'. We denote these results by \(S\) and \(F\), respectively.
+\item
+  Consider a Bernoulli trial. Let
+\end{itemize}
+
+\begin{equation}
+X=
+\begin{cases} 
+0 & \text{if the Bernoulli trial results in a failure } \\
+1 & \text{if the Bernoulli trial results in a success} 
+\end{cases}
+\end{equation}
+
+\begin{itemize}
+\item
+  Suppose that the probability of a `'success' in any Bernoulli trial is \(\theta.\)
+\item
+  Then \(X\) is said to have a Bernoulli distribution with probability mass function
+\end{itemize}
+
+\(f_X(x)= P(X=x)=\theta^x(1-\theta)^{1-x}, \;\;x=0,1\)
+
+\begin{itemize}
+\item
+  This is denoted as \(X \sim Bernoulli(\theta).\)
+\item
+  If \(X\) has a Bernoulli distribution, then \(E(X) = \theta\) and \(Var(X) = \theta(1-\theta)\)
+\end{itemize}
+
+\hypertarget{binomial-distribution}{%
+\subsection{Binomial Distribution}\label{binomial-distribution}}
+
+\begin{itemize}
+\tightlist
+\item
+  A random experiment with the following properties is called a `Binomial experiment'
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  The random experiment consists of a sequence of \(n\) trials, where \(n\) is fixed in advance of the random experiment.
+\item
+  Each trial can result in one of the same two possible outcomes: ``success'' \((S)\) or ``failure'' \((F)\)
+\item
+  The trials are independent. Therefore the outcome of any particular trial does not influence the outcome of any other trial.
+\item
+  The probability of ``success'' is the same for each trial. Let this probability is \(\theta.\)
+\end{enumerate}
+
+\textbf{Binomial distribution}
+
+\begin{itemize}
+\tightlist
+\item
+  Consider a binomial experiment with \(n\) trials and probability \(\theta\) of a success.
+\end{itemize}
+
+A random variable \(X\) is defined to have a \emph{binomial distribution} if the discrete density function of \(X\) is given by
+\[f_X(x)= P(X=x)= {n\choose x}\theta ^x(1-\theta)^{n-x} , \;\; x=0,1,2,\dots, n\]
+
+\begin{itemize}
+\item
+  This is denoted as \(X \sim Bin(n,\theta).\)
+\item
+  If \(X\) has a binomial distribution, then \(E(X) = n\theta\) and \(Var(X) = n\theta(1-\theta)\)
+\item
+  The binomial distribution reduces to the Bernoulli distribution when \(n=1.\)
+\end{itemize}
+
+\hypertarget{geometric-distribution}{%
+\subsection{Geometric Distribution}\label{geometric-distribution}}
+
+\begin{itemize}
+\item
+  Consider a sequence of independent Bernoulli trials whose probability of ``success'' for each trial is \(\theta\).
+\item
+  Let \(X= \text{Number of failures before the first success}\)
+\item
+  Then, \(X\) is said to have a Geometric distribution with parameter \(\theta.\)
+\item
+  The probability mass function is given by
+  \[f_X(x)= P(X=x)= \theta (1-\theta)^x , \;\; x=0,1,2,\dots\]
+\item
+  This is denoted as \(X \sim Geometric(\theta).\)
+\item
+  If \(X\) has a geometric distribution, then \(E(X) = (1-\theta)/\theta\) and \(Var(X) = (1-\theta)/\theta^2\)
+\item
+  A random variable \(X\) that has a geometric distribution is often referred to as a discrete \emph{waiting-time} random variable. It represents how long (in terms of number of failures) one has to wait for a ``success.''
+\end{itemize}
+
+\hypertarget{negative-binomial-distribution}{%
+\subsection{Negative Binomial Distribution}\label{negative-binomial-distribution}}
+
+\begin{itemize}
+\item
+  Consider a sequence of independent Bernoulli trials whose probability of ``success'' for each trial is \(\theta\).
+\item
+  Let \(X= \text{Number of failures before the rth success}\)
+\item
+  Then, \(X\) is said to have a Negative Binomial distribution with parameter \(\theta.\)
+\item
+  The probability mass function is given by
+  \[f_X(x)= P(X=x)= {x+r-1\choose r-1} \theta^r (1-\theta)^x , \;\; x=0,1,2,\dots\]
+\item
+  This is denoted as \(X \sim negbin(r,\theta).\)
+\item
+  If \(X\) has a Negative Binomial distribution, then \(E(X) = r(1-\theta)/\theta\) and \(Var(X) = r(1-\theta)/\theta^2\)
+\item
+  If in the negative binomial distribution \(r=1\), then the negative binomial density specializes to the geometric density. 
+\end{itemize}
+
+\hypertarget{hypergeometric-distribution}{%
+\subsection{Hypergeometric Distribution}\label{hypergeometric-distribution}}
+
+\begin{itemize}
+\item
+  Suppose a population of size \(N\) has \(M\) individuals of a certain kind (``success'').
+\item
+  A sample of \(n\) items is taken from this population without replacement.
+\item
+  Let \(X\) be the number of successes in the sample.
+\item
+  Then, \(X\) is said to have a hypergeometric distribution.
+\item
+  The probability mass function is given by
+  \[f_X(x)= P(X=x)= \frac{{M\choose x}{N-M\choose n-x}}{{N \choose n}}  , \;\; x=0,1,2,\dots, n\]
+\item
+  Hypergeometric distribution can be used as a model for the number of ``successes'' in a sample of size \(n\) if the sampling is done without replacement from a relatively small population.
+\item
+  If \(X\) has a Hypergeometric distribution, then \(E(X) = n.\frac{M}{N}\) and \(Var(X) = n\frac{M}{N}\left(1-\frac{M}{N}\right)\left(\frac{N-n}{N-1}\right)\)
+\end{itemize}
+
+\hypertarget{poisson-distribution}{%
+\subsection{Poisson Distribution}\label{poisson-distribution}}
+
+\begin{itemize}
+\item
+  The Poisson distribution provides a realistic probability model for the number of events in a given period of time, space, region or length.
+\item
+  Example:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The number of fatal traffic accidents per week in a given city
+  \item
+    The number of emails per hour coming into the company of a large business
+  \item
+    the number of defect per unit of some material
+  \end{itemize}
+\item
+  Poisson distribution is suitable if the following conditions hold.
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    the number of events within non-overlapping time intervals are independent.
+  \item
+    Let \(t\) be a fixed time point. For a small time interval \(\delta t\), the probability of exactly one event happening in the interval \([t,t+\delta t]\) is approximately proportional to the length \(\delta t\) of the interval. \emph{i.e.,}
+  \end{enumerate}
+\end{itemize}
+
+\[\frac{P(\text{exactly one event in }[t,t+\delta t])}{\delta t} \to \text{a positive constant}\]
+as \(\delta t \to 0.\)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Let \(t\) be a fixed time point. For a small time interval \(\delta t\), the probability of more than one event happening in the interval \([t,t+\delta t]\) is negligible. \emph{i.e.,}
+\end{enumerate}
+
+\[\frac{P(\text{more than one event in }[t,t+\delta t])}{\delta t} \to 0\]
+as \(\delta t \to 0.\)
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(X\) be the number of events during a time interval.
+\item
+  Suppose that the average number of events during the interested time interval is \(\lambda (>0).\)
+\item
+  Then, the distribution of \(X\) can be modeled by a Poisson Distribution with the probability mass function,
+\end{itemize}
+
+\[f_X(x)= P(X=x)= \frac{e^{-\lambda} (\lambda)^x}{x!}  , \;\; x=0,1,2,\dots\]
+- This is denoted as \(X \sim Poisson(\lambda).\)
+
+\begin{itemize}
+\item
+  If \(X\) has a Poisson distribution, then \(E(X) = \lambda\) and \(Var(X) = \lambda\)
+\item
+  The Poisson distribution can be used for counts of some sort of a given area, space, region, volume or length as well.
+\end{itemize}
+
+\emph{Example 09}
+
+Phone calls arrive at a switchboard at an average rate of 2.0 calls per minute.
+
+If the number of calls in any time interval follows the Poisson distribution, then
+
+\(X =\) number of phone calls in a given minute.
+\(X \sim Poisson(\; )\)
+
+\(Y =\) number of phone calls in a given hour.
+\(Y \sim Poisson ( \;)\)
+
+\(W =\) number of phone calls in a 15 seconds.
+\(W \sim Poisson (\;)\)
+
+\newpage
 
 \hypertarget{models-for-continuous-distributions}{%
-\section{Models for continuous distributions}\label{models-for-continuous-distributions}}
+\section{Models for Continuous Distributions}\label{models-for-continuous-distributions}}
+
+\hypertarget{uniform-distribution}{%
+\subsection{Uniform Distribution}\label{uniform-distribution}}
+
+\begin{itemize}
+\item
+  The continuous uniform distribution is defined by spreading mass uniformly over an interval \([a,b]\).
+\item
+  A random variable \(X\) is said to have a uniform distribution in \((a,b)\) if its probability density function is given by
+  \[f_X(x) = \frac{1}{b-a};\; a\leq x\leq b\]
+\item
+  This is denoted as \(X\sim U(a,b)\) or \(X \sim Unif(a, b)\)
+\item
+  It is easy to check \(\int_a^bf(x) dx =1\).
+\item
+  We also have
+  \[E(X) = \int_a^b\frac{x}{b-a}dx = \frac{a+b}{2}\]
+\end{itemize}
+
+\[Var(X) =  \frac{(b-a)^2}{12}\]
+
+\begin{figure}
+
+{\centering \includegraphics{figure/unif-1} 
+
+}
+
+\caption{Uniform probabiity density}\label{fig:unif}
+\end{figure}
+
+\hypertarget{normal-distribution-gaussian-distribution}{%
+\subsection{Normal Distribution (Gaussian Distribution)}\label{normal-distribution-gaussian-distribution}}
+
+\begin{itemize}
+\item
+  One commonly used bell shaped curve is called the normal distribution.
+\item
+  Many techniques use din applied statistics are based upon the normal distribution.
+\item
+  The normal distribution has two parameters, usually denoted by \(\mu\) and \(\sigma^2\), which are its mean and variance.
+\item
+  A random variable \(X\) is said to have a normal distribution with location parameter \(\mu\) and scale parameter \(\sigma\), if its probability density function is given by,
+\end{itemize}
+
+\[f_X(x)=f_X(x;\mu, \sigma)= \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2};\;\; -\infty<x<\infty\]
+
+\begin{itemize}
+\item
+  This is denoted by \(X \sim N(\mu, \sigma^2)\).
+\item
+  The normal density function is \textbf{symmetric around} the location parameter \(\mu\).
+\item
+  The \textbf{dispersion of the distribution} depends on the scale parameter \(\sigma\).
+\item
+  If \(X\) is a normal random variable, \(E(X) = \mu\) and \(Vax(X) = \sigma^2\)
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics{figure/norm-1} 
+
+}
+
+\caption{Normal distribution for different $\mu$ and $\sigma$}\label{fig:norm}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics{figure/norm2-1} 
+
+}
+
+\caption{$P(a< X < b = \int_a^b f_X(x)dx$}\label{fig:norm2}
+\end{figure}
+
+\[P(a<X<b)=\int_a^b \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}dx\]
+
+\begin{itemize}
+\tightlist
+\item
+  Evaluating of this integration is somewhat tedious
+\item
+  When we calculate this type of probabilities of normal distribution manually, it is convenient to use a normal probability table.
+\end{itemize}
+
+\hypertarget{standard-normal-distribution}{%
+\subsubsection{Standard Normal Distribution}\label{standard-normal-distribution}}
+
+\begin{itemize}
+\tightlist
+\item
+  Normal distribution with \(\mu =0\) and \(\sigma = 1\) is called the \textbf{standard normal distribution}.
+\item
+  A random variable with standard normal distribution is usually denoted by \(Z\).
+\item
+  The probability density function of standard normal distribution is denoted by \(\phi\)
+\item
+  If \(Z\sim N(0,1)\), then
+\end{itemize}
+
+\[\phi_Z(z) = \frac{1}{\sqrt{2 \pi}}e^{-\frac{1}{2}z^2};\;\; -\infty< z< \infty\]
+
+\begin{itemize}
+\tightlist
+\item
+  Probabilities related to Z can be found by using standard normal probability table.
+\end{itemize}
+
+\newpage
+
+\emph{Example 10}
+
+Let \(Z\) be a standard normal random variable. Calculate probabilities given in table below.
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+No. & Calculate this probability & Answer\tabularnewline
+\midrule
+\endhead
+1 & \(P(Z < 0)\) &\tabularnewline
+2 & \(P(Z < 2.02)\) &\tabularnewline
+3 & \(P(Z > 0.95)\) &\tabularnewline
+4 & \(P(Z > -1.48)\) &\tabularnewline
+5 & \(P(Z < -1.76)\) &\tabularnewline
+6 & \(P(Z < 1.7)\) &\tabularnewline
+7 & \(P(Z < -0.33)\) &\tabularnewline
+8 & \(P(0.94 < Z < 2.41)\) &\tabularnewline
+9 & \(P(-2.41 < Z < -0.94)\) &\tabularnewline
+10 & \(P(-2.96 < Z < 1.05)\) &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\newpage
+
+Example contd\ldots{}
+
+\newpage
+
+\textbf{Cumulative Standard Normal Distribution}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/ztable} \end{center}
+
+\newpage
+
+\(Z_\alpha\) \textbf{Notation}
+
+\begin{itemize}
+\tightlist
+\item
+  \(Z_\alpha\) denotes the value such that \(P(Z\geq Z_\alpha) = \alpha\)
+\item
+  Here \(\alpha\) represents a probability.
+\item
+  Therfore \(0\leq \alpha \leq 1\)
+\end{itemize}
+
+\emph{Example 11}
+
+Find \(Z_{0.025}\)''
+
+\begin{figure}
+
+{\centering \includegraphics{figure/norm3-1} 
+
+}
+
+\caption{$P(a< X < b = \int_a^b f_X(x)dx$}\label{fig:norm3}
+\end{figure}
+
+\emph{Example 12}
+
+Find the following values
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  \(Z_{0.01}\)
+\item
+  \(Z_{0.05}\)
+\item
+  \(Z_{0.9}\)
+\item
+  \(Z_{0.975}\)
+\item
+  \(Z_{0.85}\)
+\end{enumerate}
+
+\newpage
+
+Example contd \ldots{}
+
+\newpage 
+\pagenumbering{arabic}
+
+\hypertarget{tutorial}{%
+\section*{Tutorial}\label{tutorial}}
+\addcontentsline{toc}{section}{Tutorial}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Consider the experiment of taking two products randomly form a production line and determine whether each is defective or not. Express the following events using a suitably defined random variable.
+\end{enumerate}
+
+\(D_0=\) \emph{The event that both products are non defective}
+
+\(D_1=\) \emph{The event that one product is defective}
+
+\(D_2=\) \emph{The event that both products are defective}
+
+\(E=\) \emph{The event that at least one product is defective}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Let X be a random variable with the following probability distribution
+\end{enumerate}
+
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule
+\(x\) & 1 & 1.5 & 2 & 2.5 & 3 & other\tabularnewline
+\midrule
+\endhead
+\(f_X(x)\) & \(k\) & \(2k\) & \(4k\) & \(2k\) & \(k\) & 0\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Find the value of \(k\)
+\item
+  Find \(P(X = 2.5)\)
+\item
+  Calculate \(P (X \geq 1.75)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  The sample space of a random experiment is \(\{a, b, c, d, e, f\}\), and each outcome is equally likely. A random variable \(X\) is defined as follows:
+\end{enumerate}
+
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule
+Outcome & \(a\) & \(b\) & \(c\) & \(d\) & \(e\) & \(f\)\tabularnewline
+\midrule
+\endhead
+\(x\) & 0 & 0 & 1.5 & 1.5 & 2 & 3\tabularnewline
+\bottomrule
+\end{longtable}
+
+Determine the probability mass function of \(X\). Use the probability mass function to determine the following probabilities:
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(P(X = 1.5)\)
+\item
+  \(P(0.5 < X < 2.7)\)
+\item
+  \(P(X > 3)\)
+\item
+  \(P(0 \leq X < 2)\)
+\item
+  \(P(X = 0 \text{ or } X = 2)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Verify that the following function is a probability mass function, and determine the requested probabilities.
+\end{enumerate}
+
+\[f_X(x)=\frac{8}{7} \left(\frac{1}{2} \right)^x, \text{ x= 1,2,3 }\]
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(P(X \leq 1)\)
+\item
+  \(P(X > 1)\)
+\item
+  \(P (2 < X < 6)\)
+\item
+  \(P(X \leq 1 \text{ or } X > 1)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  A disk drive manufacturer sells storage devices with capacities of one terabyte, 500 gigabytes, and 100 gigabytes with probabilities 0.5, 0.3, and 0.2, respectively. The revenues associated with the sales in that year are estimated to be \$50 million, \$25 million, and \$10 million, respectively. Let \(X\) denotes the revenue of storage devices during that year.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Determine the probability mass function of \(X\).
+\item
+  Calculate the probability of getting more than \$20 million of revenue during that year.\\
+\item
+  Determine the cumulative distribution function of \(X\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Consider the following cumulative distribution function:
+\end{enumerate}
+
+\begin{equation}
+F_X(x) =
+\begin{cases} 
+0 & x<-2\\
+0.2 & -2 \leq x< 0\\
+0.7 & 0\leq x<2\\
+1 & 2 \leq x
+\end{cases}
+\end{equation}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  Draw the plot of \(F_X(x)\)
+\item
+  Discuss the properties of \(F_X(x)\) (eg: whether it is discrete or continuous, whether it is decreasing or increasing function etc. )
+\item
+  Determine the probability mass function of \(X\) from the above cumulative distribution function:
+\item
+  Plot the probability mass function of \(X\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  The number of e-mail messages received per hour varies from 10 to 16 with the following probabilities
+\end{enumerate}
+
+\begin{longtable}[]{@{}llllllll@{}}
+\toprule
+\(x =\) number of messages & 10 & 11 & 12 & 13 & 14 & 15 & 16\tabularnewline
+\midrule
+\endhead
+\(P(X=x)\) & 0.08 & 0.15 & 0.1 & 0.2 & 0.1 & 0.07 & 0.3\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  Let \(X\) be the number of e-mail messages received per hour. Find the probability mass function of X
+\item
+  Determine the mean and standard deviation of the number of messages received per hour
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  According to past data, twenty percent of all telephones of a certain type are submitted for service while under warranty. Of these, \(60\%\) can be repaired whereas the other \(40\%\) must be replaced with new units. If a company purchases ten of these telephones, what is the probability that
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  two telephones will be submitted for service under warranty?
+\item
+  at most 3 telephones will be submitted for service under warranty?
+\item
+  two telephones will end up being replaced under warranty?
+\item
+  one telephone will end up being repaired under warranty?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Each sample of water has a \(10\%\) chance of containing a particular organic pollutant. Assume that the samples are independent with regard to the presence of the pollutant. Find the probability that in the next 18 samples, exactly 2 contain the pollutant
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  Define a suitable random variable for the above question
+\item
+  Find the distribution of that random variable
+\item
+  Find the probability that in the next 18 samples, exactly 2 contain the pollutant
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  The space shuttle flight control system called Primary Avionics Software Set (PASS) uses four independent computers working in parallel. At each critical step, the computers ``vote'' to determine the appropriate step. The probability that a computer will ask for a roll to the left when a roll to the right is appropriate is 0.0001. Let \(X\) denotes the number of computers that vote for a left roll when a right roll is appropriate.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  What is the probability mass function of \(X\)?
+\item
+  What are the mean and variance of \(X\)?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  A University lecturer never finishes his lecture before the end of the hour and always finishes his lectures within 2 minutes after the hour. Let \(X\) = the time that elapses between the end of the hour and the end of the lecture and suppose the pdf of \(X\) is
+\end{enumerate}
+
+\begin{equation}
+f_X(x) =
+\begin{cases} 
+kx^2 & 0\leq  x\leq 2\\
+0 & otherwise
+\end{cases}
+\end{equation}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  Find the value of \(k\) and draw the density curve.
+\item
+  What is the probability that the lecture ends within 1 min of the end of the hour?
+\item
+  What is the probability that the lecture continues beyond the hour for between 60 and 90 sec?
+\item
+  What is the probability that the lecture continues for at least 90 sec beyond the end of the hour?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  The daily sales of gasoline are uniformly distributed between 2,000 and 5,000 gallons. Find the probability that sales are:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  between 2,500 and 3,000 gallon
+\item
+  more than 4000 gallons
+\item
+  exactly 2500 gallons
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  Suppose \(X\) has a continuous uniform distribution over the interval \([-1,1]\). Determine the following:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Mean, variance, and standard deviation of \(X\)
+\item
+  Value for \(k\) such that \(P(-k < X < k ) = 0.90\)
+\item
+  Cumulative distribution function
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\tightlist
+\item
+  Suppose that the time it takes a data collection operator to fill out an electronic form for a database is uniformly between 1.5 and 2.2 minutes.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  What are the mean and variance of the time it takes an operator to fill out the form?
+\item
+  What is the probability that it will take less than two minutes to fill out the form?
+\item
+  Determine the cumulative distribution function of the time it takes to fill out the form.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{14}
+\item
+  An electronic product contains 40 integrated circuits. The probability that any integrated circuit is defective is 0.01, and the integrated circuits are independent. The product operates only if there are no defective integrated circuits. What is the probability that the product operates?
+\item
+  A bag of 200 chocolate chips is dumped into a batch of cookies dough. 40 cookies are made from such a batch of dough. What is the probability that a randomly selected cookie has at least 4 chocolate chips?
+\item
+  For the case of the thin copper wire, suppose that the number of flaws follows a Poisson distribution with a mean of 2.3 flaws per millimeter.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  Determine the probability of exactly two flaws in 1 millimeter of wire.
+\item
+  Determine the probability of 10 flaws in 5 millimeters of wire
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{17}
+\tightlist
+\item
+  Contamination is a problem in the manufacture of magnetic storage disks. Assume that the number of particles of contamination that occur on a disk surface has a Poisson distribution, and the average number of particles per square centimeter of media surface is 0.1. The area of a disk under study is 100 square centimeters.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  Determine the probability that 12 particles occur in the area of a disk under study.
+\item
+  Determine the probability that zero particles occur in the area of the disk under study.
+\item
+  Determine the probability that 12 or fewer particles occur in the area of the disk under study
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{18}
+\tightlist
+\item
+  The number of surface flaws in plastic panels used in the interior of automobiles has a Poisson distribution with a mean of 0.05 flaw per square foot of plastic panel. Assume that an automobile interior contains 10 square feet of plastic panel.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  What is the probability that there are no surface flaws in an auto's interior?
+\item
+  If 10 cars are sold to a rental company, what is the probability that none of the 10 cars has any surface flaws?
+\item
+  If 10 cars are sold to a rental company, what is the probability that at most 1 car has any surface flaws?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{19}
+\tightlist
+\item
+  Cabs pass your workplace according to a Poisson process with a mean of five cabs per hour. Suppose that you exit the workplace at 6:00 p.m. Determine the following:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  Probability that you wait more than 10 minutes for a cab.
+\item
+  Probability that you wait fewer than 20 minutes for a cab.
+\end{enumerate}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  An electronic product contains 40 integrated circuits. The probability that any integrated circuit is defective is 0.01, and the integrated circuits are independent. The product operates only if there are no defective integrated circuits. What is the probability that the product operates?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  A person must take two buses to go to work. From the past experience, he knows that a bus can come at any time within 6 minutes. Also, the probability that a bus comes within any period of the same length is the same. Hence, it is reasonable to assume the following probability density function for the waiting time \(X\) (in minutes) for a bus
+\end{enumerate}
+
+\(f_X(x) = \frac{1}{6}, \;\;0<x<6.\)
+
+Then the total waiting time \(T\) at both bus-stops has the following density function
+
+\begin{equation}
+f_T(t) =
+\begin{cases} 
+\frac{t}{36} & 0\leq t \leq 6\\
+\frac{1}{3}- \frac{t}{36} & 6\leq t \leq 12
+\end{cases}
+\end{equation}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  Verify that each of above function is a proper density function
+\item
+  What is the probability that the waiting time at the first bus-stop will be less than 2 minutes?
+\item
+  What is the probability that the waiting time at the first bus-stop will be less than 2 minutes and the waiting time at the second
+\end{enumerate}
+
+\newpage
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\begin{minipage}[b]{0.16\columnwidth}\raggedright
+Name\strut
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright
+Notation\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright
+Discrete density functions\strut
+\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\raggedright
+Parameter Space\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright
+Mean\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.16\columnwidth}\raggedright
+Discrete Uniform\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(f(x) = \frac{1}{N},\;\;x=1,2,\dots, N\)\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\(N=1,2,\dots\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(\frac{N+1}{2}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\(\frac{N^2-1}{12}\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\raggedright
+Bernoulli\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(f(x) = \theta^x (1-\theta)^{1-x}\;\; x=0,1\)\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\(0\leq \theta \leq 1\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(\theta\)\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\(\theta (1-\theta)\)\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
 \hypertarget{estimations}{%
 \chapter{Estimations}\label{estimations}}

@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-05-29" />
+<meta name="date" content="2020-06-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -97,11 +97,26 @@
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="statistical-distributions.html"><a href="statistical-distributions.html#cumulative-distribution-function"><i class="fa fa-check"></i><b>1.4</b> Cumulative Distribution Function</a><ul>
 <li class="chapter" data-level="1.4.1" data-path="statistical-distributions.html"><a href="statistical-distributions.html#relationship-between-cdf-and-pdf"><i class="fa fa-check"></i><b>1.4.1</b> Relationship between cdf and pdf</a></li>
-<li class="chapter" data-level="1.4.2" data-path="statistical-distributions.html"><a href="statistical-distributions.html#properties-of-a-cumulative-distribution-function-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>1.4.2</b> Properties of a cumulative distribution function of a <strong>Discrete random variable</strong></a></li>
+<li class="chapter" data-level="1.4.2" data-path="statistical-distributions.html"><a href="statistical-distributions.html#properties-of-a-cumulative-distribution-function-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>1.4.2</b> Properties of a cumulative distribution function of a Discrete random variable</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="statistical-distributions.html"><a href="statistical-distributions.html#descriptive-properties-of-distributions"><i class="fa fa-check"></i><b>1.5</b> Descriptive properties of distributions</a></li>
-<li class="chapter" data-level="1.6" data-path="statistical-distributions.html"><a href="statistical-distributions.html#models-for-discrete-distributions"><i class="fa fa-check"></i><b>1.6</b> Models for discrete distributions</a></li>
-<li class="chapter" data-level="1.7" data-path="statistical-distributions.html"><a href="statistical-distributions.html#models-for-continuous-distributions"><i class="fa fa-check"></i><b>1.7</b> Models for continuous distributions</a></li>
+<li class="chapter" data-level="1.5" data-path="statistical-distributions.html"><a href="statistical-distributions.html#expectations-and-moments"><i class="fa fa-check"></i><b>1.5</b> Expectations and Moments</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="statistical-distributions.html"><a href="statistical-distributions.html#expectation"><i class="fa fa-check"></i><b>1.5.1</b> Expectation</a></li>
+<li class="chapter" data-level="1.5.2" data-path="statistical-distributions.html"><a href="statistical-distributions.html#moments"><i class="fa fa-check"></i><b>1.5.2</b> Moments</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="statistical-distributions.html"><a href="statistical-distributions.html#models-for-discrete-distributions"><i class="fa fa-check"></i><b>1.6</b> Models for Discrete Distributions</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="statistical-distributions.html"><a href="statistical-distributions.html#discrete-uniform-distribution"><i class="fa fa-check"></i><b>1.6.1</b> Discrete Uniform Distribution</a></li>
+<li class="chapter" data-level="1.6.2" data-path="statistical-distributions.html"><a href="statistical-distributions.html#bernoulli-distribution"><i class="fa fa-check"></i><b>1.6.2</b> Bernoulli Distribution</a></li>
+<li class="chapter" data-level="1.6.3" data-path="statistical-distributions.html"><a href="statistical-distributions.html#binomial-distribution"><i class="fa fa-check"></i><b>1.6.3</b> Binomial Distribution</a></li>
+<li class="chapter" data-level="1.6.4" data-path="statistical-distributions.html"><a href="statistical-distributions.html#geometric-distribution"><i class="fa fa-check"></i><b>1.6.4</b> Geometric Distribution</a></li>
+<li class="chapter" data-level="1.6.5" data-path="statistical-distributions.html"><a href="statistical-distributions.html#negative-binomial-distribution"><i class="fa fa-check"></i><b>1.6.5</b> Negative Binomial Distribution</a></li>
+<li class="chapter" data-level="1.6.6" data-path="statistical-distributions.html"><a href="statistical-distributions.html#hypergeometric-distribution"><i class="fa fa-check"></i><b>1.6.6</b> Hypergeometric Distribution</a></li>
+<li class="chapter" data-level="1.6.7" data-path="statistical-distributions.html"><a href="statistical-distributions.html#poisson-distribution"><i class="fa fa-check"></i><b>1.6.7</b> Poisson Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="statistical-distributions.html"><a href="statistical-distributions.html#models-for-continuous-distributions"><i class="fa fa-check"></i><b>1.7</b> Models for Continuous Distributions</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="statistical-distributions.html"><a href="statistical-distributions.html#uniform-distribution"><i class="fa fa-check"></i><b>1.7.1</b> Uniform Distribution</a></li>
+<li class="chapter" data-level="1.7.2" data-path="statistical-distributions.html"><a href="statistical-distributions.html#normal-distribution-gaussian-distribution"><i class="fa fa-check"></i><b>1.7.2</b> Normal Distribution (Gaussian Distribution)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistical-distributions.html"><a href="statistical-distributions.html#tutorial"><i class="fa fa-check"></i>Tutorial</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="estimations.html"><a href="estimations.html"><i class="fa fa-check"></i><b>2</b> Estimations</a><ul>
 <li class="chapter" data-level="2.1" data-path="estimations.html"><a href="estimations.html#point-estimation"><i class="fa fa-check"></i><b>2.1</b> Point Estimation</a><ul>
@@ -172,7 +187,7 @@
 <ul>
 <li>Axioms 1 and 2 imply that for any event <span class="math inline">\(E\)</span>, <span class="math inline">\(0 \leq P (E) \leq 1\)</span>.</li>
 <li><span class="math inline">\(P (E) = 1 \iff\)</span> the event E is certain to occur.</li>
-<li><span class="math inline">\(P (E) = 1 \iff\)</span> the event E cannot occur.</li>
+<li><span class="math inline">\(P (E) = 0 \iff\)</span> the event E cannot occur.</li>
 </ul>
 </div>
 <div id="methods-for-determining-probability" class="section level3 unnumbered">
@@ -240,7 +255,7 @@ Consider the experiment of tossing a coin. Express the following events using a 
 <p>Consider the experiment of rolling of a die. Express the following events using a suitably defined random variable</p>
 <p><span class="math inline">\(A=\)</span> <em>The event that the number faced up is less than 5</em></p>
 <p><span class="math inline">\(B=\)</span> <em>The event that the number faced up is even</em></p>
-<p><span class="math inline">\(C=\)</span> <em>The event that the number faced up is is 2 or 5</em></p>
+<p><span class="math inline">\(C=\)</span> <em>The event that the number faced up is 2 or 5</em></p>
 <p><img src="figure/Ch1box2-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <div style="page-break-after: always;"></div>
 <p><em>Example 03</em></p>
@@ -310,7 +325,7 @@ P(X=x) &amp; \text{if } x=x_j, j=1,2,\dots,n,\dots\\
 X =
 \begin{cases} 
 0 &amp; \text{if the outcome is a Tail }\\
-0 &amp; \text{if the outcome is a Head}
+1 &amp; \text{if the outcome is a Head}
 \end{cases}
 \end{equation}\]</span></p>
 <p>Find the probability mass function of <span class="math inline">\(X\)</span>. Is <span class="math inline">\(X\)</span> discrete or continuous?</p>
@@ -417,7 +432,7 @@ and therefore</p>
 <ul>
 <li><p>Therefore, the height of a bar represents the <em>probability density</em> in that class interval.</p></li>
 <li><p>When <span class="math inline">\(\delta x \rightarrow0\)</span>, it will allow us to approximate the histogram by a smooth curve as in Figure  (d).</p></li>
-<li><p>As the are under each histogram is 1, the area under the curve is also 1</p></li>
+<li><p>As the area under each histogram is 1, the area under the curve is also 1</p></li>
 <li><p>For any point <span class="math inline">\(x\)</span>,</p></li>
 </ul>
 <p><span class="math display">\[\text{The height of the curve} \approx \lim \limits_{\delta x \to 0} \frac{P(x_i-\frac{\delta x}{2} \leq X \leq x_i+\frac{\delta x}{2})}{\delta x} \]</span></p>
@@ -438,9 +453,9 @@ and therefore</p>
 </ul>
 <p><span class="math display">\[P(c\leq X \leq d) = \int_c^d f_X(x)dx\]</span></p>
 <div class="figure" style="text-align: center"><span id="fig:hist2"></span>
-<img src="figure/hist2-1.png" alt="Histograms with different class intervals and a possible model for the pdf" width="960" />
+<img src="figure/hist2-1.png" alt="$P(c\leq x \leq d = \int_c^d f_X(x)dx$" width="960" />
 <p class="caption">
-Figure 1.2: Histograms with different class intervals and a possible model for the pdf
+Figure 1.2: <span class="math inline">\(P(c\leq x \leq d = \int_c^d f_X(x)dx\)</span>
 </p>
 </div>
 <ul>
@@ -526,20 +541,762 @@ where <span class="math inline">\(f_X(t)\)</span> is the value of the pdf of <sp
 <li>Draw the cumulative distribution function of <span class="math inline">\(X\)</span></li>
 </ol>
 <p><img src="figure/Ch1box12-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="figure/Ch1box13-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="properties-of-a-cumulative-distribution-function-of-a-discrete-random-variable" class="section level3">
-<h3><span class="header-section-number">1.4.2</span> Properties of a cumulative distribution function of a <strong>Discrete random variable</strong></h3>
+<h3><span class="header-section-number">1.4.2</span> Properties of a cumulative distribution function of a Discrete random variable</h3>
+<p><em>Example 07</em></p>
+<p><span class="math display">\[\begin{equation}
+f_X(x) =
+\begin{cases} 
+\frac{1}{25}x &amp; 0\leq x &lt; 5\\
+\frac{2}{5}- \frac{1}{25}x &amp; 5\leq x \leq 10\\
+0 &amp; \text{otherwise}
+\end{cases}
+\end{equation}\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Find the CDF of <span class="math inline">\(X\)</span></li>
+<li>Find <span class="math inline">\(P(X\leq 8)\)</span></li>
+<li>Find <span class="math inline">\(P(3\leq X\leq 8)\)</span></li>
+</ol>
+<div style="page-break-after: always;"></div>
+<ol style="list-style-type: decimal">
+<li></li>
+</ol>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
-<div id="descriptive-properties-of-distributions" class="section level2">
-<h2><span class="header-section-number">1.5</span> Descriptive properties of distributions</h2>
+<div id="expectations-and-moments" class="section level2">
+<h2><span class="header-section-number">1.5</span> Expectations and Moments</h2>
+<!-- Casella pg 55-->
+<div id="expectation" class="section level3">
+<h3><span class="header-section-number">1.5.1</span> Expectation</h3>
+<ul>
+<li><p>The expected value, or expectation of a random variable is merely its average value.</p></li>
+<li><p>By weighting the values of the random variable according to the probability distribution, we can obtain a number that summarizes a typical or expected value of an observation of the random variable.</p></li>
+</ul>
+<p><strong>Definition 4: Expected value</strong></p>
+<p>Let <span class="math inline">\(X\)</span> be a random variable. The <em>expected value</em> or <em>mean</em> of a random variable <span class="math inline">\(g(X)\)</span>, denoted by <span class="math inline">\(E[g(x)],\)</span> is</p>
+<p><span class="math display">\[\begin{equation}
+E[g(x)] =
+\begin{cases} 
+\sum_{x}g(x) f_X(x) &amp; \text{if } X \text{ is a discrete random variable with pmf }  f_X(x) \\
+\int_x g(x) f_X(x)dx &amp; \text{if } X \text{ is a continuous random variable with pdf }  f_X(x)
+\end{cases}
+\end{equation}\]</span></p>
+<!--Casella pg 57-->
+<ul>
+<li><p>The mean of a random variable gives a measure of <em>central location</em> of the density of <span class="math inline">\(X\)</span>.</p></li>
+<li><p>The process of taking expectations is a linear operation.</p></li>
+<li><p>For any constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>,
+<span class="math display">\[E(aX+b) = aE(X)+b\]</span></p></li>
+</ul>
+<div id="properties-of-expected-value" class="section level4">
+<h4><span class="header-section-number">1.5.1.1</span> Properties of expected value</h4>
+<!-- mood pg 70-, casella pg 57-->
+<p><strong>Theorem</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(E(c) = c\)</span> for a constant <span class="math inline">\(c\)</span></li>
+<li><span class="math inline">\(E[cg(X)] = cE[g(X)]\)</span> for a constant <span class="math inline">\(c\)</span></li>
+<li><span class="math inline">\(E[c_1g_1(X)+c_2g_2(X)]= c_1E[g_1(X)]+c_2E[g_2(X)]\)</span></li>
+<li>If <span class="math inline">\(g_1(x) \geq 0\)</span> for all <span class="math inline">\(x\)</span>, then <span class="math inline">\(E[g_1(X)] \geq 0\)</span></li>
+<li>If <span class="math inline">\(g_1(x) \geq g_2(x)\)</span> for all <span class="math inline">\(x\)</span>, then <span class="math inline">\(E[g_1(X)] \geq E[g_2(X)]\)</span></li>
+<li>If <span class="math inline">\(a\leq g_1(x) \leq b\)</span> for all <span class="math inline">\(x\)</span>, then <span class="math inline">\(a\leq E[g_1(X)] \leq b\)</span></li>
+<li>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are two <strong>independent</strong> random variables, then <span class="math inline">\(E(X \times Y) = E(X)\times E(Y)\)</span></li>
+</ol>
+<p><em>Example 08</em></p>
+<p>Random variable <span class="math inline">\(X\)</span> has the following pmf</p>
+<p><span class="math display">\[\begin{equation}
+f_X(x) =
+\begin{cases} 
+0.2 &amp;  x =2\\
+0.3 &amp;  x =4\\
+0.4 &amp;  x =5\\
+0.1 &amp;  x =7
+\end{cases}
+\end{equation}\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Find <span class="math inline">\(E(X)\)</span></li>
+<li>Find <span class="math inline">\(E(X^2)\)</span></li>
+<li>Find <span class="math inline">\(E\left( \frac{1}{X}\right)\)</span></li>
+<li>Find <span class="math inline">\(E(2X+3X^2-5)\)</span></li>
+</ol>
+<p><img src="figure/Ch1box15-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="moments" class="section level3">
+<h3><span class="header-section-number">1.5.2</span> Moments</h3>
+<ul>
+<li>The various moments of a distribution are an important class of expectation</li>
+</ul>
+<!-- Mood pg 73-->
+<p><strong>Definition 5: Moments</strong></p>
+<p>If <span class="math inline">\(X\)</span> is a random variable, the <span class="math inline">\(r\)</span><em>th moment of</em> <span class="math inline">\(X\)</span>, usually denoted by <span class="math inline">\(\mu_r^\prime,\)</span> is defined as</p>
+<p><span class="math display">\[\mu_r^\prime = E(X^r).\]</span></p>
+<p>if the expectation exists.</p>
+<ul>
+<li>Note that <span class="math inline">\(\mu_1^\prime = E(X)= \mu,\)</span> the mean of <span class="math inline">\(X\)</span>.</li>
+</ul>
+<p><strong>Definition 6: Central moments</strong></p>
+<p>If <span class="math inline">\(X\)</span> is a random variable, the <span class="math inline">\(r\)</span><em>th central moment of</em> <span class="math inline">\(X\)</span> <em>about</em> <span class="math inline">\(a\)</span> is defined as <span class="math inline">\(E[(x-a)^r]\)</span>.</p>
+<p>If <span class="math inline">\(a= E(X) = \mu,\)</span> we have the <span class="math inline">\(r\)</span><em>th central moment of</em> <span class="math inline">\(X\)</span>, <em>about</em> <span class="math inline">\(E(X)\)</span>, denoted by <span class="math inline">\(\mu_r,\)</span> which is
+<span class="math display">\[\mu_r=E[(X-E(X))^r] = E[(X-\mu)^r] .\]</span></p>
+<ul>
+<li>Find <span class="math inline">\(\mu_1\)</span></li>
+</ul>
+<div style="page-break-after: always;"></div>
+<p><strong>Definition 7: Variance</strong>
+<!-- Casella pg 59-, mood 70--></p>
+<p>If <span class="math inline">\(X\)</span> is a random variable, <span class="math inline">\(Var(X)= E[(X-E(X))^2]= E(X^2) - [E(X)]^2\)</span> provided <span class="math inline">\(E(X^2)\)</span> exists.</p>
+<p><img src="figure/Ch1box16-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li><p>The <em>variance</em> of a random variable <span class="math inline">\(X\)</span> is its second central moment, <span class="math inline">\(Var(X) = E[(X-E(X))^2]= E[(X-\mu)^2]\)</span></p></li>
+<li><p>The positive square root of <span class="math inline">\(Var(X)\)</span> is the <em>standard deviation</em> of <span class="math inline">\(X\)</span></p></li>
+</ul>
+<!-- mood 67-->
+<ul>
+<li><p>The <em>variance</em> of a random variable gives a measure of the degree of spread of a distribution around its mean.</p></li>
+<li><p>Let <span class="math inline">\(X\)</span> be a random variable, and let <span class="math inline">\(\mu\)</span> be <span class="math inline">\(E(X).\)</span> the <em>variance</em> of <span class="math inline">\(X\)</span>, denoted by <span class="math inline">\(\sigma^2\)</span> of <span class="math inline">\(Var(X),\)</span> is defined by</p></li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+Var(X) =
+\begin{cases} 
+\sum_{x}(x-\mu)^2f_X(x) &amp; \text{if } X \text{ is  discrete with mass points }  x_!, x_2, \dots, x_j\dots \\
+\int_x (x-\mu)^2 f_X(x)dx &amp; \text{if } X \text{ is continuous with probability density function }  f_X(x)
+\end{cases}
+\end{equation}\]</span></p>
+<div id="properties-of-variance-of-a-random-variable" class="section level4">
+<h4><span class="header-section-number">1.5.2.1</span> Properties of variance of a random variable</h4>
+<!-- mood pg 70-, casella pg 57-->
+<p><strong>Theorem</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(c\)</span> is a constant, then <span class="math inline">\(V(cX) = c^2V(X)\)</span></li>
+<li><span class="math inline">\(V(c) = 0\)</span>, Variance of a constant is zero.</li>
+<li>If <span class="math inline">\(X\)</span> is a random variable and <span class="math inline">\(c\)</span> is a constant, then <span class="math inline">\(V(c+X) = V(X)\)</span></li>
+<li>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants, then <span class="math inline">\(V(aX+b)= a^2V(X)\)</span></li>
+<li>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are two independent random variables, then
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(V(X+Y) = V(X) + V(Y)\)</span></li>
+<li><span class="math inline">\(V(X-Y) = V(X) + V(Y)\)</span></li>
+</ol></li>
+</ol>
+<p><img src="figure/Ch1box14-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
 </div>
 <div id="models-for-discrete-distributions" class="section level2">
-<h2><span class="header-section-number">1.6</span> Models for discrete distributions</h2>
+<h2><span class="header-section-number">1.6</span> Models for Discrete Distributions</h2>
+<div id="discrete-uniform-distribution" class="section level3">
+<h3><span class="header-section-number">1.6.1</span> Discrete Uniform Distribution</h3>
+<!--Casella page 86-->
+<p>A random variable <span class="math inline">\(X\)</span> has a <em>discrete uniform</em> <span class="math inline">\((1, N)\)</span> distribution if
+<span class="math display">\[f_X(x)= P(X=x)=\frac{1}{N}, \;\; x=1,2,\dots, N\]</span>
+where <span class="math inline">\(N\)</span> is a specified integer.</p>
+<ul>
+<li><p>The distribution puts equal mass on each of the outcomes <span class="math inline">\(1,2,\dots, N.\)</span></p></li>
+<li><p>If <span class="math inline">\(X\)</span> ha s a discrete uniform distribution, then <span class="math inline">\(E(X) = (N+1)/2\)</span> and <span class="math inline">\(Var(X) = (N^2-1)/12.\)</span></p></li>
+</ul>
+</div>
+<div id="bernoulli-distribution" class="section level3">
+<h3><span class="header-section-number">1.6.2</span> Bernoulli Distribution</h3>
+<p><strong>Bernoulli Trial</strong></p>
+<p>A random experiment of which the outcome can be classified into two categories is called a <em>Bernoulli trial</em></p>
+<ul>
+<li><p>In general, the results of a Bernoulli Trial are called ‘success’ and ‘failure’. We denote these results by <span class="math inline">\(S\)</span> and <span class="math inline">\(F\)</span>, respectively.</p></li>
+<li><p>Consider a Bernoulli trial. Let</p></li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+X=
+\begin{cases} 
+0 &amp; \text{if the Bernoulli trial results in a failure } \\
+1 &amp; \text{if the Bernoulli trial results in a success} 
+\end{cases}
+\end{equation}\]</span></p>
+<ul>
+<li><p>Suppose that the probability of a ‘’success’ in any Bernoulli trial is <span class="math inline">\(\theta.\)</span></p></li>
+<li><p>Then <span class="math inline">\(X\)</span> is said to have a Bernoulli distribution with probability mass function</p></li>
+</ul>
+<p><span class="math inline">\(f_X(x)= P(X=x)=\theta^x(1-\theta)^{1-x}, \;\;x=0,1\)</span></p>
+<ul>
+<li><p>This is denoted as <span class="math inline">\(X \sim Bernoulli(\theta).\)</span></p></li>
+<li><p>If <span class="math inline">\(X\)</span> has a Bernoulli distribution, then <span class="math inline">\(E(X) = \theta\)</span> and <span class="math inline">\(Var(X) = \theta(1-\theta)\)</span></p></li>
+</ul>
+</div>
+<div id="binomial-distribution" class="section level3">
+<h3><span class="header-section-number">1.6.3</span> Binomial Distribution</h3>
+<!--Mood page 89-->
+<ul>
+<li>A random experiment with the following properties is called a ‘Binomial experiment’</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p>The random experiment consists of a sequence of <span class="math inline">\(n\)</span> trials, where <span class="math inline">\(n\)</span> is fixed in advance of the random experiment.</p></li>
+<li><p>Each trial can result in one of the same two possible outcomes: “success” <span class="math inline">\((S)\)</span> or “failure” <span class="math inline">\((F)\)</span></p></li>
+<li><p>The trials are independent. Therefore the outcome of any particular trial does not influence the outcome of any other trial.</p></li>
+<li><p>The probability of “success” is the same for each trial. Let this probability is <span class="math inline">\(\theta.\)</span></p></li>
+</ol>
+<p><strong>Binomial distribution</strong></p>
+<ul>
+<li>Consider a binomial experiment with <span class="math inline">\(n\)</span> trials and probability <span class="math inline">\(\theta\)</span> of a success.</li>
+</ul>
+<p>A random variable <span class="math inline">\(X\)</span> is defined to have a <em>binomial distribution</em> if the discrete density function of <span class="math inline">\(X\)</span> is given by
+<span class="math display">\[f_X(x)= P(X=x)= {n\choose x}\theta ^x(1-\theta)^{n-x} , \;\; x=0,1,2,\dots, n\]</span></p>
+<ul>
+<li><p>This is denoted as <span class="math inline">\(X \sim Bin(n,\theta).\)</span></p></li>
+<li><p>If <span class="math inline">\(X\)</span> has a binomial distribution, then <span class="math inline">\(E(X) = n\theta\)</span> and <span class="math inline">\(Var(X) = n\theta(1-\theta)\)</span></p></li>
+<li><p>The binomial distribution reduces to the Bernoulli distribution when <span class="math inline">\(n=1.\)</span></p></li>
+</ul>
+</div>
+<div id="geometric-distribution" class="section level3">
+<h3><span class="header-section-number">1.6.4</span> Geometric Distribution</h3>
+<ul>
+<li><p>Consider a sequence of independent Bernoulli trials whose probability of “success” for each trial is <span class="math inline">\(\theta\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(X= \text{Number of failures before the first success}\)</span></p></li>
+<li><p>Then, <span class="math inline">\(X\)</span> is said to have a Geometric distribution with parameter <span class="math inline">\(\theta.\)</span></p></li>
+<li><p>The probability mass function is given by
+<span class="math display">\[f_X(x)= P(X=x)= \theta (1-\theta)^x , \;\; x=0,1,2,\dots\]</span></p></li>
+<li><p>This is denoted as <span class="math inline">\(X \sim Geometric(\theta).\)</span></p></li>
+<li><p>If <span class="math inline">\(X\)</span> has a geometric distribution, then <span class="math inline">\(E(X) = (1-\theta)/\theta\)</span> and <span class="math inline">\(Var(X) = (1-\theta)/\theta^2\)</span>
+<!-- Mood page 101--></p></li>
+<li><p>A random variable <span class="math inline">\(X\)</span> that has a geometric distribution is often referred to as a discrete <em>waiting-time</em> random variable. It represents how long (in terms of number of failures) one has to wait for a “success.”</p></li>
+</ul>
+</div>
+<div id="negative-binomial-distribution" class="section level3">
+<h3><span class="header-section-number">1.6.5</span> Negative Binomial Distribution</h3>
+<ul>
+<li><p>Consider a sequence of independent Bernoulli trials whose probability of “success” for each trial is <span class="math inline">\(\theta\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(X= \text{Number of failures before the rth success}\)</span></p></li>
+<li><p>Then, <span class="math inline">\(X\)</span> is said to have a Negative Binomial distribution with parameter <span class="math inline">\(\theta.\)</span></p></li>
+<li><p>The probability mass function is given by
+<span class="math display">\[f_X(x)= P(X=x)= {x+r-1\choose r-1} \theta^r (1-\theta)^x , \;\; x=0,1,2,\dots\]</span></p></li>
+<li><p>This is denoted as <span class="math inline">\(X \sim negbin(r,\theta).\)</span></p></li>
+<li><p>If <span class="math inline">\(X\)</span> has a Negative Binomial distribution, then <span class="math inline">\(E(X) = r(1-\theta)/\theta\)</span> and <span class="math inline">\(Var(X) = r(1-\theta)/\theta^2\)</span></p></li>
+<li><p>If in the negative binomial distribution <span class="math inline">\(r=1\)</span>, then the negative binomial density specializes to the geometric density. <!-- mood page 99--></p></li>
+</ul>
+</div>
+<div id="hypergeometric-distribution" class="section level3">
+<h3><span class="header-section-number">1.6.6</span> Hypergeometric Distribution</h3>
+<ul>
+<li><p>Suppose a population of size <span class="math inline">\(N\)</span> has <span class="math inline">\(M\)</span> individuals of a certain kind (“success”).</p></li>
+<li><p>A sample of <span class="math inline">\(n\)</span> items is taken from this population without replacement.</p></li>
+<li><p>Let <span class="math inline">\(X\)</span> be the number of successes in the sample.</p></li>
+<li><p>Then, <span class="math inline">\(X\)</span> is said to have a hypergeometric distribution.</p></li>
+<li><p>The probability mass function is given by
+<span class="math display">\[f_X(x)= P(X=x)= \frac{{M\choose x}{N-M\choose n-x}}{{N \choose n}}  , \;\; x=0,1,2,\dots, n\]</span></p></li>
+<li><p>Hypergeometric distribution can be used as a model for the number of “successes” in a sample of size <span class="math inline">\(n\)</span> if the sampling is done without replacement from a relatively small population.</p></li>
+<li><p>If <span class="math inline">\(X\)</span> has a Hypergeometric distribution, then <span class="math inline">\(E(X) = n.\frac{M}{N}\)</span> and <span class="math inline">\(Var(X) = n\frac{M}{N}\left(1-\frac{M}{N}\right)\left(\frac{N-n}{N-1}\right)\)</span></p></li>
+</ul>
+</div>
+<div id="poisson-distribution" class="section level3">
+<h3><span class="header-section-number">1.6.7</span> Poisson Distribution</h3>
+<ul>
+<li><p>The Poisson distribution provides a realistic probability model for the number of events in a given period of time, space, region or length.</p></li>
+<li>Example:
+<ul>
+<li>The number of fatal traffic accidents per week in a given city</li>
+<li>The number of emails per hour coming into the company of a large business</li>
+<li>the number of defect per unit of some material</li>
+</ul></li>
+<li>Poisson distribution is suitable if the following conditions hold.
+<ol style="list-style-type: decimal">
+<li>the number of events within non-overlapping time intervals are independent.</li>
+<li>Let <span class="math inline">\(t\)</span> be a fixed time point. For a small time interval <span class="math inline">\(\delta t\)</span>, the probability of exactly one event happening in the interval <span class="math inline">\([t,t+\delta t]\)</span> is approximately proportional to the length <span class="math inline">\(\delta t\)</span> of the interval. <em>i.e.,</em></li>
+</ol></li>
+</ul>
+<p><span class="math display">\[\frac{P(\text{exactly one event in }[t,t+\delta t])}{\delta t} \to \text{a positive constant}\]</span>
+as <span class="math inline">\(\delta t \to 0.\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(t\)</span> be a fixed time point. For a small time interval <span class="math inline">\(\delta t\)</span>, the probability of more than one event happening in the interval <span class="math inline">\([t,t+\delta t]\)</span> is negligible. <em>i.e.,</em></li>
+</ol>
+<p><span class="math display">\[\frac{P(\text{more than one event in }[t,t+\delta t])}{\delta t} \to 0\]</span>
+as <span class="math inline">\(\delta t \to 0.\)</span></p>
+<ul>
+<li>Let <span class="math inline">\(X\)</span> be the number of events during a time interval.</li>
+<li>Suppose that the average number of events during the interested time interval is <span class="math inline">\(\lambda (&gt;0).\)</span></li>
+<li>Then, the distribution of <span class="math inline">\(X\)</span> can be modeled by a Poisson Distribution with the probability mass function,</li>
+</ul>
+<p><span class="math display">\[f_X(x)= P(X=x)= \frac{e^{-\lambda} (\lambda)^x}{x!}  , \;\; x=0,1,2,\dots\]</span>
+- This is denoted as <span class="math inline">\(X \sim Poisson(\lambda).\)</span></p>
+<ul>
+<li><p>If <span class="math inline">\(X\)</span> has a Poisson distribution, then <span class="math inline">\(E(X) = \lambda\)</span> and <span class="math inline">\(Var(X) = \lambda\)</span></p></li>
+<li><p>The Poisson distribution can be used for counts of some sort of a given area, space, region, volume or length as well.</p></li>
+</ul>
+<p><em>Example 09</em></p>
+<p>Phone calls arrive at a switchboard at an average rate of 2.0 calls per minute.</p>
+<p>If the number of calls in any time interval follows the Poisson distribution, then</p>
+<p><span class="math inline">\(X =\)</span> number of phone calls in a given minute.
+<span class="math inline">\(X \sim Poisson(\; )\)</span></p>
+<p><span class="math inline">\(Y =\)</span> number of phone calls in a given hour.
+<span class="math inline">\(Y \sim Poisson ( \;)\)</span></p>
+<p><span class="math inline">\(W =\)</span> number of phone calls in a 15 seconds.
+<span class="math inline">\(W \sim Poisson (\;)\)</span></p>
+<div style="page-break-after: always;"></div>
+</div>
 </div>
 <div id="models-for-continuous-distributions" class="section level2">
-<h2><span class="header-section-number">1.7</span> Models for continuous distributions</h2>
+<h2><span class="header-section-number">1.7</span> Models for Continuous Distributions</h2>
+<div id="uniform-distribution" class="section level3">
+<h3><span class="header-section-number">1.7.1</span> Uniform Distribution</h3>
+<ul>
+<li><p>The continuous uniform distribution is defined by spreading mass uniformly over an interval <span class="math inline">\([a,b]\)</span>.</p></li>
+<li><p>A random variable <span class="math inline">\(X\)</span> is said to have a uniform distribution in <span class="math inline">\((a,b)\)</span> if its probability density function is given by
+<span class="math display">\[f_X(x) = \frac{1}{b-a};\; a\leq x\leq b\]</span></p></li>
+<li><p>This is denoted as <span class="math inline">\(X\sim U(a,b)\)</span> or <span class="math inline">\(X \sim Unif(a, b)\)</span></p></li>
+<li><p>It is easy to check <span class="math inline">\(\int_a^bf(x) dx =1\)</span>.</p></li>
+<li><p>We also have
+<span class="math display">\[E(X) = \int_a^b\frac{x}{b-a}dx = \frac{a+b}{2}\]</span></p></li>
+</ul>
+<p><span class="math display">\[Var(X) =  \frac{(b-a)^2}{12}\]</span></p>
+<div class="figure" style="text-align: center"><span id="fig:unif"></span>
+<img src="figure/unif-1.png" alt="Uniform probabiity density" width="384" />
+<p class="caption">
+Figure 1.3: Uniform probabiity density
+</p>
+</div>
+</div>
+<div id="normal-distribution-gaussian-distribution" class="section level3">
+<h3><span class="header-section-number">1.7.2</span> Normal Distribution (Gaussian Distribution)</h3>
+<ul>
+<li><p>One commonly used bell shaped curve is called the normal distribution.</p></li>
+<li><p>Many techniques use din applied statistics are based upon the normal distribution.</p></li>
+<li><p>The normal distribution has two parameters, usually denoted by <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^2\)</span>, which are its mean and variance.</p></li>
+<li><p>A random variable <span class="math inline">\(X\)</span> is said to have a normal distribution with location parameter <span class="math inline">\(\mu\)</span> and scale parameter <span class="math inline">\(\sigma\)</span>, if its probability density function is given by,</p></li>
+</ul>
+<p><span class="math display">\[f_X(x)=f_X(x;\mu, \sigma)= \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2};\;\; -\infty&lt;x&lt;\infty\]</span></p>
+<ul>
+<li><p>This is denoted by <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>.</p></li>
+<li><p>The normal density function is <strong>symmetric around</strong> the location parameter <span class="math inline">\(\mu\)</span>.</p></li>
+<li><p>The <strong>dispersion of the distribution</strong> depends on the scale parameter <span class="math inline">\(\sigma\)</span>.</p></li>
+<li><p>If <span class="math inline">\(X\)</span> is a normal random variable, <span class="math inline">\(E(X) = \mu\)</span> and <span class="math inline">\(Vax(X) = \sigma^2\)</span></p></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:norm"></span>
+<img src="figure/norm-1.png" alt="Normal distribution for different $\mu$ and $\sigma$" width="2400" />
+<p class="caption">
+Figure 1.4: Normal distribution for different <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:norm2"></span>
+<img src="figure/norm2-1.png" alt="$P(a&lt; X &lt; b = \int_a^b f_X(x)dx$" width="960" />
+<p class="caption">
+Figure 1.5: <span class="math inline">\(P(a&lt; X &lt; b = \int_a^b f_X(x)dx\)</span>
+</p>
+</div>
+<p><span class="math display">\[P(a&lt;X&lt;b)=\int_a^b \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}dx\]</span></p>
+<ul>
+<li>Evaluating of this integration is somewhat tedious</li>
+<li>When we calculate this type of probabilities of normal distribution manually, it is convenient to use a normal probability table.</li>
+</ul>
+<div id="standard-normal-distribution" class="section level4">
+<h4><span class="header-section-number">1.7.2.1</span> Standard Normal Distribution</h4>
+<ul>
+<li>Normal distribution with <span class="math inline">\(\mu =0\)</span> and <span class="math inline">\(\sigma = 1\)</span> is called the <strong>standard normal distribution</strong>.</li>
+<li>A random variable with standard normal distribution is usually denoted by <span class="math inline">\(Z\)</span>.</li>
+<li>The probability density function of standard normal distribution is denoted by <span class="math inline">\(\phi\)</span></li>
+<li>If <span class="math inline">\(Z\sim N(0,1)\)</span>, then</li>
+</ul>
+<p><span class="math display">\[\phi_Z(z) = \frac{1}{\sqrt{2 \pi}}e^{-\frac{1}{2}z^2};\;\; -\infty&lt; z&lt; \infty\]</span></p>
+<ul>
+<li>Probabilities related to Z can be found by using standard normal probability table.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+<p><em>Example 10</em></p>
+<p>Let <span class="math inline">\(Z\)</span> be a standard normal random variable. Calculate probabilities given in table below.</p>
+<table>
+<thead>
+<tr class="header">
+<th>No.</th>
+<th>Calculate this probability</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><span class="math inline">\(P(Z &lt; 0)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><span class="math inline">\(P(Z &lt; 2.02)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><span class="math inline">\(P(Z &gt; 0.95)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><span class="math inline">\(P(Z &gt; -1.48)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><span class="math inline">\(P(Z &lt; -1.76)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><span class="math inline">\(P(Z &lt; 1.7)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><span class="math inline">\(P(Z &lt; -0.33)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><span class="math inline">\(P(0.94 &lt; Z &lt; 2.41)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><span class="math inline">\(P(-2.41 &lt; Z &lt; -0.94)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><span class="math inline">\(P(-2.96 &lt; Z &lt; 1.05)\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<p>Example contd…</p>
+<div style="page-break-after: always;"></div>
+<p><strong>Cumulative Standard Normal Distribution</strong></p>
+<p><img src="figure/ztable.png" width="100%" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+<p><span class="math inline">\(Z_\alpha\)</span> <strong>Notation</strong></p>
+<ul>
+<li><span class="math inline">\(Z_\alpha\)</span> denotes the value such that <span class="math inline">\(P(Z\geq Z_\alpha) = \alpha\)</span></li>
+<li>Here <span class="math inline">\(\alpha\)</span> represents a probability.</li>
+<li>Therfore <span class="math inline">\(0\leq \alpha \leq 1\)</span></li>
+</ul>
+<p><em>Example 11</em></p>
+<p>Find <span class="math inline">\(Z_{0.025}\)</span>’’</p>
+<div class="figure" style="text-align: center"><span id="fig:norm3"></span>
+<img src="figure/norm3-1.png" alt="$P(a&lt; X &lt; b = \int_a^b f_X(x)dx$" width="960" />
+<p class="caption">
+Figure 1.6: <span class="math inline">\(P(a&lt; X &lt; b = \int_a^b f_X(x)dx\)</span>
+</p>
+</div>
+<p><em>Example 12</em></p>
+<p>Find the following values</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(Z_{0.01}\)</span></li>
+<li><span class="math inline">\(Z_{0.05}\)</span></li>
+<li><span class="math inline">\(Z_{0.9}\)</span></li>
+<li><span class="math inline">\(Z_{0.975}\)</span></li>
+<li><span class="math inline">\(Z_{0.85}\)</span></li>
+</ol>
+<div style="page-break-after: always;"></div>
+<p>Example contd …</p>
+
+</div>
+</div>
+</div>
+<div id="tutorial" class="section level2 unnumbered">
+<h2>Tutorial</h2>
+<ol style="list-style-type: decimal">
+<li>Consider the experiment of taking two products randomly form a production line and determine whether each is defective or not. Express the following events using a suitably defined random variable.</li>
+</ol>
+<p><span class="math inline">\(D_0=\)</span> <em>The event that both products are non defective</em></p>
+<p><span class="math inline">\(D_1=\)</span> <em>The event that one product is defective</em></p>
+<p><span class="math inline">\(D_2=\)</span> <em>The event that both products are defective</em></p>
+<p><span class="math inline">\(E=\)</span> <em>The event that at least one product is defective</em></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Let X be a random variable with the following probability distribution</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(x\)</span></th>
+<th>1</th>
+<th>1.5</th>
+<th>2</th>
+<th>2.5</th>
+<th>3</th>
+<th>other</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(f_X(x)\)</span></td>
+<td><span class="math inline">\(k\)</span></td>
+<td><span class="math inline">\(2k\)</span></td>
+<td><span class="math inline">\(4k\)</span></td>
+<td><span class="math inline">\(2k\)</span></td>
+<td><span class="math inline">\(k\)</span></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: lower-alpha">
+<li>Find the value of <span class="math inline">\(k\)</span></li>
+<li>Find <span class="math inline">\(P(X = 2.5)\)</span></li>
+<li>Calculate <span class="math inline">\(P (X \geq 1.75)\)</span></li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>The sample space of a random experiment is <span class="math inline">\(\{a, b, c, d, e, f\}\)</span>, and each outcome is equally likely. A random variable <span class="math inline">\(X\)</span> is defined as follows:</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Outcome</th>
+<th><span class="math inline">\(a\)</span></th>
+<th><span class="math inline">\(b\)</span></th>
+<th><span class="math inline">\(c\)</span></th>
+<th><span class="math inline">\(d\)</span></th>
+<th><span class="math inline">\(e\)</span></th>
+<th><span class="math inline">\(f\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x\)</span></td>
+<td>0</td>
+<td>0</td>
+<td>1.5</td>
+<td>1.5</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Determine the probability mass function of <span class="math inline">\(X\)</span>. Use the probability mass function to determine the following probabilities:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(P(X = 1.5)\)</span></li>
+<li><span class="math inline">\(P(0.5 &lt; X &lt; 2.7)\)</span></li>
+<li><span class="math inline">\(P(X &gt; 3)\)</span></li>
+<li><span class="math inline">\(P(0 \leq X &lt; 2)\)</span></li>
+<li><span class="math inline">\(P(X = 0 \text{ or } X = 2)\)</span></li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Verify that the following function is a probability mass function, and determine the requested probabilities.</li>
+</ol>
+<p><span class="math display">\[f_X(x)=\frac{8}{7} \left(\frac{1}{2} \right)^x, \text{ x= 1,2,3 }\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(P(X \leq 1)\)</span></li>
+<li><span class="math inline">\(P(X &gt; 1)\)</span></li>
+<li><span class="math inline">\(P (2 &lt; X &lt; 6)\)</span></li>
+<li><span class="math inline">\(P(X \leq 1 \text{ or } X &gt; 1)\)</span></li>
+</ol>
+<ol start="5" style="list-style-type: decimal">
+<li>A disk drive manufacturer sells storage devices with capacities of one terabyte, 500 gigabytes, and 100 gigabytes with probabilities 0.5, 0.3, and 0.2, respectively. The revenues associated with the sales in that year are estimated to be $50 million, $25 million, and $10 million, respectively. Let <span class="math inline">\(X\)</span> denotes the revenue of storage devices during that year.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Determine the probability mass function of <span class="math inline">\(X\)</span>.</li>
+<li>Calculate the probability of getting more than $20 million of revenue during that year.<br />
+</li>
+<li>Determine the cumulative distribution function of <span class="math inline">\(X\)</span></li>
+</ol>
+<ol start="6" style="list-style-type: decimal">
+<li>Consider the following cumulative distribution function:</li>
+</ol>
+<p><span class="math display">\[\begin{equation}
+F_X(x) =
+\begin{cases} 
+0 &amp; x&lt;-2\\
+0.2 &amp; -2 \leq x&lt; 0\\
+0.7 &amp; 0\leq x&lt;2\\
+1 &amp; 2 \leq x
+\end{cases}
+\end{equation}\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Draw the plot of <span class="math inline">\(F_X(x)\)</span></li>
+<li>Discuss the properties of <span class="math inline">\(F_X(x)\)</span> (eg: whether it is discrete or continuous, whether it is decreasing or increasing function etc. )</li>
+<li>Determine the probability mass function of <span class="math inline">\(X\)</span> from the above cumulative distribution function:</li>
+<li>Plot the probability mass function of <span class="math inline">\(X\)</span></li>
+</ol>
+<ol start="7" style="list-style-type: decimal">
+<li>The number of e-mail messages received per hour varies from 10 to 16 with the following probabilities</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(x =\)</span> number of messages</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(P(X=x)\)</span></td>
+<td>0.08</td>
+<td>0.15</td>
+<td>0.1</td>
+<td>0.2</td>
+<td>0.1</td>
+<td>0.07</td>
+<td>0.3</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: lower-alpha">
+<li>Let <span class="math inline">\(X\)</span> be the number of e-mail messages received per hour. Find the probability mass function of X</li>
+<li>Determine the mean and standard deviation of the number of messages received per hour</li>
+</ol>
+<ol start="8" style="list-style-type: decimal">
+<li>According to past data, twenty percent of all telephones of a certain type are submitted for service while under warranty. Of these, <span class="math inline">\(60\%\)</span> can be repaired whereas the other <span class="math inline">\(40\%\)</span> must be replaced with new units. If a company purchases ten of these telephones, what is the probability that</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>two telephones will be submitted for service under warranty?</li>
+<li>at most 3 telephones will be submitted for service under warranty?</li>
+<li>two telephones will end up being replaced under warranty?</li>
+<li>one telephone will end up being repaired under warranty?</li>
+</ol>
+<ol start="9" style="list-style-type: decimal">
+<li>Each sample of water has a <span class="math inline">\(10\%\)</span> chance of containing a particular organic pollutant. Assume that the samples are independent with regard to the presence of the pollutant. Find the probability that in the next 18 samples, exactly 2 contain the pollutant</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Define a suitable random variable for the above question</li>
+<li>Find the distribution of that random variable</li>
+<li>Find the probability that in the next 18 samples, exactly 2 contain the pollutant</li>
+</ol>
+<ol start="10" style="list-style-type: decimal">
+<li>The space shuttle flight control system called Primary Avionics Software Set (PASS) uses four independent computers working in parallel. At each critical step, the computers “vote” to determine the appropriate step. The probability that a computer will ask for a roll to the left when a roll to the right is appropriate is 0.0001. Let <span class="math inline">\(X\)</span> denotes the number of computers that vote for a left roll when a right roll is appropriate.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability mass function of <span class="math inline">\(X\)</span>?</li>
+<li>What are the mean and variance of <span class="math inline">\(X\)</span>?</li>
+</ol>
+<ol start="11" style="list-style-type: decimal">
+<li>A University lecturer never finishes his lecture before the end of the hour and always finishes his lectures within 2 minutes after the hour. Let <span class="math inline">\(X\)</span> = the time that elapses between the end of the hour and the end of the lecture and suppose the pdf of <span class="math inline">\(X\)</span> is</li>
+</ol>
+<p><span class="math display">\[\begin{equation}
+f_X(x) =
+\begin{cases} 
+kx^2 &amp; 0\leq  x\leq 2\\
+0 &amp; otherwise
+\end{cases}
+\end{equation}\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Find the value of <span class="math inline">\(k\)</span> and draw the density curve.</li>
+<li>What is the probability that the lecture ends within 1 min of the end of the hour?</li>
+<li>What is the probability that the lecture continues beyond the hour for between 60 and 90 sec?</li>
+<li>What is the probability that the lecture continues for at least 90 sec beyond the end of the hour?</li>
+</ol>
+<ol start="12" style="list-style-type: decimal">
+<li>The daily sales of gasoline are uniformly distributed between 2,000 and 5,000 gallons. Find the probability that sales are:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>between 2,500 and 3,000 gallon</li>
+<li>more than 4000 gallons</li>
+<li>exactly 2500 gallons</li>
+</ol>
+<ol start="13" style="list-style-type: decimal">
+<li>Suppose <span class="math inline">\(X\)</span> has a continuous uniform distribution over the interval <span class="math inline">\([-1,1]\)</span>. Determine the following:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Mean, variance, and standard deviation of <span class="math inline">\(X\)</span></li>
+<li>Value for <span class="math inline">\(k\)</span> such that <span class="math inline">\(P(-k &lt; X &lt; k ) = 0.90\)</span></li>
+<li>Cumulative distribution function</li>
+</ol>
+<ol start="14" style="list-style-type: decimal">
+<li>Suppose that the time it takes a data collection operator to fill out an electronic form for a database is uniformly between 1.5 and 2.2 minutes.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What are the mean and variance of the time it takes an operator to fill out the form?</li>
+<li>What is the probability that it will take less than two minutes to fill out the form?</li>
+<li>Determine the cumulative distribution function of the time it takes to fill out the form.</li>
+</ol>
+<ol start="15" style="list-style-type: decimal">
+<li><p>An electronic product contains 40 integrated circuits. The probability that any integrated circuit is defective is 0.01, and the integrated circuits are independent. The product operates only if there are no defective integrated circuits. What is the probability that the product operates?</p></li>
+<li><p>A bag of 200 chocolate chips is dumped into a batch of cookies dough. 40 cookies are made from such a batch of dough. What is the probability that a randomly selected cookie has at least 4 chocolate chips?</p></li>
+<li><p>For the case of the thin copper wire, suppose that the number of flaws follows a Poisson distribution with a mean of 2.3 flaws per millimeter.</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>Determine the probability of exactly two flaws in 1 millimeter of wire.</p></li>
+<li><p>Determine the probability of 10 flaws in 5 millimeters of wire</p></li>
+</ol>
+<ol start="18" style="list-style-type: decimal">
+<li>Contamination is a problem in the manufacture of magnetic storage disks. Assume that the number of particles of contamination that occur on a disk surface has a Poisson distribution, and the average number of particles per square centimeter of media surface is 0.1. The area of a disk under study is 100 square centimeters.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>Determine the probability that 12 particles occur in the area of a disk under study.</p></li>
+<li><p>Determine the probability that zero particles occur in the area of the disk under study.</p></li>
+<li><p>Determine the probability that 12 or fewer particles occur in the area of the disk under study</p></li>
+</ol>
+<ol start="19" style="list-style-type: decimal">
+<li>The number of surface flaws in plastic panels used in the interior of automobiles has a Poisson distribution with a mean of 0.05 flaw per square foot of plastic panel. Assume that an automobile interior contains 10 square feet of plastic panel.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>What is the probability that there are no surface flaws in an auto’s interior?</p></li>
+<li><p>If 10 cars are sold to a rental company, what is the probability that none of the 10 cars has any surface flaws?</p></li>
+<li><p>If 10 cars are sold to a rental company, what is the probability that at most 1 car has any surface flaws?</p></li>
+</ol>
+<ol start="20" style="list-style-type: decimal">
+<li>Cabs pass your workplace according to a Poisson process with a mean of five cabs per hour. Suppose that you exit the workplace at 6:00 p.m. Determine the following:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>Probability that you wait more than 10 minutes for a cab.</p></li>
+<li><p>Probability that you wait fewer than 20 minutes for a cab.</p></li>
+</ol>
+<div style="page-break-after: always;"></div>
+<ol start="11" style="list-style-type: decimal">
+<li>An electronic product contains 40 integrated circuits. The probability that any integrated circuit is defective is 0.01, and the integrated circuits are independent. The product operates only if there are no defective integrated circuits. What is the probability that the product operates?</li>
+</ol>
+<!-- Activity 2.1.3 Thi note-->
+<ol start="7" style="list-style-type: decimal">
+<li>A person must take two buses to go to work. From the past experience, he knows that a bus can come at any time within 6 minutes. Also, the probability that a bus comes within any period of the same length is the same. Hence, it is reasonable to assume the following probability density function for the waiting time <span class="math inline">\(X\)</span> (in minutes) for a bus</li>
+</ol>
+<p><span class="math inline">\(f_X(x) = \frac{1}{6}, \;\;0&lt;x&lt;6.\)</span></p>
+<p>Then the total waiting time <span class="math inline">\(T\)</span> at both bus-stops has the following density function</p>
+<p><span class="math display">\[\begin{equation}
+f_T(t) =
+\begin{cases} 
+\frac{t}{36} &amp; 0\leq t \leq 6\\
+\frac{1}{3}- \frac{t}{36} &amp; 6\leq t \leq 12
+\end{cases}
+\end{equation}\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Verify that each of above function is a proper density function</li>
+<li>What is the probability that the waiting time at the first bus-stop will be less than 2 minutes?</li>
+<li>What is the probability that the waiting time at the first bus-stop will be less than 2 minutes and the waiting time at the second</li>
+</ol>
+<div style="page-break-after: always;"></div>
+<table style="width:100%;">
+<colgroup>
+<col width="18%" />
+<col width="18%" />
+<col width="22%" />
+<col width="16%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Notation</th>
+<th>Discrete density functions</th>
+<th>Parameter Space</th>
+<th>Mean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Discrete Uniform</td>
+<td><span class="math inline">\(f(x) = \frac{1}{N},\;\;x=1,2,\dots, N\)</span></td>
+<td><span class="math inline">\(N=1,2,\dots\)</span></td>
+<td><span class="math inline">\(\frac{N+1}{2}\)</span></td>
+<td><span class="math inline">\(\frac{N^2-1}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td>Bernoulli</td>
+<td><span class="math inline">\(f(x) = \theta^x (1-\theta)^{1-x}\;\; x=0,1\)</span></td>
+<td><span class="math inline">\(0\leq \theta \leq 1\)</span></td>
+<td><span class="math inline">\(\theta\)</span></td>
+<td><span class="math inline">\(\theta (1-\theta)\)</span></td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
