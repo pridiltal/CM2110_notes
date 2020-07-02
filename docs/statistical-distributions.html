@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-06-26" />
+<meta name="date" content="2020-07-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -115,6 +115,9 @@
 <li class="chapter" data-level="1.7" data-path="statistical-distributions.html"><a href="statistical-distributions.html#models-for-continuous-distributions"><i class="fa fa-check"></i><b>1.7</b> Models for Continuous Distributions</a><ul>
 <li class="chapter" data-level="1.7.1" data-path="statistical-distributions.html"><a href="statistical-distributions.html#uniform-distribution"><i class="fa fa-check"></i><b>1.7.1</b> Uniform Distribution</a></li>
 <li class="chapter" data-level="1.7.2" data-path="statistical-distributions.html"><a href="statistical-distributions.html#normal-distribution-gaussian-distribution"><i class="fa fa-check"></i><b>1.7.2</b> Normal Distribution (Gaussian Distribution)</a></li>
+<li class="chapter" data-level="1.7.3" data-path="statistical-distributions.html"><a href="statistical-distributions.html#gamma-distribution"><i class="fa fa-check"></i><b>1.7.3</b> Gamma Distribution</a></li>
+<li class="chapter" data-level="1.7.4" data-path="statistical-distributions.html"><a href="statistical-distributions.html#exponential-distribution"><i class="fa fa-check"></i><b>1.7.4</b> Exponential Distribution</a></li>
+<li class="chapter" data-level="1.7.5" data-path="statistical-distributions.html"><a href="statistical-distributions.html#beta-distribution"><i class="fa fa-check"></i><b>1.7.5</b> Beta Distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="statistical-distributions.html"><a href="statistical-distributions.html#tutorial"><i class="fa fa-check"></i>Tutorial</a></li>
 </ul></li>
@@ -994,8 +997,401 @@ Figure 1.6: <span class="math inline">\(P(a&lt; X &lt; b = \int_a^b f_X(x)dx\)</
 </ol>
 <div style="page-break-after: always;"></div>
 <p>Example contd …</p>
-
+<div style="page-break-after: always;"></div>
 </div>
+<div id="calculation-of-probabilities-of-normal-distribution" class="section level4">
+<h4><span class="header-section-number">1.7.2.2</span> Calculation of Probabilities of Normal Distribution</h4>
+<ul>
+<li>Suppose <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>.</li>
+<li>Let <span class="math inline">\(Z = \frac{x-\mu}{\sigma}\)</span>.</li>
+<li>Then, <span class="math inline">\(Z \sim N(0,1)\)</span></li>
+<li>This result can be used to find probabilities of any normal distribution.</li>
+</ul>
+<p><em>Example 13</em></p>
+<p>Let <span class="math inline">\(X \sim N(10,4).\)</span> Calculate <span class="math inline">\(P(X \geq 15)\)</span></p>
+<p><img src="figure/Ch1box17-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><em>Example 14</em></p>
+<p>Calculate the probabilities in the table below</p>
+<table>
+<thead>
+<tr class="header">
+<th>No.</th>
+<th><span class="math inline">\(\mu\)</span></th>
+<th><span class="math inline">\(\sigma\)</span></th>
+<th>Calculate this probability</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>95</td>
+<td>16</td>
+<td><span class="math inline">\(P(104.92 \leq X \leq 115.16)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>65</td>
+<td>15</td>
+<td><span class="math inline">\(P(X \leq 86.66)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>96</td>
+<td>20</td>
+<td><span class="math inline">\(P( X &lt; 86.3)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>93</td>
+<td>8</td>
+<td><span class="math inline">\(P(91.24 \leq X \leq 109.34)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>63</td>
+<td>9</td>
+<td><span class="math inline">\(P(65.55 &lt; X &lt; 76.61)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>102</td>
+<td>8</td>
+<td><span class="math inline">\(P( X &gt; 80.55)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>79</td>
+<td>18</td>
+<td><span class="math inline">\(P(X &lt; 131.15)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>86</td>
+<td>6</td>
+<td><span class="math inline">\(P( X \leq 69.2)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>85</td>
+<td>2</td>
+<td><span class="math inline">\(P(X &lt; 86.46)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>100</td>
+<td>5</td>
+<td><span class="math inline">\(P(X \leq 112.26)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>58</td>
+<td>10</td>
+<td><span class="math inline">\(P(75.19 \leq X \leq 82.1)\)</span></td>
+<td>0.0348</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>49</td>
+<td>7</td>
+<td><span class="math inline">\(P(X \geq 48.52)\)</span></td>
+<td>0.5273</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>103</td>
+<td>17</td>
+<td><span class="math inline">\(P(73.97 \leq X \leq 138.28)\)</span></td>
+<td>0.9371</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>99</td>
+<td>24</td>
+<td><span class="math inline">\(P( X &lt; 82.8)\)</span></td>
+<td>0.2498</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>52</td>
+<td>10</td>
+<td><span class="math inline">\(P( X \leq 53.58)\)</span></td>
+<td>0.5628</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>72</td>
+<td>8</td>
+<td><span class="math inline">\(P(70.45 &lt; X \leq 93.5)\)</span></td>
+<td>0.5732</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>82</td>
+<td>20</td>
+<td><span class="math inline">\(P(48.14 &lt; X &lt; 99.49)\)</span></td>
+<td>0.7639</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>94</td>
+<td>15</td>
+<td><span class="math inline">\(P(91.93 \leq X \leq 98.55)\)</span></td>
+<td>0.1741</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>45</td>
+<td>4</td>
+<td><span class="math inline">\(P(42.36 \leq X \leq 50.59)\)</span></td>
+<td>0.6643</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>73</td>
+<td>1</td>
+<td><span class="math inline">\(P(X \geq 72.38)\)</span></td>
+<td>0.7324</td>
+</tr>
+</tbody>
+</table>
+<p><em>Example 15</em></p>
+<p>Calculate the quantiles <span class="math inline">\(k\)</span> in the table below</p>
+<table>
+<thead>
+<tr class="header">
+<th>No.</th>
+<th><span class="math inline">\(\mu\)</span></th>
+<th><span class="math inline">\(\sigma\)</span></th>
+<th>Calculate <span class="math inline">\(k\)</span> such that</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>85</td>
+<td>6</td>
+<td><span class="math inline">\(P( X &lt;k)= 0.9936\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>97</td>
+<td>23</td>
+<td><span class="math inline">\(P( X &lt;k)= 0.0694\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>77</td>
+<td>5</td>
+<td><span class="math inline">\(P( X &gt;k)= 0.0002\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>93</td>
+<td>12</td>
+<td><span class="math inline">\(P( X &gt;k)= 0.0023\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>67</td>
+<td>3</td>
+<td><span class="math inline">\(P( X &lt;k)= 0.0197\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>59</td>
+<td>5</td>
+<td><span class="math inline">\(P( X &gt;k)= 0.9756\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>94</td>
+<td>13</td>
+<td><span class="math inline">\(P( X &gt;k)= 0.3228\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>51</td>
+<td>4</td>
+<td><span class="math inline">\(P( X &lt;k)= 0.1515\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>49</td>
+<td>10</td>
+<td><span class="math inline">\(P( X &gt;k)= 0.9693\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>61</td>
+<td>13</td>
+<td><span class="math inline">\(P( X &lt;k)= 0.9946\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>69</td>
+<td>14</td>
+<td><span class="math inline">\(P( X &lt;k)= 0.9357\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>85</td>
+<td>5</td>
+<td><span class="math inline">\(P( X&gt;k)= 0.008\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>96</td>
+<td>16</td>
+<td><span class="math inline">\(P( X &gt;k)= 0.0014\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>96</td>
+<td>7</td>
+<td><span class="math inline">\(P( X &lt;k)= 0.2578\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>45</td>
+<td>4</td>
+<td><span class="math inline">\(P( X &lt;k)= 0.2578\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="empirical-rule-for-normal-distribution" class="section level4">
+<h4><span class="header-section-number">1.7.2.3</span> Empirical Rule for Normal Distribution</h4>
+<div class="figure" style="text-align: center"><span id="fig:norm4"></span>
+<img src="figure/norm4-1.png" alt="Empirical Rule for Normal Distribution" width="960" />
+<p class="caption">
+Figure 1.7: Empirical Rule for Normal Distribution
+</p>
+</div>
+<p>Calculate the following probabilities
+1. <span class="math inline">\(P(|x-\mu|\leq \sigma)\)</span>
+2. <span class="math inline">\(P(|x-\mu|\leq 2\sigma)\)</span>
+3. <span class="math inline">\(P(|x-\mu|\leq 3\sigma)\)</span></p>
+<p><strong>Empirical Rule for Normal Distribution</strong></p>
+<p>Approximately 68% of the values in any normal distribution lie within one standard deviation, approximately 95% lie within two standard deviations and approximately 99.7% lie within three standard deviations from the mean.</p>
+<ul>
+<li><p>The normal distribution is somewhat special as its two parameters <span class="math inline">\(\mu\)</span> (the mean) and <span class="math inline">\(\sigma^2\)</span> (the variance), provide us with complete information about the exact shape and location of the distribution.</p></li>
+<li><p>Straightforward calculus shows that the normal distribution has its maximum at <span class="math inline">\(x=\mu\)</span> and inflection point (where the curve changes from concave to convex) at <span class="math inline">\(\mu \pm\sigma.\)</span></p></li>
+</ul>
+</div>
+</div>
+<div id="gamma-distribution" class="section level3">
+<h3><span class="header-section-number">1.7.3</span> Gamma Distribution</h3>
+<ul>
+<li><p>We come across with many practical situations in which the variable of interest has a skewed distribution.</p></li>
+<li><p>The gamma family of distributions is a flexible family of distributions on <span class="math inline">\([0,\infty)\)</span> that yields a wide variety of skewed distributions</p></li>
+</ul>
+<!--casella-->
+<p>A random variable <span class="math inline">\(X\)</span> is said to have a gamma distribution with shape parameter <span class="math inline">\(\alpha\)</span> and scale parameter <span class="math inline">\(\beta\)</span> if its probability density function is given by</p>
+<p><span class="math display">\[f_X(x;\alpha, \beta)= \frac{1}{\Gamma(\alpha)\beta ^ {\alpha}}x^{\alpha-1}e^{-x/\beta}, \;\; 0&lt;x&lt;\infty,\;\; \alpha &gt;0, \;\;\beta &gt;0\]</span></p>
+<p>Here <span class="math inline">\(\Gamma(\alpha)\)</span> is called the <em>gamma function</em>,</p>
+<p><span class="math display">\[\Gamma(\alpha)=\int_0^{\infty}x^{\alpha-1}e^{-x}dx\]</span>
+- The gamma function satisfies many useful relationships, in particular,</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\Gamma(\alpha+1)=\alpha\Gamma(\alpha),\;\; \alpha &gt;0\)</span> (can be verified through integration by parts)</li>
+<li><span class="math inline">\(\Gamma(1) =1\)</span></li>
+<li>For any positive integer <span class="math inline">\(n(&gt;0)\)</span>, <span class="math inline">\(\Gamma(n)=(n-1)!\)</span></li>
+<li><span class="math inline">\(\Gamma \left (\frac{1}{2} \right) = \sqrt{\pi}\)</span></li>
+</ol>
+<ul>
+<li><p>When <span class="math inline">\(X\)</span> has a gamma distribution with shape parameter <span class="math inline">\(\alpha\)</span> and scale parameter <span class="math inline">\(\beta\)</span>, it is denoted as <span class="math inline">\(X \sim gamma(\alpha, \beta)\)</span></p></li>
+<li><p>The parameter <span class="math inline">\(\alpha\)</span> is known as the shape parameter, since it most influences the peakedness of the distibution</p></li>
+<li><p>The parameter <span class="math inline">\(\beta\)</span> is called the scale parameter, since most of its influence is on the spread of the distribution.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:gamma"></span>
+<img src="figure/gamma-1.png" alt="Gamma density functions" width="960" />
+<p class="caption">
+Figure 1.8: Gamma density functions
+</p>
+</div>
+<ul>
+<li><p>If <span class="math inline">\(X\)</span> has a gamma distribution with shape parameter <span class="math inline">\(\alpha\)</span> and scale parameter <span class="math inline">\(\beta\)</span>, then</p>
+<ul>
+<li><span class="math inline">\(E(X) = \alpha \beta\)</span></li>
+<li><span class="math inline">\(Var(X) = \alpha \beta^2\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div id="exponential-distribution" class="section level3">
+<h3><span class="header-section-number">1.7.4</span> Exponential Distribution</h3>
+<ul>
+<li><p>This distribution is often used to model lifetime of various items.</p></li>
+<li><p>When the number of events in a time interval has a Poisson distribution, the length of time interval between successive events can be modeled by an exponential distribution.</p></li>
+<li><p>A random variable <span class="math inline">\(X\)</span> is said to have an exponential distribution with scale parameter <span class="math inline">\(\beta\)</span>, if its probability density function is given by</p></li>
+</ul>
+<p><span class="math display">\[f_X(x; \beta)=\frac{1}{\beta}e^{-x/\beta},\;\; 0&lt;x&lt;\infty\]</span></p>
+<ul>
+<li>This is denoted by <span class="math inline">\(X \sim exponential(\beta)\)</span></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:exp"></span>
+<img src="figure/exp-1.png" alt="Exponential density functions" width="960" />
+<p class="caption">
+Figure 1.9: Exponential density functions
+</p>
+</div>
+<ul>
+<li><p>Note that exponential distibution is a special case of the gamma distribution.</p></li>
+<li><p>It can be easily shown that <span class="math inline">\(X\sim exponential(\beta) \iff X\sim gamma (1.\beta)\)</span></p></li>
+<li>If <span class="math inline">\(X\)</span> has an exponential distribution, then
+<ul>
+<li><span class="math inline">\(E(X) = \beta\)</span></li>
+<li><span class="math inline">\(Var(X) = \beta^{2}\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div id="beta-distribution" class="section level3">
+<h3><span class="header-section-number">1.7.5</span> Beta Distribution</h3>
+<ul>
+<li><p>The beta family of distributions is a continuous family on <span class="math inline">\((0,1)\)</span> indexed by two parameters.</p></li>
+<li><p>The <span class="math inline">\(beta(\alpha, \beta)\)</span> probability density function is</p></li>
+</ul>
+<p><span class="math display">\[f_X(x; \alpha, beta)= \frac{1}{B(\alpha, \beta)}x^{\alpha -1}(1-x)^{\beta-1},\;\;0&lt;x&lt;1,\; \alpha &gt;0,\;\; \beta &gt;0,\]</span></p>
+<p>where <span class="math inline">\(B(\alpha, \beta)\)</span> denotes the <em>beta function</em>,
+<span class="math display">\[B(\alpha, \beta)=\int_0^1x^{\alpha -1}(1-x)^{\beta-1}dx.\]</span></p>
+<ul>
+<li><p>The beta function is related to the gamma function through the following identity <span class="math display">\[B(\alpha, \beta)= \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}\]</span></p></li>
+<li><p>The beta distibution is one of the few common “named” distributions that give probability 1 to a finite interval, here taken to be <span class="math inline">\((0,1)\)</span>.</p></li>
+<li><p>Therefore, the beta distibution is often used to model proportions, which naturally lie between 0 and 1.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:beta"></span>
+<img src="figure/beta-1.png" alt="Beta density functions" width="960" />
+<p class="caption">
+Figure 1.10: Beta density functions
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+
 </div>
 </div>
 <div id="tutorial" class="section level2 unnumbered">

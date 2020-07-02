@@ -88,7 +88,7 @@
 
 \title{CM 2110 Calculus and Statistical Distributions}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-06-26}
+\date{2020-07-03}
 
 \begin{document}
 \maketitle
@@ -1396,7 +1396,259 @@ Find the following values
 
 Example contd \ldots{}
 
-\newpage 
+\newpage
+
+\hypertarget{calculation-of-probabilities-of-normal-distribution}{%
+\subsubsection{Calculation of Probabilities of Normal Distribution}\label{calculation-of-probabilities-of-normal-distribution}}
+
+\begin{itemize}
+\tightlist
+\item
+  Suppose \(X \sim N(\mu, \sigma^2)\).
+\item
+  Let \(Z = \frac{x-\mu}{\sigma}\).
+\item
+  Then, \(Z \sim N(0,1)\)
+\item
+  This result can be used to find probabilities of any normal distribution.
+\end{itemize}
+
+\emph{Example 13}
+
+Let \(X \sim N(10,4).\) Calculate \(P(X \geq 15)\)
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch1box17-1} \end{center}
+
+\emph{Example 14}
+
+Calculate the probabilities in the table below
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+No. & \(\mu\) & \(\sigma\) & Calculate this probability & Answer\tabularnewline
+\midrule
+\endhead
+1 & 95 & 16 & \(P(104.92 \leq X \leq 115.16)\) &\tabularnewline
+2 & 65 & 15 & \(P(X \leq 86.66)\) &\tabularnewline
+3 & 96 & 20 & \(P( X < 86.3)\) &\tabularnewline
+4 & 93 & 8 & \(P(91.24 \leq X \leq 109.34)\) &\tabularnewline
+5 & 63 & 9 & \(P(65.55 < X < 76.61)\) &\tabularnewline
+6 & 102 & 8 & \(P( X > 80.55)\) &\tabularnewline
+7 & 79 & 18 & \(P(X < 131.15)\) &\tabularnewline
+8 & 86 & 6 & \(P( X \leq 69.2)\) &\tabularnewline
+9 & 85 & 2 & \(P(X < 86.46)\) &\tabularnewline
+10 & 100 & 5 & \(P(X \leq 112.26)\) &\tabularnewline
+11 & 58 & 10 & \(P(75.19 \leq X \leq 82.1)\) & 0.0348\tabularnewline
+12 & 49 & 7 & \(P(X \geq 48.52)\) & 0.5273\tabularnewline
+13 & 103 & 17 & \(P(73.97 \leq X \leq 138.28)\) & 0.9371\tabularnewline
+14 & 99 & 24 & \(P( X < 82.8)\) & 0.2498\tabularnewline
+15 & 52 & 10 & \(P( X \leq 53.58)\) & 0.5628\tabularnewline
+16 & 72 & 8 & \(P(70.45 < X \leq 93.5)\) & 0.5732\tabularnewline
+17 & 82 & 20 & \(P(48.14 < X < 99.49)\) & 0.7639\tabularnewline
+18 & 94 & 15 & \(P(91.93 \leq X \leq 98.55)\) & 0.1741\tabularnewline
+19 & 45 & 4 & \(P(42.36 \leq X \leq 50.59)\) & 0.6643\tabularnewline
+20 & 73 & 1 & \(P(X \geq 72.38)\) & 0.7324\tabularnewline
+\bottomrule
+\end{longtable}
+
+\emph{Example 15}
+
+Calculate the quantiles \(k\) in the table below
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+No. & \(\mu\) & \(\sigma\) & Calculate \(k\) such that & Answer\tabularnewline
+\midrule
+\endhead
+1 & 85 & 6 & \(P( X <k)= 0.9936\) &\tabularnewline
+2 & 97 & 23 & \(P( X <k)= 0.0694\) &\tabularnewline
+3 & 77 & 5 & \(P( X >k)= 0.0002\) &\tabularnewline
+4 & 93 & 12 & \(P( X >k)= 0.0023\) &\tabularnewline
+5 & 67 & 3 & \(P( X <k)= 0.0197\) &\tabularnewline
+6 & 59 & 5 & \(P( X >k)= 0.9756\) &\tabularnewline
+7 & 94 & 13 & \(P( X >k)= 0.3228\) &\tabularnewline
+8 & 51 & 4 & \(P( X <k)= 0.1515\) &\tabularnewline
+9 & 49 & 10 & \(P( X >k)= 0.9693\) &\tabularnewline
+10 & 61 & 13 & \(P( X <k)= 0.9946\) &\tabularnewline
+11 & 69 & 14 & \(P( X <k)= 0.9357\) &\tabularnewline
+12 & 85 & 5 & \(P( X>k)= 0.008\) &\tabularnewline
+13 & 96 & 16 & \(P( X >k)= 0.0014\) &\tabularnewline
+14 & 96 & 7 & \(P( X <k)= 0.2578\) &\tabularnewline
+15 & 45 & 4 & \(P( X <k)= 0.2578\) &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{empirical-rule-for-normal-distribution}{%
+\subsubsection{Empirical Rule for Normal Distribution}\label{empirical-rule-for-normal-distribution}}
+
+\begin{figure}
+
+{\centering \includegraphics{figure/norm4-1} 
+
+}
+
+\caption{Empirical Rule for Normal Distribution}\label{fig:norm4}
+\end{figure}
+
+Calculate the following probabilities
+1. \(P(|x-\mu|\leq \sigma)\)
+2. \(P(|x-\mu|\leq 2\sigma)\)
+3. \(P(|x-\mu|\leq 3\sigma)\)
+
+\textbf{Empirical Rule for Normal Distribution}
+
+Approximately 68\% of the values in any normal distribution lie within one standard deviation, approximately 95\% lie within two standard deviations and approximately 99.7\% lie within three standard deviations from the mean.
+
+\begin{itemize}
+\item
+  The normal distribution is somewhat special as its two parameters \(\mu\) (the mean) and \(\sigma^2\) (the variance), provide us with complete information about the exact shape and location of the distribution.
+\item
+  Straightforward calculus shows that the normal distribution has its maximum at \(x=\mu\) and inflection point (where the curve changes from concave to convex) at \(\mu \pm\sigma.\)
+\end{itemize}
+
+\hypertarget{gamma-distribution}{%
+\subsection{Gamma Distribution}\label{gamma-distribution}}
+
+\begin{itemize}
+\item
+  We come across with many practical situations in which the variable of interest has a skewed distribution.
+\item
+  The gamma family of distributions is a flexible family of distributions on \([0,\infty)\) that yields a wide variety of skewed distributions
+\end{itemize}
+
+A random variable \(X\) is said to have a gamma distribution with shape parameter \(\alpha\) and scale parameter \(\beta\) if its probability density function is given by
+
+\[f_X(x;\alpha, \beta)= \frac{1}{\Gamma(\alpha)\beta ^ {\alpha}}x^{\alpha-1}e^{-x/\beta}, \;\; 0<x<\infty,\;\; \alpha >0, \;\;\beta >0\]
+
+Here \(\Gamma(\alpha)\) is called the \emph{gamma function},
+
+\[\Gamma(\alpha)=\int_0^{\infty}x^{\alpha-1}e^{-x}dx\]
+- The gamma function satisfies many useful relationships, in particular,
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\Gamma(\alpha+1)=\alpha\Gamma(\alpha),\;\; \alpha >0\) (can be verified through integration by parts)
+\item
+  \(\Gamma(1) =1\)
+\item
+  For any positive integer \(n(>0)\), \(\Gamma(n)=(n-1)!\)
+\item
+  \(\Gamma \left (\frac{1}{2} \right) = \sqrt{\pi}\)
+\end{enumerate}
+
+\begin{itemize}
+\item
+  When \(X\) has a gamma distribution with shape parameter \(\alpha\) and scale parameter \(\beta\), it is denoted as \(X \sim gamma(\alpha, \beta)\)
+\item
+  The parameter \(\alpha\) is known as the shape parameter, since it most influences the peakedness of the distibution
+\item
+  The parameter \(\beta\) is called the scale parameter, since most of its influence is on the spread of the distribution.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics{figure/gamma-1} 
+
+}
+
+\caption{Gamma density functions}\label{fig:gamma}
+\end{figure}
+
+\begin{itemize}
+\item
+  If \(X\) has a gamma distribution with shape parameter \(\alpha\) and scale parameter \(\beta\), then
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(E(X) = \alpha \beta\)
+  \item
+    \(Var(X) = \alpha \beta^2\)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{exponential-distribution}{%
+\subsection{Exponential Distribution}\label{exponential-distribution}}
+
+\begin{itemize}
+\item
+  This distribution is often used to model lifetime of various items.
+\item
+  When the number of events in a time interval has a Poisson distribution, the length of time interval between successive events can be modeled by an exponential distribution.
+\item
+  A random variable \(X\) is said to have an exponential distribution with scale parameter \(\beta\), if its probability density function is given by
+\end{itemize}
+
+\[f_X(x; \beta)=\frac{1}{\beta}e^{-x/\beta},\;\; 0<x<\infty\]
+
+\begin{itemize}
+\tightlist
+\item
+  This is denoted by \(X \sim exponential(\beta)\)
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics{figure/exp-1} 
+
+}
+
+\caption{Exponential density functions}\label{fig:exp}
+\end{figure}
+
+\begin{itemize}
+\item
+  Note that exponential distibution is a special case of the gamma distribution.
+\item
+  It can be easily shown that \(X\sim exponential(\beta) \iff X\sim gamma (1.\beta)\)
+\item
+  If \(X\) has an exponential distribution, then
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(E(X) = \beta\)
+  \item
+    \(Var(X) = \beta^{2}\)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{beta-distribution}{%
+\subsection{Beta Distribution}\label{beta-distribution}}
+
+\begin{itemize}
+\item
+  The beta family of distributions is a continuous family on \((0,1)\) indexed by two parameters.
+\item
+  The \(beta(\alpha, \beta)\) probability density function is
+\end{itemize}
+
+\[f_X(x; \alpha, beta)= \frac{1}{B(\alpha, \beta)}x^{\alpha -1}(1-x)^{\beta-1},\;\;0<x<1,\; \alpha >0,\;\; \beta >0,\]
+
+where \(B(\alpha, \beta)\) denotes the \emph{beta function},
+\[B(\alpha, \beta)=\int_0^1x^{\alpha -1}(1-x)^{\beta-1}dx.\]
+
+\begin{itemize}
+\item
+  The beta function is related to the gamma function through the following identity \[B(\alpha, \beta)= \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}\]
+\item
+  The beta distibution is one of the few common ``named'' distributions that give probability 1 to a finite interval, here taken to be \((0,1)\).
+\item
+  Therefore, the beta distibution is often used to model proportions, which naturally lie between 0 and 1.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics{figure/beta-1} 
+
+}
+
+\caption{Beta density functions}\label{fig:beta}
+\end{figure}
+\newpage
+
 \pagenumbering{arabic}
 
 \hypertarget{tutorial}{%
