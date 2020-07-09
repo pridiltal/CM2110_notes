@@ -88,7 +88,7 @@
 
 \title{CM 2110 Calculus and Statistical Distributions}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-07-03}
+\date{2020-07-09}
 
 \begin{document}
 \maketitle
@@ -1649,6 +1649,241 @@ where \(B(\alpha, \beta)\) denotes the \emph{beta function},
 \end{figure}
 \newpage
 
+\hypertarget{approximations}{%
+\section{Approximations}\label{approximations}}
+
+\hypertarget{poisson-approximation-to-binomial}{%
+\subsection{Poisson approximation to Binomial}\label{poisson-approximation-to-binomial}}
+
+Suppose \(X\sim Bin(n, \theta)\) and \(n\) is large and \(\theta\) is small. Then \(X\sim Poisson(n\theta)\) and
+
+\[f_X(x) \approx \frac{e^{-n\theta} (n\theta)^x}{x!}\]
+
+\emph{Example 16}
+
+Suppose \(X\) has a binomial distribution with \(n=40\) and \(p=0.005\). Find \(f_X(1)\)
+
+\hypertarget{normal-approximation-to-binomial}{%
+\subsection{Normal approximation to Binomial}\label{normal-approximation-to-binomial}}
+
+Suppose \(X\sim Bin(n, \theta)\) and \(n\theta \geq 5\) and \(n(1-\theta) \geq 5.\) Then \(X \sim N(n\theta, n\theta(1-\theta))\) and
+
+\[P(X \leq x)_{Binomial} = P(X \leq x + 0.5)_{Normal} \approx P(Z \leq \frac{x+0.5-n\theta}{\sqrt{n\theta(1-\theta)}})\]
+
+\textbf{Note:} Since we are approximating a discrete distribution by a continuous distribution, we should apply a \emph{continuity correction}
+
+\emph{Example 17}
+
+Suppose \(X\) has a binomial distribution with \(n=40\) and \(p=0.6.\) Find
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(P(X\leq 20)\)
+\item
+  \(P(X < 25)\)
+\item
+  \(P(X > 15)\)
+\item
+  \(P(X \geq 20)\)
+\item
+  \(P(X = 30)\)
+\end{enumerate}
+
+\hypertarget{normal-approximation-to-poisson}{%
+\subsection{Normal approximation to Poisson}\label{normal-approximation-to-poisson}}
+
+Suppose \(X\sim Poisson(\lambda)\) and \(\lambda > 10,\)
+
+\[P(X \leq x)_{Poisson} = P(X \leq x + 0.5)_{Normal} \approx P(Z \leq \frac{x+0.5-\lambda}{\sqrt{\lambda}})\]
+
+\textbf{Note:} Since we are approximating a discrete distribution by a continuous distribution, we should apply a \emph{continuity correction}
+
+\emph{Example 18}
+
+Suppose \(X\) has a Poisson distribution with \(\lambda=25\)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(P(X\leq 20)\)
+\item
+  \(P(X < 25)\)
+\item
+  \(P(X > 15)\)
+\item
+  \(P(X \geq 20)\)
+\item
+  \(P(X = 30)\)
+\end{enumerate}
+
+\hypertarget{distribution-of-functions-of-random-variables}{%
+\section{Distribution of Functions of Random Variables}\label{distribution-of-functions-of-random-variables}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Distribution of the linear transformation of a normal random variable}
+\end{enumerate}
+
+Suppose that \(X \sim N(\mu, \sigma^2).\) Let \(Y= ax+b,\) where \(a\) and \(b\) are constants. Then
+
+\[Y\sim N(a\mu +b, a^2\sigma^2)\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Standardization of a normal random variable}
+\end{enumerate}
+
+Suppose that \(X \sim N(\mu, \sigma^2).\) Let \(Z= \frac{X-\mu}{\sigma}.\) Then
+
+\[Z\sim N(0,1).\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Distribution of the square of a standard normal random variable}
+\end{enumerate}
+
+Suppose that \(Z \sim N(0,1).\) Let \(Y= Z^2.\) Then
+
+\[Y\sim \chi^2_1\]
+
+\newpage
+
+\hypertarget{distribution-of-sum-of-independent-random-variables}{%
+\section{Distribution of Sum of Independent Random Variables}\label{distribution-of-sum-of-independent-random-variables}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Distribution of sum of i.i.d Bernoulli random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent, identically distributed (i.i.d) random variables with \(Bernoulli(\theta)\) distribution. Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y\sim Bin(n, \theta); \;\;y=0,1,2,\dots, n.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Distribution of sum of i.i.d Poisson random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent, identically distributed (i.i.d) random variables with \(Poisson(\lambda)\) distribution. Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y\sim Poisson(n\lambda); \;\;y=0,1,2,\dots,.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Distribution of sum of independent Poisson random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent random variables with \(Poisson(\lambda_i), \; i=1,2,\dots, n.\) Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y\sim Poisson \left(\sum_{i=1}^n\lambda_i\right); \;\;y=0,1,2,\dots,.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{Distribution of sum of i.i.d Geometric random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent, identically distributed (i.i.d) random variables with \(Geometric(\theta)\) distribution. Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y\sim Neg.bin(n, \theta); \;\;y=n, n+1, n+2,\dots,.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  \textbf{Distribution of sum of independent Normal random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent random variables with \(X_i\sim N(\mu_i, \sigma_i^2); \; i=1,2,\dots, n\). Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y\sim N\left(\sum_{i=1}^n \mu_i,\sum_{i=1}^n \sigma_i^2  \right).\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  \textbf{Distribution of sum of i.i.d exponential random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent, identically distributed (i.i.d) random variables with \(X_i\sim exp(\lambda);\; i=1,2,\dots, n\). Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y \sim gamma(n, \lambda)\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  \textbf{Distribution of sum of independent gamma random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent random variables with \(X_i\sim gamma(\alpha_i, \lambda);\; i=1,2,\dots, n\). Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y \sim gamma\left(\sum_{i=1}^n\alpha_i, \lambda\right).\]
+
+\hypertarget{sampling-distribution}{%
+\section{Sampling Distribution}\label{sampling-distribution}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Distribution of sample mean of a normal distribution}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) is a random sample from a normal distribution with mean \(\mu\) and variance \(\sigma^2\). Let \(\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}\) be the sample mean. Then,
+
+\[\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Distribution of sample variance of a normal distribution}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) is a random sample from a normal distribution with mean \(\mu\) and variance \(\sigma^2\). Let \(\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}\) be the sample mean and \(S^2 = \frac{1}{n-1}\sum_{i=1}^n(X_i-\bar{X})^2\) be the sample variance. Then,
+
+\[\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Large sample distribution of sample average - Central Limit Theorem)}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) is a random sample from any distribution with mean \(\mu\) and variance \(\sigma^2\). Let \(\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}\) be the sample mean and \(Z_n = \frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}}.\)
+
+Then, the distribution of \(Z_n\) approaches the standard normal distribution as \(n\) approaches \(\infty.\)
+
+\newpage
 \pagenumbering{arabic}
 
 \hypertarget{tutorial}{%

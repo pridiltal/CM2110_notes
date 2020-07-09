@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-07-03" />
+<meta name="date" content="2020-07-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -119,6 +119,14 @@
 <li class="chapter" data-level="1.7.4" data-path="statistical-distributions.html"><a href="statistical-distributions.html#exponential-distribution"><i class="fa fa-check"></i><b>1.7.4</b> Exponential Distribution</a></li>
 <li class="chapter" data-level="1.7.5" data-path="statistical-distributions.html"><a href="statistical-distributions.html#beta-distribution"><i class="fa fa-check"></i><b>1.7.5</b> Beta Distribution</a></li>
 </ul></li>
+<li class="chapter" data-level="1.8" data-path="statistical-distributions.html"><a href="statistical-distributions.html#approximations"><i class="fa fa-check"></i><b>1.8</b> Approximations</a><ul>
+<li class="chapter" data-level="1.8.1" data-path="statistical-distributions.html"><a href="statistical-distributions.html#poisson-approximation-to-binomial"><i class="fa fa-check"></i><b>1.8.1</b> Poisson approximation to Binomial</a></li>
+<li class="chapter" data-level="1.8.2" data-path="statistical-distributions.html"><a href="statistical-distributions.html#normal-approximation-to-binomial"><i class="fa fa-check"></i><b>1.8.2</b> Normal approximation to Binomial</a></li>
+<li class="chapter" data-level="1.8.3" data-path="statistical-distributions.html"><a href="statistical-distributions.html#normal-approximation-to-poisson"><i class="fa fa-check"></i><b>1.8.3</b> Normal approximation to Poisson</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="statistical-distributions.html"><a href="statistical-distributions.html#distribution-of-functions-of-random-variables"><i class="fa fa-check"></i><b>1.9</b> Distribution of Functions of Random Variables</a></li>
+<li class="chapter" data-level="1.10" data-path="statistical-distributions.html"><a href="statistical-distributions.html#distribution-of-sum-of-independent-random-variables"><i class="fa fa-check"></i><b>1.10</b> Distribution of Sum of Independent Random Variables</a></li>
+<li class="chapter" data-level="1.11" data-path="statistical-distributions.html"><a href="statistical-distributions.html#sampling-distribution"><i class="fa fa-check"></i><b>1.11</b> Sampling Distribution</a></li>
 <li class="chapter" data-level="" data-path="statistical-distributions.html"><a href="statistical-distributions.html#tutorial"><i class="fa fa-check"></i>Tutorial</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="estimations.html"><a href="estimations.html"><i class="fa fa-check"></i><b>2</b> Estimations</a><ul>
@@ -1391,8 +1399,123 @@ Figure 1.10: Beta density functions
 </p>
 </div>
 <div style="page-break-after: always;"></div>
-
 </div>
+</div>
+<div id="approximations" class="section level2">
+<h2><span class="header-section-number">1.8</span> Approximations</h2>
+<div id="poisson-approximation-to-binomial" class="section level3">
+<h3><span class="header-section-number">1.8.1</span> Poisson approximation to Binomial</h3>
+<p>Suppose <span class="math inline">\(X\sim Bin(n, \theta)\)</span> and <span class="math inline">\(n\)</span> is large and <span class="math inline">\(\theta\)</span> is small. Then <span class="math inline">\(X\sim Poisson(n\theta)\)</span> and</p>
+<p><span class="math display">\[f_X(x) \approx \frac{e^{-n\theta} (n\theta)^x}{x!}\]</span></p>
+<p><em>Example 16</em></p>
+<p>Suppose <span class="math inline">\(X\)</span> has a binomial distribution with <span class="math inline">\(n=40\)</span> and <span class="math inline">\(p=0.005\)</span>. Find <span class="math inline">\(f_X(1)\)</span></p>
+</div>
+<div id="normal-approximation-to-binomial" class="section level3">
+<h3><span class="header-section-number">1.8.2</span> Normal approximation to Binomial</h3>
+<p>Suppose <span class="math inline">\(X\sim Bin(n, \theta)\)</span> and <span class="math inline">\(n\theta \geq 5\)</span> and <span class="math inline">\(n(1-\theta) \geq 5.\)</span> Then <span class="math inline">\(X \sim N(n\theta, n\theta(1-\theta))\)</span> and</p>
+<p><span class="math display">\[P(X \leq x)_{Binomial} = P(X \leq x + 0.5)_{Normal} \approx P(Z \leq \frac{x+0.5-n\theta}{\sqrt{n\theta(1-\theta)}})\]</span></p>
+<p><strong>Note:</strong> Since we are approximating a discrete distribution by a continuous distribution, we should apply a <em>continuity correction</em></p>
+<p><em>Example 17</em></p>
+<p>Suppose <span class="math inline">\(X\)</span> has a binomial distribution with <span class="math inline">\(n=40\)</span> and <span class="math inline">\(p=0.6.\)</span> Find</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(P(X\leq 20)\)</span></li>
+<li><span class="math inline">\(P(X &lt; 25)\)</span></li>
+<li><span class="math inline">\(P(X &gt; 15)\)</span></li>
+<li><span class="math inline">\(P(X \geq 20)\)</span></li>
+<li><span class="math inline">\(P(X = 30)\)</span></li>
+</ol>
+</div>
+<div id="normal-approximation-to-poisson" class="section level3">
+<h3><span class="header-section-number">1.8.3</span> Normal approximation to Poisson</h3>
+<p>Suppose <span class="math inline">\(X\sim Poisson(\lambda)\)</span> and <span class="math inline">\(\lambda &gt; 10,\)</span></p>
+<p><span class="math display">\[P(X \leq x)_{Poisson} = P(X \leq x + 0.5)_{Normal} \approx P(Z \leq \frac{x+0.5-\lambda}{\sqrt{\lambda}})\]</span></p>
+<p><strong>Note:</strong> Since we are approximating a discrete distribution by a continuous distribution, we should apply a <em>continuity correction</em></p>
+<p><em>Example 18</em></p>
+<p>Suppose <span class="math inline">\(X\)</span> has a Poisson distribution with <span class="math inline">\(\lambda=25\)</span></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(P(X\leq 20)\)</span></li>
+<li><span class="math inline">\(P(X &lt; 25)\)</span></li>
+<li><span class="math inline">\(P(X &gt; 15)\)</span></li>
+<li><span class="math inline">\(P(X \geq 20)\)</span></li>
+<li><span class="math inline">\(P(X = 30)\)</span></li>
+</ol>
+</div>
+</div>
+<div id="distribution-of-functions-of-random-variables" class="section level2">
+<h2><span class="header-section-number">1.9</span> Distribution of Functions of Random Variables</h2>
+<ol style="list-style-type: decimal">
+<li><strong>Distribution of the linear transformation of a normal random variable</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X \sim N(\mu, \sigma^2).\)</span> Let <span class="math inline">\(Y= ax+b,\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants. Then</p>
+<p><span class="math display">\[Y\sim N(a\mu +b, a^2\sigma^2)\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Standardization of a normal random variable</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X \sim N(\mu, \sigma^2).\)</span> Let <span class="math inline">\(Z= \frac{X-\mu}{\sigma}.\)</span> Then</p>
+<p><span class="math display">\[Z\sim N(0,1).\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Distribution of the square of a standard normal random variable</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(Z \sim N(0,1).\)</span> Let <span class="math inline">\(Y= Z^2.\)</span> Then</p>
+<p><span class="math display">\[Y\sim \chi^2_1\]</span></p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="distribution-of-sum-of-independent-random-variables" class="section level2">
+<h2><span class="header-section-number">1.10</span> Distribution of Sum of Independent Random Variables</h2>
+<ol style="list-style-type: decimal">
+<li><strong>Distribution of sum of i.i.d Bernoulli random variables</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> are independent, identically distributed (i.i.d) random variables with <span class="math inline">\(Bernoulli(\theta)\)</span> distribution. Let <span class="math inline">\(Y= X_1+X_2+\dots +X_n.\)</span> Then</p>
+<p><span class="math display">\[Y\sim Bin(n, \theta); \;\;y=0,1,2,\dots, n.\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Distribution of sum of i.i.d Poisson random variables</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> are independent, identically distributed (i.i.d) random variables with <span class="math inline">\(Poisson(\lambda)\)</span> distribution. Let <span class="math inline">\(Y= X_1+X_2+\dots +X_n.\)</span> Then</p>
+<p><span class="math display">\[Y\sim Poisson(n\lambda); \;\;y=0,1,2,\dots,.\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Distribution of sum of independent Poisson random variables</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> are independent random variables with <span class="math inline">\(Poisson(\lambda_i), \; i=1,2,\dots, n.\)</span> Let <span class="math inline">\(Y= X_1+X_2+\dots +X_n.\)</span> Then</p>
+<p><span class="math display">\[Y\sim Poisson \left(\sum_{i=1}^n\lambda_i\right); \;\;y=0,1,2,\dots,.\]</span></p>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Distribution of sum of i.i.d Geometric random variables</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> are independent, identically distributed (i.i.d) random variables with <span class="math inline">\(Geometric(\theta)\)</span> distribution. Let <span class="math inline">\(Y= X_1+X_2+\dots +X_n.\)</span> Then</p>
+<p><span class="math display">\[Y\sim Neg.bin(n, \theta); \;\;y=n, n+1, n+2,\dots,.\]</span></p>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Distribution of sum of independent Normal random variables</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> are independent random variables with <span class="math inline">\(X_i\sim N(\mu_i, \sigma_i^2); \; i=1,2,\dots, n\)</span>. Let <span class="math inline">\(Y= X_1+X_2+\dots +X_n.\)</span> Then</p>
+<p><span class="math display">\[Y\sim N\left(\sum_{i=1}^n \mu_i,\sum_{i=1}^n \sigma_i^2  \right).\]</span></p>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>Distribution of sum of i.i.d exponential random variables</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> are independent, identically distributed (i.i.d) random variables with <span class="math inline">\(X_i\sim exp(\lambda);\; i=1,2,\dots, n\)</span>. Let <span class="math inline">\(Y= X_1+X_2+\dots +X_n.\)</span> Then</p>
+<p><span class="math display">\[Y \sim gamma(n, \lambda)\]</span></p>
+<ol start="7" style="list-style-type: decimal">
+<li><strong>Distribution of sum of independent gamma random variables</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> are independent random variables with <span class="math inline">\(X_i\sim gamma(\alpha_i, \lambda);\; i=1,2,\dots, n\)</span>. Let <span class="math inline">\(Y= X_1+X_2+\dots +X_n.\)</span> Then</p>
+<p><span class="math display">\[Y \sim gamma\left(\sum_{i=1}^n\alpha_i, \lambda\right).\]</span></p>
+</div>
+<div id="sampling-distribution" class="section level2">
+<h2><span class="header-section-number">1.11</span> Sampling Distribution</h2>
+<ol style="list-style-type: decimal">
+<li><strong>Distribution of sample mean of a normal distribution</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> is a random sample from a normal distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>. Let <span class="math inline">\(\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}\)</span> be the sample mean. Then,</p>
+<p><span class="math display">\[\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Distribution of sample variance of a normal distribution</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> is a random sample from a normal distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>. Let <span class="math inline">\(\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}\)</span> be the sample mean and <span class="math inline">\(S^2 = \frac{1}{n-1}\sum_{i=1}^n(X_i-\bar{X})^2\)</span> be the sample variance. Then,</p>
+<p><span class="math display">\[\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}.\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Large sample distribution of sample average - Central Limit Theorem)</strong></li>
+</ol>
+<p>Suppose that <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> is a random sample from any distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>. Let <span class="math inline">\(\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}\)</span> be the sample mean and <span class="math inline">\(Z_n = \frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}}.\)</span></p>
+<p>Then, the distribution of <span class="math inline">\(Z_n\)</span> approaches the standard normal distribution as <span class="math inline">\(n\)</span> approaches <span class="math inline">\(\infty.\)</span></p>
+
 </div>
 <div id="tutorial" class="section level2 unnumbered">
 <h2>Tutorial</h2>
