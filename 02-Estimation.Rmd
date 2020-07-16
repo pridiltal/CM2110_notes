@@ -1,8 +1,121 @@
 # Estimations
 
+
+```{r chap2, echo = FALSE, cache = FALSE, include = FALSE}
+library(knitr)
+opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  fig.path = 'figure/',
+  cache.path = 'cache/',
+  fig.align = 'center',
+  fig.show = 'hold',
+  cache = FALSE,
+  external = TRUE,
+  dev = "png",
+  fig.height = 5,
+  fig.width = 10
+)
+
+
+library(tidyverse)
+library(ggpubr)
+
+```
+
+\pagenumbering{arabic}
+
+## Statistical Inference
+
+- The process of making educated guess and conclusions regarding a population, using a sample of that population is called **Statistical Inference**. 
+- Two important problems in statistical inference are **estimation of parameters** and **tests of hypothesis**
+- Estimation can be of the form of **point estimation** and  **interval estimation**. 
+
+```{r Ch2box1, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
 ## Point Estimation
 
+**Main Task**
+
+- Assume that some characteristic of the elements in a population can be represented by a random variable $X$.
+- Assume that $X_1, X_2, \dots, X_n$ is a random sample from a density $f(x, \theta)$, where the form of the density is known but the parameter $\theta$  is unknown.
+- The objective is to construct good estimators for $\theta$ or its function $\tau (\theta)$ on the basis of the observed sample values $x_1, x_2, \dots, x_n$ of a random sample $X_1, X_2, \dots, X_n$ from $f(x, \theta)$.
+
+**Definition: Statistic**
+
+Suppose $X_1, X_2, \dots, X_n$ be $n$ observable random variables. Then, a known function $T=g(X_1, X_2, \dots, X_n)$ of observable random variables $X_1, X_2, \dots, X_n$ is called a **statistic**. A statistic is always a random variable.
+
+**Definition: Estimator**
+
+Suppose $X_1, X_2, \dots, X_n$ is a random sample from from a density $f(x, \theta)$ and it is desired to estimate $\theta$. Suppose $T=g(X_1, X_2, \dots, X_n)$ is a *statistic* that can be used to  determine and approximate value for $\theta$. Then $T$ is called an **estimator** for $\theta$. An estimator is always a random variable. 
+
+**Definition: Estimate**
+
+Suppose $T=g(X_1, X_2, \dots, X_n)$ be an estimator for $\theta$. Suppose that $x_1, x_2, \dots, x_n$ is a set of observed values of the random variable $X_1, X_2, \dots, X_n.$ Then *the value* $t=g(x_1, x_2, \dots, x_n)$ obtained by substituting the observed values in the estimator is called an **estimate** for $\theta$.
+
+- Therefore the **estimator** stands for the function of the sample, and the word **estimate** stands for the realized value of that function.
+
+- *Notation:* An estimator of $\theta$ is denoted by $\hat{\theta}$. An estimate of $\theta$ is also denoted by $\hat{\theta}$. The difference between the two should be understood based on the context.
+
+
+Parameter | Estimator: Using random sample ($X_1, X_2, \dots, X_n$) | Estimate 1:  Using observed sample ($1,4,2,3,4$) | Estimate 2:  Using observed sample ($4,2,2,6,3$)
+----------|-----------|------------|----------
+$\mu$ | $\hat{\mu}=\bar{X}$ | $\hat{\mu}=$ | $\hat{\mu}=$
+$\sigma^2$| $\hat{\sigma^2}=S^2$ | $\hat{\sigma^2}=$ | $\hat{\sigma^2}=$
+
+
 ### Methods of finding point estimators
+
+- In some cases there will be an obvious or natural candidate for a point estimator of a particular parameter.
+- For example, the sample mean is a good point estimator of the population mean
+- However, in more complicated models we need a methodical way of estimating parameters.
+- There are different methods of finding point estimators
+    - Method of Moments
+    - Maximum Likelihood Estimators (MLE)
+    - Method of Least Squares <!--
+    (Mood page 273) -->
+    - Bayes Estimators
+    - The EM Algorithm
+
+- However, these techniques do not carry any guarantees with them 
+- The point estimators that they yeild still must be evaluated before their worth is established
+
+#### Method of Moments
+
+- Let $X_1, X_2, \dots X_n$ be a random sample from a population with pdf or pmf $f(x; \theta),$ where $\theta = (\theta_1, \theta_2, \dots, \theta_k)$ and $k\geq 1$.
+- Sample moments $m^\prime$ and population moments $\mu^\prime$ are defined as follows
+
+Sample moment  | Population moment
+---------------|-------------------
+$m_1^\prime= \frac{1}{n}\sum_{i=1}^nX_i$ | $\mu_1=E(X)$
+$m_2^\prime= \frac{1}{n}\sum_{i=1}^nX_i^2$ | $\mu_2=E(X^2)$
+$\dots$ | $\dots$
+$m_k^\prime= \frac{1}{n}\sum_{i=1}^nX_i^k$ | $\mu_k=E(X^k)$
+$\dots$ | $\dots$
+
+Each $\mu_j^\prime$ is a function $\theta,$ i.e. $\mu_j^\prime= \mu_j^\prime(\theta_1, \theta_2, \dots, \theta_k)$ for $j=1,2,\dots, k.$
+
+**Method of Moments Estimators (MME)**
+
+We first equate the first $k$ sample moments to the corresponding $k$ population moments,
+
+$$m_1^\prime = \mu_1^\prime,$$
+$$m_2^\prime = \mu_2^\prime,$$
+$$\dots$$
+$$m_k^\prime = \mu_k^\prime,$$
+
+Then we solve the resulting systems of simultaneous equations for $\hat{\theta_1}, \hat{\theta_2}, \dots, \hat{\theta_k}$
+
+\newpage 
 
 ### Methods of evaluating point estimators
 
@@ -13,3 +126,30 @@
 ### Methods of finding interval estimators
 
 ### Methods of evaluating interval estimators
+
+\newpage
+\pagenumbering{arabic}
+
+## Tutorial {-}
+
+1. Let $X_1, X_2, \dots, X_n \sim iid\;\; N(\mu, \sigma^2),$ both $\mu$ and $\sigma^2$ unknown. Derive a method of moment estimators for $\mu$ and $\sigma$.
+
+2. Let $X_1, X_2, \dots, X_n \sim iid\;\; Bin(n,\theta),$ both $n$ and $\theta$ unknown. Derive a method of moment estimators for $n$ and $\theta$.
+
+
+3. Let $X_1, X_2, \dots, X_n \sim iid\;\; Unif(\theta_1,\theta_2),$ where $\theta_1<\theta_2$, both unknown. Derive a method of moment estimators for $\theta_1$ and $\theta_2$.
+
+4. Let $X_1, X_2, \dots, X_n \sim Poisson(\lambda).$ Derive a method of moment estimators for $\lambda$.
+
+5. Let $X_1, X_2, \dots, X_n \sim iid\;\; Gamma(\alpha,\beta),$ both $\alpha$ and $\beta$ unknown. Derive a method of moment estimators for $\alpha$ and $\beta$.
+
+The survival time (in weeks) of 20 randomly selected male mouse exposed to 240 units of certain type of radiation are given below. 
+
+$152, 115, 109, 94, 88, 137, 152, 77, 160, 165, 125, 40, 128, 123, 136, 101, 62, 153, 83, 69$
+
+It is believed that the survival times have a gamma distribution. Estimate the corresponding parameters.
+
+6. Let $x_1, x_2, \dots, x_n$ be $n$ random measurements of random variable $X$ with the density function
+$$f_X(x;\lambda)= \lambda x^{\lambda-1},\;\; 0<x<1, \;\; \lambda>0$$
+
+Derive a method of moment estimator for $\lambda$.

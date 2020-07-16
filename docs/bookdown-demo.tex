@@ -88,7 +88,7 @@
 
 \title{CM 2110 Calculus and Statistical Distributions}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-07-09}
+\date{2020-07-16}
 
 \begin{document}
 \maketitle
@@ -1883,6 +1883,14 @@ Suppose that \(X_1, X_2, \dots, X_n\) is a random sample from any distribution w
 
 Then, the distribution of \(Z_n\) approaches the standard normal distribution as \(n\) approaches \(\infty.\)
 
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+Casella, G., \& Berger, R. L. (2002). Statistical inference (Vol. 2, pp.~337-472).Pacific Grove, CA: Duxbury
+
+Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co.~Ltd.
+
 \newpage
 \pagenumbering{arabic}
 
@@ -2366,11 +2374,162 @@ Bernoulli\strut
 \hypertarget{estimations}{%
 \chapter{Estimations}\label{estimations}}
 
+\pagenumbering{arabic}
+
+\hypertarget{statistical-inference}{%
+\section{Statistical Inference}\label{statistical-inference}}
+
+\begin{itemize}
+\tightlist
+\item
+  The process of making educated guess and conclusions regarding a population, using a sample of that population is called \textbf{Statistical Inference}.
+\item
+  Two important problems in statistical inference are \textbf{estimation of parameters} and \textbf{tests of hypothesis}
+\item
+  Estimation can be of the form of \textbf{point estimation} and \textbf{interval estimation}.
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch2box1-1} \end{center}
+
 \hypertarget{point-estimation}{%
 \section{Point Estimation}\label{point-estimation}}
 
+\textbf{Main Task}
+
+\begin{itemize}
+\tightlist
+\item
+  Assume that some characteristic of the elements in a population can be represented by a random variable \(X\).
+\item
+  Assume that \(X_1, X_2, \dots, X_n\) is a random sample from a density \(f(x, \theta)\), where the form of the density is known but the parameter \(\theta\) is unknown.
+\item
+  The objective is to construct good estimators for \(\theta\) or its function \(\tau (\theta)\) on the basis of the observed sample values \(x_1, x_2, \dots, x_n\) of a random sample \(X_1, X_2, \dots, X_n\) from \(f(x, \theta)\).
+\end{itemize}
+
+\textbf{Definition: Statistic}
+
+Suppose \(X_1, X_2, \dots, X_n\) be \(n\) observable random variables. Then, a known function \(T=g(X_1, X_2, \dots, X_n)\) of observable random variables \(X_1, X_2, \dots, X_n\) is called a \textbf{statistic}. A statistic is always a random variable.
+
+\textbf{Definition: Estimator}
+
+Suppose \(X_1, X_2, \dots, X_n\) is a random sample from from a density \(f(x, \theta)\) and it is desired to estimate \(\theta\). Suppose \(T=g(X_1, X_2, \dots, X_n)\) is a \emph{statistic} that can be used to determine and approximate value for \(\theta\). Then \(T\) is called an \textbf{estimator} for \(\theta\). An estimator is always a random variable.
+
+\textbf{Definition: Estimate}
+
+Suppose \(T=g(X_1, X_2, \dots, X_n)\) be an estimator for \(\theta\). Suppose that \(x_1, x_2, \dots, x_n\) is a set of observed values of the random variable \(X_1, X_2, \dots, X_n.\) Then \emph{the value} \(t=g(x_1, x_2, \dots, x_n)\) obtained by substituting the observed values in the estimator is called an \textbf{estimate} for \(\theta\).
+
+\begin{itemize}
+\item
+  Therefore the \textbf{estimator} stands for the function of the sample, and the word \textbf{estimate} stands for the realized value of that function.
+\item
+  \emph{Notation:} An estimator of \(\theta\) is denoted by \(\hat{\theta}\). An estimate of \(\theta\) is also denoted by \(\hat{\theta}\). The difference between the two should be understood based on the context.
+\end{itemize}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\begin{minipage}[b]{0.21\columnwidth}\raggedright
+Parameter\strut
+\end{minipage} & \begin{minipage}[b]{0.23\columnwidth}\raggedright
+Estimator: Using random sample (\(X_1, X_2, \dots, X_n\))\strut
+\end{minipage} & \begin{minipage}[b]{0.25\columnwidth}\raggedright
+Estimate 1: Using observed sample (\(1,4,2,3,4\))\strut
+\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedright
+Estimate 2: Using observed sample (\(4,2,2,6,3\))\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+\(\mu\)\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(\hat{\mu}=\bar{X}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+\(\hat{\mu}=\)\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
+\(\hat{\mu}=\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+\(\sigma^2\)\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(\hat{\sigma^2}=S^2\)\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+\(\hat{\sigma^2}=\)\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
+\(\hat{\sigma^2}=\)\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
 \hypertarget{methods-of-finding-point-estimators}{%
 \subsection{Methods of finding point estimators}\label{methods-of-finding-point-estimators}}
+
+\begin{itemize}
+\tightlist
+\item
+  In some cases there will be an obvious or natural candidate for a point estimator of a particular parameter.
+\item
+  For example, the sample mean is a good point estimator of the population mean
+\item
+  However, in more complicated models we need a methodical way of estimating parameters.
+\item
+  There are different methods of finding point estimators
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Method of Moments
+  \item
+    Maximum Likelihood Estimators (MLE)
+  \item
+    Method of Least Squares 
+  \item
+    Bayes Estimators
+  \item
+    The EM Algorithm
+  \end{itemize}
+\item
+  However, these techniques do not carry any guarantees with them
+\item
+  The point estimators that they yeild still must be evaluated before their worth is established
+\end{itemize}
+
+\hypertarget{method-of-moments}{%
+\subsubsection{Method of Moments}\label{method-of-moments}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(X_1, X_2, \dots X_n\) be a random sample from a population with pdf or pmf \(f(x; \theta),\) where \(\theta = (\theta_1, \theta_2, \dots, \theta_k)\) and \(k\geq 1\).
+\item
+  Sample moments \(m^\prime\) and population moments \(\mu^\prime\) are defined as follows
+\end{itemize}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Sample moment & Population moment\tabularnewline
+\midrule
+\endhead
+\(m_1^\prime= \frac{1}{n}\sum_{i=1}^nX_i\) & \(\mu_1=E(X)\)\tabularnewline
+\(m_2^\prime= \frac{1}{n}\sum_{i=1}^nX_i^2\) & \(\mu_2=E(X^2)\)\tabularnewline
+\(\dots\) & \(\dots\)\tabularnewline
+\(m_k^\prime= \frac{1}{n}\sum_{i=1}^nX_i^k\) & \(\mu_k=E(X^k)\)\tabularnewline
+\(\dots\) & \(\dots\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+Each \(\mu_j^\prime\) is a function \(\theta,\) i.e.~\(\mu_j^\prime= \mu_j^\prime(\theta_1, \theta_2, \dots, \theta_k)\) for \(j=1,2,\dots, k.\)
+
+\textbf{Method of Moments Estimators (MME)}
+
+We first equate the first \(k\) sample moments to the corresponding \(k\) population moments,
+
+\[m_1^\prime = \mu_1^\prime,\]
+\[m_2^\prime = \mu_2^\prime,\]
+\[\dots\]
+\[m_k^\prime = \mu_k^\prime,\]
+
+Then we solve the resulting systems of simultaneous equations for \(\hat{\theta_1}, \hat{\theta_2}, \dots, \hat{\theta_k}\)
+
+\newpage
 
 \hypertarget{methods-of-evaluating-point-estimators}{%
 \subsection{Methods of evaluating point estimators}\label{methods-of-evaluating-point-estimators}}
@@ -2386,6 +2545,44 @@ Bernoulli\strut
 
 \hypertarget{methods-of-evaluating-interval-estimators}{%
 \subsection{Methods of evaluating interval estimators}\label{methods-of-evaluating-interval-estimators}}
+
+\newpage
+\pagenumbering{arabic}
+
+\hypertarget{tutorial-1}{%
+\section*{Tutorial}\label{tutorial-1}}
+\addcontentsline{toc}{section}{Tutorial}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid\;\; N(\mu, \sigma^2),\) both \(\mu\) and \(\sigma^2\) unknown. Derive a method of moment estimators for \(\mu\) and \(\sigma\).
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid\;\; Bin(n,\theta),\) both \(n\) and \(\theta\) unknown. Derive a method of moment estimators for \(n\) and \(\theta\).
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid\;\; Unif(\theta_1,\theta_2),\) where \(\theta_1<\theta_2\), both unknown. Derive a method of moment estimators for \(\theta_1\) and \(\theta_2\).
+\item
+  Let \(X_1, X_2, \dots, X_n \sim Poisson(\lambda).\) Derive a method of moment estimators for \(\lambda\).
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid\;\; Gamma(\alpha,\beta),\) both \(\alpha\) and \(\beta\) unknown. Derive a method of moment estimators for \(\alpha\) and \(\beta\).
+\end{enumerate}
+
+The survival time (in weeks) of 20 randomly selected male mouse exposed to 240 units of certain type of radiation are given below.
+
+\(152, 115, 109, 94, 88, 137, 152, 77, 160, 165, 125, 40, 128, 123, 136, 101, 62, 153, 83, 69\)
+
+It is believed that the survival times have a gamma distribution. Estimate the corresponding parameters.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Let \(x_1, x_2, \dots, x_n\) be \(n\) random measurements of random variable \(X\) with the density function
+  \[f_X(x;\lambda)= \lambda x^{\lambda-1},\;\; 0<x<1, \;\; \lambda>0\]
+\end{enumerate}
+
+Derive a method of moment estimator for \(\lambda\).
 
 \hypertarget{hypothesis-testing}{%
 \chapter{Hypothesis Testing}\label{hypothesis-testing}}
@@ -2416,6 +2613,10 @@ Bernoulli\strut
 
 \hypertarget{completely-randomized-design}{%
 \section{Completely randomized design}\label{completely-randomized-design}}
+
+Casella, G., \& Berger, R. L. (2002). Statistical inference (Vol. 2, pp.~337-472).Pacific Grove, CA: Duxbury
+
+Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co.~Ltd.
 
 \bibliography{book.bib,packages.bib}
 
