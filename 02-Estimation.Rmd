@@ -96,10 +96,17 @@ $\sigma^2$| $\hat{\sigma^2}=S^2$ | $\hat{\sigma^2}=$ | $\hat{\sigma^2}=$
 
 Sample moment  | Population moment
 ---------------|-------------------
+<<<<<<< HEAD
 $m_1^\prime= \frac{1}{n}\sum_{i=1}^nX_i$ | $\mu_1^\prime=E(X)$
 $m_2^\prime= \frac{1}{n}\sum_{i=1}^nX_i^2$ | $\mu_2^\prime=E(X^2)$
 $\dots$ | $\dots$
 $m_k^\prime= \frac{1}{n}\sum_{i=1}^nX_i^k$ | $\mu_k^\prime=E(X^k)$
+=======
+$m_1^\prime= \frac{1}{n}\sum_{i=1}^nX_i$ | $\mu_1=E(X)$
+$m_2^\prime= \frac{1}{n}\sum_{i=1}^nX_i^2$ | $\mu_2=E(X^2)$
+$\dots$ | $\dots$
+$m_k^\prime= \frac{1}{n}\sum_{i=1}^nX_i^k$ | $\mu_k=E(X^k)$
+>>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 $\dots$ | $\dots$
 
 Each $\mu_j^\prime$ is a function $\theta,$ i.e. $\mu_j^\prime= \mu_j^\prime(\theta_1, \theta_2, \dots, \theta_k)$ for $j=1,2,\dots, k.$
@@ -115,6 +122,7 @@ $$m_k^\prime = \mu_k^\prime,$$
 
 Then we solve the resulting systems of simultaneous equations for $\hat{\theta_1}, \hat{\theta_2}, \dots, \hat{\theta_k}$
 
+<<<<<<< HEAD
 **Remarks on Method of Moments Estimators**
 
 - Very easy to compute
@@ -218,6 +226,8 @@ Then, $l(\theta)$ is called the **log-likelihood function**.
 
 If $\hat{\theta}$ is the MLE of $\theta$, then for any function $\tau(\theta),$ the MLE of  $\tau(\theta)$ is $\tau(\hat{\theta}).$
 
+=======
+>>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 \newpage 
 
 ### Methods of evaluating point estimators
@@ -257,6 +267,7 @@ It is believed that the survival times have a gamma distribution. Estimate the c
 6. Let $x_1, x_2, \dots, x_n$ be $n$ random measurements of random variable $X$ with the density function
 $$f_X(x;\lambda)= \lambda x^{\lambda-1},\;\; 0<x<1, \;\; \lambda>0$$
 
+<<<<<<< HEAD
 Derive a method of moment estimator for $\lambda$.
 
 <!-- Lecture note example 2.9-->
@@ -267,3 +278,6 @@ Derive a method of moment estimator for $\lambda$.
 9. Let $X_1, X_2, \dots, X_n \sim iid \; Poisson (\lambda)$. Find the MLE of $P(X\leq 1)$
 
 10. Let $X_1, X_2, \dots, X_n \sim iid \; N (\mu, \sigma^2)$. Find the MLE of $\mu/\sigma$
+=======
+Derive a method of moment estimator for $\lambda$.
+>>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
