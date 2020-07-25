@@ -22,6 +22,9 @@ header-includes:
 - \floatplacement{table}{H}
 - \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
 - \usepackage{mathtools}
+- \usepackage{pdflscape}
+- \newcommand{\blandscape}{\begin{landscape}}
+- \newcommand{\elandscape}{\end{landscape}}
 ---
 
 # Course Syllabus {-}

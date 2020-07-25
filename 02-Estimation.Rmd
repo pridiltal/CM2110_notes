@@ -1,10 +1,228 @@
 # Estimations
 
+
+```{r chap2, echo = FALSE, cache = FALSE, include = FALSE}
+library(knitr)
+opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  fig.path = 'figure/',
+  cache.path = 'cache/',
+  fig.align = 'center',
+  fig.show = 'hold',
+  cache = FALSE,
+  external = TRUE,
+  dev = "png",
+  fig.height = 5,
+  fig.width = 10
+)
+
+
+library(tidyverse)
+library(ggpubr)
+
+```
+
+\pagenumbering{arabic}
+
+## Statistical Inference
+
+- The process of making educated guess and conclusions regarding a population, using a sample of that population is called **Statistical Inference**. 
+- Two important problems in statistical inference are **estimation of parameters** and **tests of hypothesis**
+- Estimation can be of the form of **point estimation** and  **interval estimation**. 
+
+```{r Ch2box1, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
 ## Point Estimation
+
+**Main Task**
+
+- Assume that some characteristic of the elements in a population can be represented by a random variable $X$.
+- Assume that $X_1, X_2, \dots, X_n$ is a random sample from a density $f(x, \theta)$, where the form of the density is known but the parameter $\theta$  is unknown.
+- The objective is to construct good estimators for $\theta$ or its function $\tau (\theta)$ on the basis of the observed sample values $x_1, x_2, \dots, x_n$ of a random sample $X_1, X_2, \dots, X_n$ from $f(x, \theta)$.
+
+**Definition: Statistic**
+
+Suppose $X_1, X_2, \dots, X_n$ be $n$ observable random variables. Then, a known function $T=g(X_1, X_2, \dots, X_n)$ of observable random variables $X_1, X_2, \dots, X_n$ is called a **statistic**. A statistic is always a random variable.
+
+**Definition: Estimator**
+
+Suppose $X_1, X_2, \dots, X_n$ is a random sample from from a density $f(x, \theta)$ and it is desired to estimate $\theta$. Suppose $T=g(X_1, X_2, \dots, X_n)$ is a *statistic* that can be used to  determine and approximate value for $\theta$. Then $T$ is called an **estimator** for $\theta$. An estimator is always a random variable. 
+
+**Definition: Estimate**
+
+Suppose $T=g(X_1, X_2, \dots, X_n)$ be an estimator for $\theta$. Suppose that $x_1, x_2, \dots, x_n$ is a set of observed values of the random variable $X_1, X_2, \dots, X_n.$ Then *the value* $t=g(x_1, x_2, \dots, x_n)$ obtained by substituting the observed values in the estimator is called an **estimate** for $\theta$.
+
+- Therefore the **estimator** stands for the function of the sample, and the word **estimate** stands for the realized value of that function.
+
+- *Notation:* An estimator of $\theta$ is denoted by $\hat{\theta}$. An estimate of $\theta$ is also denoted by $\hat{\theta}$. The difference between the two should be understood based on the context.
+
+
+Parameter | Estimator: Using random sample ($X_1, X_2, \dots, X_n$) | Estimate 1:  Using observed sample ($1,4,2,3,4$) | Estimate 2:  Using observed sample ($4,2,2,6,3$)
+----------|-----------|------------|----------
+$\mu$ | $\hat{\mu}=\bar{X}$ | $\hat{\mu}=$ | $\hat{\mu}=$
+$\sigma^2$| $\hat{\sigma^2}=S^2$ | $\hat{\sigma^2}=$ | $\hat{\sigma^2}=$
+
 
 ### Methods of finding point estimators
 
+- In some cases there will be an obvious or natural candidate for a point estimator of a particular parameter.
+- For example, the sample mean is a good point estimator of the population mean
+- However, in more complicated models we need a methodical way of estimating parameters.
+- There are different methods of finding point estimators
+    - Method of Moments
+    - Maximum Likelihood Estimators (MLE)
+    - Method of Least Squares <!--
+    (Mood page 273) -->
+    - Bayes Estimators
+    - The EM Algorithm
+
+- However, these techniques do not carry any guarantees with them 
+- The point estimators that they yeild still must be evaluated before their worth is established
+
+#### Method of Moments
+
+- Let $X_1, X_2, \dots X_n$ be a random sample from a population with pdf or pmf $f(x; \theta),$ where $\theta = (\theta_1, \theta_2, \dots, \theta_k)$ and $k\geq 1$.
+- Sample moments $m^\prime$ and population moments $\mu^\prime$ are defined as follows
+
+Sample moment  | Population moment
+---------------|-------------------
+$m_1^\prime= \frac{1}{n}\sum_{i=1}^nX_i$ | $\mu_1^\prime=E(X)$
+$m_2^\prime= \frac{1}{n}\sum_{i=1}^nX_i^2$ | $\mu_2^\prime=E(X^2)$
+$\dots$ | $\dots$
+$m_k^\prime= \frac{1}{n}\sum_{i=1}^nX_i^k$ | $\mu_k^\prime=E(X^k)$
+$\dots$ | $\dots$
+
+Each $\mu_j^\prime$ is a function $\theta,$ i.e. $\mu_j^\prime= \mu_j^\prime(\theta_1, \theta_2, \dots, \theta_k)$ for $j=1,2,\dots, k.$
+
+**Method of Moments Estimators (MME)**
+
+We first equate the first $k$ sample moments to the corresponding $k$ population moments,
+
+$$m_1^\prime = \mu_1^\prime,$$
+$$m_2^\prime = \mu_2^\prime,$$
+$$\dots$$
+$$m_k^\prime = \mu_k^\prime,$$
+
+Then we solve the resulting systems of simultaneous equations for $\hat{\theta_1}, \hat{\theta_2}, \dots, \hat{\theta_k}$
+
+**Remarks on Method of Moments Estimators**
+
+- Very easy to compute
+- Always give an estimator to start with
+- Generally consistent (Since sample moments are consistent for population moments)
+- Not necessarily the best or most efficient estimators 
+
+#### Maximum Likelihood Estimators (MLE)
+
+*Example*
+
+The number of orders per day coming to a certain company seems to have a Poisson distribution with parameter $\lambda$.
+
+The  number of orders received during 10 randomly selected days are as follows:
+$12,14,15,12,13,10,11,15,10,6$
+
+Derive an expression for the $P(X_1=12, \; X_2 = 14, \dots, X_{10} = 10)$  as a function of $\lambda.$
+
+\newpage
+**Find the joint probability of the data**
+
+<!--
+$$\text{Joint probability of the data} = P(X_1=12, \; X_2 = 14, \dots, X_{10} = 6)$$
+$$=\frac{e^{-\lambda}\lambda^{12}}{12!}\frac{e^{-\lambda}\lambda^{14}}{14!}\dots\frac{e^{-\lambda}\lambda^{6}}{6!}$$
+-->
+
+
+```{r Ch2box2, out.width='100%', fig.asp=.7, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+```{r joint, fig.cap="Probability of the sample is maximum when $\\lambda = 11.8$" }
+y <- expression((exp(-10*x)*x^118)/(factorial(12)*factorial(14)*factorial(15)*factorial(12)*factorial(13)*factorial(10)*factorial(11)*factorial(15)*factorial(10)*factorial(6)))
+x <- seq(10, 14, by = 0.1)
+f <- eval(y)
+
+
+data <- data.frame(x, f)
+
+p <- data %>% pivot_longer(-x, names_to = "Function", values_to = "f") %>%
+  ggplot( aes(x, f)) +
+  geom_line() +
+  geom_vline(xintercept= c(11.8))+
+  theme(aspect.ratio = 0.9) + 
+  xlab("lambda")+
+  xlab( expression(lambda))+
+  ylab("Probability of obtaining the sample")
+
+print(p)
+```
+
+- When it is viewed as a function of $\lambda$, it is called the **likelihood function of $\lambda$ for the available data**
+- The likelihood for the data is maximum when $\lambda = 11.8.$
+- Since these data have already occurred, it is very likely that the data have arisen from a Poisson distribution with $\lambda =11.8$.
+- This estimate for $\lambda$ is called the **maximum likelihood estimate**
+
+- In order to define maximum-likelihood estimators, we shall first define the likelihood function.
+
+**Definition: Likelihood function**
+
+Let $x_1,x_2, \dots, x_n$ be a set of observations of random variables $X_1, X_2, \dots, X_n$ with the joint  density of $n$ random variables, say $f_{X_1, X_2, \dots, X_n}(x_1,x_2, \dots, x_n;\; \theta)$. This joint density function, which is considered to be a function of $\theta$ is called the **likelihood function of $\theta$ for the set of observations (sample) $x_1,x_2, \dots, x_n.$**
+
+In particular, if $x_1,x_2, \dots, x_n$ is a random sample from the density $f(x; \theta)$, then the likelihood function is $f(x_1; \theta)f(x_2; \theta) \dots f(x_n; \theta).$
+
+*Notation*
+
+We use the notation $L(\theta;\;x_1,x_2, \dots, x_n)$ for the likelihood function, in order to remind ourselves to think of the likelihood function as a function of $\theta.$ 
+
+
+- Likelihood function is seen as a function of $\theta$ rather than $x$
+- Likelihood can be viewed as the degree of plausibility.
+- An estimate of $\theta$ may be obtained by choosing the most plausible value, i.e., where the likelihood function is maximized. 
+
+
+**Definition: Maximum Likelihood Estimator**
+
+Let $L(\theta)=L(\theta;\;x_1,x_2, \dots, x_n)$ be the likelihood function of $\theta$ for the sample  $x_1,x_2, \dots, x_n.$ Suppose $L(\theta)$ has its maximum when $\theta = \hat{\theta}.$ 
+
+Then $\hat{\theta}$ is called the **Maximum likelihood estimate of** $\theta$.
+
+The corresponding estimator is called the  **Maximum likelihood estimator of** $\theta$.
+
+- Many likelihood functions satisfy regularity conditions; so the maximum likelihood estimator is the solution of the equation $$\frac{dL(\theta)}{d\theta} = 0$$
+
+**Log-likelihood function**
+
+Let $$l(\theta) = ln[L(\theta)].$$
+
+Then, $l(\theta)$ is called the **log-likelihood function**. 
+
+- Both $L(\theta)$ and $l(\theta)$ have their maxima at the same value of $\theta$.
+- It is sometimes easier tot find the maximum of the logarithm of the likelihood and thereby simplify the calculations in finding the maximum likelihood estimate.
+
+
+**Invariance Property of MLE's**
+
+If $\hat{\theta}$ is the MLE of $\theta$, then for any function $\tau(\theta),$ the MLE of  $\tau(\theta)$ is $\tau(\hat{\theta}).$
+
+\newpage 
+
 ### Methods of evaluating point estimators
+
+
 
 ## Interval Estimation
 
@@ -13,3 +231,39 @@
 ### Methods of finding interval estimators
 
 ### Methods of evaluating interval estimators
+
+\newpage
+\pagenumbering{arabic}
+
+## Tutorial {-}
+
+1. Let $X_1, X_2, \dots, X_n \sim iid\;\; N(\mu, \sigma^2),$ both $\mu$ and $\sigma^2$ unknown. Derive a method of moment estimators for $\mu$ and $\sigma$.
+
+2. Let $X_1, X_2, \dots, X_n \sim iid\;\; Bin(n,\theta),$ both $n$ and $\theta$ unknown. Derive a method of moment estimators for $n$ and $\theta$.
+
+
+3. Let $X_1, X_2, \dots, X_n \sim iid\;\; Unif(\theta_1,\theta_2),$ where $\theta_1<\theta_2$, both unknown. Derive a method of moment estimators for $\theta_1$ and $\theta_2$.
+
+4. Let $X_1, X_2, \dots, X_n \sim Poisson(\lambda).$ Derive a method of moment estimators for $\lambda$.
+
+5. Let $X_1, X_2, \dots, X_n \sim iid\;\; Gamma(\alpha,\beta),$ both $\alpha$ and $\beta$ unknown. Derive a method of moment estimators for $\alpha$ and $\beta$.
+
+The survival time (in weeks) of 20 randomly selected male mouse exposed to 240 units of certain type of radiation are given below. 
+
+$152, 115, 109, 94, 88, 137, 152, 77, 160, 165, 125, 40, 128, 123, 136, 101, 62, 153, 83, 69$
+
+It is believed that the survival times have a gamma distribution. Estimate the corresponding parameters.
+
+6. Let $x_1, x_2, \dots, x_n$ be $n$ random measurements of random variable $X$ with the density function
+$$f_X(x;\lambda)= \lambda x^{\lambda-1},\;\; 0<x<1, \;\; \lambda>0$$
+
+Derive a method of moment estimator for $\lambda$.
+
+<!-- Lecture note example 2.9-->
+7. Let $x_1, x_2, \dots, x_n$  be a random sample of size $n$ from a Poisson distribution with parameter $\lambda$. Derive the maximum likelihood estimator of $\lambda$.
+
+8. Let $x_1, x_2, \dots, x_n$  be a random sample of size $n$ from a normal distribution with mean $\mu$ and variance $\sigma^2$. Derive the maximum likelihood estimators of $\mu$ and $\sigma^2$.
+
+9. Let $X_1, X_2, \dots, X_n \sim iid \; Poisson (\lambda)$. Find the MLE of $P(X\leq 1)$
+
+10. Let $X_1, X_2, \dots, X_n \sim iid \; N (\mu, \sigma^2)$. Find the MLE of $\mu/\sigma$

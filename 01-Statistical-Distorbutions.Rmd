@@ -1324,8 +1324,161 @@ print(p)
 ```
 \newpage
 
+## Approximations
+
+### Poisson approximation to Binomial
+
+Suppose $X\sim Bin(n, \theta)$ and $n$ is large and $\theta$ is small. Then $X\sim Poisson(n\theta)$ and 
+
+$$f_X(x) \approx \frac{e^{-n\theta} (n\theta)^x}{x!}$$
+
+*Example 16*
+
+Suppose $X$ has a binomial distribution with $n=40$ and $p=0.005$. Find $f_X(1)$
 
 
+### Normal approximation to Binomial
+
+Suppose $X\sim Bin(n, \theta)$ and $n\theta \geq 5$ and $n(1-\theta) \geq 5.$ Then $X \sim N(n\theta, n\theta(1-\theta))$ and
+
+$$P(X \leq x)_{Binomial} = P(X \leq x + 0.5)_{Normal} \approx P(Z \leq \frac{x+0.5-n\theta}{\sqrt{n\theta(1-\theta)}})$$
+
+
+**Note:** Since we are approximating a discrete distribution by a continuous distribution, we should apply a *continuity correction*
+
+
+*Example 17*
+
+Suppose $X$ has a binomial distribution with $n=40$ and $p=0.6.$ Find
+
+  1. $P(X\leq 20)$
+  2. $P(X < 25)$ 
+  3. $P(X > 15)$ 
+  4. $P(X \geq 20)$ 
+  5. $P(X = 30)$ 
+
+
+### Normal approximation to Poisson
+
+
+Suppose $X\sim Poisson(\lambda)$ and $\lambda > 10,$ 
+
+$$P(X \leq x)_{Poisson} = P(X \leq x + 0.5)_{Normal} \approx P(Z \leq \frac{x+0.5-\lambda}{\sqrt{\lambda}})$$
+
+
+**Note:** Since we are approximating a discrete distribution by a continuous distribution, we should apply a *continuity correction*
+
+
+*Example 18*
+
+Suppose $X$ has a Poisson distribution with $\lambda=25$
+
+  1. $P(X\leq 20)$
+  2. $P(X < 25)$ 
+  3. $P(X > 15)$ 
+  4. $P(X \geq 20)$ 
+  5. $P(X = 30)$ 
+
+## Distribution of Functions of Random Variables
+
+1. **Distribution of the linear transformation of a normal random variable**
+
+Suppose that $X \sim N(\mu, \sigma^2).$ Let $Y= ax+b,$ where $a$ and $b$ are constants. Then
+
+$$Y\sim N(a\mu +b, a^2\sigma^2)$$
+
+2. **Standardization of a normal random variable**
+
+Suppose that $X \sim N(\mu, \sigma^2).$ Let $Z= \frac{X-\mu}{\sigma}.$ Then
+
+$$Z\sim N(0,1).$$
+
+3. **Distribution of the square of a standard normal random variable**
+
+Suppose that $Z \sim N(0,1).$ Let $Y= Z^2.$ Then
+
+$$Y\sim \chi^2_1$$
+
+\newpage
+
+## Distribution of Sum of Independent Random Variables
+
+1. **Distribution of sum of i.i.d Bernoulli random variables**
+
+Suppose that $X_1, X_2, \dots, X_n$ are independent, identically distributed (i.i.d) random variables with $Bernoulli(\theta)$ distribution. Let $Y= X_1+X_2+\dots +X_n.$ Then
+
+$$Y\sim Bin(n, \theta); \;\;y=0,1,2,\dots, n.$$
+
+
+2. **Distribution of sum of i.i.d Poisson random variables**
+
+Suppose that $X_1, X_2, \dots, X_n$ are independent, identically distributed (i.i.d) random variables with $Poisson(\lambda)$ distribution. Let $Y= X_1+X_2+\dots +X_n.$ Then
+
+$$Y\sim Poisson(n\lambda); \;\;y=0,1,2,\dots,.$$
+
+
+3. **Distribution of sum of  independent Poisson random variables**
+
+Suppose that $X_1, X_2, \dots, X_n$ are independent random variables with $Poisson(\lambda_i), \; i=1,2,\dots, n.$ Let $Y= X_1+X_2+\dots +X_n.$ Then
+
+$$Y\sim Poisson \left(\sum_{i=1}^n\lambda_i\right); \;\;y=0,1,2,\dots,.$$
+
+4. **Distribution of sum of i.i.d Geometric random variables**
+
+Suppose that $X_1, X_2, \dots, X_n$ are independent, identically distributed (i.i.d) random variables with $Geometric(\theta)$ distribution. Let $Y= X_1+X_2+\dots +X_n.$ Then
+
+$$Y\sim Neg.bin(n, \theta); \;\;y=n, n+1, n+2,\dots,.$$
+
+5. **Distribution of sum of independent Normal random variables**
+
+Suppose that $X_1, X_2, \dots, X_n$ are independent random variables with $X_i\sim N(\mu_i, \sigma_i^2); \; i=1,2,\dots, n$. Let $Y= X_1+X_2+\dots +X_n.$ Then
+
+$$Y\sim N\left(\sum_{i=1}^n \mu_i,\sum_{i=1}^n \sigma_i^2  \right).$$
+
+
+6.  **Distribution of sum of i.i.d exponential random variables**
+
+Suppose that $X_1, X_2, \dots, X_n$ are independent, identically distributed (i.i.d) random variables with $X_i\sim exp(\lambda);\; i=1,2,\dots, n$. Let $Y= X_1+X_2+\dots +X_n.$ Then
+
+$$Y \sim gamma(n, \lambda)$$
+
+7. **Distribution of sum of independent gamma random variables**
+
+Suppose that $X_1, X_2, \dots, X_n$ are independent random variables with $X_i\sim gamma(\alpha_i, \lambda);\; i=1,2,\dots, n$. Let $Y= X_1+X_2+\dots +X_n.$ Then
+
+$$Y \sim gamma\left(\sum_{i=1}^n\alpha_i, \lambda\right).$$
+
+
+## Sampling Distribution
+
+1. **Distribution of sample mean of a normal distribution**
+
+Suppose that $X_1, X_2, \dots, X_n$ is a random sample from a normal distribution with mean $\mu$ and variance $\sigma^2$. Let $\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}$ be the sample mean. Then,
+
+$$\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)$$
+
+2. **Distribution of sample variance of a normal distribution**
+
+Suppose that $X_1, X_2, \dots, X_n$ is a random sample from a normal distribution with mean $\mu$ and variance $\sigma^2$. Let $\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}$ be the sample mean and $S^2 = \frac{1}{n-1}\sum_{i=1}^n(X_i-\bar{X})^2$ be the sample variance. Then,
+
+$$\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}.$$
+
+
+
+3. **Large sample distribution of sample average - Central Limit Theorem)**
+
+Suppose that $X_1, X_2, \dots, X_n$ is a random sample from any distribution with mean $\mu$ and variance $\sigma^2$. Let $\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}$ be the sample mean and $Z_n = \frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}}.$
+
+Then, the distribution of $Z_n$ approaches the standard normal distribution as $n$ approaches $\infty.$
+
+
+## References {-}
+
+Casella, G., & Berger, R. L. (2002). Statistical inference (Vol. 2, pp. 337-472).Pacific Grove, CA: Duxbury
+
+Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co. Ltd.
+
+\newpage
 \pagenumbering{arabic}
 ## Tutorial {-}
 
@@ -1526,8 +1679,31 @@ c) What is the probability that the waiting time at the first bus-stop will be l
 
 
 \newpage
+\pagenumbering{arabic}
+\blandscape
 
-Name | Notation | Discrete density functions | Parameter Space | Mean| Variance
----------|---------|-----------|--------|-----------
-Discrete Uniform | $f(x) = \frac{1}{N},\;\;x=1,2,\dots, N$ | $N=1,2,\dots$ | $\frac{N+1}{2}$ | $\frac{N^2-1}{12}$
-Bernoulli| $f(x) = \theta^x (1-\theta)^{1-x}\;\; x=0,1$ | $0\leq \theta \leq 1$ | $\theta$ | $\theta (1-\theta)$
+## Summary {-}
+
+**Models for Discrete Distributions**
+
+Name | Remarks  | Probability mass function |values of  $X$ |Parameter Space | Mean| Variance
+--------------|-------------------|-----------------------|--------------------|-----------------------|-------|-------------
+Discrete Uniform | Outcomes that are equally likely (finite) | $f(x) = \frac{1}{N}$ |$x=1,2,\dots, N$ | $N=1,2,\dots$ | $\frac{N+1}{2}$ | $\frac{N^2-1}{12}$
+Bernoulli| Bernoulli trial   | $f(x) = \theta^x (1-\theta)^{1-x}$ |  $x=0,1$ | $0\leq \theta \leq 1$ | $\theta$ | $\theta (1-\theta)$
+Binomial| $X=$ Number of successes in $n$ fixed trials| $f_X(x) = {n\choose x}\theta ^x(1-\theta)^{n-x}$ | $x=0,1,2,\dots, n$ | $0\leq \theta \leq 1; \;\;\; \newline n =1,2,3,\dots$ | $n\theta$ | $n\theta(1-\theta)$
+Geometric| $X=$ Number of failures before the first success| $f_X(x)= \theta (1-\theta)^x$ |$x=0,1,2,\dots$ | $0\leq \theta \leq 1$ | $\frac{1-\theta}{\theta}$ | $\frac{1-\theta}{\theta^2}$
+Negative Binomial | $X=$  Number of failures before the $r$th success | $f_X(x)= {x+r-1\choose r-1} \theta^r (1-\theta)^x$| $x=0,1,2,\dots$ | $0\leq \theta \leq 1; \;\; r > 0$ | $\frac{r(1-\theta)}{\theta}$ | $\frac{r(1-\theta)}{\theta^2}$
+Hypergeometric| $X=$ Number of successes in the sample taken without replacement | $f_X(x)=  \frac{{M\choose x}{N-M\choose n-x}}{{N \choose n}}$ | $x=0,1,2,\dots, n$ | $N = 1,2,\dots;\;\;\;\;\newline   M= 0,1,\dots,N; \;\;\;\; \newline n=1,2,\dots,N$ | $n\frac{M}{N}$ | $n\frac{M}{N}\left(1-\frac{M}{N} \right)\left(\frac{N-n}{N-1}\right)$
+Poisson | $X=$ number of events in a given period of time, space, region or length| $f_X(x)= \frac{e^{-\lambda} (\lambda)^x}{x!}$ |  $x=0,1,2,\dots$ | $\lambda > 0$ | $\lambda$ | $\lambda$
+
+**Models for Continuous Distributions**
+
+Name | Probability density function | Values of $X$ |Parameter Space | Mean| Variance
+------------|------------------------|---------------|--------------------|--------|--------
+Uniform |  $f_X(x) = \frac{1}{b-a}$ | $a\leq x\leq b$  | $-\infty<a<b<\infty$ | $\frac{a+b}{2}$ | $\frac{(b-a)^2}{12}$
+Normal (Gaussian)  | $f_X(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$ | $-\infty<x<\infty$ | $-\infty<\mu<\infty;\;\; \sigma >0$ | $\mu$ | $\sigma^2$
+Gamma | $f_X(x)= \frac{1}{\Gamma(\alpha)\beta ^ {\alpha}}x^{\alpha-1}e^{-x/\beta}$ | $0<x<\infty$ |$\alpha >0; \;\;\beta >0$ |  $\alpha\beta$ | $\alpha\beta^2$
+Exponential | $f_X(x)=\frac{1}{\beta}e^{-x/\beta}$ | $0<x<\infty$ |$\beta >0$ |  $\beta$ | $\beta^2$
+Beta | $f_X(x)= \frac{1}{B(\alpha, \beta)}x^{\alpha -1}(1-x)^{\beta-1}$| $0<x<1$ | $\alpha >0;\;\; \beta >0$  |  $\frac{\alpha}{\alpha+\beta}$ | $\frac{\alpha\beta}{(\alpha+\beta+1)(\alpha+\beta)^2}$
+
+\elandscape

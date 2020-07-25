@@ -83,12 +83,15 @@
 \floatplacement{table}{H}
 \makeatletter\renewcommand*{\fps@figure}{H}\makeatother
 \usepackage{mathtools}
+\usepackage{pdflscape}
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{CM 2110 Calculus and Statistical Distributions}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-07-03}
+\date{2020-07-24}
 
 \begin{document}
 \maketitle
@@ -1649,6 +1652,249 @@ where \(B(\alpha, \beta)\) denotes the \emph{beta function},
 \end{figure}
 \newpage
 
+\hypertarget{approximations}{%
+\section{Approximations}\label{approximations}}
+
+\hypertarget{poisson-approximation-to-binomial}{%
+\subsection{Poisson approximation to Binomial}\label{poisson-approximation-to-binomial}}
+
+Suppose \(X\sim Bin(n, \theta)\) and \(n\) is large and \(\theta\) is small. Then \(X\sim Poisson(n\theta)\) and
+
+\[f_X(x) \approx \frac{e^{-n\theta} (n\theta)^x}{x!}\]
+
+\emph{Example 16}
+
+Suppose \(X\) has a binomial distribution with \(n=40\) and \(p=0.005\). Find \(f_X(1)\)
+
+\hypertarget{normal-approximation-to-binomial}{%
+\subsection{Normal approximation to Binomial}\label{normal-approximation-to-binomial}}
+
+Suppose \(X\sim Bin(n, \theta)\) and \(n\theta \geq 5\) and \(n(1-\theta) \geq 5.\) Then \(X \sim N(n\theta, n\theta(1-\theta))\) and
+
+\[P(X \leq x)_{Binomial} = P(X \leq x + 0.5)_{Normal} \approx P(Z \leq \frac{x+0.5-n\theta}{\sqrt{n\theta(1-\theta)}})\]
+
+\textbf{Note:} Since we are approximating a discrete distribution by a continuous distribution, we should apply a \emph{continuity correction}
+
+\emph{Example 17}
+
+Suppose \(X\) has a binomial distribution with \(n=40\) and \(p=0.6.\) Find
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(P(X\leq 20)\)
+\item
+  \(P(X < 25)\)
+\item
+  \(P(X > 15)\)
+\item
+  \(P(X \geq 20)\)
+\item
+  \(P(X = 30)\)
+\end{enumerate}
+
+\hypertarget{normal-approximation-to-poisson}{%
+\subsection{Normal approximation to Poisson}\label{normal-approximation-to-poisson}}
+
+Suppose \(X\sim Poisson(\lambda)\) and \(\lambda > 10,\)
+
+\[P(X \leq x)_{Poisson} = P(X \leq x + 0.5)_{Normal} \approx P(Z \leq \frac{x+0.5-\lambda}{\sqrt{\lambda}})\]
+
+\textbf{Note:} Since we are approximating a discrete distribution by a continuous distribution, we should apply a \emph{continuity correction}
+
+\emph{Example 18}
+
+Suppose \(X\) has a Poisson distribution with \(\lambda=25\)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(P(X\leq 20)\)
+\item
+  \(P(X < 25)\)
+\item
+  \(P(X > 15)\)
+\item
+  \(P(X \geq 20)\)
+\item
+  \(P(X = 30)\)
+\end{enumerate}
+
+\hypertarget{distribution-of-functions-of-random-variables}{%
+\section{Distribution of Functions of Random Variables}\label{distribution-of-functions-of-random-variables}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Distribution of the linear transformation of a normal random variable}
+\end{enumerate}
+
+Suppose that \(X \sim N(\mu, \sigma^2).\) Let \(Y= ax+b,\) where \(a\) and \(b\) are constants. Then
+
+\[Y\sim N(a\mu +b, a^2\sigma^2)\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Standardization of a normal random variable}
+\end{enumerate}
+
+Suppose that \(X \sim N(\mu, \sigma^2).\) Let \(Z= \frac{X-\mu}{\sigma}.\) Then
+
+\[Z\sim N(0,1).\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Distribution of the square of a standard normal random variable}
+\end{enumerate}
+
+Suppose that \(Z \sim N(0,1).\) Let \(Y= Z^2.\) Then
+
+\[Y\sim \chi^2_1\]
+
+\newpage
+
+\hypertarget{distribution-of-sum-of-independent-random-variables}{%
+\section{Distribution of Sum of Independent Random Variables}\label{distribution-of-sum-of-independent-random-variables}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Distribution of sum of i.i.d Bernoulli random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent, identically distributed (i.i.d) random variables with \(Bernoulli(\theta)\) distribution. Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y\sim Bin(n, \theta); \;\;y=0,1,2,\dots, n.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Distribution of sum of i.i.d Poisson random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent, identically distributed (i.i.d) random variables with \(Poisson(\lambda)\) distribution. Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y\sim Poisson(n\lambda); \;\;y=0,1,2,\dots,.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Distribution of sum of independent Poisson random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent random variables with \(Poisson(\lambda_i), \; i=1,2,\dots, n.\) Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y\sim Poisson \left(\sum_{i=1}^n\lambda_i\right); \;\;y=0,1,2,\dots,.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{Distribution of sum of i.i.d Geometric random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent, identically distributed (i.i.d) random variables with \(Geometric(\theta)\) distribution. Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y\sim Neg.bin(n, \theta); \;\;y=n, n+1, n+2,\dots,.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  \textbf{Distribution of sum of independent Normal random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent random variables with \(X_i\sim N(\mu_i, \sigma_i^2); \; i=1,2,\dots, n\). Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y\sim N\left(\sum_{i=1}^n \mu_i,\sum_{i=1}^n \sigma_i^2  \right).\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  \textbf{Distribution of sum of i.i.d exponential random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent, identically distributed (i.i.d) random variables with \(X_i\sim exp(\lambda);\; i=1,2,\dots, n\). Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y \sim gamma(n, \lambda)\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  \textbf{Distribution of sum of independent gamma random variables}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) are independent random variables with \(X_i\sim gamma(\alpha_i, \lambda);\; i=1,2,\dots, n\). Let \(Y= X_1+X_2+\dots +X_n.\) Then
+
+\[Y \sim gamma\left(\sum_{i=1}^n\alpha_i, \lambda\right).\]
+
+\hypertarget{sampling-distribution}{%
+\section{Sampling Distribution}\label{sampling-distribution}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Distribution of sample mean of a normal distribution}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) is a random sample from a normal distribution with mean \(\mu\) and variance \(\sigma^2\). Let \(\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}\) be the sample mean. Then,
+
+\[\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Distribution of sample variance of a normal distribution}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) is a random sample from a normal distribution with mean \(\mu\) and variance \(\sigma^2\). Let \(\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}\) be the sample mean and \(S^2 = \frac{1}{n-1}\sum_{i=1}^n(X_i-\bar{X})^2\) be the sample variance. Then,
+
+\[\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Large sample distribution of sample average - Central Limit Theorem)}
+\end{enumerate}
+
+Suppose that \(X_1, X_2, \dots, X_n\) is a random sample from any distribution with mean \(\mu\) and variance \(\sigma^2\). Let \(\bar{X} = \frac{X_1+X_2+\dots + X_n}{n}\) be the sample mean and \(Z_n = \frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}}.\)
+
+Then, the distribution of \(Z_n\) approaches the standard normal distribution as \(n\) approaches \(\infty.\)
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+Casella, G., \& Berger, R. L. (2002). Statistical inference (Vol. 2, pp.~337-472).Pacific Grove, CA: Duxbury
+
+Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co.~Ltd.
+
+\newpage
 \pagenumbering{arabic}
 
 \hypertarget{tutorial}{%
@@ -2087,55 +2333,496 @@ f_T(t) =
 \end{enumerate}
 
 \newpage
+\pagenumbering{arabic}
+\begin{landscape}
 
-\begin{longtable}[]{@{}lllll@{}}
+\hypertarget{summary}{%
+\section*{Summary}\label{summary}}
+\addcontentsline{toc}{section}{Summary}
+
+\textbf{Models for Discrete Distributions}
+
+\begin{longtable}[]{@{}lllllll@{}}
 \toprule
-\begin{minipage}[b]{0.16\columnwidth}\raggedright
+\begin{minipage}[b]{0.10\columnwidth}\raggedright
 Name\strut
+\end{minipage} & \begin{minipage}[b]{0.13\columnwidth}\raggedright
+Remarks\strut
 \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright
-Notation\strut
-\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright
-Discrete density functions\strut
+Probability mass function\strut
 \end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\raggedright
+values of \(X\)\strut
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright
 Parameter Space\strut
-\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
 Mean\strut
+\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\raggedright
+Variance\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.16\columnwidth}\raggedright
+\begin{minipage}[t]{0.10\columnwidth}\raggedright
 Discrete Uniform\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+Outcomes that are equally likely (finite)\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
-\(f(x) = \frac{1}{N},\;\;x=1,2,\dots, N\)\strut
-\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
-\(N=1,2,\dots\)\strut
+\(f(x) = \frac{1}{N}\)\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(x=1,2,\dots, N\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(N=1,2,\dots\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
 \(\frac{N+1}{2}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
 \(\frac{N^2-1}{12}\)\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\raggedright
+\begin{minipage}[t]{0.10\columnwidth}\raggedright
 Bernoulli\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+Bernoulli trial\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
-\(f(x) = \theta^x (1-\theta)^{1-x}\;\; x=0,1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
-\(0\leq \theta \leq 1\)\strut
+\(f(x) = \theta^x (1-\theta)^{1-x}\)\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(x=0,1\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(0\leq \theta \leq 1\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
 \(\theta\)\strut
-\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
 \(\theta (1-\theta)\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedright
+Binomial\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+\(X=\) Number of successes in \(n\) fixed trials\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(f_X(x) = {n\choose x}\theta ^x(1-\theta)^{n-x}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(x=0,1,2,\dots, n\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(0\leq \theta \leq 1; \;\;\; \newline n =1,2,3,\dots\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\(n\theta\)\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+\(n\theta(1-\theta)\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedright
+Geometric\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+\(X=\) Number of failures before the first success\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(f_X(x)= \theta (1-\theta)^x\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(x=0,1,2,\dots\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(0\leq \theta \leq 1\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\(\frac{1-\theta}{\theta}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+\(\frac{1-\theta}{\theta^2}\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedright
+Negative Binomial\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+\(X=\) Number of failures before the \(r\)th success\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(f_X(x)= {x+r-1\choose r-1} \theta^r (1-\theta)^x\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(x=0,1,2,\dots\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(0\leq \theta \leq 1; \;\; r > 0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\(\frac{r(1-\theta)}{\theta}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+\(\frac{r(1-\theta)}{\theta^2}\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedright
+Hypergeometric\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+\(X=\) Number of successes in the sample taken without replacement\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(f_X(x)= \frac{{M\choose x}{N-M\choose n-x}}{{N \choose n}}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(x=0,1,2,\dots, n\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(N = 1,2,\dots;\;\;\;\;\newline M= 0,1,\dots,N; \;\;\;\; \newline n=1,2,\dots,N\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\(n\frac{M}{N}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+\(n\frac{M}{N}\left(1-\frac{M}{N} \right)\left(\frac{N-n}{N-1}\right)\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedright
+Poisson\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+\(X=\) number of events in a given period of time, space, region or length\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(f_X(x)= \frac{e^{-\lambda} (\lambda)^x}{x!}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(x=0,1,2,\dots\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(\lambda > 0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\(\lambda\)\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+\(\lambda\)\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
+\textbf{Models for Continuous Distributions}
+
+\begin{longtable}[]{@{}llllll@{}}
+\toprule
+\begin{minipage}[b]{0.11\columnwidth}\raggedright
+Name\strut
+\end{minipage} & \begin{minipage}[b]{0.23\columnwidth}\raggedright
+Probability density function\strut
+\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\raggedright
+Values of \(X\)\strut
+\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright
+Parameter Space\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Mean\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Variance\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Uniform\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(f_X(x) = \frac{1}{b-a}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(a\leq x\leq b\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(-\infty<a<b<\infty\)\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\(\frac{a+b}{2}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\(\frac{(b-a)^2}{12}\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Normal (Gaussian)\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(f_X(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(-\infty<x<\infty\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(-\infty<\mu<\infty;\;\; \sigma >0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\(\mu\)\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\(\sigma^2\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Gamma\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(f_X(x)= \frac{1}{\Gamma(\alpha)\beta ^ {\alpha}}x^{\alpha-1}e^{-x/\beta}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(0<x<\infty\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(\alpha >0; \;\;\beta >0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\(\alpha\beta\)\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\(\alpha\beta^2\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Exponential\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(f_X(x)=\frac{1}{\beta}e^{-x/\beta}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(0<x<\infty\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(\beta >0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\(\beta\)\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\(\beta^2\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Beta\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(f_X(x)= \frac{1}{B(\alpha, \beta)}x^{\alpha -1}(1-x)^{\beta-1}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\(0<x<1\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(\alpha >0;\;\; \beta >0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\(\frac{\alpha}{\alpha+\beta}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\(\frac{\alpha\beta}{(\alpha+\beta+1)(\alpha+\beta)^2}\)\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{landscape}
+
 \hypertarget{estimations}{%
 \chapter{Estimations}\label{estimations}}
+
+\pagenumbering{arabic}
+
+\hypertarget{statistical-inference}{%
+\section{Statistical Inference}\label{statistical-inference}}
+
+\begin{itemize}
+\tightlist
+\item
+  The process of making educated guess and conclusions regarding a population, using a sample of that population is called \textbf{Statistical Inference}.
+\item
+  Two important problems in statistical inference are \textbf{estimation of parameters} and \textbf{tests of hypothesis}
+\item
+  Estimation can be of the form of \textbf{point estimation} and \textbf{interval estimation}.
+\end{itemize}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch2box1-1} \end{center}
 
 \hypertarget{point-estimation}{%
 \section{Point Estimation}\label{point-estimation}}
 
+\textbf{Main Task}
+
+\begin{itemize}
+\tightlist
+\item
+  Assume that some characteristic of the elements in a population can be represented by a random variable \(X\).
+\item
+  Assume that \(X_1, X_2, \dots, X_n\) is a random sample from a density \(f(x, \theta)\), where the form of the density is known but the parameter \(\theta\) is unknown.
+\item
+  The objective is to construct good estimators for \(\theta\) or its function \(\tau (\theta)\) on the basis of the observed sample values \(x_1, x_2, \dots, x_n\) of a random sample \(X_1, X_2, \dots, X_n\) from \(f(x, \theta)\).
+\end{itemize}
+
+\textbf{Definition: Statistic}
+
+Suppose \(X_1, X_2, \dots, X_n\) be \(n\) observable random variables. Then, a known function \(T=g(X_1, X_2, \dots, X_n)\) of observable random variables \(X_1, X_2, \dots, X_n\) is called a \textbf{statistic}. A statistic is always a random variable.
+
+\textbf{Definition: Estimator}
+
+Suppose \(X_1, X_2, \dots, X_n\) is a random sample from from a density \(f(x, \theta)\) and it is desired to estimate \(\theta\). Suppose \(T=g(X_1, X_2, \dots, X_n)\) is a \emph{statistic} that can be used to determine and approximate value for \(\theta\). Then \(T\) is called an \textbf{estimator} for \(\theta\). An estimator is always a random variable.
+
+\textbf{Definition: Estimate}
+
+Suppose \(T=g(X_1, X_2, \dots, X_n)\) be an estimator for \(\theta\). Suppose that \(x_1, x_2, \dots, x_n\) is a set of observed values of the random variable \(X_1, X_2, \dots, X_n.\) Then \emph{the value} \(t=g(x_1, x_2, \dots, x_n)\) obtained by substituting the observed values in the estimator is called an \textbf{estimate} for \(\theta\).
+
+\begin{itemize}
+\item
+  Therefore the \textbf{estimator} stands for the function of the sample, and the word \textbf{estimate} stands for the realized value of that function.
+\item
+  \emph{Notation:} An estimator of \(\theta\) is denoted by \(\hat{\theta}\). An estimate of \(\theta\) is also denoted by \(\hat{\theta}\). The difference between the two should be understood based on the context.
+\end{itemize}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\begin{minipage}[b]{0.21\columnwidth}\raggedright
+Parameter\strut
+\end{minipage} & \begin{minipage}[b]{0.23\columnwidth}\raggedright
+Estimator: Using random sample (\(X_1, X_2, \dots, X_n\))\strut
+\end{minipage} & \begin{minipage}[b]{0.25\columnwidth}\raggedright
+Estimate 1: Using observed sample (\(1,4,2,3,4\))\strut
+\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedright
+Estimate 2: Using observed sample (\(4,2,2,6,3\))\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+\(\mu\)\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(\hat{\mu}=\bar{X}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+\(\hat{\mu}=\)\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
+\(\hat{\mu}=\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+\(\sigma^2\)\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(\hat{\sigma^2}=S^2\)\strut
+\end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright
+\(\hat{\sigma^2}=\)\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
+\(\hat{\sigma^2}=\)\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
 \hypertarget{methods-of-finding-point-estimators}{%
 \subsection{Methods of finding point estimators}\label{methods-of-finding-point-estimators}}
+
+\begin{itemize}
+\tightlist
+\item
+  In some cases there will be an obvious or natural candidate for a point estimator of a particular parameter.
+\item
+  For example, the sample mean is a good point estimator of the population mean
+\item
+  However, in more complicated models we need a methodical way of estimating parameters.
+\item
+  There are different methods of finding point estimators
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Method of Moments
+  \item
+    Maximum Likelihood Estimators (MLE)
+  \item
+    Method of Least Squares 
+  \item
+    Bayes Estimators
+  \item
+    The EM Algorithm
+  \end{itemize}
+\item
+  However, these techniques do not carry any guarantees with them
+\item
+  The point estimators that they yeild still must be evaluated before their worth is established
+\end{itemize}
+
+\hypertarget{method-of-moments}{%
+\subsubsection{Method of Moments}\label{method-of-moments}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(X_1, X_2, \dots X_n\) be a random sample from a population with pdf or pmf \(f(x; \theta),\) where \(\theta = (\theta_1, \theta_2, \dots, \theta_k)\) and \(k\geq 1\).
+\item
+  Sample moments \(m^\prime\) and population moments \(\mu^\prime\) are defined as follows
+\end{itemize}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Sample moment & Population moment\tabularnewline
+\midrule
+\endhead
+\(m_1^\prime= \frac{1}{n}\sum_{i=1}^nX_i\) & \(\mu_1^\prime=E(X)\)\tabularnewline
+\(m_2^\prime= \frac{1}{n}\sum_{i=1}^nX_i^2\) & \(\mu_2^\prime=E(X^2)\)\tabularnewline
+\(\dots\) & \(\dots\)\tabularnewline
+\(m_k^\prime= \frac{1}{n}\sum_{i=1}^nX_i^k\) & \(\mu_k^\prime=E(X^k)\)\tabularnewline
+\(\dots\) & \(\dots\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+Each \(\mu_j^\prime\) is a function \(\theta,\) i.e.~\(\mu_j^\prime= \mu_j^\prime(\theta_1, \theta_2, \dots, \theta_k)\) for \(j=1,2,\dots, k.\)
+
+\textbf{Method of Moments Estimators (MME)}
+
+We first equate the first \(k\) sample moments to the corresponding \(k\) population moments,
+
+\[m_1^\prime = \mu_1^\prime,\]
+\[m_2^\prime = \mu_2^\prime,\]
+\[\dots\]
+\[m_k^\prime = \mu_k^\prime,\]
+
+Then we solve the resulting systems of simultaneous equations for \(\hat{\theta_1}, \hat{\theta_2}, \dots, \hat{\theta_k}\)
+
+\textbf{Remarks on Method of Moments Estimators}
+
+\begin{itemize}
+\tightlist
+\item
+  Very easy to compute
+\item
+  Always give an estimator to start with
+\item
+  Generally consistent (Since sample moments are consistent for population moments)
+\item
+  Not necessarily the best or most efficient estimators
+\end{itemize}
+
+\hypertarget{maximum-likelihood-estimators-mle}{%
+\subsubsection{Maximum Likelihood Estimators (MLE)}\label{maximum-likelihood-estimators-mle}}
+
+\emph{Example}
+
+The number of orders per day coming to a certain company seems to have a Poisson distribution with parameter \(\lambda\).
+
+The number of orders received during 10 randomly selected days are as follows:
+\(12,14,15,12,13,10,11,15,10,6\)
+
+Derive an expression for the \(P(X_1=12, \; X_2 = 14, \dots, X_{10} = 10)\) as a function of \(\lambda.\)
+
+\newpage
+
+\textbf{Find the joint probability of the data}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/Ch2box2-1} \end{center}
+
+\begin{figure}
+
+{\centering \includegraphics{figure/joint-1} 
+
+}
+
+\caption{Probability of the sample is maximum when $\lambda = 11.8$}\label{fig:joint}
+\end{figure}
+
+\begin{itemize}
+\item
+  When it is viewed as a function of \(\lambda\), it is called the \textbf{likelihood function of \(\lambda\) for the available data}
+\item
+  The likelihood for the data is maximum when \(\lambda = 11.8.\)
+\item
+  Since these data have already occurred, it is very likely that the data have arisen from a Poisson distribution with \(\lambda =11.8\).
+\item
+  This estimate for \(\lambda\) is called the \textbf{maximum likelihood estimate}
+\item
+  In order to define maximum-likelihood estimators, we shall first define the likelihood function.
+\end{itemize}
+
+\textbf{Definition: Likelihood function}
+
+Let \(x_1,x_2, \dots, x_n\) be a set of observations of random variables \(X_1, X_2, \dots, X_n\) with the joint density of \(n\) random variables, say \(f_{X_1, X_2, \dots, X_n}(x_1,x_2, \dots, x_n;\; \theta)\). This joint density function, which is considered to be a function of \(\theta\) is called the \textbf{likelihood function of \(\theta\) for the set of observations (sample) \(x_1,x_2, \dots, x_n.\)}
+
+In particular, if \(x_1,x_2, \dots, x_n\) is a random sample from the density \(f(x; \theta)\), then the likelihood function is \(f(x_1; \theta)f(x_2; \theta) \dots f(x_n; \theta).\)
+
+\emph{Notation}
+
+We use the notation \(L(\theta;\;x_1,x_2, \dots, x_n)\) for the likelihood function, in order to remind ourselves to think of the likelihood function as a function of \(\theta.\)
+
+\begin{itemize}
+\tightlist
+\item
+  Likelihood function is seen as a function of \(\theta\) rather than \(x\)
+\item
+  Likelihood can be viewed as the degree of plausibility.
+\item
+  An estimate of \(\theta\) may be obtained by choosing the most plausible value, i.e., where the likelihood function is maximized.
+\end{itemize}
+
+\textbf{Definition: Maximum Likelihood Estimator}
+
+Let \(L(\theta)=L(\theta;\;x_1,x_2, \dots, x_n)\) be the likelihood function of \(\theta\) for the sample \(x_1,x_2, \dots, x_n.\) Suppose \(L(\theta)\) has its maximum when \(\theta = \hat{\theta}.\)
+
+Then \(\hat{\theta}\) is called the \textbf{Maximum likelihood estimate of} \(\theta\).
+
+The corresponding estimator is called the \textbf{Maximum likelihood estimator of} \(\theta\).
+
+\begin{itemize}
+\tightlist
+\item
+  Many likelihood functions satisfy regularity conditions; so the maximum likelihood estimator is the solution of the equation \[\frac{dL(\theta)}{d\theta} = 0\]
+\end{itemize}
+
+\textbf{Log-likelihood function}
+
+Let \[l(\theta) = ln[L(\theta)].\]
+
+Then, \(l(\theta)\) is called the \textbf{log-likelihood function}.
+
+\begin{itemize}
+\tightlist
+\item
+  Both \(L(\theta)\) and \(l(\theta)\) have their maxima at the same value of \(\theta\).
+\item
+  It is sometimes easier tot find the maximum of the logarithm of the likelihood and thereby simplify the calculations in finding the maximum likelihood estimate.
+\end{itemize}
+
+\textbf{Invariance Property of MLE's}
+
+If \(\hat{\theta}\) is the MLE of \(\theta\), then for any function \(\tau(\theta),\) the MLE of \(\tau(\theta)\) is \(\tau(\hat{\theta}).\)
+
+\newpage
 
 \hypertarget{methods-of-evaluating-point-estimators}{%
 \subsection{Methods of evaluating point estimators}\label{methods-of-evaluating-point-estimators}}
@@ -2151,6 +2838,57 @@ Bernoulli\strut
 
 \hypertarget{methods-of-evaluating-interval-estimators}{%
 \subsection{Methods of evaluating interval estimators}\label{methods-of-evaluating-interval-estimators}}
+
+\newpage
+\pagenumbering{arabic}
+
+\hypertarget{tutorial-1}{%
+\section*{Tutorial}\label{tutorial-1}}
+\addcontentsline{toc}{section}{Tutorial}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid\;\; N(\mu, \sigma^2),\) both \(\mu\) and \(\sigma^2\) unknown. Derive a method of moment estimators for \(\mu\) and \(\sigma\).
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid\;\; Bin(n,\theta),\) both \(n\) and \(\theta\) unknown. Derive a method of moment estimators for \(n\) and \(\theta\).
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid\;\; Unif(\theta_1,\theta_2),\) where \(\theta_1<\theta_2\), both unknown. Derive a method of moment estimators for \(\theta_1\) and \(\theta_2\).
+\item
+  Let \(X_1, X_2, \dots, X_n \sim Poisson(\lambda).\) Derive a method of moment estimators for \(\lambda\).
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid\;\; Gamma(\alpha,\beta),\) both \(\alpha\) and \(\beta\) unknown. Derive a method of moment estimators for \(\alpha\) and \(\beta\).
+\end{enumerate}
+
+The survival time (in weeks) of 20 randomly selected male mouse exposed to 240 units of certain type of radiation are given below.
+
+\(152, 115, 109, 94, 88, 137, 152, 77, 160, 165, 125, 40, 128, 123, 136, 101, 62, 153, 83, 69\)
+
+It is believed that the survival times have a gamma distribution. Estimate the corresponding parameters.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Let \(x_1, x_2, \dots, x_n\) be \(n\) random measurements of random variable \(X\) with the density function
+  \[f_X(x;\lambda)= \lambda x^{\lambda-1},\;\; 0<x<1, \;\; \lambda>0\]
+\end{enumerate}
+
+Derive a method of moment estimator for \(\lambda\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\item
+  Let \(x_1, x_2, \dots, x_n\) be a random sample of size \(n\) from a Poisson distribution with parameter \(\lambda\). Derive the maximum likelihood estimator of \(\lambda\).
+\item
+  Let \(x_1, x_2, \dots, x_n\) be a random sample of size \(n\) from a normal distribution with mean \(\mu\) and variance \(\sigma^2\). Derive the maximum likelihood estimators of \(\mu\) and \(\sigma^2\).
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid \; Poisson (\lambda)\). Find the MLE of \(P(X\leq 1)\)
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid \; N (\mu, \sigma^2)\). Find the MLE of \(\mu/\sigma\)
+\end{enumerate}
 
 \hypertarget{hypothesis-testing}{%
 \chapter{Hypothesis Testing}\label{hypothesis-testing}}
@@ -2181,6 +2919,10 @@ Bernoulli\strut
 
 \hypertarget{completely-randomized-design}{%
 \section{Completely randomized design}\label{completely-randomized-design}}
+
+Casella, G., \& Berger, R. L. (2002). Statistical inference (Vol. 2, pp.~337-472).Pacific Grove, CA: Duxbury
+
+Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co.~Ltd.
 
 \bibliography{book.bib,packages.bib}
 
