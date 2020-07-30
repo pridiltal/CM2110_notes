@@ -24,11 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<<<<<<< HEAD
-<meta name="date" content="2020-07-24" />
-=======
-<meta name="date" content="2020-07-16" />
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
+<meta name="date" content="2020-07-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -139,7 +135,8 @@
 <li class="chapter" data-level="2.1" data-path="estimations.html"><a href="estimations.html#statistical-inference"><i class="fa fa-check"></i><b>2.1</b> Statistical Inference</a></li>
 <li class="chapter" data-level="2.2" data-path="estimations.html"><a href="estimations.html#point-estimation"><i class="fa fa-check"></i><b>2.2</b> Point Estimation</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="estimations.html"><a href="estimations.html#methods-of-finding-point-estimators"><i class="fa fa-check"></i><b>2.2.1</b> Methods of finding point estimators</a></li>
-<li class="chapter" data-level="2.2.2" data-path="estimations.html"><a href="estimations.html#methods-of-evaluating-point-estimators"><i class="fa fa-check"></i><b>2.2.2</b> Methods of evaluating point estimators</a></li>
+<li class="chapter" data-level="2.2.2" data-path="estimations.html"><a href="estimations.html#desirable-properties-of-point-estimators"><i class="fa fa-check"></i><b>2.2.2</b> Desirable properties of point estimators</a></li>
+<li class="chapter" data-level="2.2.3" data-path="estimations.html"><a href="estimations.html#consistency"><i class="fa fa-check"></i><b>2.2.3</b> Consistency</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="estimations.html"><a href="estimations.html#interval-estimation"><i class="fa fa-check"></i><b>2.3</b> Interval Estimation</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="estimations.html"><a href="estimations.html#interpretation-of-confidence-intervals"><i class="fa fa-check"></i><b>2.3.1</b> Interpretation of confidence intervals</a></li>
@@ -272,19 +269,11 @@
 <tbody>
 <tr class="odd">
 <td><span class="math inline">\(m_1^\prime= \frac{1}{n}\sum_{i=1}^nX_i\)</span></td>
-<<<<<<< HEAD
-<td><span class="math inline">\(\mu_1^\prime=E(X)\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(m_2^\prime= \frac{1}{n}\sum_{i=1}^nX_i^2\)</span></td>
-<td><span class="math inline">\(\mu_2^\prime=E(X^2)\)</span></td>
-=======
 <td><span class="math inline">\(\mu_1=E(X)\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(m_2^\prime= \frac{1}{n}\sum_{i=1}^nX_i^2\)</span></td>
 <td><span class="math inline">\(\mu_2=E(X^2)\)</span></td>
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(\dots\)</span></td>
@@ -292,15 +281,7 @@
 </tr>
 <tr class="even">
 <td><span class="math inline">\(m_k^\prime= \frac{1}{n}\sum_{i=1}^nX_i^k\)</span></td>
-<<<<<<< HEAD
-<td><span class="math inline">\(\mu_k^\prime=E(X^k)\)</span></td>
-=======
 <td><span class="math inline">\(\mu_k=E(X^k)\)</span></td>
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\dots\)</span></td>
-<td><span class="math inline">\(\dots\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -312,7 +293,6 @@
 <span class="math display">\[\dots\]</span>
 <span class="math display">\[m_k^\prime = \mu_k^\prime,\]</span></p>
 <p>Then we solve the resulting systems of simultaneous equations for <span class="math inline">\(\hat{\theta_1}, \hat{\theta_2}, \dots, \hat{\theta_k}\)</span></p>
-<<<<<<< HEAD
 <p><strong>Remarks on Method of Moments Estimators</strong></p>
 <ul>
 <li>Very easy to compute</li>
@@ -374,13 +354,59 @@ Figure 2.1: Probability of the sample is maximum when <span class="math inline">
 </ul>
 <p><strong>Invariance Property of MLE’s</strong></p>
 <p>If <span class="math inline">\(\hat{\theta}\)</span> is the MLE of <span class="math inline">\(\theta\)</span>, then for any function <span class="math inline">\(\tau(\theta),\)</span> the MLE of <span class="math inline">\(\tau(\theta)\)</span> is <span class="math inline">\(\tau(\hat{\theta}).\)</span></p>
-=======
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 <div style="page-break-after: always;"></div>
 </div>
 </div>
-<div id="methods-of-evaluating-point-estimators" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Methods of evaluating point estimators</h3>
+<div id="desirable-properties-of-point-estimators" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Desirable properties of point estimators</h3>
+<ul>
+<li><p>We discussed several methods of obtaining point estimators.</p></li>
+<li><p>It is possible that different methods of finding estimators will lead to same estimator or different estimators.</p></li>
+<li><p>In this section we discuss certain properties, which an estimator may or may not posses, that will guide us in deciding whether one estimator is better than another.</p></li>
+</ul>
+<div id="unbiasedness" class="section level4">
+<h4><span class="header-section-number">2.2.2.1</span> Unbiasedness</h4>
+<p><strong>Definition: Unbiased estimator</strong></p>
+<p>An estimator <span class="math inline">\(\hat{\theta}\)</span> <span class="math inline">\((=t(X_1, X_2, \dots, X_n))\)</span> is defined to be an <strong>unbiased estimator</strong> of <span class="math inline">\(\theta\)</span> if and only if
+<span class="math display">\[E(\hat{\theta}) = \theta\]</span></p>
+<ul>
+<li><p>The difference <span class="math inline">\(E(\hat{\theta}) -\theta\)</span> is called as the bias of <span class="math inline">\(\hat{\theta}\)</span> and denoted by
+<span class="math display">\[Bias(\hat{\theta}) = E(\hat{\theta}) = \theta \]</span></p></li>
+<li><p>An estimator whose bias is equal to 0 is called <strong>unbiased</strong>.</p></li>
+</ul>
+</div>
+</div>
+<div id="consistency" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Consistency</h3>
+<p><strong>Mean-Squared Error</strong></p>
+<ul>
+<li>The <em>mean-squared error</em> is a measure of goodness or closeness of an estimator to the target.</li>
+</ul>
+<p><strong>Definition: Mean-squared Error (MSE)</strong></p>
+<p>The <strong>mean-squared error</strong> of an estimator <span class="math inline">\(\hat{\theta}\)</span> of <span class="math inline">\(\theta\)</span> is defined as
+<span class="math display">\[MSE(\hat{\theta})= E\left[(\hat{\theta} - \theta)^2 \right]\]</span></p>
+<ul>
+<li><p>The MSE measures the average squared difference between <span class="math inline">\(\hat{\theta}\)</span> and <span class="math inline">\(\theta\)</span>.</p></li>
+<li><p>The MSE is a function of <span class="math inline">\(\theta\)</span> and has the interpretation</p></li>
+</ul>
+<p><span class="math display">\[MSE(\hat{\theta})= Var(\hat{\theta})+ \left[Bias(\hat{\theta}) \right]^2\]</span></p>
+<ul>
+<li><p>Therefore the MSE incorporates two components, one measuring the variability of the estimator (<em>precision</em>) and the other measuring its bias (<em>accuracy</em>).</p></li>
+<li><p>Small value of MSE implies small combined variance and bias.</p></li>
+<li><p>If <span class="math inline">\(\hat{\theta}\)</span> is unbiased, then
+<span class="math display">\[MSE(\hat{\theta})= Var(\hat{\theta})\]</span></p></li>
+<li><p>The positive square root of MSE is known as the <em>root mean squared error</em>
+<span class="math display">\[RMSE(\hat{\theta})= \sqrt{MSE(\hat{\theta})}\]</span></p></li>
+</ul>
+<p><strong>Consistency</strong></p>
+<ul>
+<li>Estimator <span class="math inline">\(\hat{\theta}\)</span> is said to be consistent for <span class="math inline">\(\theta\)</span> if <span class="math inline">\(MSE(\hat{\theta})\)</span> approaches zero as the sample size <span class="math inline">\(n\)</span> approaches <span class="math inline">\(\infty\)</span>.</li>
+</ul>
+<p><span class="math display">\[lim_{n\rightarrow \infty}E\left[(\hat{\theta} - \theta)^2 \right]=0\]</span></p>
+<ul>
+<li>Mean-squared error consistency implies that the bias and the variance both approach to zero as <span class="math inline">\(n\)</span> approaches <span class="math inline">\(\infty.\)</span></li>
+</ul>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div id="interval-estimation" class="section level2">
@@ -410,19 +436,41 @@ Figure 2.1: Probability of the sample is maximum when <span class="math inline">
 <p>It is believed that the survival times have a gamma distribution. Estimate the corresponding parameters.</p>
 <ol start="6" style="list-style-type: decimal">
 <li>Let <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> be <span class="math inline">\(n\)</span> random measurements of random variable <span class="math inline">\(X\)</span> with the density function
-<span class="math display">\[f_X(x;\lambda)= \lambda x^{\lambda-1},\;\; 0&lt;x&lt;1, \;\; \lambda&gt;0\]</span></li>
+<span class="math display">\[f_X(x;\lambda)= \lambda x^{\lambda-1},\;\; 0&lt;x&lt;1, \;\; \lambda&gt;0\]</span>
+Derive a method of moment estimator for <span class="math inline">\(\lambda\)</span>.</li>
 </ol>
-<p>Derive a method of moment estimator for <span class="math inline">\(\lambda\)</span>.</p>
-<<<<<<< HEAD
 <!-- Lecture note example 2.9-->
 <ol start="7" style="list-style-type: decimal">
 <li><p>Let <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> be a random sample of size <span class="math inline">\(n\)</span> from a Poisson distribution with parameter <span class="math inline">\(\lambda\)</span>. Derive the maximum likelihood estimator of <span class="math inline">\(\lambda\)</span>.</p></li>
 <li><p>Let <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> be a random sample of size <span class="math inline">\(n\)</span> from a normal distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>. Derive the maximum likelihood estimators of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^2\)</span>.</p></li>
-<li><p>Let <span class="math inline">\(X_1, X_2, \dots, X_n \sim iid \; Poisson (\lambda)\)</span>. Find the MLE of <span class="math inline">\(P(X\leq 1)\)</span></p></li>
-<li><p>Let <span class="math inline">\(X_1, X_2, \dots, X_n \sim iid \; N (\mu, \sigma^2)\)</span>. Find the MLE of <span class="math inline">\(\mu/\sigma\)</span></p></li>
 </ol>
-=======
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
+<!-- Lecture note page 58 PhD print note-->
+<ol start="9" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(X_1, X_2, \dots, X_n \sim iid \; Poisson (\lambda)\)</span>. Find the MLE of <span class="math inline">\(P(X\leq 1)\)</span></li>
+</ol>
+<!-- Lecture note page 58 PhD print note-->
+<ol start="10" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(X_1, X_2, \dots, X_n \sim iid \; N (\mu, \sigma^2)\)</span>. Find the MLE of <span class="math inline">\(\mu/\sigma\)</span>
+Derive a method of moment estimator for <span class="math inline">\(\lambda\)</span>.</li>
+</ol>
+<!-- Lecture note bsc print example 2.3-->
+<ol start="11" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from an exponential distribution with the density function
+<span class="math display">\[f_X(x;\lambda)= \lambda e^{-\lambda x},\;\; x&gt;0\]</span>. Is the maximum likelihood estimators of <span class="math inline">\(\lambda\)</span> unbiased?</li>
+</ol>
+<!-- Lecture note bsc print example 2.1-->
+<ol start="12" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample of size <span class="math inline">\(n\)</span> from a distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>. Show that <span class="math inline">\(\bar{X}\)</span> and <span class="math inline">\(S^2 = \frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n-1}\)</span> are unbiased estimators of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^2\)</span>, respectively.</li>
+</ol>
+<!-- Lecture note page 63 PhD print note-->
+<ol start="13" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> be a random sample of size <span class="math inline">\(n\)</span> from a normal distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>. Consider the maximum likelihood estimators of <span class="math inline">\(\sigma^2\)</span>. Show the estimator <span class="math inline">\(\hat{\sigma^2} = \frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n}\)</span> is biased for <span class="math inline">\(\sigma^2\)</span>, but it has a smaller MSE than <span class="math inline">\(S^2 = \frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n-1}\)</span>.</li>
+</ol>
+<!-- Lecture note page 63 PhD print note-->
+<ol start="14" style="list-style-type: decimal">
+<li><p>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from some distribution and <span class="math inline">\(E(X) = \mu\)</span>. Show that <span class="math inline">\(\bar{X}\)</span> is a better estimator than <span class="math inline">\(X_1\)</span> and <span class="math inline">\(\frac{X_1+X_2}{2}\)</span> for <span class="math inline">\(\mu\)</span> in terms of MSE.</p></li>
+<li><p>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from a <span class="math inline">\(N(\mu, \sigma^2).\)</span> Let <span class="math inline">\(\bar{X}= \frac{\sum_{i=1}^nX_i}{n}\)</span> and <span class="math inline">\(T=\frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n}\)</span>. Show that <span class="math inline">\(\bar{X}\)</span> is consistent for <span class="math inline">\(\mu\)</span> and <span class="math inline">\(T\)</span> is consistent for <span class="math inline">\(\sigma^2.\)</span></p></li>
+</ol>
 
 </div>
 </div>

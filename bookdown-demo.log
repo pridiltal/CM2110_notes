@@ -1,29 +1,25 @@
-<<<<<<< HEAD
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.7.9)  24 JUL 2020 05:25
-=======
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.7.9)  16 JUL 2020 07:10
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.7.28)  30 JUL 2020 12:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **bookdown-demo.tex
 (./bookdown-demo.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-06-18> (/Users/priyangatalagala/Library/TinyTeX/texm
+L3 programming layer <2020-07-17> (/Users/priyangatalagala/Library/TinyTeX/texm
 f-dist/tex/latex/base/book.cls
 Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/base/bk10.clo
 File: bk10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
-\c@part=\count163
-\c@chapter=\count164
-\c@section=\count165
-\c@subsection=\count166
-\c@subsubsection=\count167
-\c@paragraph=\count168
-\c@subparagraph=\count169
-\c@figure=\count170
-\c@table=\count171
+\c@part=\count164
+\c@chapter=\count165
+\c@section=\count166
+\c@subsection=\count167
+\c@subsubsection=\count168
+\c@paragraph=\count169
+\c@subparagraph=\count170
+\c@figure=\count171
+\c@table=\count172
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
@@ -101,13 +97,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 y
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count172
+\inf@bad=\count173
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count173
-\leftroot@=\count174
+\uproot@=\count174
+\leftroot@=\count175
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count175
-\DOTSCASE@=\count176
+\classnum@=\count176
+\DOTSCASE@=\count177
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
@@ -116,15 +112,15 @@ LaTeX Info: Redefining \cdots on input line 610.
 \big@size=\dimen137
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count177
-\c@MaxMatrixCols=\count178
+\macc@depth=\count178
+\c@MaxMatrixCols=\count179
 \dotsspace@=\muskip16
-\c@parentequation=\count179
-\dspbrk@lvl=\count180
+\c@parentequation=\count180
+\dspbrk@lvl=\count181
 \tag@help=\toks17
-\row@=\count181
-\column@=\count182
-\maxfields@=\count183
+\row@=\count182
+\column@=\count183
+\maxfields@=\count184
 \andhelp@=\toks18
 \eqnshift@=\dimen138
 \alignsep@=\dimen139
@@ -164,15 +160,15 @@ Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 ode-math.sty
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.st
 y
-Package: expl3 2020-06-18 L3 programming layer (loader) 
+Package: expl3 2020-07-17 L3 programming layer (loader) 
 
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backe
 nd-xdvipdfmx.def
 File: l3backend-xdvipdfmx.def 2020-06-29 L3 backend support: xdvipdfmx
-\g__graphics_track_int=\count184
+\g__graphics_track_int=\count185
 \l__pdf_internal_box=\box47
-\g__pdf_backend_object_int=\count185
-\g__pdf_backend_annotation_int=\count186
+\g__pdf_backend_object_int=\count186
+\g__pdf_backend_annotation_int=\count187
 ))
 Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
 
@@ -187,10 +183,10 @@ Package: xparse 2020-05-15 L3 Experimental document command parser
 
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse
 /xparse-generic.tex
-\l__xparse_current_arg_int=\count187
-\g__xparse_grabber_int=\count188
-\l__xparse_m_args_int=\count189
-\l__xparse_v_nesting_int=\count190
+\l__xparse_current_arg_int=\count188
+\g__xparse_grabber_int=\count189
+\l__xparse_m_args_int=\count190
+\l__xparse_v_nesting_int=\count191
 ))
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys
 2e/l3keys2e.sty
@@ -204,17 +200,17 @@ Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 -xetex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count191
-\l__fontspec_language_int=\count192
-\l__fontspec_strnum_int=\count193
-\l__fontspec_tmp_int=\count194
-\l__fontspec_tmpa_int=\count195
-\l__fontspec_tmpb_int=\count196
-\l__fontspec_tmpc_int=\count197
-\l__fontspec_em_int=\count198
-\l__fontspec_emdef_int=\count199
-\l__fontspec_strong_int=\count266
-\l__fontspec_strongdef_int=\count267
+\l__fontspec_script_int=\count192
+\l__fontspec_language_int=\count193
+\l__fontspec_strnum_int=\count194
+\l__fontspec_tmp_int=\count195
+\l__fontspec_tmpa_int=\count196
+\l__fontspec_tmpb_int=\count197
+\l__fontspec_tmpc_int=\count198
+\l__fontspec_em_int=\count199
+\l__fontspec_emdef_int=\count266
+\l__fontspec_strong_int=\count267
+\l__fontspec_strongdef_int=\count268
 \l__fontspec_tmpa_dim=\dimen144
 \l__fontspec_tmpb_dim=\dimen145
 \l__fontspec_tmpc_dim=\dimen146
@@ -229,9 +225,9 @@ Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-\g__um_fam_int=\count268
-\g__um_fonts_used_int=\count269
-\l__um_primecount_int=\count270
+\g__um_fam_int=\count269
+\g__um_fonts_used_int=\count270
+\l__um_primecount_int=\count271
 \g__um_primekern_muskip=\muskip17
 
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unic
@@ -291,8 +287,8 @@ ns.sty
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen147
-\Hy@linkcounter=\count271
-\Hy@pagecounter=\count272
+\Hy@linkcounter=\count272
+\Hy@pagecounter=\count273
 
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.d
 ef
@@ -306,7 +302,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count273
+\Hy@SavedSpaceFactor=\count274
 Package hyperref Info: Option `unicode' set `true' on input line 4338.
 
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.de
@@ -320,7 +316,7 @@ Package hyperref Info: Plain pages OFF on input line 4479.
 Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count274
+\c@Hy@tempcnt=\count275
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -337,7 +333,7 @@ ntcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count275
+\Fld@menulength=\count276
 \Field@Width=\dimen149
 \Fld@charsize=\dimen150
 Package hyperref Info: Hyper figures OFF on input line 6347.
@@ -354,9 +350,9 @@ LaTeX Info: Redefining \pageref on input line 6421.
 hi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count276
-\c@Item=\count277
-\c@Hfootnote=\count278
+\Hy@abspage=\count277
+\c@Item=\count278
+\c@Hfootnote=\count279
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
@@ -370,10 +366,10 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box48
-\c@Hy@AnnotLevel=\count279
-\HyField@AnnotCount=\count280
-\Fld@listcount=\count281
-\c@bookmark@seq@number=\count282
+\c@Hy@AnnotLevel=\count280
+\HyField@AnnotCount=\count281
+\Fld@listcount=\count282
+\c@bookmark@seq@number=\count283
 
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/re
 runfilecheck.sty
@@ -402,16 +398,16 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTright=\skip54
 \LTpre=\skip55
 \LTpost=\skip56
-\LTchunksize=\count283
+\LTchunksize=\count284
 \LTcapwidth=\dimen151
 \LT@head=\box49
 \LT@firsthead=\box50
 \LT@foot=\box51
 \LT@lastfoot=\box52
-\LT@cols=\count284
-\LT@rows=\count285
-\c@LT@tables=\count286
-\c@LT@chunks=\count287
+\LT@cols=\count285
+\LT@rows=\count286
+\c@LT@tables=\count287
+\c@LT@chunks=\count288
 \LT@p@ftn=\toks22
 )
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs
@@ -427,12 +423,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen159
 \cmidrulekern=\dimen160
 \defaultaddspace=\dimen161
-\@cmidla=\count288
-\@cmidlb=\count289
+\@cmidla=\count289
+\@cmidlb=\count290
 \@aboverulesep=\dimen162
 \@belowrulesep=\dimen163
-\@thisruleclass=\count290
-\@lastruleclass=\count291
+\@thisruleclass=\count291
+\@lastruleclass=\count292
 \@thisrulewidth=\dimen164
 )
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote
@@ -502,7 +498,7 @@ s
 ty
 \wrapoverhang=\dimen168
 \WF@size=\dimen169
-\c@WF@wrappedlines=\count292
+\c@WF@wrappedlines=\count293
 \WF@box=\box54
 \WF@everypar=\toks29
 Package: wrapfig 2003/01/31  v 3.6
@@ -513,7 +509,7 @@ Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
 
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/caption/caption3.
 sty
-Package: caption3 2020/05/30 v1.12 caption3 kernel (AR)
+Package: caption3 2020/07/20 v1.12b caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
 \captionmargin=\dimen170
 \captionmargin@=\dimen171
@@ -524,7 +520,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 61.
 \caption@hangindent=\dimen176
 Package caption Info: Standard document class detected.
 )
-\c@float@type=\count293
+\c@float@type=\count294
 \float@exts=\toks30
 \float@box=\box55
 \@floatcapt=\box56
@@ -542,18 +538,18 @@ Package floatrow Info: Modified rotfloat package code loaded on input line 473.
 \FBo@max=\skip72
 \FBc@max=\skip73
 \FBf@max=\skip74
-\c@FBl@b=\count294
-\floatbox@depth=\count295
-\c@FRobj=\count296
-\c@FRsobj=\count297
+\c@FBl@b=\count295
+\floatbox@depth=\count296
+\c@FRobj=\count297
+\c@FRsobj=\count298
 \Xhsize=\skip75
 \sXhsize=\skip76
 \Zhsize=\skip77
 \sZhsize=\skip78
 \flrow@rowbox=\box57
 \FR@Zunitlength=\dimen180
-\c@FBcnt=\count298
-\FPOScnt=\count299
+\c@FBcnt=\count299
+\FPOScnt=\count300
 \LTleft=\skip79
 \LTright=\skip80
 \LTleft=\skip81
@@ -565,15 +561,15 @@ ls.sty
 Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count300
-\calc@Bcount=\count301
+\calc@Acount=\count301
+\calc@Bcount=\count302
 \calc@Adimen=\dimen181
 \calc@Bdimen=\dimen182
 \calc@Askip=\skip83
 \calc@Bskip=\skip84
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count302
+\calc@Ccount=\count303
 \calc@Cskip=\skip85
 )
 (/Users/priyangatalagala/Library/TinyTeX/texmf-dist/tex/latex/mathtools/mhsetup
@@ -584,7 +580,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count303
+\g_MT_multlinerow_int=\count304
 \l_MT_multwidth_dim=\dimen183
 \origjot=\skip86
 \l_MT_shortvdotswithinadjustabove_dim=\dimen184
@@ -612,7 +608,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip87
 \bibsep=\skip88
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count304
+\c@NAT@ctr=\count305
 ) (./bookdown-demo.aux)
 \openout1 = `bookdown-demo.aux'.
 
@@ -938,7 +934,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count305
+\c@section@level=\count306
 )
 LaTeX Info: Redefining \ref on input line 96.
 LaTeX Info: Redefining \pageref on input line 96.
@@ -966,7 +962,7 @@ Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 
 \flrow@LT@lasthead=\box60
 \flrow@LT@prelastfoot=\box61
-\c@FBLTpage=\count306
+\c@FBLTpage=\count307
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 98.
@@ -1210,21 +1206,13 @@ File: figure/exp-1.png Graphic file (type bmp)
 File: figure/beta-1.png Graphic file (type bmp)
 <figure/beta-1.png>
 [44] [45] [46]
-<<<<<<< HEAD
 Underfull \hbox (badness 6608) in paragraph at lines 1799--1800
-=======
-Underfull \hbox (badness 6608) in paragraph at lines 1796--1797
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 []\TU/lmr/m/n/10 Suppose that $[][][] [][][] [] [] [][]$ are independent random
  variables with
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 6608) in paragraph at lines 1823--1824
-=======
-Underfull \hbox (badness 6608) in paragraph at lines 1820--1821
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 []\TU/lmr/m/n/10 Suppose that $[][][] [][][] [] [] [][]$ are independent random
  variables with
  []
@@ -1236,75 +1224,43 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [47]
-<<<<<<< HEAD
 Underfull \hbox (badness 6608) in paragraph at lines 1847--1848
-=======
-Underfull \hbox (badness 6608) in paragraph at lines 1844--1845
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 []\TU/lmr/m/n/10 Suppose that $[][][] [][][] [] [] [][]$ are independent random
  variables with
  []
 
 [48] [49]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in alignment at lines 1927--1931
-=======
-Underfull \hbox (badness 10000) in alignment at lines 1924--1928
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 [] [] [] [] [] [] []
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in alignment at lines 1931--1934
-=======
-Underfull \hbox (badness 10000) in alignment at lines 1928--1931
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 [] [] [] [] [] [] []
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in alignment at lines 1955--1959
-=======
-Underfull \hbox (badness 10000) in alignment at lines 1952--1956
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 [] [] [] [] [] [] []
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in alignment at lines 1959--1962
-=======
-Underfull \hbox (badness 10000) in alignment at lines 1956--1959
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 [] [] [] [] [] [] []
  []
 
 [1]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 2018--2020
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 2015--2017
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in alignment at lines 2062--2066
-=======
-Underfull \hbox (badness 10000) in alignment at lines 2059--2063
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 [] [] [] [] [] [] [] []
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in alignment at lines 2066--2069
-=======
-Underfull \hbox (badness 10000) in alignment at lines 2063--2066
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 [] [] [] [] [] [] [] []
  []
 
@@ -1312,7 +1268,6 @@ Underfull \hbox (badness 10000) in alignment at lines 2063--2066
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [2] [3] [4] [5] [6]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in alignment at lines 2345--2363
 [] [] [] [] [] [] []
  []
@@ -1320,15 +1275,6 @@ Underfull \hbox (badness 10000) in alignment at lines 2345--2363
 
 Overfull \hbox (14.21664pt too wide) in paragraph at lines 2440--2441
 []\TU/lmr/m/n/10 Hypergeometric|  
-=======
-Underfull \hbox (badness 10000) in alignment at lines 2334--2348
-[] [] [] [] []
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 2348--2372
-[] [] [] [] []
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
  []
 
 
@@ -1362,25 +1308,16 @@ Underfull \hbox (badness 10000) in alignment at lines 2490--2557
 Chapter 2.
 File: figure/Ch2box1-1.png Graphic file (type bmp)
 <figure/Ch2box1-1.png>
-<<<<<<< HEAD
 [1
 
 
 ]
 Overfull \hbox (1.50322pt too wide) in alignment at lines 2615--2627
-=======
-[1]
-Overfull \hbox (1.50322pt too wide) in alignment at lines 2428--2440
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 [] [] [] []
  []
 
 
-<<<<<<< HEAD
 Overfull \hbox (1.50322pt too wide) in alignment at lines 2627--2647
-=======
-Overfull \hbox (1.50322pt too wide) in alignment at lines 2440--2460
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 [] [] [] []
  []
 
@@ -1388,17 +1325,12 @@ Overfull \hbox (1.50322pt too wide) in alignment at lines 2440--2460
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [2]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in alignment at lines 2693--2697
-=======
-Underfull \hbox (badness 10000) in alignment at lines 2506--2510
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 [] []
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in alignment at lines 2697--2704
+Underfull \hbox (badness 10000) in alignment at lines 2697--2703
 [] []
  []
 
@@ -1407,71 +1339,40 @@ File: figure/Ch2box2-1.png Graphic file (type bmp)
 <figure/Ch2box2-1.png>
 File: figure/joint-1.png Graphic file (type bmp)
 <figure/joint-1.png>
-[5] [6] [7] [8]
-Overfull \hbox (4.87936pt too wide) in paragraph at lines 2865--2866
-=======
-Underfull \hbox (badness 10000) in alignment at lines 2510--2517
-[] []
- []
-
-[3] [4] [5]
-Overfull \hbox (4.87936pt too wide) in paragraph at lines 2572--2573
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
+[5] [6] [7] [8] [9] [10]
+Overfull \hbox (4.87936pt too wide) in paragraph at lines 2945--2946
 []$[][][][] [][][][] [][][][] [][][] [][][] [][][][] [][][][] [][][] [][][][] [
 ][][][] [][][][] [][][] [][][][] [][][][] [][][][] [][][][] [][][] [][][][] [][
 ][] [][]$ 
  []
 
-[1] [2
-
-]
+[1] [2]
 Chapter 3.
-[3] [4
+[3
+
+] [4
 
 ]
 Chapter 4.
 No file bookdown-demo.bbl.
-<<<<<<< HEAD
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2929.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3055.
 [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2929.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3055.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2929.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2929.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3055.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3055.
 
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
 (rerunfilecheck)             Checksum: 7F429EA767F40F57E96D1090B61B983E;6843.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2929.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3055.
  ) 
 Here is how much of TeX's memory you used:
- 18774 strings out of 481269
- 338760 string characters out of 5923164
- 753625 words of memory out of 5000000
- 35998 multiletter control sequences out of 15000+600000
-=======
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2623.
-[5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2623.
-(./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2623.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2623.
-
-Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
-(rerunfilecheck)             Checksum: 57078FF150C9CE3EDF5497E0EC61B60D;6753.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2623.
- ) 
-Here is how much of TeX's memory you used:
- 18716 strings out of 481269
- 337549 string characters out of 5923164
- 744692 words of memory out of 5000000
- 35949 multiletter control sequences out of 15000+600000
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
- 538813 words of font info for 80 fonts, out of 8000000 for 9000
+ 18780 strings out of 481704
+ 338887 string characters out of 5932036
+ 757732 words of memory out of 5000000
+ 35569 multiletter control sequences out of 15000+600000
+ 541563 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  53i,12n,118p,613b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-<<<<<<< HEAD
-Output written on bookdown-demo.pdf (76 pages).
-=======
-Output written on bookdown-demo.pdf (73 pages).
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
+Output written on bookdown-demo.pdf (78 pages).

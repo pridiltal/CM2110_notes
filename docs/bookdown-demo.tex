@@ -91,11 +91,7 @@
 
 \title{CM 2110 Calculus and Statistical Distributions}
 \author{Dr.~Priyanga D. Talagala}
-<<<<<<< HEAD
-\date{2020-07-24}
-=======
-\date{2020-07-16}
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
+\date{2020-07-30}
 
 \begin{document}
 \maketitle
@@ -2699,18 +2695,10 @@ Estimate 2: Using observed sample (\(4,2,2,6,3\))\strut
 Sample moment & Population moment\tabularnewline
 \midrule
 \endhead
-<<<<<<< HEAD
-\(m_1^\prime= \frac{1}{n}\sum_{i=1}^nX_i\) & \(\mu_1^\prime=E(X)\)\tabularnewline
-\(m_2^\prime= \frac{1}{n}\sum_{i=1}^nX_i^2\) & \(\mu_2^\prime=E(X^2)\)\tabularnewline
-\(\dots\) & \(\dots\)\tabularnewline
-\(m_k^\prime= \frac{1}{n}\sum_{i=1}^nX_i^k\) & \(\mu_k^\prime=E(X^k)\)\tabularnewline
-=======
 \(m_1^\prime= \frac{1}{n}\sum_{i=1}^nX_i\) & \(\mu_1=E(X)\)\tabularnewline
 \(m_2^\prime= \frac{1}{n}\sum_{i=1}^nX_i^2\) & \(\mu_2=E(X^2)\)\tabularnewline
 \(\dots\) & \(\dots\)\tabularnewline
 \(m_k^\prime= \frac{1}{n}\sum_{i=1}^nX_i^k\) & \(\mu_k=E(X^k)\)\tabularnewline
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
-\(\dots\) & \(\dots\)\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -2727,7 +2715,6 @@ We first equate the first \(k\) sample moments to the corresponding \(k\) popula
 
 Then we solve the resulting systems of simultaneous equations for \(\hat{\theta_1}, \hat{\theta_2}, \dots, \hat{\theta_k}\)
 
-<<<<<<< HEAD
 \textbf{Remarks on Method of Moments Estimators}
 
 \begin{itemize}
@@ -2834,12 +2821,91 @@ Then, \(l(\theta)\) is called the \textbf{log-likelihood function}.
 
 If \(\hat{\theta}\) is the MLE of \(\theta\), then for any function \(\tau(\theta),\) the MLE of \(\tau(\theta)\) is \(\tau(\hat{\theta}).\)
 
-=======
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
 \newpage
 
-\hypertarget{methods-of-evaluating-point-estimators}{%
-\subsection{Methods of evaluating point estimators}\label{methods-of-evaluating-point-estimators}}
+\hypertarget{desirable-properties-of-point-estimators}{%
+\subsection{Desirable properties of point estimators}\label{desirable-properties-of-point-estimators}}
+
+\begin{itemize}
+\item
+  We discussed several methods of obtaining point estimators.
+\item
+  It is possible that different methods of finding estimators will lead to same estimator or different estimators.
+\item
+  In this section we discuss certain properties, which an estimator may or may not posses, that will guide us in deciding whether one estimator is better than another.
+\end{itemize}
+
+\hypertarget{unbiasedness}{%
+\subsubsection{Unbiasedness}\label{unbiasedness}}
+
+\textbf{Definition: Unbiased estimator}
+
+An estimator \(\hat{\theta}\) \((=t(X_1, X_2, \dots, X_n))\) is defined to be an \textbf{unbiased estimator} of \(\theta\) if and only if
+\[E(\hat{\theta}) = \theta\]
+
+\begin{itemize}
+\item
+  The difference \(E(\hat{\theta}) -\theta\) is called as the bias of \(\hat{\theta}\) and denoted by
+  \[Bias(\hat{\theta}) = E(\hat{\theta}) = \theta \]
+\item
+  An estimator whose bias is equal to 0 is called \textbf{unbiased}.
+\end{itemize}
+
+\hypertarget{consistency}{%
+\subsection{Consistency}\label{consistency}}
+
+\textbf{Mean-Squared Error}
+
+\begin{itemize}
+\tightlist
+\item
+  The \emph{mean-squared error} is a measure of goodness or closeness of an estimator to the target.
+\end{itemize}
+
+\textbf{Definition: Mean-squared Error (MSE)}
+
+The \textbf{mean-squared error} of an estimator \(\hat{\theta}\) of \(\theta\) is defined as
+\[MSE(\hat{\theta})= E\left[(\hat{\theta} - \theta)^2 \right]\]
+
+\begin{itemize}
+\item
+  The MSE measures the average squared difference between \(\hat{\theta}\) and \(\theta\).
+\item
+  The MSE is a function of \(\theta\) and has the interpretation
+\end{itemize}
+
+\[MSE(\hat{\theta})= Var(\hat{\theta})+ \left[Bias(\hat{\theta}) \right]^2\]
+
+\begin{itemize}
+\item
+  Therefore the MSE incorporates two components, one measuring the variability of the estimator (\emph{precision}) and the other measuring its bias (\emph{accuracy}).
+\item
+  Small value of MSE implies small combined variance and bias.
+\item
+  If \(\hat{\theta}\) is unbiased, then
+  \[MSE(\hat{\theta})= Var(\hat{\theta})\]
+\item
+  The positive square root of MSE is known as the \emph{root mean squared error}
+  \[RMSE(\hat{\theta})= \sqrt{MSE(\hat{\theta})}\]
+\end{itemize}
+
+\textbf{Consistency}
+
+\begin{itemize}
+\tightlist
+\item
+  Estimator \(\hat{\theta}\) is said to be consistent for \(\theta\) if \(MSE(\hat{\theta})\) approaches zero as the sample size \(n\) approaches \(\infty\).
+\end{itemize}
+
+\[lim_{n\rightarrow \infty}E\left[(\hat{\theta} - \theta)^2 \right]=0\]
+
+\begin{itemize}
+\tightlist
+\item
+  Mean-squared error consistency implies that the bias and the variance both approach to zero as \(n\) approaches \(\infty.\)
+\end{itemize}
+
+\newpage
 
 \hypertarget{interval-estimation}{%
 \section{Interval Estimation}\label{interval-estimation}}
@@ -2887,11 +2953,9 @@ It is believed that the survival times have a gamma distribution. Estimate the c
 \item
   Let \(x_1, x_2, \dots, x_n\) be \(n\) random measurements of random variable \(X\) with the density function
   \[f_X(x;\lambda)= \lambda x^{\lambda-1},\;\; 0<x<1, \;\; \lambda>0\]
+  Derive a method of moment estimator for \(\lambda\).
 \end{enumerate}
 
-Derive a method of moment estimator for \(\lambda\).
-
-<<<<<<< HEAD
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{6}
@@ -2899,14 +2963,59 @@ Derive a method of moment estimator for \(\lambda\).
   Let \(x_1, x_2, \dots, x_n\) be a random sample of size \(n\) from a Poisson distribution with parameter \(\lambda\). Derive the maximum likelihood estimator of \(\lambda\).
 \item
   Let \(x_1, x_2, \dots, x_n\) be a random sample of size \(n\) from a normal distribution with mean \(\mu\) and variance \(\sigma^2\). Derive the maximum likelihood estimators of \(\mu\) and \(\sigma^2\).
-\item
-  Let \(X_1, X_2, \dots, X_n \sim iid \; Poisson (\lambda)\). Find the MLE of \(P(X\leq 1)\)
-\item
-  Let \(X_1, X_2, \dots, X_n \sim iid \; N (\mu, \sigma^2)\). Find the MLE of \(\mu/\sigma\)
 \end{enumerate}
 
-=======
->>>>>>> 9590c57c11f4139a8fce0f8734b292086112d3bd
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid \; Poisson (\lambda)\). Find the MLE of \(P(X\leq 1)\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Let \(X_1, X_2, \dots, X_n \sim iid \; N (\mu, \sigma^2)\). Find the MLE of \(\mu/\sigma\)
+  Derive a method of moment estimator for \(\lambda\).
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  Let \(X_1, X_2, \dots, X_n\) be a random sample from an exponential distribution with the density function
+  \[f_X(x;\lambda)= \lambda e^{-\lambda x},\;\; x>0\]. Is the maximum likelihood estimators of \(\lambda\) unbiased?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  Let \(X_1, X_2, \dots, X_n\) be a random sample of size \(n\) from a distribution with mean \(\mu\) and variance \(\sigma^2\). Show that \(\bar{X}\) and \(S^2 = \frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n-1}\) are unbiased estimators of \(\mu\) and \(\sigma^2\), respectively.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  Let \(x_1, x_2, \dots, x_n\) be a random sample of size \(n\) from a normal distribution with mean \(\mu\) and variance \(\sigma^2\). Consider the maximum likelihood estimators of \(\sigma^2\). Show the estimator \(\hat{\sigma^2} = \frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n}\) is biased for \(\sigma^2\), but it has a smaller MSE than \(S^2 = \frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n-1}\).
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\item
+  Let \(X_1, X_2, \dots, X_n\) be a random sample from some distribution and \(E(X) = \mu\). Show that \(\bar{X}\) is a better estimator than \(X_1\) and \(\frac{X_1+X_2}{2}\) for \(\mu\) in terms of MSE.
+\item
+  Let \(X_1, X_2, \dots, X_n\) be a random sample from a \(N(\mu, \sigma^2).\) Let \(\bar{X}= \frac{\sum_{i=1}^nX_i}{n}\) and \(T=\frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n}\). Show that \(\bar{X}\) is consistent for \(\mu\) and \(T\) is consistent for \(\sigma^2.\)
+\end{enumerate}
+
 \hypertarget{hypothesis-testing}{%
 \chapter{Hypothesis Testing}\label{hypothesis-testing}}
 
