@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.7.28)  30 JUL 2020 12:12
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.7.28)  2 AUG 2020 09:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1340,7 +1340,13 @@ File: figure/Ch2box2-1.png Graphic file (type bmp)
 File: figure/joint-1.png Graphic file (type bmp)
 <figure/joint-1.png>
 [5] [6] [7] [8] [9] [10]
-Overfull \hbox (4.87936pt too wide) in paragraph at lines 2945--2946
+Underfull \hbox (badness 3849) in paragraph at lines 2967--2968
+[]\TU/lmr/m/n/10 Suppose that $[][][] [][][] [] [] [][]$ is a realization of $[
+][][] [][][] [] [] [][]$ and let
+ []
+
+[11] [12]
+Overfull \hbox (4.87936pt too wide) in paragraph at lines 3010--3011
 []$[][][][] [][][][] [][][][] [][][] [][][] [][][][] [][][][] [][][] [][][][] [
 ][][][] [][][][] [][][] [][][][] [][][][] [][][][] [][][][] [][][] [][][][] [][
 ][] [][]$ 
@@ -1355,24 +1361,24 @@ Chapter 3.
 ]
 Chapter 4.
 No file bookdown-demo.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3055.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3121.
 [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3055.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3121.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3055.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3055.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3121.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3121.
 
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
 (rerunfilecheck)             Checksum: 7F429EA767F40F57E96D1090B61B983E;6843.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3055.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3121.
  ) 
 Here is how much of TeX's memory you used:
- 18780 strings out of 481704
- 338887 string characters out of 5932036
- 757732 words of memory out of 5000000
- 35569 multiletter control sequences out of 15000+600000
+ 18782 strings out of 481704
+ 338969 string characters out of 5932036
+ 757881 words of memory out of 5000000
+ 35571 multiletter control sequences out of 15000+600000
  541563 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,12n,118p,613b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,12n,118p,614b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (78 pages).
+Output written on bookdown-demo.pdf (80 pages).

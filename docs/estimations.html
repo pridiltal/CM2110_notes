@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-07-30" />
+<meta name="date" content="2020-08-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -139,9 +139,11 @@
 <li class="chapter" data-level="2.2.3" data-path="estimations.html"><a href="estimations.html#consistency"><i class="fa fa-check"></i><b>2.2.3</b> Consistency</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="estimations.html"><a href="estimations.html#interval-estimation"><i class="fa fa-check"></i><b>2.3</b> Interval Estimation</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="estimations.html"><a href="estimations.html#interpretation-of-confidence-intervals"><i class="fa fa-check"></i><b>2.3.1</b> Interpretation of confidence intervals</a></li>
-<li class="chapter" data-level="2.3.2" data-path="estimations.html"><a href="estimations.html#methods-of-finding-interval-estimators"><i class="fa fa-check"></i><b>2.3.2</b> Methods of finding interval estimators</a></li>
-<li class="chapter" data-level="2.3.3" data-path="estimations.html"><a href="estimations.html#methods-of-evaluating-interval-estimators"><i class="fa fa-check"></i><b>2.3.3</b> Methods of evaluating interval estimators</a></li>
+<li class="chapter" data-level="2.3.1" data-path="estimations.html"><a href="estimations.html#what-is-gained-by-using-an-interval-estimator"><i class="fa fa-check"></i><b>2.3.1</b> What is gained by using an Interval Estimator?</a></li>
+<li class="chapter" data-level="2.3.2" data-path="estimations.html"><a href="estimations.html#definition-of-confidence-interval"><i class="fa fa-check"></i><b>2.3.2</b> Definition of confidence interval</a></li>
+<li class="chapter" data-level="2.3.3" data-path="estimations.html"><a href="estimations.html#interpretation-of-confidence-intervals"><i class="fa fa-check"></i><b>2.3.3</b> Interpretation of confidence intervals</a></li>
+<li class="chapter" data-level="2.3.4" data-path="estimations.html"><a href="estimations.html#methods-of-finding-interval-estimators"><i class="fa fa-check"></i><b>2.3.4</b> Methods of finding interval estimators</a></li>
+<li class="chapter" data-level="2.3.5" data-path="estimations.html"><a href="estimations.html#methods-of-evaluating-interval-estimators"><i class="fa fa-check"></i><b>2.3.5</b> Methods of evaluating interval estimators</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="estimations.html"><a href="estimations.html#tutorial-1"><i class="fa fa-check"></i>Tutorial</a></li>
 </ul></li>
@@ -411,14 +413,57 @@ Figure 2.1: Probability of the sample is maximum when <span class="math inline">
 </div>
 <div id="interval-estimation" class="section level2">
 <h2><span class="header-section-number">2.3</span> Interval Estimation</h2>
+<ul>
+<li><p>Under point estimation of a parameter <span class="math inline">\(\theta\)</span>, the inference is a guess of a <strong>single value</strong> as the value of <span class="math inline">\(\theta\)</span>.</p></li>
+<li><p>Instead of making the inference of estimating the true value of the parameter to be a point, under interval estimation we make the inference of estimating that the true value of the parameter is contained in <strong>some interval.</strong></p></li>
+</ul>
+<div id="what-is-gained-by-using-an-interval-estimator" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> What is gained by using an Interval Estimator?</h3>
+<p><strong>Example</strong>
+<!-- Cassela and berger page 418, mood pg 372--></p>
+<ul>
+<li>For a sample <span class="math inline">\(X_1, X_2, X_3, X_4\)</span> from a <span class="math inline">\(N(\mu, 1),\)</span> an interval estimator of <span class="math inline">\(\mu\)</span> is <span class="math inline">\([\bar{X}-1, \bar{X}+1].\)</span></li>
+<li>This means that we will assert that <span class="math inline">\(\mu\)</span> is in this interval.</li>
+<li>In the previous section (Point estimation) we estimated <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\bar{X}.\)</span></li>
+<li><p>But now we have the less precise estimator <span class="math inline">\([\bar{X}-1, \bar{X}+1]\)</span>.</p></li>
+<li><p>Under interval estimation, by giving up some precision in our estimate (or assertion about <span class="math inline">\(\mu\)</span>), we try to gain some confidence , or assurance that our assertion is correct.</p></li>
+</ul>
+<p><strong>Explanation</strong></p>
+<ul>
+<li><p>When we estimate <span class="math inline">\(\mu\)</span> by <span class="math inline">\(\bar{X},\)</span> the probability that the estimator exactly equaled the value of the parameter being estimated is zero (Why? the probability that a continuous random variable equals any value is 0), <em>i.e.</em> <span class="math inline">\(P(\bar{X}=\mu) = 0.\)</span></p></li>
+<li><p>However, with an interval estimator, we have a positive probability of being correct.</p></li>
+<li><p>The probability that <span class="math inline">\(\mu\)</span> is covered by the interval <span class="math inline">\([\bar{X}-1, \bar{X}+1]\)</span> can be calculated as
+<span class="math display">\[P(\mu \in [\bar{X}-1, \bar{X}+1])= P(\bar{X}-1 \leq \mu\leq \bar{X}+1)\]</span>
+<span class="math display">\[ = P(-1 \leq \bar{X} - \mu\leq 1)\]</span>
+<span class="math display">\[ = P(- 2\leq \frac{\bar{X} - \mu}{\sqrt{1/4}}\leq 2)\]</span>
+<span class="math display">\[ = P(- 2\leq Z\leq 2)\;\;\; \left(\frac{\bar{X} - \mu}{\sqrt{1/4}} \text{ is standard normal }\right)\]</span>
+<span class="math display">\[=0.9544.\]</span></p></li>
+<li><p>Therefore now we have over 95% chance of covering the unknown parameter with the interval estimator.</p></li>
+<li><p>By moving for a point to an interval we have scarified some precision in our estimate. But it has resulted in increased confidence that our assertion is correct.</p></li>
+<li><p>The purpose of using an interval estimator rather than a point estimator is to have some guarantee of capturing the parameter of interest.</p></li>
+</ul>
+<!--mood 377, bsc note-->
+</div>
+<div id="definition-of-confidence-interval" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Definition of confidence interval</h3>
+<p><strong>Definition</strong></p>
+<p>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from a distribution with parameter <span class="math inline">\(\theta.\)</span> Let <span class="math inline">\(T_1 = g(X_1, X_2, \dots, X_n),\)</span> and <span class="math inline">\(T_2 = h(X_1, X_2, \dots, X_n)\)</span> be two statistics satisfying <span class="math inline">\(T_1 \leq T_2\)</span> for which <span class="math inline">\(P(T_1 &lt; \theta &lt; T_2)= \gamma,\)</span> where <span class="math inline">\(\gamma\)</span> does not depend on <span class="math inline">\(\theta\)</span>. Then, the random interval <span class="math inline">\((T_1, T_2)\)</span> is called a <span class="math inline">\(100\gamma\)</span> <strong>percent confidence interval for</strong> <span class="math inline">\(\theta\)</span>; <span class="math inline">\(\gamma\)</span> is called the confidence coefficient; and <span class="math inline">\(T_1\)</span> <span class="math inline">\(T_2\)</span> are called the lower and upper confidence limits, respectively, for <span class="math inline">\(\theta.\)</span></p>
+<p>Suppose that <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> is a realization of <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> and let <span class="math inline">\(t_1 = g(x_1, x_2, \dots, x_n),\)</span> and <span class="math inline">\(t_2 = h(x_1, x_2, \dots, x_n)\)</span>. Then the <em>numerical</em> interval <span class="math inline">\((t_1, t_2)\)</span> is also called a <span class="math inline">\(100\gamma\)</span> <strong>percent confidence interval for</strong> <span class="math inline">\(\theta\)</span>.</p>
+<!--* discuss Example 16*-->
+</div>
 <div id="interpretation-of-confidence-intervals" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> Interpretation of confidence intervals</h3>
+<h3><span class="header-section-number">2.3.3</span> Interpretation of confidence intervals</h3>
+<ul>
+<li><p>Consider the probability statement <span class="math inline">\(P(\bar{X}-1.18 \leq \mu\leq \bar{X}+1.18) =0.95.\)</span></p></li>
+<li><p>The above probability statement implies that the random interval <span class="math inline">\((\bar{X}-1.18, \bar{X}+1.18)\)</span> includes the unknown true mean <span class="math inline">\(\mu\)</span> with probability 0.95.</p></li>
+</ul>
+<div style="page-break-after: always;"></div>
 </div>
 <div id="methods-of-finding-interval-estimators" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> Methods of finding interval estimators</h3>
+<h3><span class="header-section-number">2.3.4</span> Methods of finding interval estimators</h3>
 </div>
 <div id="methods-of-evaluating-interval-estimators" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> Methods of evaluating interval estimators</h3>
+<h3><span class="header-section-number">2.3.5</span> Methods of evaluating interval estimators</h3>
 
 </div>
 </div>
@@ -450,8 +495,7 @@ Derive a method of moment estimator for <span class="math inline">\(\lambda\)</s
 </ol>
 <!-- Lecture note page 58 PhD print note-->
 <ol start="10" style="list-style-type: decimal">
-<li>Let <span class="math inline">\(X_1, X_2, \dots, X_n \sim iid \; N (\mu, \sigma^2)\)</span>. Find the MLE of <span class="math inline">\(\mu/\sigma\)</span>
-Derive a method of moment estimator for <span class="math inline">\(\lambda\)</span>.</li>
+<li>Let <span class="math inline">\(X_1, X_2, \dots, X_n \sim iid \; N (\mu, \sigma^2)\)</span>. Find the MLE of <span class="math inline">\(\mu/\sigma\)</span>.</li>
 </ol>
 <!-- Lecture note bsc print example 2.3-->
 <ol start="11" style="list-style-type: decimal">
@@ -470,6 +514,7 @@ Derive a method of moment estimator for <span class="math inline">\(\lambda\)</s
 <ol start="14" style="list-style-type: decimal">
 <li><p>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from some distribution and <span class="math inline">\(E(X) = \mu\)</span>. Show that <span class="math inline">\(\bar{X}\)</span> is a better estimator than <span class="math inline">\(X_1\)</span> and <span class="math inline">\(\frac{X_1+X_2}{2}\)</span> for <span class="math inline">\(\mu\)</span> in terms of MSE.</p></li>
 <li><p>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from a <span class="math inline">\(N(\mu, \sigma^2).\)</span> Let <span class="math inline">\(\bar{X}= \frac{\sum_{i=1}^nX_i}{n}\)</span> and <span class="math inline">\(T=\frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n}\)</span>. Show that <span class="math inline">\(\bar{X}\)</span> is consistent for <span class="math inline">\(\mu\)</span> and <span class="math inline">\(T\)</span> is consistent for <span class="math inline">\(\sigma^2.\)</span></p></li>
+<li><p>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from a <span class="math inline">\(N(\mu,9).\)</span> Find a 95% confidence interval for <span class="math inline">\(\mu\)</span>.</p></li>
 </ol>
 
 </div>
