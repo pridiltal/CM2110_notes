@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-08-02" />
+<meta name="date" content="2020-08-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -373,7 +373,7 @@ Figure 2.1: Probability of the sample is maximum when <span class="math inline">
 <span class="math display">\[E(\hat{\theta}) = \theta\]</span></p>
 <ul>
 <li><p>The difference <span class="math inline">\(E(\hat{\theta}) -\theta\)</span> is called as the bias of <span class="math inline">\(\hat{\theta}\)</span> and denoted by
-<span class="math display">\[Bias(\hat{\theta}) = E(\hat{\theta}) = \theta \]</span></p></li>
+<span class="math display">\[Bias(\hat{\theta}) = E(\hat{\theta}) - \theta \]</span></p></li>
 <li><p>An estimator whose bias is equal to 0 is called <strong>unbiased</strong>.</p></li>
 </ul>
 </div>
@@ -461,10 +461,28 @@ Figure 2.1: Probability of the sample is maximum when <span class="math inline">
 </div>
 <div id="methods-of-finding-interval-estimators" class="section level3">
 <h3><span class="header-section-number">2.3.4</span> Methods of finding interval estimators</h3>
+<div id="pivotal-quantity-method" class="section level4">
+<h4><span class="header-section-number">2.3.4.1</span> Pivotal Quantity Method</h4>
+<!-- Mood page 379-->
+<p><strong>Definition: Pivotal Quantity</strong></p>
+<p>Let <span class="math inline">\(X_1, X_2,\dots, X_n\)</span> be a random sample from the density <span class="math inline">\(f(.;\theta).\)</span> Let <span class="math inline">\(Q=q(X_1, X_2,\dots, X_n; \theta)\)</span>; that is, let <span class="math inline">\(Q\)</span> be a function of <span class="math inline">\(X_1, X_2,\dots, X_n\)</span> and <span class="math inline">\(\theta\)</span>. If <span class="math inline">\(Q\)</span> has a distribution that does not depend on <span class="math inline">\(\theta\)</span>, then <span class="math inline">\(Q\)</span> is defined to be a <em>pivotal quantity</em></p>
+<!-- Mood page 379 Example 2 discuss it first few examples for pivotal quantities and not pivotal quantities-->
+<p><strong>Pivotal Quantity method</strong></p>
+<p>If <span class="math inline">\(Q=q(X_1, X_2,\dots, X_n; \theta)\)</span> is a pivotal quantity and has a probability density function, then for any fixed <span class="math inline">\(0&lt;\gamma&lt;1\)</span> there will exist <span class="math inline">\(q_1\)</span> and <span class="math inline">\(q_2\)</span> depending on <span class="math inline">\(\gamma\)</span> such that <span class="math inline">\(P[q_1&lt;Q&lt;q_2]=\gamma.\)</span> Now, if for each possible sample value <span class="math inline">\((x_1, x_2, \dots, x_n),\)</span> <span class="math inline">\(q_1&lt; q(x_1, x_2,\dots, x_n; \theta)&lt; q_2\)</span> if and only if <span class="math inline">\(t_1(x_1, x_2,\dots, x_n)&lt;\tau(\theta)&lt;t_2(x_1, x_2,\dots, x_n)\)</span> for functions <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> (not depending on <span class="math inline">\(\theta\)</span>), then <span class="math inline">\((T_1, T_2)\)</span> is a <span class="math inline">\(100\gamma\)</span> percent confidence interval for <span class="math inline">\(\tau(\theta),\)</span> where <span class="math inline">\(T_1=t_1(X_1, X_2,\dots, X_n)\)</span> and <span class="math inline">\(T_2=t_2(X_1, X_2,\dots, X_n)\)</span>.</p>
+<!-- Question 16-->
+<!-- Mood page 379 last paraghraph and page 380 first two paragraphs before example 3-->
+<!--Question 17, Question 18-->
+<!-- refer phd note and casebella chapter 9.3.1-->
+</div>
 </div>
 <div id="methods-of-evaluating-interval-estimators" class="section level3">
 <h3><span class="header-section-number">2.3.5</span> Methods of evaluating interval estimators</h3>
+<ul>
+<li>Coverage probability</li>
+<li>Size (expected length)
 
+</li>
+</ul>
 </div>
 </div>
 <div id="tutorial-1" class="section level2 unnumbered">
@@ -512,9 +530,23 @@ Derive a method of moment estimator for <span class="math inline">\(\lambda\)</s
 </ol>
 <!-- Lecture note page 63 PhD print note-->
 <ol start="14" style="list-style-type: decimal">
-<li><p>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from some distribution and <span class="math inline">\(E(X) = \mu\)</span>. Show that <span class="math inline">\(\bar{X}\)</span> is a better estimator than <span class="math inline">\(X_1\)</span> and <span class="math inline">\(\frac{X_1+X_2}{2}\)</span> for <span class="math inline">\(\mu\)</span> in terms of MSE.</p></li>
-<li><p>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from a <span class="math inline">\(N(\mu, \sigma^2).\)</span> Let <span class="math inline">\(\bar{X}= \frac{\sum_{i=1}^nX_i}{n}\)</span> and <span class="math inline">\(T=\frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n}\)</span>. Show that <span class="math inline">\(\bar{X}\)</span> is consistent for <span class="math inline">\(\mu\)</span> and <span class="math inline">\(T\)</span> is consistent for <span class="math inline">\(\sigma^2.\)</span></p></li>
-<li><p>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from a <span class="math inline">\(N(\mu,9).\)</span> Find a 95% confidence interval for <span class="math inline">\(\mu\)</span>.</p></li>
+<li>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from some distribution and <span class="math inline">\(E(X) = \mu\)</span>. Show that <span class="math inline">\(\bar{X}\)</span> is a better estimator than <span class="math inline">\(X_1\)</span> and <span class="math inline">\(\frac{X_1+X_2}{2}\)</span> for <span class="math inline">\(\mu\)</span> in terms of MSE.</li>
+</ol>
+<!-- BSc lecture note sir example before Example 2.1.1-->
+<ol start="15" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from a <span class="math inline">\(N(\mu, \sigma^2).\)</span> Let <span class="math inline">\(\bar{X}= \frac{\sum_{i=1}^nX_i}{n}\)</span> and <span class="math inline">\(T=\frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n}\)</span>. Show that <span class="math inline">\(\bar{X}\)</span> is consistent for <span class="math inline">\(\mu\)</span> and <span class="math inline">\(T\)</span> is consistent for <span class="math inline">\(\sigma^2.\)</span></li>
+</ol>
+<!-- BSc lecture note sir example before Example 2.2.1, Phd note page 36-->
+<ol start="16" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from a <span class="math inline">\(N(\mu,9).\)</span> Find a 95% confidence interval for <span class="math inline">\(\mu\)</span>.</li>
+</ol>
+<!-- BSc lecture note Example 2.2.1-->
+<ol start="17" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from a <span class="math inline">\(N(\mu,\sigma^2),\)</span> both <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> are unknown. Construct a <span class="math inline">\(100(1-\alpha)\%\)</span> <span class="math inline">\((0&lt;\alpha&lt;1)\)</span> confidence interval for <span class="math inline">\(\mu\)</span>.</li>
+</ol>
+<!-- BSc lecture note Example 2.2.2-->
+<ol start="18" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from a <span class="math inline">\(N(\mu,\sigma^2),.\)</span> Construct a <span class="math inline">\(100(1-\alpha)\%\)</span> <span class="math inline">\((0&lt;\alpha&lt;1)\)</span> confidence interval for <span class="math inline">\(\sigma^2\)</span>.</li>
 </ol>
 
 </div>
