@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.8.17)  21 AUG 2020 03:40
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.8.17)  28 AUG 2020 22:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1064,12 +1064,12 @@ File: figure/Ch1box7-1.png Graphic file (type bmp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [10] [11]
-Overfull \hbox (38.29453pt too wide) in alignment at lines 538--542
+Overfull \hbox (38.29453pt too wide) in alignment at lines 540--544
 [] [] [] [] []
  []
 
 
-Overfull \hbox (38.29453pt too wide) in alignment at lines 542--549
+Overfull \hbox (38.29453pt too wide) in alignment at lines 544--551
 [] [] [] [] []
  []
 
@@ -1082,18 +1082,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: figure/hist2-1.png Graphic file (type bmp)
 <figure/hist2-1.png>
 
-Overfull \hbox (30.83711pt too wide) detected at line 630
+Overfull \hbox (30.83711pt too wide) detected at line 632
 [][][] [] [] [] [][] [] [][][] [] [] [] [][] [] [][][] [] [] [] [][] [] [][][] 
 [] [] [] [][] [] [][] [][][][][][][]
  []
 
 [14] [15]
-Underfull \hbox (badness 10000) in alignment at lines 684--688
+Underfull \hbox (badness 10000) in alignment at lines 686--690
 [] [] [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 688--691
+Underfull \hbox (badness 10000) in alignment at lines 690--693
 [] [] [] [] [] [] [] []
  []
 
@@ -1115,7 +1115,7 @@ File: figure/Ch1box13-1.png Graphic file (type bmp)
 Underfull \vbox (badness 1178) has occurred while \output is active []
 
 [18] [19] [20]
-Overfull \hbox (16.11282pt too wide) detected at line 801
+Overfull \hbox (16.11282pt too wide) detected at line 803
 [][][][][][][][][] [] []
  []
 
@@ -1126,7 +1126,7 @@ File: figure/Ch1box15-1.png Graphic file (type bmp)
 File: figure/Ch1box16-1.png Graphic file (type bmp)
 <figure/Ch1box16-1.png>
 
-Overfull \hbox (59.06383pt too wide) detected at line 932
+Overfull \hbox (59.06383pt too wide) detected at line 934
 [][][][][][][][] [] []
  []
 
@@ -1137,7 +1137,7 @@ File: figure/Ch1box14-1.png Graphic file (type bmp)
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1052.
+(amsmath)                 on input line 1054.
 
 [27] [28] [29] [30]
 File: figure/unif-1.png Graphic file (type bmp)
@@ -1148,12 +1148,12 @@ File: figure/norm-1.png Graphic file (type bmp)
 File: figure/norm2-1.png Graphic file (type bmp)
 <figure/norm2-1.png>
 [32] [33]
-Underfull \hbox (badness 10000) in alignment at lines 1324--1328
+Underfull \hbox (badness 10000) in alignment at lines 1326--1330
 [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1328--1340
+Underfull \hbox (badness 10000) in alignment at lines 1330--1342
 [] [] []
  []
 
@@ -1167,27 +1167,27 @@ File: figure/norm3-1.png Graphic file (type bmp)
 File: figure/Ch1box17-1.png Graphic file (type bmp)
 <figure/Ch1box17-1.png>
 
-Underfull \hbox (badness 10000) in alignment at lines 1429--1433
+Underfull \hbox (badness 10000) in alignment at lines 1431--1435
 [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1433--1454
+Underfull \hbox (badness 10000) in alignment at lines 1435--1456
 [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1454--1455
+Underfull \hbox (badness 10000) in alignment at lines 1456--1457
 [] [] [] [] []
  []
 
 [39]
-Underfull \hbox (badness 10000) in alignment at lines 1461--1465
+Underfull \hbox (badness 10000) in alignment at lines 1463--1467
 [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1465--1482
+Underfull \hbox (badness 10000) in alignment at lines 1467--1484
 [] [] [] [] []
  []
 
@@ -1206,13 +1206,13 @@ File: figure/exp-1.png Graphic file (type bmp)
 File: figure/beta-1.png Graphic file (type bmp)
 <figure/beta-1.png>
 [44] [45] [46]
-Underfull \hbox (badness 6608) in paragraph at lines 1799--1800
+Underfull \hbox (badness 6608) in paragraph at lines 1801--1802
 []\TU/lmr/m/n/10 Suppose that $[][][] [][][] [] [] [][]$ are independent random
  variables with
  []
 
 
-Underfull \hbox (badness 6608) in paragraph at lines 1823--1824
+Underfull \hbox (badness 6608) in paragraph at lines 1825--1826
 []\TU/lmr/m/n/10 Suppose that $[][][] [][][] [] [] [][]$ are independent random
  variables with
  []
@@ -1224,43 +1224,43 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [47]
-Underfull \hbox (badness 6608) in paragraph at lines 1847--1848
+Underfull \hbox (badness 6608) in paragraph at lines 1849--1850
 []\TU/lmr/m/n/10 Suppose that $[][][] [][][] [] [] [][]$ are independent random
  variables with
  []
 
 [48] [49]
-Underfull \hbox (badness 10000) in alignment at lines 1927--1931
+Underfull \hbox (badness 10000) in alignment at lines 1929--1933
 [] [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1931--1934
+Underfull \hbox (badness 10000) in alignment at lines 1933--1936
 [] [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1955--1959
+Underfull \hbox (badness 10000) in alignment at lines 1957--1961
 [] [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1959--1962
+Underfull \hbox (badness 10000) in alignment at lines 1961--1964
 [] [] [] [] [] [] []
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 2018--2020
+Underfull \hbox (badness 10000) in paragraph at lines 2020--2022
 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2062--2066
+Underfull \hbox (badness 10000) in alignment at lines 2064--2068
 [] [] [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2066--2069
+Underfull \hbox (badness 10000) in alignment at lines 2068--2071
 [] [] [] [] [] [] [] []
  []
 
@@ -1268,39 +1268,39 @@ Underfull \hbox (badness 10000) in alignment at lines 2066--2069
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [2] [3] [4] [5] [6]
-Underfull \hbox (badness 10000) in alignment at lines 2345--2363
+Underfull \hbox (badness 10000) in alignment at lines 2347--2365
 [] [] [] [] [] [] []
  []
 
 
-Overfull \hbox (14.21664pt too wide) in paragraph at lines 2440--2441
+Overfull \hbox (14.21664pt too wide) in paragraph at lines 2442--2443
 []\TU/lmr/m/n/10 Hypergeometric|  
  []
 
 
-Overfull \hbox (36.23643pt too wide) in paragraph at lines 2452--2453
+Overfull \hbox (36.23643pt too wide) in paragraph at lines 2454--2455
 []$[][] [] []$|  
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2363--2470
+Underfull \hbox (badness 10000) in alignment at lines 2365--2472
 [] [] [] [] [] [] []
  []
 
 [1
 
 ]
-Underfull \hbox (badness 10000) in alignment at lines 2474--2490
+Underfull \hbox (badness 10000) in alignment at lines 2476--2492
 [] [] [] [] [] []
  []
 
 
-Overfull \hbox (13.15901pt too wide) in paragraph at lines 2554--2555
+Overfull \hbox (13.15901pt too wide) in paragraph at lines 2556--2557
 []$[]$|  
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2490--2557
+Underfull \hbox (badness 10000) in alignment at lines 2492--2559
 [] [] [] [] [] []
  []
 
@@ -1312,12 +1312,12 @@ File: figure/Ch2box1-1.png Graphic file (type bmp)
 
 
 ]
-Overfull \hbox (1.50322pt too wide) in alignment at lines 2615--2627
+Overfull \hbox (1.50322pt too wide) in alignment at lines 2617--2629
 [] [] [] []
  []
 
 
-Overfull \hbox (1.50322pt too wide) in alignment at lines 2627--2647
+Overfull \hbox (1.50322pt too wide) in alignment at lines 2629--2649
 [] [] [] []
  []
 
@@ -1325,12 +1325,12 @@ Overfull \hbox (1.50322pt too wide) in alignment at lines 2627--2647
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [2]
-Underfull \hbox (badness 10000) in alignment at lines 2693--2697
+Underfull \hbox (badness 10000) in alignment at lines 2695--2699
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2697--2703
+Underfull \hbox (badness 10000) in alignment at lines 2699--2705
 [] []
  []
 
@@ -1340,13 +1340,13 @@ File: figure/Ch2box2-1.png Graphic file (type bmp)
 File: figure/joint-1.png Graphic file (type bmp)
 <figure/joint-1.png>
 [5] [6] [7] [8] [9] [10]
-Underfull \hbox (badness 3849) in paragraph at lines 2967--2968
+Underfull \hbox (badness 3849) in paragraph at lines 2969--2970
 []\TU/lmr/m/n/10 Suppose that $[][][] [][][] [] [] [][]$ is a realization of $[
 ][][] [][][] [] [] [][]$ and let
  []
 
 [11] [12]
-Overfull \hbox (4.87936pt too wide) in paragraph at lines 3028--3029
+Overfull \hbox (4.87936pt too wide) in paragraph at lines 3030--3031
 []$[][][][] [][][][] [][][][] [][][] [][][] [][][][] [][][][] [][][] [][][][] [
 ][][][] [][][][] [][][] [][][][] [][][][] [][][][] [][][][] [][][] [][][][] [][
 ][] [][]$ 
@@ -1356,29 +1356,64 @@ Overfull \hbox (4.87936pt too wide) in paragraph at lines 3028--3029
 Chapter 3.
 [3
 
-] [4
+]
+File: figure/Ch3box2-1.png Graphic file (type bmp)
+<figure/Ch3box2-1.png>
+[4]
+File: figure/Ch3box3-1.png Graphic file (type bmp)
+<figure/Ch3box3-1.png>
+[5]
+File: figure/Ch3box4-1.png Graphic file (type bmp)
+<figure/Ch3box4-1.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in alignment at lines 3336--3340
+[] [] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 3340--3346
+[] [] []
+ []
+
+[6]
+File: figure/Ch3box5-1.png Graphic file (type bmp)
+<figure/Ch3box5-1.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[7] [8] [9]
+File: figure/Ch3box6-1.png Graphic file (type bmp)
+<figure/Ch3box6-1.png>
+[10] [11] [12
 
 ]
 Chapter 4.
+[13] [14
+
+]
+Chapter 5.
 No file bookdown-demo.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3168.
-[5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3168.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3520.
+[15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3520.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3168.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3168.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3520.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3520.
 
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
-(rerunfilecheck)             Checksum: 7F429EA767F40F57E96D1090B61B983E;6843.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3168.
+(rerunfilecheck)             Checksum: 6FD6F441D3D75F87E04DAC3ACFAABFE5;7303.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3520.
  ) 
 Here is how much of TeX's memory you used:
- 18783 strings out of 481691
- 339011 string characters out of 5931835
- 757662 words of memory out of 5000000
- 35585 multiletter control sequences out of 15000+600000
- 541563 words of font info for 85 fonts, out of 8000000 for 9000
+ 18856 strings out of 481691
+ 340561 string characters out of 5931835
+ 757325 words of memory out of 5000000
+ 35649 multiletter control sequences out of 15000+600000
+ 541579 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 52i,12n,118p,676b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,12n,118p,789b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (80 pages).
+Output written on bookdown-demo.pdf (90 pages).

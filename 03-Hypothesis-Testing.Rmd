@@ -1,11 +1,346 @@
 # Hypothesis Testing
 
+
+- Hypothesis testing about population characteristics is another fundamental aspect od statistical inference.
+
+**Definition: Hypothesis **
+
+A *hypothesis* is a statement about a **population parameter**.
+
+- In testing hypothesis, we start by making *an assumption* with regard to an unknown population characteristic.
+- We then take a random sample from the population, and on the basis of the corresponding sample characteristic, we either accept or reject the hypothesis with a particular degree of confidence.
+
 ## Null and alternative hypotheses
+
+<!-- in hypothesis testing we have two contradictory statements about he population characteristics
+
+- we use hypothesis testing to decide which of the these two statements about the parameter is correct-->
+
+- Statistical hypotheses consist of the **null hypothesis** and the **alternative hypothesis,** which together contain all the possible outcomes of the experiment or study.
+
+
+
+**null hypothesis**
+
+- Generally, the *null hypothesis* states that a treatment has *no effect* (and has led to the term "null" hypothesis).
+
+
+**alternative hypothesis**
+
+- Usually, alternative hypothesis is the negation, or complement, of the null hypothesis.
+- Usually it is the hypothesis that the researcher is interested in proving. 
+
+- The null hypothesis is denoted $H_0$, and the alternative is denoted $H_1$.
+
+- Let $\theta$ is a population parameter. 
+- the general format of the null hypothesis and alternative hypothesis is 
+$$H_0 : \theta \in \Theta_o \text{ and } H_1 :\theta \in \Theta_o^c$$
+where $\Theta_o$ is some subset of the  parameter space and $\Theta_o^c$ is its complement.
+
+## Different types of Hypotheses
+
+(1) **simple hypotheses:** both $H_0$ and $H_1$ consist of only one probability distibution
+
+$$H_0: \theta = \theta_0 \text{ vs } H_1: \theta = \theta_1$$
+<!--in the null hypothesis just only one point-->
+
+(2) **composite hypothesis:** either $H_0$ or $H_1$ has more than one probability distribution
+
+   - *one sided*: $H_0: \theta \geq \theta_0 \text{ vs } H_1: \theta < \theta_0$
+   - *one sided*: $H_0: \theta \leq \theta_0 \text{ vs } H_1: \theta > \theta_0$
+  - *two sided*: $H_0: \theta = \theta_0 \text{ vs } H_1: \theta \neq \theta_0$
+  
+<!-- alternative hypothesis specify not one value but a range of values.-->
+
+### Writing $H_0$ and $H_1$
+
+
+1. The equality sign (eq: $=,\leq, or \geq$)) always  goes to $H_0$
+
+2. $H_0:$      $H_1: \text{ which is to be tested (claim to be tested})$
+
+<!--somebody's claim goes to H1-->
+
+3. $H_0: \text{ initially favoured one before collecting information}$      $H_1:$
+
+<!--our opinion goes to H0-->
+
+<!--phd note -->
+*Example 1*
+
+An ideal manufacturing process requires that all products are non-defective. This is very seldom. The goal is to keep the proportion of defective items as low as possible. Let $p$ be the proportion of defective items, and 0.01 be the maximum acceptable proportion of defective items.
+
+```{r Ch3box2, out.width='100%', fig.asp=.3, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+<!-- Ho :  $p\geq 0.01$ (the proportion of defectives is unacceptably high)
+
+H1: p<0.01 (acceptable quality) -->
+
+
+*Example 2*
+let $\theta$ be the average change in a patient's blood pressure after taking a drug. An experimenter might be interested in testing
+
+```{r Ch3box3, out.width='100%', fig.asp=.3, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+<!-- 
+Ho :  $\theta = 0$ (the drug has no effect on blood pressure)
+
+H1: $\theta \neq 0$  (there is some effect) -->
+
+### Two tailed test and one tailed test
+
+**Two tailed test**
+
+- Two tailed tests always use $=$ and $\neq$ in the statistical hypotheses.
+- Alternative hypothesis allows for either the $>$ or $<$ possibility. 
+- Here the research is interested in testing deviations from the null in two directions.
+
+**One tailed test**
+
+- One tailed tests are always directional, and the alternative hypothesis uses either the $>$ or $<$ sign.
+
+## Rejection region
+
+- A hypothesis testing procedure or hypothesis test is a rule that specifies:
+
+  i) for which sample values $H_0$ is accepted as true
+  ii) for which sample values $H_0$ is rejected and $H_1$ is accepted as true
+  
+- The subset of the sample space for which $H_0$ will be rejected is denoted as $R$ and called the **rejection** or **critical region** 
+<!-- if a computed statistics lies in this portion of a distribution, the null hypothesis will be rejected)-->
+
+- The complement set $R^c$ is called the **acceptance** region.
+<!-- Any portion of a distribution that is not in the rejection region. If the observed statistic falls in this region, the decision is to fail to reject the null hypothesis-->
+
+- The rejection region $R$ of a hypothesis test is usually defined through a *test statistic* $W(X)$, a function of the sample. 
+
+- For example
+
+$$R = \{X:W(X)>b\}.$$
+
+- If $X\in R,$ one rejects $H_0$
+- Otherwise if $X\in R^c,$ there is no enough evidence to reject $H_0$ 
+
+<!-- Business statistics(black et all) book page 309 -->
+
+```{r Ch3box4, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h', fig.cap = "Rejection and nonrejection regions"}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
 
 ## Errors in testing hypotheses-type I and type II error
 
-## Significance level, size, power of a test
+- Samples are used to determine whether to reject $H_0$ or not.
+- Since the decision to reject $H_0$ or not, is based on incomplete (i.e sample information), there is always a possibility of making an incorrect decision.
+- We can make two types errors in testing a hypothesis.
 
-## Formulation of hypotheses
+  - *Type I error:* if $H_0$ is true, but the test incorrectly reject $H_0.$ (reject $H_0$/ $H_0$ true)
+  - *Type II error:* if $H_0$ is false, but the test incorrectly accept $H_0.$ (accept $H_0$/ $H_1$ true)
+  
+<!-- in this case null hypothesis is false, but a decision is made to not reject it-->
+ 
+$\text{}$  | Decision             
+------|----------------------|------------------
+Truth     | Accept $H_0$         |   Reject $H_0$
+------|----------------------|------------------
+$H_0$ | Correct decision     |  **Type I error** ($\alpha$)
+$H_1$ |  **Type II error** ($\beta$)    |  Correct decision  (*power*)
+
+<!-- refer phd note 
+Type I error is the most serious error and that is what we try to control-->
+
+<!-- Data analysis 2n year note-->
+*Example 3*
+
+There is a concern about  the perchlorate level found in well water. EPA guidelines suggest that a water supply should have a mean perchlorate level below 4 ppb (parts per billion)
+
+Set up the appropriate hypotheses for this situation by considering the Type I error
+
+```{r Ch3box5, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+
+<!-- Let $\mu$ - mean perchlorate level in water.
+
+Method I Death can be occurred : this is the correct hypothesis
+
+H0: water is poisoned vs H1: water is not poisoned
+
+H0 : mu > 4 vs H1: mu < 4
+
+Type I error: reject H0 / H0 true
+
+(water is not poisoned/ water is poisoned)
+
+Method II no death can be occurred
+
+H): water is not poisoned vs H1: water is poised
+
+H0 : mu <4 vs H1: mu >4
+
+Type I error: (reject H0/ H0 true)
+
+(water is poisoned/ water is not poisoned)-->
+
+<!-- Schaum'a statistics and Econometrics  book page 87, black's book page 310-->
+
+## Significance level
+
+- We can control or determine the probability making type I error, $\alpha$.
+- However, by reducing $\alpha,$ we will have to accept a greater probability of making a type II error, $\beta$, unless the sample size is increased.
+- The probability of committing a type I error is called $\alpha$ or  *significance level* (level of significance)
+- $\alpha$ equals the area under the curve that is in the rejection region beyond the critical value(s).
+- The value of $\alpha$ is always set before the experiment or study is undertaken.
+- $1-\alpha$ is called the *level of confidence* of the test.
+- Common values of $\alpha$ are 0.05, 0.01, 0.10 and 0.001.
+
+<!--  black's book page 311-->
+
+## Power of a test
+
+- The probability of committing a Type II error is $\beta$.
+- Unlike $\alpha$, $\beta$ is not usually stated at the beginning of the hypothesis testing procedure.
+
+**Are** $\alpha$ **and** $\beta$ **related?**
+
+- $\alpha$ can only be committed when the null hypothesis is rejected and $beta$ can only be committed when the null hypothesis is not rejected.
+- A researcher cannot commit both a Type I error and Type II error at the same time on the same hypothesis test.
+- Generally, $\alpha$ and $\beta$ are inversely related. <!-- if alpha is reduced, then beta is increased, vice versa-->
+
+- One way to reduce both errors is to increase the sample size.
+- If a larger sample is taken, it is more likely that the sample is representative of the population, which translates into a better chance that a researcher will make the correct choice.
+- Statistically, a larger sample will yeild a sample mean closer to the true population mean, thereby indicating better whether the null hypothesis is true or false.
+
+- **Power** of a test is equal to $1-\beta.$ 
+- *i.e.*, the probability of a test rejecting the null hypothesis when the null hypothesis is false.
+
+<!-- phd note :
+
+beta = P(reject H0/ ho is false)
+
+an ideal test should have the power function satisfying beta = 0 and power = 1-beta =1
+
+But such  a test is almost impossible unless the truth is known, in practice, a good test should have the power function satisfying  beta is near zero and power is near 1-->
+
+<!-- Black's book page 307-->
+## Testing hypotheses
+
+- Typically, the hypothesis testing process is presented in terms of an eight-step approach.
+
+**Task 1: Hypothesise**
+   
+   Step 1: Establish null and alternative hypotheses.
+
+**Task II: Test**
+   
+   Step 2: Determine the appropriate statistical test
+   
+   Step 3: Set the value of $\alpha,$ the Type I error rate.
+   
+   Step 4: Establish the decision rule
+   
+   Step 5: Gather sample data
+   
+   Step 6: Analyse the data
+   
+**Task III: Take statistical action**
+
+   Step 7: Reach a statistical conclusion.
+   
+**Task IV: Determine the business implications**
+ 
+   Step 8: Make a business decision.
+
+- This process of testing hypothesis is referred as the HTAB system, where HTAB is an abbreviation for Hypothesise, Test, Action, Business.
+
+
+<!-- Black's book page 314, 315, Manjula madam's note, second year data analysis fir the confidence interval method-->
 
 ## Methods of testing hypotheses
+
+### Using the critical value method to test hypotheses
+
+
+- A method of testing hypotheses by comparing the sample statistic with the  critical value in order to reach a conclusion about rejecting or failing to reject the null hypothesis.
+
+- Critical region: Set of all values of the test statistic that would cause us to reject null hypothesis.
+
+
+
+<!-- get the decision by comparing the test statistics value with the critical value-->
+
+### Using the p-value to test hypotheses
+
+- Get the decision by comparing $\alpha$ value with p-value.
+- **p-value: ** Probability of observing a *sample statistic* as extreme or more extreme than the one observed *under the assumption that $H_0$ is true.*
+
+$$p-value = P(Z>Z_{cal})$$
+
+- Virtually every statistical computer program yields this probability (p-value)
+
+
+<!-- Majula madam note-->
+### Using  confidence intervals to test hypotheses
+
+- Confidence intervals also give some indication about the decision.
+
+```{r Ch3box6, out.width='100%', fig.asp=.9, fig.align='center', fig.pos='h'}
+library(ggplot2)
+
+ggplot()+
+  theme_void()+
+  theme(panel.border = element_rect(colour = "white", fill=NA, size=1))
+
+```
+
+<!-- mu given in H0 inside the confidence interval
+
+
+Do not reject H0: that is we have no enough evidence to reject Ho
+
+mu outside the confidence interval: we reject H0
+
+H0: mu <= 30 vs H1 mu >30
+
+95% CI: (37.3388, 39.59776)
+
+we can reject H0
+
+-->
+
+<!-- Black et all text book page 316 problem 9.1-->
+
+*Example 4*
+
+In order to ensure a good user experience, software companies often thoroughly test their products before releasing them to the public. IMAX Software company conducted  a survey several years ago to determine the user-friendliness of one of their products. According to the previous survey the mean customer rating was 4.3 out of 5 (on a scale from 1 to 5, with 1 being low and 5 being high). Suppose a researcher believes that the  customer ratings are lower now due to the new additional features of the software product, and he set a new survey in an attempt to prove his claim. Data are gathered and the results are obtained. Use this data to test this claim  at 0.05 level of significance. Assume from previous studies that the population standard deviation is 0.574.
+
+$3,4,5,5,4,5,5,4,4,4,4,$
+$4,4,4,4,5,4,4,4,3,4,4,$
+$4,3,5,4,4,5,4,4,4,5$
+
+
+<!-- Use this data to determine whether the current customers rate the usefriendliness of the updated product significantly lower that the 4.30 mean-->

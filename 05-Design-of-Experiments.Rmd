@@ -1,6 +1,6 @@
 # Design of Experiments
 
-## ntroduction to experimental design
+## Introduction to experimental design
 
 ## Basic principles of experimental design
 

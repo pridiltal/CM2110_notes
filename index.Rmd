@@ -51,6 +51,7 @@ On successful completion of this module, students will be able to plan more care
 -	**Statistical Distributions**
 -	**Estimation**
 -	**Hypothesis Testing**
+- **Contingency tables**
 -	**Design of Experiments**
 
 
