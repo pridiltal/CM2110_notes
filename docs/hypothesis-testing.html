@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Priyanga D. Talagala" />
 
 
-<meta name="date" content="2020-08-28" />
+<meta name="date" content="2020-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -163,6 +163,7 @@
 <li class="chapter" data-level="3.8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#using-the-p-value-to-test-hypotheses"><i class="fa fa-check"></i><b>3.8.2</b> Using the p-value to test hypotheses</a></li>
 <li class="chapter" data-level="3.8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#using-confidence-intervals-to-test-hypotheses"><i class="fa fa-check"></i><b>3.8.3</b> Using confidence intervals to test hypotheses</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#tutorial-2"><i class="fa fa-check"></i>Tutorial</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="contingency-tables.html"><a href="contingency-tables.html"><i class="fa fa-check"></i><b>4</b> Contingency Tables</a></li>
 <li class="chapter" data-level="5" data-path="design-of-experiments.html"><a href="design-of-experiments.html"><i class="fa fa-check"></i><b>5</b> Design of Experiments</a><ul>
@@ -242,13 +243,14 @@ where <span class="math inline">\(\Theta_o\)</span> is some subset of the parame
 <h3><span class="header-section-number">3.2.1</span> Writing <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_1\)</span></h3>
 <ol style="list-style-type: decimal">
 <li><p>The equality sign (eq: <span class="math inline">\(=,\leq, or \geq\)</span>)) always goes to <span class="math inline">\(H_0\)</span></p></li>
-<li><p><span class="math inline">\(H_0:\)</span> <span class="math inline">\(H_1: \text{ which is to be tested (claim to be tested})\)</span></p></li>
+<li><p><span class="math inline">\(H_0:\text{            }\)</span> <span class="math inline">\(H_1: \text{ which is to be tested (claim to be tested})\)</span></p></li>
 </ol>
 <!--somebody's claim goes to H1-->
 <ol start="3" style="list-style-type: decimal">
-<li><span class="math inline">\(H_0: \text{ initially favoured one before collecting information}\)</span> <span class="math inline">\(H_1:\)</span></li>
+<li><span class="math inline">\(H_0: \text{ initially favoured one before collecting information   }\)</span> <span class="math inline">\(H_1:\)</span></li>
 </ol>
 <!--our opinion goes to H0-->
+<div style="page-break-after: always;"></div>
 <!--phd note -->
 <p><em>Example 1</em></p>
 <p>An ideal manufacturing process requires that all products are non-defective. This is very seldom. The goal is to keep the proportion of defective items as low as possible. Let <span class="math inline">\(p\)</span> be the proportion of defective items, and 0.01 be the maximum acceptable proportion of defective items.</p>
@@ -305,6 +307,7 @@ H1: $\theta \neq 0$  (there is some effect) --></p>
 Figure 3.1: Rejection and nonrejection regions
 </p>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 <div id="errors-in-testing-hypotheses-type-i-and-type-ii-error" class="section level2">
 <h2><span class="header-section-number">3.4</span> Errors in testing hypotheses-type I and type II error</h2>
@@ -355,7 +358,6 @@ Type I error is the most serious error and that is what we try to control-->
 <p><em>Example 3</em></p>
 <p>There is a concern about the perchlorate level found in well water. EPA guidelines suggest that a water supply should have a mean perchlorate level below 4 ppb (parts per billion)</p>
 <p>Set up the appropriate hypotheses for this situation by considering the Type I error</p>
-<p><img src="figure/Ch3box5-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <!-- Let $\mu$ - mean perchlorate level in water.
 
 Method I Death can be occurred : this is the correct hypothesis
@@ -377,6 +379,7 @@ H0 : mu <4 vs H1: mu >4
 Type I error: (reject H0/ H0 true)
 
 (water is poisoned/ water is not poisoned)-->
+<div style="page-break-after: always;"></div>
 <!-- Schaum'a statistics and Econometrics  book page 87, black's book page 310-->
 </div>
 <div id="significance-level" class="section level2">
@@ -449,16 +452,20 @@ But such  a test is almost impossible unless the truth is known, in practice, a 
 <li><p>Critical region: Set of all values of the test statistic that would cause us to reject null hypothesis.</p></li>
 </ul>
 <!-- get the decision by comparing the test statistics value with the critical value-->
+<!-- black's book page 314 p value-->
 </div>
 <div id="using-the-p-value-to-test-hypotheses" class="section level3">
 <h3><span class="header-section-number">3.8.2</span> Using the p-value to test hypotheses</h3>
 <ul>
 <li>Get the decision by comparing <span class="math inline">\(\alpha\)</span> value with p-value.</li>
-<li><strong>p-value: </strong> Probability of observing a <em>sample statistic</em> as extreme or more extreme than the one observed <em>under the assumption that <span class="math inline">\(H_0\)</span> is true.</em></li>
-</ul>
-<p><span class="math display">\[p-value = P(Z&gt;Z_{cal})\]</span></p>
+<li><strong>p-value: </strong> Probability of observing a <em>sample statistic</em> at least as extreme as the observed test statistic computed <em>under the assumption that <span class="math inline">\(H_0\)</span> is true.</em></li>
+<li><p>The p-value defines the smallest value of <span class="math inline">\(\alpha\)</span> for which the null hypothesis can be rejected</p>
+<p><em>Example</em></p>
 <ul>
-<li>Virtually every statistical computer program yields this probability (p-value)</li>
+<li><p>If the p-value of a test is 0.038, the null hypothesis cannot be rejected at <span class="math inline">\(\alpha =0.01\)</span> because 0.038 is the smallest value of alpha for which the null hypothesis can be rejected. However, the null hypothesis can be rejected for <span class="math inline">\(\alpha = 0.05.\)</span></p></li>
+<li><p>If the p-value of a test is 0.0207, , the researcher would reject the null hypothesis for <span class="math inline">\(\alpha = 0.05\)</span> or <span class="math inline">\(\alpha =0.10\)</span> or any value more than 0.0207.</p></li>
+</ul></li>
+<li><p>Virtually every statistical computer program yields this probability (p-value)</p></li>
 </ul>
 <!-- Majula madam note-->
 </div>
@@ -467,7 +474,6 @@ But such  a test is almost impossible unless the truth is known, in practice, a 
 <ul>
 <li>Confidence intervals also give some indication about the decision.</li>
 </ul>
-<p><img src="figure/Ch3box6-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <!-- mu given in H0 inside the confidence interval
 
 
@@ -482,6 +488,7 @@ H0: mu <= 30 vs H1 mu >30
 we can reject H0
 
 -->
+<div style="page-break-after: always;"></div>
 <!-- Black et all text book page 316 problem 9.1-->
 <p><em>Example 4</em></p>
 <p>In order to ensure a good user experience, software companies often thoroughly test their products before releasing them to the public. IMAX Software company conducted a survey several years ago to determine the user-friendliness of one of their products. According to the previous survey the mean customer rating was 4.3 out of 5 (on a scale from 1 to 5, with 1 being low and 5 being high). Suppose a researcher believes that the customer ratings are lower now due to the new additional features of the software product, and he set a new survey in an attempt to prove his claim. Data are gathered and the results are obtained. Use this data to test this claim at 0.05 level of significance. Assume from previous studies that the population standard deviation is 0.574.</p>
@@ -495,8 +502,223 @@ sample mean  mean(c(3,4,5,5,4,5,5,4,4,4,4, 4,4,4,4,5,4,4,4,3,4,4, 4,3,5,4,4,5,4,
 
 n=32
 -->
+<div style="page-break-after: always;"></div>
+<p>contd…</p>
+<div style="page-break-after: always;"></div>
+<!-- One of the most basic hypothesis test is a test about a population mean.-->
+<ol style="list-style-type: decimal">
+<li><p>Hypotheses testing for single population</p>
+<ul>
+<li><p>1.1 Testing hypotheses about a population mean using the z statistic (<span class="math inline">\(\sigma\)</span> known)</p></li>
+<li><p>1.2 Testing hypotheses about a population mean using the t statistic (<span class="math inline">\(\sigma\)</span> unknown)</p></li>
+<li><p>1.3 Testing hypotheses about a proportion</p></li>
+<li><p>1.4 Testing hypotheses about a variance</p></li>
+</ul></li>
+<li><p>Test hypotheses about two populations</p>
+<ul>
+<li><p>2.1 Hypothesis testing for the difference in two means using the z statistic (Population variances known)</p></li>
+<li><p>2.2 Hypothesis testing for the difference in two means using the t statistic (Population variances unknown)</p></li>
+<li><p>2.3 Hypothesis testing for the difference in two proportions using the z statistic</p></li>
+</ul></li>
+</ol>
 
+<!-- Black page 312
+
+1. can be used to test hypotheses about a single population mean if the sample size is lager (n>=30 for any population and for small samples (n<30) if x is known to be normally distributed)
+-->
+<table>
+<colgroup>
+<col width="22%" />
+<col width="18%" />
+<col width="22%" />
+<col width="18%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Test For</th>
+<th>Null Hypothesis (<span class="math inline">\(H_0\)</span>)</th>
+<th>Test Statistic</th>
+<th>Distribution</th>
+<th>Use When</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Population mean (<span class="math inline">\(\mu\)</span>)</td>
+<td><span class="math inline">\(\mu = \mu_0\)</span></td>
+<td><span class="math inline">\(\frac{\bar{x} -\mu_{0}}{\sigma/\sqrt{n}}\)</span></td>
+<td><span class="math inline">\(Z\)</span></td>
+<td>Normal distribution or <span class="math inline">\(n\geq 30\)</span>; <span class="math inline">\(\sigma\)</span> known</td>
+</tr>
+<tr class="even">
+<td>Population mean (<span class="math inline">\(\mu\)</span>)</td>
+<td><span class="math inline">\(\mu = \mu_0\)</span></td>
+<td><span class="math inline">\(\frac{\bar{x} -\mu_{0}}{s/\sqrt{n}}\)</span></td>
+<td><span class="math inline">\(t_{n-1}\)</span></td>
+<td>Normal distribution and <span class="math inline">\(\sigma\)</span> unknown</td>
+</tr>
+<tr class="odd">
+<td>Population proportion (<span class="math inline">\(p\)</span>)</td>
+<td><span class="math inline">\(p=p_0\)</span></td>
+<td><span class="math inline">\(\frac{\hat{p} -p_{0}}{\sqrt{\frac{p_{0}(1-p_0)}{n}}}\)</span></td>
+<td><span class="math inline">\(Z\)</span></td>
+<td><span class="math inline">\(n\geq20\)</span>, <span class="math inline">\(n\hat{p} \geq 5\)</span> and <span class="math inline">\(n\hat{q}\geq 5\)</span></td>
+</tr>
+<tr class="even">
+<td>Population variance (<span class="math inline">\(\sigma\)</span>)</td>
+<td><span class="math inline">\(\sigma=\sigma_0\)</span></td>
+<td><span class="math inline">\(\frac{(n-1)s^2}{\sigma_0^2}\)</span></td>
+<td><span class="math inline">\(\chi^2_{n-1}\)</span></td>
+<td>Normal distribution</td>
+</tr>
+<tr class="odd">
+<td>Difference of two means (<span class="math inline">\(\mu_1-\mu_2\)</span>)</td>
+<td><span class="math inline">\(\mu_1-\mu_2=0\)</span></td>
+<td><span class="math inline">\(\frac{(\bar{x}_1-\bar{x}_2) -0}{\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}}\)</span></td>
+<td><span class="math inline">\(Z\)</span></td>
+<td>Both normal distributions, or <span class="math inline">\(n_1,n_2\geq 30;\)</span> <span class="math inline">\(\sigma_1, \sigma_2\)</span> known</td>
+</tr>
+<tr class="even">
+<td>Difference of two means (<span class="math inline">\(\mu_1-\mu_2\)</span>)</td>
+<td><span class="math inline">\(\mu_1-\mu_2=0\)</span></td>
+<td><span class="math inline">\(\frac{(\bar{x}_1-\bar{x}_2) -0}{\sqrt{\frac{s^2_1(n_1-1)+ s^2_2(n_2-1)}{n_1+n_2-2}} \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\)</span></td>
+<td><span class="math inline">\(t_{n_1+n_2-2}\)</span></td>
+<td><span class="math inline">\(\sigma_1, \sigma_2\)</span> unknown but assume <span class="math inline">\(\sigma_1= \sigma_2\)</span> , samples are independent, Both normal distributions</td>
+</tr>
+<tr class="odd">
+<td>Difference of two proportions (<span class="math inline">\(p_1-p_2\)</span>)</td>
+<td><span class="math inline">\(p_1-p_2=0\)</span></td>
+<td><span class="math inline">\(\frac{(\hat{p}_1-\hat{p}_2) -0}{\sqrt{\bar{p}\bar{q}\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}}\)</span> where <span class="math inline">\(\bar{p}=\frac{x_1 +x_2}{n_1+n_2}=\frac{n_1\hat{p}_1+n_2\hat{p}_2}{n_1+n_2}\)</span> and <span class="math inline">\(\bar{q}=1-\bar{p}\)</span></td>
+<td><span class="math inline">\(Z\)</span></td>
+<td><span class="math inline">\(n\hat{p}, n(1-\hat{p}) \geq 5\)</span> for each group</td>
+</tr>
+</tbody>
+</table>
+
+<div style="page-break-after: always;"></div>
+<p><strong>Cumulative Standard Normal Distribution</strong></p>
+<p><img src="figure/ztable.png" width="100%" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+<p><strong>Critical values from the t distribution</strong></p>
+<p><img src="figure/ttable.jpg" width="100%" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+<p><strong>Critical values from the chi-square distribution</strong></p>
+<p><img src="figure/chisquaretable.jpg" width="100%" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
 </div>
+</div>
+<div id="tutorial-2" class="section level2 unnumbered">
+<h2>Tutorial</h2>
+
+<!-- black et al. page 312 two tailed test
+
+example 4 is a one tailed test-->
+<ol style="list-style-type: decimal">
+<li>A survey of technical consultants of a computer product s company found that the average net income for a technical consultant is <span class="math inline">\(\$74914\)</span>. Because this survey is now more than 10 years old, an accounting researcher wants to test this figure by taking a random sample of 112 technical consultants to determine whether the net income figure changed. Assume the population standard deviation of net incomes for technical consultants is <span class="math inline">\(\$14530\)</span>. Suppose the 112 technical consultants who respond produce a sample mean of <span class="math inline">\(\$78695\)</span>.</li>
+</ol>
+<!-- Black page 319 9.1 answer is given HW mu z test-->
+<ol start="2" style="list-style-type: decimal">
+<li></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Use the data given to test the following hypotheses.</li>
+</ol>
+<p><span class="math display">\[H_0: \mu =25\qquad H_1:\mu\neq 25\]</span></p>
+<p><span class="math display">\[\bar{x}=28.1\qquad n=57 \qquad \sigma =8.46 \qquad \alpha =0.01\]</span></p>
+<!-- Black page 319 9.3 answer is given HW mu z test-->
+<ol start="3" style="list-style-type: decimal">
+<li></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Use the data given to test the following hypotheses.</li>
+</ol>
+<p><span class="math display">\[H_0: \mu =1200\qquad H_1:\mu&gt; 1200\]</span></p>
+<p><span class="math display">\[\bar{x}=1215\qquad n=113 \qquad \sigma =100 \qquad \alpha =0.10\]</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Use the <span class="math inline">\(p-\)</span> value to reach a statistical conclusion.</li>
+</ol>
+<!-- Black page 320   mu t  test-->
+<ol start="4" style="list-style-type: decimal">
+<li>A company build fully automated harvesters. For a harvester to be properly balanced when operating , a 25-kg plate is installed on its side. The machine that produces these plates is set to yield plates that average 25-kg. The distribution of plates produced from the machine is normal. However, the supervisor is worried that the machine us out of adjustment and is producing plates that do not average 25 kg. To test this concern, he randomly selects 20 of the plates produced the day before and weighs them. The following data shows the computed sample mean and sample standard deviation
+<span class="math display">\[\bar{x}=25.51\qquad n=20 \qquad s =2.1933 \qquad \alpha =0.05\]</span></li>
+</ol>
+<!-- Black page 324 9.15   mu t  test answer is given-->
+<ol start="5" style="list-style-type: decimal">
+<li>Suppose a study reports that the average price for a litre of self -serve regular unleaded petrol is <span class="math inline">\(\$1.16\)</span>. You believe that the figure is higher in your area of the country. You decide to test this claim for your area by randomly calling petrol stations. Your random survey of 25 stations produces the following prices.</li>
+</ol>
+<p><span class="math inline">\(\$1.27, 1.29, 1.16, 1.20, 1.37\)</span>
+<span class="math inline">\(1.20, 1.23, 1.19, 1.20, 1.24\)</span> 
+<span class="math inline">\(1.16, 1.07, 1.27, 1.09, 1.35\)</span> 
+<span class="math inline">\(1.15, 1.23, 1.14, 1.05, 1.35\)</span> 
+<span class="math inline">\(1.21, 1.14, 1.14, 1.07,1.10\)</span>.</p>
+<p>Assume petrol prices for a region are normally distributed. Do the data you obtained provide enough evidence to reject the claim?. Use a <span class="math inline">\(1\%\)</span> level of significance.</p>
+<!-- proportion black page 326 two tail-->
+<ol start="6" style="list-style-type: decimal">
+<li>A manufacturing company believes exactly <span class="math inline">\(8\%\)</span> of its products contain at least one minor flaw. Suppose a company researcher want to test this belief. He randomly selects a sample of 200 products, inspects each item for flaws and determines that 33 items have at least one minor flaw. Use a <span class="math inline">\(0.10\)</span> level of significance to test this hypothesis.</li>
+</ol>
+<!-- proportion black et al. page 328 one tail-->
+<ol start="7" style="list-style-type: decimal">
+<li>A survey of the online teaching shows that the primary mode of delivery for 17% of school teachers is google classroom. A researcher believes the figure is higher for western province. To test this idea, he contacts a random sample of 550 teachers asks which primary mode they used to online teaching during the least six months. Suppose 115 replied that google classroom was the primary mode of delivery. Using a level of significance of 0.05, tests idea that the figure is higher for western province.</li>
+</ol>
+<!-- variance  black et al. page 332  one tail-->
+<ol start="8" style="list-style-type: decimal">
+<li>A manufacturing company has been working to implement a just-in-time inventory system for its production line. The final product requires the installation of a pneumatic tube at a particular station on the assembly line. With the just-in-time inventory system, th company’s goal is to minimize the number of pneumatic tubes that are piled up at the station waiting to be installed. Ideally, the tubes would arrive just as the operator needs them. However, because of the supplier and the variables involved in getting the tubes to the line, most of the time there will be some build-up of tube inventory. The company expects that, on average, about 20 pneumatic tubes will be at the station. However, the production superintendent does not want the variance of this inventory to be grater than 4. On a given day, the number of pneumatic tubes piled up at the workstation is determined eight different times and the following numbers of tubes are recorded.</li>
+</ol>
+<p><span class="math display">\[23, 17, 20, 29, 21, 14, 19, 24\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Use these sample data and <span class="math inline">\(\alpha =0.05\)</span> to determine whether the variance is greater than 4.</p></li>
+<li><p>Write the assumptions that you make and motivate your answer.</p></li>
+</ol>
+<!-- answer Assume the number of tubes is normally distributed-->
+<!-- variance  black et al. page 333  two tail-->
+<ol start="9" style="list-style-type: decimal">
+<li>A small business business has 37 employees. Because of the uncertain demand for its products, the company usually pays overtime on any given week. The company assumed that about 50 total hours of overtime per week us required and that the variance on this figure is about 25. Company officials want to know whether the variance of overtime hours has changed. Given here is a sample of 16 weeks of overtime data (in hours per week). Assume hours of overtime are normally distributed. Use these data to test the null hypothesis that the variance of overtime data is 25. Let <span class="math inline">\(\alpha =0.10\)</span></li>
+</ol>
+<p><span class="math inline">\(57,56,52,44\)</span>
+<span class="math inline">\(46,53,44,44\)</span> 
+<span class="math inline">\(48,51,55,48\)</span> 
+<span class="math inline">\(63,53,51,50\)</span> </p>
+<!-- difference means z test  black et al. page 355  two tail-->
+<ol start="10" style="list-style-type: decimal">
+<li>Suppose a researcher want to conduct a hypothesis test to determine whether the average annual wage of an advertising manager is different from the average annual wage of an auditing manager. A random sample of 32 advertising managers and a random sample of 34 auditing manager are taken.They are contacted by telephone and asked their annual salary. The resulting salary data are given below. Suppose <span class="math inline">\(\alpha =0.05.\)</span></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Advertising managers</th>
+<th>Auditing managers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(n_1 = 32\)</span></td>
+<td><span class="math inline">\(n_2 = 34\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\bar{x}_1 = 70.700\)</span></td>
+<td><span class="math inline">\(\bar{x}_2 = 62.187\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\sigma_1 = 16.253\)</span></td>
+<td><span class="math inline">\(\sigma_2 = 12.900\)</span></td>
+</tr>
+</tbody>
+</table>
+<!-- difference means t test black et al. page 367  two tail-->
+<ol start="11" style="list-style-type: decimal">
+<li>In a production company new employees are expected to attend a three-day seminar to learn about the company. At the end of the seminar , they are tested to measure their knowledge about the company. The traditional training method has been lecture and a QA session. Management decided to experiment with a different training procedure, which processes new employees in two days by using pre-recorded online lectures and having no QA session. If this procedure works, it could save the company thousands of dollars over a period of several years. However, there is some concern about the effectiveness of the two-day method, and company managers would like to know whether there is any difference in the effectiveness of two training methods.</li>
+</ol>
+<p>To test the difference in the two methods, the managers randomly select one group of 15 newly hired employees to take the three-day seminar (method A) and a second group of 12 new employees for the two-day prerecorded online method (method B). The test scores are given below.</p>
+<p>Use <span class="math inline">\(\alpha =0.05\)</span>, determine whether there is a significant difference in the mean scores of the two groups. Assume that the scores for this test are normally distributed and that the population variances are approximately equal.</p>
+<p>Method A : <span class="math inline">\(56,50,52,44,52,47,47,53,45,48,42,51,42,43,44\)</span></p>
+<p>Method B : <span class="math inline">\(59,54,55,65,52,57,64,53,53,56,53,57\)</span></p>
+<!-- difference proportions  z test black et al. page 386  two tail-->
+<ol start="12" style="list-style-type: decimal">
+<li>A study of young entrepreneurs was conducted to determine their definition of success. The entrepreneurs were offered optional choices such as happiness/self-fulfillment, sales/profit and achievement/challenge. The entrepreneurs were divided into groups according to the gross sales of their businesses. A significantly higher portions of entrepreneurs in the <span class="math inline">\(\$100000\)</span> to <span class="math inline">\(\$500000\)</span> category than in the less than <span class="math inline">\(\$100000\)</span> category seemed to rate sales/profit a a definition of success.</li>
+</ol>
+<p>Suppose you decide to test this result by taking a survey of your own and identify entrepreneurs by gross sales. You interview 100 young entrepreneurs with gross sales of less than <span class="math inline">\(\$100000\)</span>, and 24 of then define sales/profit as success. You then interview 95 young entrepreneurs with gross sales of <span class="math inline">\(\$100000\)</span> to <span class="math inline">\(\$500000\)</span>, and 39 cite sales/profit as a definition of success. Use this information to test to determine whether there is a significant difference in the proportions of the two groups that define success as sales/profit. Use <span class="math inline">\(\alpha =0.01.\)</span></p>
+
 </div>
 </div>
             </section>

@@ -1,2 +1,8 @@
 # Contingency Tables
 
+<!--Black's book page 479 
+
+Chi square test has two cases:
+
+1) Ch-square goodness of fit test
+2)  chi square test of independecne - This is called contingency analysis : we cove only this page 479 black's et all book-->

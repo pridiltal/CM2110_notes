@@ -91,7 +91,7 @@
 
 \title{CM 2110 Calculus and Statistical Distributions}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-08-28}
+\date{2020-09-04}
 
 \begin{document}
 \maketitle
@@ -3003,9 +3003,10 @@ If \(Q=q(X_1, X_2,\dots, X_n; \theta)\) is a pivotal quantity and has a probabil
   Coverage probability
 \item
   Size (expected length)
-  \newpage
-  \pagenumbering{arabic}
 \end{itemize}
+
+\newpage
+\pagenumbering{arabic}
 
 \hypertarget{tutorial-1}{%
 \section*{Tutorial}\label{tutorial-1}}
@@ -3224,7 +3225,7 @@ A \emph{hypothesis} is a statement about a \textbf{population parameter}.
 \item
   The equality sign (eq: \(=,\leq, or \geq\))) always goes to \(H_0\)
 \item
-  \(H_0:\) \(H_1: \text{ which is to be tested (claim to be tested})\)
+  \(H_0:\text{            }\) \(H_1: \text{ which is to be tested (claim to be tested})\)
 \end{enumerate}
 
 \begin{enumerate}
@@ -3232,8 +3233,10 @@ A \emph{hypothesis} is a statement about a \textbf{population parameter}.
 \setcounter{enumi}{2}
 \tightlist
 \item
-  \(H_0: \text{ initially favoured one before collecting information}\) \(H_1:\)
+  \(H_0: \text{ initially favoured one before collecting information   }\) \(H_1:\)
 \end{enumerate}
+
+\newpage
 
 \emph{Example 1}
 
@@ -3313,6 +3316,8 @@ let \(\theta\) be the average change in a patient's blood pressure after taking 
 \caption{Rejection and nonrejection regions}\label{fig:Ch3box4}
 \end{figure}
 
+\newpage
+
 \hypertarget{errors-in-testing-hypotheses-type-i-and-type-ii-error}{%
 \section{Errors in testing hypotheses-type I and type II error}\label{errors-in-testing-hypotheses-type-i-and-type-ii-error}}
 
@@ -3351,7 +3356,7 @@ There is a concern about the perchlorate level found in well water. EPA guidelin
 
 Set up the appropriate hypotheses for this situation by considering the Type I error
 
-\begin{center}\includegraphics[width=1\linewidth]{figure/Ch3box5-1} \end{center}
+\newpage
 
 \hypertarget{significance-level}{%
 \section{Significance level}\label{significance-level}}
@@ -3462,17 +3467,21 @@ Step 8: Make a business decision.
 \subsection{Using the p-value to test hypotheses}\label{using-the-p-value-to-test-hypotheses}}
 
 \begin{itemize}
-\tightlist
 \item
   Get the decision by comparing \(\alpha\) value with p-value.
 \item
-  \textbf{p-value: } Probability of observing a \emph{sample statistic} as extreme or more extreme than the one observed \emph{under the assumption that \(H_0\) is true.}
-\end{itemize}
+  \textbf{p-value: } Probability of observing a \emph{sample statistic} at least as extreme as the observed test statistic computed \emph{under the assumption that \(H_0\) is true.}
+\item
+  The p-value defines the smallest value of \(\alpha\) for which the null hypothesis can be rejected
 
-\[p-value = P(Z>Z_{cal})\]
+  \emph{Example}
 
-\begin{itemize}
-\tightlist
+  \begin{itemize}
+  \item
+    If the p-value of a test is 0.038, the null hypothesis cannot be rejected at \(\alpha =0.01\) because 0.038 is the smallest value of alpha for which the null hypothesis can be rejected. However, the null hypothesis can be rejected for \(\alpha = 0.05.\)
+  \item
+    If the p-value of a test is 0.0207, , the researcher would reject the null hypothesis for \(\alpha = 0.05\) or \(\alpha =0.10\) or any value more than 0.0207.
+  \end{itemize}
 \item
   Virtually every statistical computer program yields this probability (p-value)
 \end{itemize}
@@ -3486,7 +3495,7 @@ Step 8: Make a business decision.
   Confidence intervals also give some indication about the decision.
 \end{itemize}
 
-\begin{center}\includegraphics[width=1\linewidth]{figure/Ch3box6-1} \end{center}
+\newpage
 
 \emph{Example 4}
 
@@ -3495,6 +3504,332 @@ In order to ensure a good user experience, software companies often thoroughly t
 \(3,4,5,5,4,5,5,4,4,4,4,\) \newline
 \(4,4,4,4,5,4,4,4,3,4,4,\) \newline
 \(4,3,5,4,4,5,4,4,4,5\)
+
+\newpage
+
+contd\ldots{}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Hypotheses testing for single population
+
+  \begin{itemize}
+  \item
+    1.1 Testing hypotheses about a population mean using the z statistic (\(\sigma\) known)
+  \item
+    1.2 Testing hypotheses about a population mean using the t statistic (\(\sigma\) unknown)
+  \item
+    1.3 Testing hypotheses about a proportion
+  \item
+    1.4 Testing hypotheses about a variance
+  \end{itemize}
+\item
+  Test hypotheses about two populations
+
+  \begin{itemize}
+  \item
+    2.1 Hypothesis testing for the difference in two means using the z statistic (Population variances known)
+  \item
+    2.2 Hypothesis testing for the difference in two means using the t statistic (Population variances unknown)
+  \item
+    2.3 Hypothesis testing for the difference in two proportions using the z statistic
+  \end{itemize}
+\end{enumerate}
+
+\newpage
+\begin{landscape}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\begin{minipage}[b]{0.19\columnwidth}\raggedright
+Test For\strut
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright
+Null Hypothesis (\(H_0\))\strut
+\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright
+Test Statistic\strut
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright
+Distribution\strut
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright
+Use When\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Population mean (\(\mu\))\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(\mu = \mu_0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(\frac{\bar{x} -\mu_{0}}{\sigma/\sqrt{n}}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(Z\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Normal distribution or \(n\geq 30\); \(\sigma\) known\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Population mean (\(\mu\))\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(\mu = \mu_0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(\frac{\bar{x} -\mu_{0}}{s/\sqrt{n}}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(t_{n-1}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Normal distribution and \(\sigma\) unknown\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Population proportion (\(p\))\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(p=p_0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(\frac{\hat{p} -p_{0}}{\sqrt{\frac{p_{0}(1-p_0)}{n}}}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(Z\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(n\geq20\), \(n\hat{p} \geq 5\) and \(n\hat{q}\geq 5\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Population variance (\(\sigma\))\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(\sigma=\sigma_0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(\frac{(n-1)s^2}{\sigma_0^2}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(\chi^2_{n-1}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Normal distribution\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Difference of two means (\(\mu_1-\mu_2\))\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(\mu_1-\mu_2=0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(\frac{(\bar{x}_1-\bar{x}_2) -0}{\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(Z\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+Both normal distributions, or \(n_1,n_2\geq 30;\) \(\sigma_1, \sigma_2\) known\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Difference of two means (\(\mu_1-\mu_2\))\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(\mu_1-\mu_2=0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(\frac{(\bar{x}_1-\bar{x}_2) -0}{\sqrt{\frac{s^2_1(n_1-1)+ s^2_2(n_2-1)}{n_1+n_2-2}} \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(t_{n_1+n_2-2}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(\sigma_1, \sigma_2\) unknown but assume \(\sigma_1= \sigma_2\) , samples are independent, Both normal distributions\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright
+Difference of two proportions (\(p_1-p_2\))\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(p_1-p_2=0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\(\frac{(\hat{p}_1-\hat{p}_2) -0}{\sqrt{\bar{p}\bar{q}\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}}\) where \(\bar{p}=\frac{x_1 +x_2}{n_1+n_2}=\frac{n_1\hat{p}_1+n_2\hat{p}_2}{n_1+n_2}\) and \(\bar{q}=1-\bar{p}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(Z\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
+\(n\hat{p}, n(1-\hat{p}) \geq 5\) for each group\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{landscape}
+
+\newpage
+
+\textbf{Cumulative Standard Normal Distribution}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/ztable} \end{center}
+
+\newpage
+
+\textbf{Critical values from the t distribution}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/ttable} \end{center}
+
+\newpage
+
+\textbf{Critical values from the chi-square distribution}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/chisquaretable} \end{center}
+
+\newpage
+
+\hypertarget{tutorial-2}{%
+\section*{Tutorial}\label{tutorial-2}}
+\addcontentsline{toc}{section}{Tutorial}
+
+\pagenumbering{arabic}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A survey of technical consultants of a computer product s company found that the average net income for a technical consultant is \(\$74914\). Because this survey is now more than 10 years old, an accounting researcher wants to test this figure by taking a random sample of 112 technical consultants to determine whether the net income figure changed. Assume the population standard deviation of net incomes for technical consultants is \(\$14530\). Suppose the 112 technical consultants who respond produce a sample mean of \(\$78695\).
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Use the data given to test the following hypotheses.
+\end{enumerate}
+
+\[H_0: \mu =25\qquad H_1:\mu\neq 25\]
+
+\[\bar{x}=28.1\qquad n=57 \qquad \sigma =8.46 \qquad \alpha =0.01\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Use the data given to test the following hypotheses.
+\end{enumerate}
+
+\[H_0: \mu =1200\qquad H_1:\mu> 1200\]
+
+\[\bar{x}=1215\qquad n=113 \qquad \sigma =100 \qquad \alpha =0.10\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Use the \(p-\) value to reach a statistical conclusion.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  A company build fully automated harvesters. For a harvester to be properly balanced when operating , a 25-kg plate is installed on its side. The machine that produces these plates is set to yield plates that average 25-kg. The distribution of plates produced from the machine is normal. However, the supervisor is worried that the machine us out of adjustment and is producing plates that do not average 25 kg. To test this concern, he randomly selects 20 of the plates produced the day before and weighs them. The following data shows the computed sample mean and sample standard deviation
+  \[\bar{x}=25.51\qquad n=20 \qquad s =2.1933 \qquad \alpha =0.05\]
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Suppose a study reports that the average price for a litre of self -serve regular unleaded petrol is \(\$1.16\). You believe that the figure is higher in your area of the country. You decide to test this claim for your area by randomly calling petrol stations. Your random survey of 25 stations produces the following prices.
+\end{enumerate}
+
+\(\$1.27, 1.29, 1.16, 1.20, 1.37\)\newline
+\(1.20, 1.23, 1.19, 1.20, 1.24\) \newline
+\(1.16, 1.07, 1.27, 1.09, 1.35\) \newline
+\(1.15, 1.23, 1.14, 1.05, 1.35\) \newline
+\(1.21, 1.14, 1.14, 1.07,1.10\).
+
+Assume petrol prices for a region are normally distributed. Do the data you obtained provide enough evidence to reject the claim?. Use a \(1\%\) level of significance.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  A manufacturing company believes exactly \(8\%\) of its products contain at least one minor flaw. Suppose a company researcher want to test this belief. He randomly selects a sample of 200 products, inspects each item for flaws and determines that 33 items have at least one minor flaw. Use a \(0.10\) level of significance to test this hypothesis.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  A survey of the online teaching shows that the primary mode of delivery for 17\% of school teachers is google classroom. A researcher believes the figure is higher for western province. To test this idea, he contacts a random sample of 550 teachers asks which primary mode they used to online teaching during the least six months. Suppose 115 replied that google classroom was the primary mode of delivery. Using a level of significance of 0.05, tests idea that the figure is higher for western province.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  A manufacturing company has been working to implement a just-in-time inventory system for its production line. The final product requires the installation of a pneumatic tube at a particular station on the assembly line. With the just-in-time inventory system, th company's goal is to minimize the number of pneumatic tubes that are piled up at the station waiting to be installed. Ideally, the tubes would arrive just as the operator needs them. However, because of the supplier and the variables involved in getting the tubes to the line, most of the time there will be some build-up of tube inventory. The company expects that, on average, about 20 pneumatic tubes will be at the station. However, the production superintendent does not want the variance of this inventory to be grater than 4. On a given day, the number of pneumatic tubes piled up at the workstation is determined eight different times and the following numbers of tubes are recorded.
+\end{enumerate}
+
+\[23, 17, 20, 29, 21, 14, 19, 24\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Use these sample data and \(\alpha =0.05\) to determine whether the variance is greater than 4.
+\item
+  Write the assumptions that you make and motivate your answer.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  A small business business has 37 employees. Because of the uncertain demand for its products, the company usually pays overtime on any given week. The company assumed that about 50 total hours of overtime per week us required and that the variance on this figure is about 25. Company officials want to know whether the variance of overtime hours has changed. Given here is a sample of 16 weeks of overtime data (in hours per week). Assume hours of overtime are normally distributed. Use these data to test the null hypothesis that the variance of overtime data is 25. Let \(\alpha =0.10\)
+\end{enumerate}
+
+\(57,56,52,44\)\newline
+\(46,53,44,44\) \newline
+\(48,51,55,48\) \newline
+\(63,53,51,50\) \newline
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Suppose a researcher want to conduct a hypothesis test to determine whether the average annual wage of an advertising manager is different from the average annual wage of an auditing manager. A random sample of 32 advertising managers and a random sample of 34 auditing manager are taken.They are contacted by telephone and asked their annual salary. The resulting salary data are given below. Suppose \(\alpha =0.05.\)
+\end{enumerate}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Advertising managers & Auditing managers\tabularnewline
+\midrule
+\endhead
+\(n_1 = 32\) & \(n_2 = 34\)\tabularnewline
+\(\bar{x}_1 = 70.700\) & \(\bar{x}_2 = 62.187\)\tabularnewline
+\(\sigma_1 = 16.253\) & \(\sigma_2 = 12.900\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  In a production company new employees are expected to attend a three-day seminar to learn about the company. At the end of the seminar , they are tested to measure their knowledge about the company. The traditional training method has been lecture and a QA session. Management decided to experiment with a different training procedure, which processes new employees in two days by using pre-recorded online lectures and having no QA session. If this procedure works, it could save the company thousands of dollars over a period of several years. However, there is some concern about the effectiveness of the two-day method, and company managers would like to know whether there is any difference in the effectiveness of two training methods.
+\end{enumerate}
+
+To test the difference in the two methods, the managers randomly select one group of 15 newly hired employees to take the three-day seminar (method A) and a second group of 12 new employees for the two-day prerecorded online method (method B). The test scores are given below.
+
+Use \(\alpha =0.05\), determine whether there is a significant difference in the mean scores of the two groups. Assume that the scores for this test are normally distributed and that the population variances are approximately equal.
+
+Method A : \(56,50,52,44,52,47,47,53,45,48,42,51,42,43,44\)
+
+Method B : \(59,54,55,65,52,57,64,53,53,56,53,57\)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  A study of young entrepreneurs was conducted to determine their definition of success. The entrepreneurs were offered optional choices such as happiness/self-fulfillment, sales/profit and achievement/challenge. The entrepreneurs were divided into groups according to the gross sales of their businesses. A significantly higher portions of entrepreneurs in the \(\$100000\) to \(\$500000\) category than in the less than \(\$100000\) category seemed to rate sales/profit a a definition of success.
+\end{enumerate}
+
+Suppose you decide to test this result by taking a survey of your own and identify entrepreneurs by gross sales. You interview 100 young entrepreneurs with gross sales of less than \(\$100000\), and 24 of then define sales/profit as success. You then interview 95 young entrepreneurs with gross sales of \(\$100000\) to \(\$500000\), and 39 cite sales/profit as a definition of success. Use this information to test to determine whether there is a significant difference in the proportions of the two groups that define success as sales/profit. Use \(\alpha =0.01.\)
 
 \hypertarget{contingency-tables}{%
 \chapter{Contingency Tables}\label{contingency-tables}}

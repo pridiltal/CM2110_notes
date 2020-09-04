@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.8.17)  28 AUG 2020 22:52
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.8.17)  4 SEP 2020 05:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1346,7 +1346,7 @@ Underfull \hbox (badness 3849) in paragraph at lines 2969--2970
  []
 
 [11] [12]
-Overfull \hbox (4.87936pt too wide) in paragraph at lines 3030--3031
+Overfull \hbox (4.87936pt too wide) in paragraph at lines 3031--3032
 []$[][][][] [][][][] [][][][] [][][] [][][] [][][][] [][][][] [][][] [][][][] [
 ][][][] [][][][] [][][] [][][][] [][][][] [][][][] [][][][] [][][] [][][][] [][
 ][] [][]$ 
@@ -1356,10 +1356,9 @@ Overfull \hbox (4.87936pt too wide) in paragraph at lines 3030--3031
 Chapter 3.
 [3
 
-]
+] [4]
 File: figure/Ch3box2-1.png Graphic file (type bmp)
 <figure/Ch3box2-1.png>
-[4]
 File: figure/Ch3box3-1.png Graphic file (type bmp)
 <figure/Ch3box3-1.png>
 [5]
@@ -1368,52 +1367,81 @@ File: figure/Ch3box4-1.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \hbox (badness 10000) in alignment at lines 3336--3340
-[] [] []
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 3340--3346
-[] [] []
- []
-
 [6]
-File: figure/Ch3box5-1.png Graphic file (type bmp)
-<figure/Ch3box5-1.png>
+Underfull \hbox (badness 10000) in alignment at lines 3341--3345
+[] [] []
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[7] [8] [9]
-File: figure/Ch3box6-1.png Graphic file (type bmp)
-<figure/Ch3box6-1.png>
-[10] [11] [12
+Underfull \hbox (badness 10000) in alignment at lines 3345--3351
+[] [] []
+ []
+
+[7] [8] [9] [10] [11] [12] [13] [14]
+Underfull \hbox (badness 10000) in alignment at lines 3545--3559
+[] [] [] [] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 3559--3638
+[] [] [] [] []
+ []
+
+[15
 
 ]
+File: figure/ztable.png Graphic file (type bmp)
+<figure/ztable.png>
+[16
+
+]
+File: figure/ttable.jpg Graphic file (type bmp)
+<figure/ttable.jpg>
+[17]
+File: figure/chisquaretable.jpg Graphic file (type bmp)
+<figure/chisquaretable.jpg>
+[18] [1] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 3784--3788
+
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 3797--3801
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 3801--3806
+[] []
+ []
+
+[3] [4]
 Chapter 4.
-[13] [14
+[5
+
+] [6
 
 ]
 Chapter 5.
 No file bookdown-demo.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3520.
-[15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3520.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3855.
+[7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3855.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3520.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3520.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3855.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3855.
 
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
-(rerunfilecheck)             Checksum: 6FD6F441D3D75F87E04DAC3ACFAABFE5;7303.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3520.
+(rerunfilecheck)             Checksum: 43CA427657D702E1604F7420FC54D754;7398.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3855.
  ) 
 Here is how much of TeX's memory you used:
- 18856 strings out of 481691
- 340561 string characters out of 5931835
- 757325 words of memory out of 5000000
- 35649 multiletter control sequences out of 15000+600000
+ 18867 strings out of 481691
+ 340721 string characters out of 5931835
+ 761503 words of memory out of 5000000
+ 35658 multiletter control sequences out of 15000+600000
  541579 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 52i,12n,118p,789b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,12n,118p,995b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (90 pages).
+Output written on bookdown-demo.pdf (100 pages).

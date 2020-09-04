@@ -364,6 +364,9 @@ If $Q=q(X_1, X_2,\dots, X_n; \theta)$ is a pivotal quantity and has a probabilit
 
 - Coverage probability 
 - Size (expected length)
+
+<!-- my description is given in black text book-->
+
 \newpage
 \pagenumbering{arabic}
 
