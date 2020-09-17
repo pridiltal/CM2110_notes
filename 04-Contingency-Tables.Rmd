@@ -5,4 +5,211 @@
 Chi square test has two cases:
 
 1) Ch-square goodness of fit test
-2)  chi square test of independecne - This is called contingency analysis : we cove only this page 479 black's et all book-->
+2)  chi square test of independence - This is called contingency analysis : we cove only this page 479 black's et all book-->
+
+
+<!-- Daniel, W. W., & Cross, C. L. (2018). Biostatistics: a foundation for analysis in the health sciences. Wiley.  page 573-->
+
+- In Chapters 2 (Estimations) and 3 (Hypothesis Testing) we briefly discussed about the chi-square distribution in the construction of confidence intervals for and the testing of hypotheses concerning a population variance. 
+
+- Chi-square distribution, which is one of the most widely used distributions in statistical applications, has many other uses. 
+
+- The chi-square distribution is the most frequently employed statistical technique for the analysis of categorical data.
+
+
+
+<!--Black's book page 479 -->
+## Types of chi-square tests
+
+Chi square test has two cases:
+
+1) Chi-square goodness of fit test
+2) Chi-square test of independence. This is also known as  *contingency analysis*. 
+
+- In this chapter our focus is on *chi-square test of independence* 
+
+## Contingency analysis: Chi-square test of independence
+
+- **Chi-square test of independence** is a statistical test used to analyse the frequencies of two variables with multiple categories to determine whether the two variables are independent.
+
+- For example, a software developer might want to determine whether the user ranking of user-friendliness (*Very Satisfied = 5, Satisfied = 4, Neutral = 3, Dissatisfied = 2, Very Dissatisfied = 1*) of the new software product is independent of the user's education level.  
+
+<!-- https://www.eztalks.com/unified-communications/5-best-online-communication-platforms.html-->
+- A market researcher might want to determine whether the type of online communication platforms (eg:Slack, Zula, ezTalks, HipChat, Yammar) preferred by a user is independent of the user's age.
+
+- A software project manager might want to know whether customer overall satisfaction (*Very Satisfied = 5, Satisfied = 4, Neutral = 3, Dissatisfied = 2, Very Dissatisfied = 1*  is  independent of  the experience of the developer (less than 1 year, 1-5 years, more than 5 years)
+
+*Example*
+
+A software company is planning to develop a new taxi booking and trip scheduling  platform that facilitates a real time connection between the commuter and the taxi driver, enabling mutual engagement for the receipt and delivery of a service. Prior to development, the management wants to identify the strength and weakness of the existing services as they may be their potential competitors. Suppose the project manager is interested in determining whether the type of taxi service preferred by a  commuter is independent of the commuter's age.
+
+On a questionnaire, the following two questions might be used to measure these aspects.
+
+<!--https://www.readme.lk/exploring-sri-lanka-uber-pickme-taxiyak/-->
+1. What is your most preferred taxi booking and trip scheduling  platform?
+
+  a) Uber 
+  b) PickMe
+  
+2. Select your age category?
+
+  a) $< 30$ years
+  b) $30-50$ years
+  c) $>50$ years
+
+### Contingency table 
+
+- Let the number of responses received were 100.
+
+- Now the analyst can *tally the frequencies of responses* to these two questions into a two-way table called **contingency table**
+
+*Contingency table*
+
+| | Most preferred taxi booking and trip scheduling  platform|
+|:------------:|:--------------:|:----------------:|:----------:|
+|   Age       |   Uber           |  PickMe    | Total| 
+|$< 30$ years   | 32            | 25         | 57|
+|$30-50$ years  | 18            | 5          | 23|
+|$> 50$ years   | 17            | 3          | 20|
+|Total          | 67           | 33         | 100|
+
+
+- Because the chi-square test of independence uses a contingency table, this test is sometimes referred to as **contingency analysis**
+
+*Contingency table*
+
+| | Variable 2|
+|:------------:|:--------------:|:----------------:|:----------:|:----------:|
+| Variable 1    |   F           |  G    | H|  Total|
+|A   |            |         | $o_{13}$ | $n_A$|
+|B   |            |         | | $n_B$|
+|C   |            |         | |$n_C$|
+|D   |            |         | |$n_D$|
+|E   |            |         | |$n_E$|
+|Total          | $n_F$     | $n_G$        | $n_H$|  |
+           
+
+- The **observed frequency** for for each cell is denoted as $o_{ij},$ where $i$ is the row and $j$ is the column.
+
+- The **expected frequencies** are denoted in a similar manner.
+
+- If two variables are independent, they are not related. 
+
+- In a sense, the chi-square test of independence is a test of whether the variables are related.
+
+- The null hypothesis for a chi-square test of independence is that the two variables are independent (not related).
+
+- If the null hypothesis is rejected, the conclusion is that the two variables are not independent and are related.
+
+- In general, if the two variables are independent, the expected frequency values of each call can be determined by 
+
+$$e_{ij} = \frac{n_in_j}{N}$$
+
+where:
+
+   - $i =$ the row
+   - $j =$ the column
+   - $n_i =$ the total of row $i$
+   - $n_j =$ the total of column $j$
+   - $N =$ the total of all frequencies
+   
+<!-- Discuss why the above equation black's page 480-->
+
+- Using these expected frequency values and the observed frequency value, we can compute a chi-square test of independence to determine whether the variables are independent. 
+
+### Chi-square test of independence
+
+$$\chi^2 =\sum_r\sum_c \frac{(f_0-f_e)^2}{f_e}$$
+
+where
+    - $df = (r-1)(c-1)$
+    - $r=$ number of rows
+    - $c=$ number few columns
+    - $\sum_r=$ sum over row
+    - $\sum_c=$ sum over column
+    
+- The **null hypothesis** for a chi-square test of independence is that *the two variables are independent*.
+
+- The **alternative hypothesis** for a chi-square test of independence is that *the two variables are not independent*
+
+- This test is one one-tailed. <!-- why one tailed black's page 471-->
+
+<!--Chi-square test of independence tests are one tailed because a chi-square of zero indicates perfect agreement between expected frquencies and observed frequencies. Any deviation from zero difference occurs in the positive direction only because chi-square is determined by a sum of squared values and can never be negative
+
+For alpha =0.05 and df =2, the critical chi-square value taken from the table is XXX-->
+
+- The degrees of freedom are $(r-1)(c-1)$
+
+*Example contd...*
+
+Suppose the project manager is interested in determining whether the type of taxi service preferred by a  commuter is independent of the commuter's age. He conducted a small survey to determine.  He received 100 responses. The resulting $3\times2$ contingency table is
+ given below. Using $\alpha =0.05,$ perform the chi-square test of independence to determine whether preferred mode is independent of age.  
+
+| | Most preferred taxi booking and trip scheduling  platform|
+|:------------:|:--------------:|:----------------:|:----------:|
+|   Age       |   Uber           |  PickMe    | Total| 
+|$< 30$ years   | 32            | 25         | 57|
+|$30-50$ years  | 18            | 5          | 23|
+|$> 50$ years   | 17            | 3          | 20|
+|Total          | 67           | 33         | 100|
+
+<!-- Black's page 482-->
+
+### Chi-square test of independence with R 
+
+- Let us now see how to perform the Chi-square test of independence using R programming language
+
+
+<!--Chi-square test of independence using R programming language
+https://www.datacamp.com/community/tutorials/contingency-analysis-r?utm_source=adwords_ppc&utm_campaignid=1455363063&utm_adgroupid=65083631748&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=278443377092&utm_targetid=aud-390929969673:dsa-429603003980&utm_loc_interest_ms=&utm_loc_physical_ms=1009923&gclid=CjwKCAjwkoz7BRBPEiwAeKw3q5X2ay1j0feMaGONQUlGDBx9qxMKTybQovGpAiz8XKsWrSjNnKuehBoCKv4QAvD_BwE-->
+
+- Following is the observed table.
+
+```{r echo= TRUE}
+observed_table <- matrix(c(32, 25, 18, 5, 17, 3), nrow = 3, ncol = 2, byrow = T)
+rownames(observed_table) <- c('<30', '30-50', '>50')
+colnames(observed_table) <- c('Uber', 'PickMe')
+observed_table
+
+addmargins(observed_table)
+```
+
+- In order to perform the test, we need to apply the `chisq.test()` function to the observed table.
+
+```{r echo= TRUE}
+output <- chisq.test(observed_table)
+output
+```
+
+- From the above result, we can see that p-value is less than the significance level (0.05). Therefore, we can reject the null hypothesis and conclude that the two variables (age & taxi preference) are not independent
+
+- If we want to see the expected table, we can also do that.
+
+
+```{r echo= TRUE}
+output$expected
+```
+
+- Visualizing data of Contingency Table with ggplot2 (Side By Side Bar Graph)
+
+```{r echo = TRUE}
+library(tidyverse)
+
+table2 <- observed_table %>%
+  as.data.frame() %>%
+  rownames_to_column() %>%
+  gather(Column, Value, -rowname)
+
+colnames(table2) <- c('Age', 'Mode', "Count")
+table2
+
+
+ggplot(data = table2, aes(x = Age, y = Count, fill = Mode)) + 
+  geom_bar(stat = "identity", position = "dodge") +
+  scale_fill_grey()
+  
+```
+
+## References {-}
+
+- Daniel, W. W., & Cross, C. L. (2018). Biostatistics: a foundation for analysis in the health sciences. Wiley.

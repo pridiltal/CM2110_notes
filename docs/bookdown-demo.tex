@@ -34,6 +34,46 @@
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
@@ -91,7 +131,7 @@
 
 \title{CM 2110 Calculus and Statistical Distributions}
 \author{Dr.~Priyanga D. Talagala}
-\date{2020-09-04}
+\date{2020-09-18}
 
 \begin{document}
 \maketitle
@@ -3833,6 +3873,363 @@ Suppose you decide to test this result by taking a survey of your own and identi
 
 \hypertarget{contingency-tables}{%
 \chapter{Contingency Tables}\label{contingency-tables}}
+
+\begin{itemize}
+\item
+  In Chapters 2 (Estimations) and 3 (Hypothesis Testing) we briefly discussed about the chi-square distribution in the construction of confidence intervals for and the testing of hypotheses concerning a population variance.
+\item
+  Chi-square distribution, which is one of the most widely used distributions in statistical applications, has many other uses.
+\item
+  The chi-square distribution is the most frequently employed statistical technique for the analysis of categorical data.
+\end{itemize}
+
+\hypertarget{types-of-chi-square-tests}{%
+\section{Types of chi-square tests}\label{types-of-chi-square-tests}}
+
+Chi square test has two cases:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  Chi-square goodness of fit test
+\item
+  Chi-square test of independence. This is also known as \emph{contingency analysis}.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  In this chapter our focus is on \emph{chi-square test of independence}
+\end{itemize}
+
+\hypertarget{contingency-analysis-chi-square-test-of-independence}{%
+\section{Contingency analysis: Chi-square test of independence}\label{contingency-analysis-chi-square-test-of-independence}}
+
+\begin{itemize}
+\item
+  \textbf{Chi-square test of independence} is a statistical test used to analyse the frequencies of two variables with multiple categories to determine whether the two variables are independent.
+\item
+  For example, a software developer might want to determine whether the user ranking of user-friendliness (\emph{Very Satisfied = 5, Satisfied = 4, Neutral = 3, Dissatisfied = 2, Very Dissatisfied = 1}) of the new software product is independent of the user's education level.
+\end{itemize}
+
+\begin{itemize}
+\item
+  A market researcher might want to determine whether the type of online communication platforms (eg:Slack, Zula, ezTalks, HipChat, Yammar) preferred by a user is independent of the user's age.
+\item
+  A software project manager might want to know whether customer overall satisfaction (\emph{Very Satisfied = 5, Satisfied = 4, Neutral = 3, Dissatisfied = 2, Very Dissatisfied = 1} is independent of the experience of the developer (less than 1 year, 1-5 years, more than 5 years)
+\end{itemize}
+
+\emph{Example}
+
+A software company is planning to develop a new taxi booking and trip scheduling platform that facilitates a real time connection between the commuter and the taxi driver, enabling mutual engagement for the receipt and delivery of a service. Prior to development, the management wants to identify the strength and weakness of the existing services as they may be their potential competitors. Suppose the project manager is interested in determining whether the type of taxi service preferred by a commuter is independent of the commuter's age.
+
+On a questionnaire, the following two questions might be used to measure these aspects.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  What is your most preferred taxi booking and trip scheduling platform?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  Uber
+\item
+  PickMe
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Select your age category?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \(< 30\) years
+\item
+  \(30-50\) years
+\item
+  \(>50\) years
+\end{enumerate}
+
+\hypertarget{contingency-table}{%
+\subsection{Contingency table}\label{contingency-table}}
+
+\begin{itemize}
+\item
+  Let the number of responses received were 100.
+\item
+  Now the analyst can \emph{tally the frequencies of responses} to these two questions into a two-way table called \textbf{contingency table}
+\end{itemize}
+
+\emph{Contingency table}
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+& Most preferred taxi booking and trip scheduling platform & &\tabularnewline
+\midrule
+\endhead
+Age & Uber & PickMe & Total\tabularnewline
+\(< 30\) years & 32 & 25 & 57\tabularnewline
+\(30-50\) years & 18 & 5 & 23\tabularnewline
+\(> 50\) years & 17 & 3 & 20\tabularnewline
+Total & 67 & 33 & 100\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  Because the chi-square test of independence uses a contingency table, this test is sometimes referred to as \textbf{contingency analysis}
+\end{itemize}
+
+\emph{Contingency table}
+
+\begin{longtable}[]{@{}ccccc@{}}
+\toprule
+& Variable 2 & & &\tabularnewline
+\midrule
+\endhead
+Variable 1 & F & G & H & Total\tabularnewline
+A & & & \(o_{13}\) & \(n_A\)\tabularnewline
+B & & & & \(n_B\)\tabularnewline
+C & & & & \(n_C\)\tabularnewline
+D & & & & \(n_D\)\tabularnewline
+E & & & & \(n_E\)\tabularnewline
+Total & \(n_F\) & \(n_G\) & \(n_H\) &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\item
+  The \textbf{observed frequency} for for each cell is denoted as \(o_{ij},\) where \(i\) is the row and \(j\) is the column.
+\item
+  The \textbf{expected frequencies} are denoted in a similar manner.
+\item
+  If two variables are independent, they are not related.
+\item
+  In a sense, the chi-square test of independence is a test of whether the variables are related.
+\item
+  The null hypothesis for a chi-square test of independence is that the two variables are independent (not related).
+\item
+  If the null hypothesis is rejected, the conclusion is that the two variables are not independent and are related.
+\item
+  In general, if the two variables are independent, the expected frequency values of each call can be determined by
+\end{itemize}
+
+\[e_{ij} = \frac{n_in_j}{N}\]
+
+where:
+
+\begin{itemize}
+\tightlist
+\item
+  \(i =\) the row
+\item
+  \(j =\) the column
+\item
+  \(n_i =\) the total of row \(i\)
+\item
+  \(n_j =\) the total of column \(j\)
+\item
+  \(N =\) the total of all frequencies
+\end{itemize}
+
+\begin{itemize}
+\tightlist
+\item
+  Using these expected frequency values and the observed frequency value, we can compute a chi-square test of independence to determine whether the variables are independent.
+\end{itemize}
+
+\hypertarget{chi-square-test-of-independence}{%
+\subsection{Chi-square test of independence}\label{chi-square-test-of-independence}}
+
+\[\chi^2 =\sum_r\sum_c \frac{(f_0-f_e)^2}{f_e}\]
+
+where
+- \(df = (r-1)(c-1)\)
+- \(r=\) number of rows
+- \(c=\) number few columns
+- \(\sum_r=\) sum over row
+- \(\sum_c=\) sum over column
+
+\begin{itemize}
+\item
+  The \textbf{null hypothesis} for a chi-square test of independence is that \emph{the two variables are independent}.
+\item
+  The \textbf{alternative hypothesis} for a chi-square test of independence is that \emph{the two variables are not independent}
+\item
+  This test is one one-tailed. 
+\end{itemize}
+
+\begin{itemize}
+\tightlist
+\item
+  The degrees of freedom are \((r-1)(c-1)\)
+\end{itemize}
+
+\emph{Example contd\ldots{}}
+
+Suppose the project manager is interested in determining whether the type of taxi service preferred by a commuter is independent of the commuter's age. He conducted a small survey to determine. He received 100 responses. The resulting \(3\times2\) contingency table is
+given below. Using \(\alpha =0.05,\) perform the chi-square test of independence to determine whether preferred mode is independent of age.
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+& Most preferred taxi booking and trip scheduling platform & &\tabularnewline
+\midrule
+\endhead
+Age & Uber & PickMe & Total\tabularnewline
+\(< 30\) years & 32 & 25 & 57\tabularnewline
+\(30-50\) years & 18 & 5 & 23\tabularnewline
+\(> 50\) years & 17 & 3 & 20\tabularnewline
+Total & 67 & 33 & 100\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{chi-square-test-of-independence-with-r}{%
+\subsection{Chi-square test of independence with R}\label{chi-square-test-of-independence-with-r}}
+
+\begin{itemize}
+\tightlist
+\item
+  Let us now see how to perform the Chi-square test of independence using R programming language
+\end{itemize}
+
+\begin{itemize}
+\tightlist
+\item
+  Following is the observed table.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{observed_table <-}\StringTok{ }\KeywordTok{matrix}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{32}\NormalTok{, }\DecValTok{25}\NormalTok{, }\DecValTok{18}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{17}\NormalTok{, }\DecValTok{3}\NormalTok{), }\DataTypeTok{nrow =} \DecValTok{3}\NormalTok{, }\DataTypeTok{ncol =} \DecValTok{2}\NormalTok{, }\DataTypeTok{byrow =}\NormalTok{ T)}
+\KeywordTok{rownames}\NormalTok{(observed_table) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{'<30'}\NormalTok{, }\StringTok{'30-50'}\NormalTok{, }\StringTok{'>50'}\NormalTok{)}
+\KeywordTok{colnames}\NormalTok{(observed_table) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{'Uber'}\NormalTok{, }\StringTok{'PickMe'}\NormalTok{)}
+\NormalTok{observed_table}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       Uber PickMe
+## <30     32     25
+## 30-50   18      5
+## >50     17      3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{addmargins}\NormalTok{(observed_table)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       Uber PickMe Sum
+## <30     32     25  57
+## 30-50   18      5  23
+## >50     17      3  20
+## Sum     67     33 100
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  In order to perform the test, we need to apply the \texttt{chisq.test()} function to the observed table.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{output <-}\StringTok{ }\KeywordTok{chisq.test}\NormalTok{(observed_table)}
+\NormalTok{output}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  observed_table
+## X-squared = 7.2902, df = 2, p-value = 0.02612
+\end{verbatim}
+
+\begin{itemize}
+\item
+  From the above result, we can see that p-value is less than the significance level (0.05). Therefore, we can reject the null hypothesis and conclude that the two variables (age \& taxi preference) are not independent
+\item
+  If we want to see the expected table, we can also do that.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{output}\OperatorTok{$}\NormalTok{expected}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        Uber PickMe
+## <30   38.19  18.81
+## 30-50 15.41   7.59
+## >50   13.40   6.60
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Visualizing data of Contingency Table with ggplot2 (Side By Side Bar Graph)
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyverse)}
+
+\NormalTok{table2 <-}\StringTok{ }\NormalTok{observed_table }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{as.data.frame}\NormalTok{() }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{rownames_to_column}\NormalTok{() }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{gather}\NormalTok{(Column, Value, }\OperatorTok{-}\NormalTok{rowname)}
+
+\KeywordTok{colnames}\NormalTok{(table2) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{'Age'}\NormalTok{, }\StringTok{'Mode'}\NormalTok{, }\StringTok{"Count"}\NormalTok{)}
+\NormalTok{table2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##     Age   Mode Count
+## 1   <30   Uber    32
+## 2 30-50   Uber    18
+## 3   >50   Uber    17
+## 4   <30 PickMe    25
+## 5 30-50 PickMe     5
+## 6   >50 PickMe     3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ table2, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Age, }\DataTypeTok{y =}\NormalTok{ Count, }\DataTypeTok{fill =}\NormalTok{ Mode)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{position =} \StringTok{"dodge"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_fill_grey}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{figure/unnamed-chunk-10-1} \end{center}
+
+\hypertarget{references-1}{%
+\section*{References}\label{references-1}}
+\addcontentsline{toc}{section}{References}
+
+\begin{itemize}
+\tightlist
+\item
+  Daniel, W. W., \& Cross, C. L. (2018). Biostatistics: a foundation for analysis in the health sciences. Wiley.
+\end{itemize}
 
 \hypertarget{design-of-experiments}{%
 \chapter{Design of Experiments}\label{design-of-experiments}}

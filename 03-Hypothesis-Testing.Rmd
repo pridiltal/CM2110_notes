@@ -446,7 +446,7 @@ $$\bar{x}=1215\qquad n=113 \qquad \sigma =100 \qquad \alpha =0.10$$
 
 b. Use the $p-$ value to reach a statistical conclusion.
 
-<!-- Black page 320   mu t  test-->
+<!-- Black page 320   mu t  test two tail-->
 4. A company build fully automated harvesters. For a harvester to be properly balanced when operating , a 25-kg plate is installed  on its side. The machine that produces these plates is set to yield plates that average 25-kg. The distribution of plates produced from the machine is normal. However, the supervisor is worried that the machine us out of adjustment and is producing plates that do not average 25 kg. To test this concern, he randomly selects 20 of the plates produced the day before and weighs them. The following data shows the computed sample mean and sample standard deviation
 $$\bar{x}=25.51\qquad n=20 \qquad s =2.1933 \qquad \alpha =0.05$$
 
