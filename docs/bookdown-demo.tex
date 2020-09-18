@@ -3874,6 +3874,8 @@ Suppose you decide to test this result by taking a survey of your own and identi
 \hypertarget{contingency-tables}{%
 \chapter{Contingency Tables}\label{contingency-tables}}
 
+\pagenumbering{arabic}
+
 \begin{itemize}
 \item
   In Chapters 2 (Estimations) and 3 (Hypothesis Testing) we briefly discussed about the chi-square distribution in the construction of confidence intervals for and the testing of hypotheses concerning a population variance.
@@ -4077,6 +4079,17 @@ where
   The degrees of freedom are \((r-1)(c-1)\)
 \end{itemize}
 
+\textbf{Caution}
+
+\begin{itemize}
+\item
+  In chi-square test of independence, small expected frequencies can lead to inordinately large chi-square values.
+\item
+  Therefore, contingency tables should not be used with expected cell values of less than 5.
+\item
+  One way to avoid small expected values is to combine columns or rows whenever possible and whenever doing so make sense.
+\end{itemize}
+
 \emph{Example contd\ldots{}}
 
 Suppose the project manager is interested in determining whether the type of taxi service preferred by a commuter is independent of the commuter's age. He conducted a small survey to determine. He received 100 responses. The resulting \(3\times2\) contingency table is
@@ -4096,7 +4109,7 @@ Total & 67 & 33 & 100\tabularnewline
 \end{longtable}
 
 \hypertarget{chi-square-test-of-independence-with-r}{%
-\subsection{Chi-square test of independence with R}\label{chi-square-test-of-independence-with-r}}
+\section{Chi-square test of independence with R}\label{chi-square-test-of-independence-with-r}}
 
 \begin{itemize}
 \tightlist
@@ -4222,26 +4235,443 @@ Total & 67 & 33 & 100\tabularnewline
 \begin{center}\includegraphics{figure/unnamed-chunk-10-1} \end{center}
 
 \hypertarget{references-1}{%
-\section*{References}\label{references-1}}
-\addcontentsline{toc}{section}{References}
+\subsection*{References}\label{references-1}}
+\addcontentsline{toc}{subsection}{References}
 
 \begin{itemize}
-\tightlist
+\item
+  Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., \& Harris, M. (2007). \emph{Australasian business statistics}. John Wiley \& Sons.
 \item
   Daniel, W. W., \& Cross, C. L. (2018). Biostatistics: a foundation for analysis in the health sciences. Wiley.
 \end{itemize}
 
+\newpage
+
+\textbf{Critical values from the chi-square distribution}
+
+\begin{center}\includegraphics[width=1\linewidth]{figure/chisquaretable} \end{center}
+
+\newpage
+
+\hypertarget{tutorial-3}{%
+\section*{Tutorial}\label{tutorial-3}}
+\addcontentsline{toc}{section}{Tutorial}
+
+\pagenumbering{arabic}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A company maintain an online food ordering service. Suppose market researcher wants to know whether the type of beverage ordered with lunch is independent of the food delivery zone (area). A random sample of 309 lunch customers is selected, resulting in the following contingency table of observed values. Use \(\alpha = 0.01\) to determine whether the two variables are independent.
+\end{enumerate}
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+& Preferred beverage & &\tabularnewline
+\midrule
+\endhead
+Zone & Fresh Fruit Juice & Soft drink & Other\tabularnewline
+Zone 1 & 26 & 95 & 18\tabularnewline
+Zone 2 & 41 & 40 & 20\tabularnewline
+Zone 3 & 24 & 13 & 32\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  A computer manufacturer is considering sourcing supplies of an electrical component from four different manufacturers. The director of purchasing asked for samples of 95 from each manufacturer. The numbers of acceptable and unacceptable components from each manufacturer are shown in the following table. Determine whether the quality of the component depends on the type of manufacturer. Let \(\alpha =0.05\)
+\end{enumerate}
+
+\begin{longtable}[]{@{}cccccc@{}}
+\toprule
+& Manufacturer & & & &\tabularnewline
+\midrule
+\endhead
+Quality & A & B & C & D & Total\tabularnewline
+Unacceptable & 12 & 8 & 5 & 11 & 36\tabularnewline
+Acceptable & 83 & 87 & 90 & 84 & 344\tabularnewline
+Total & 95 & 95 & 95 & 95 & 380\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  An apparel \& clothing market research company conducted a survey in 2019 on social media usage of university students. The frequencies for most frequently used social media platform by male and female students (in thousands) are presented in the following contingency table. Using \(\alpha =0.01\), test the hypothesis that social media preference is independent of gender.
+\end{enumerate}
+
+\begin{longtable}[]{@{}cccccc@{}}
+\toprule
+& Social media platform & & & &\tabularnewline
+\midrule
+\endhead
+Gender & Facebook & Instagram & Twitter & Total &\tabularnewline
+Male & 687 & 327 & 82 & 1096 &\tabularnewline
+Female & 658 & 304 & 101 & 1063 &\tabularnewline
+Total & 1345 & 631 & 183 & 2159 &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Use R to make a decision for Question 1
+\item
+  Use R to make a decision for Question 2
+\item
+  Use R to make a decision for Question 3
+\end{enumerate}
+
 \hypertarget{design-of-experiments}{%
 \chapter{Design of Experiments}\label{design-of-experiments}}
+
+\pagenumbering{arabic}
 
 \hypertarget{introduction-to-experimental-design}{%
 \section{Introduction to experimental design}\label{introduction-to-experimental-design}}
 
-\hypertarget{basic-principles-of-experimental-design}{%
-\section{Basic principles of experimental design}\label{basic-principles-of-experimental-design}}
+\begin{itemize}
+\item
+  An experimental design is a plan and a structure to test hypothesis in which the researcher either controls or manipulates one or more variables.
+\item
+  It contains independent and dependent variables.
+\item
+  In an experimental design, an independent variable may e either a treatment variable or a classification variable.
+\item
+  A \emph{treatment variable} is a variable the experimenter controls or modifies in the experiment.
+\item
+  A \emph{classification variable} is some characteristic of the experimental subjects that was present prior to the experiment and is not a result of the experimenter's manipulations or control.
+\item
+  Independent variables are sometimes referred to as \emph{factors}.
+\item
+  Each \emph{independent variable} has two or more \emph{levels}, or classifications.
+\item
+  \emph{Levels}, or classifications, of independent variables are the subcategories of the independent variables used by the researcher in the experimental design.
+\item
+  The other type of variable in an experimental design is a \emph{dependent variable}.
+\item
+  A dependent variable is the repose to the different levels of the independent variables.
+\item
+  It is the measurement taken under the conditions of the experimental design that reflect the effects of the independent variables(s).
+\end{itemize}
 
-\hypertarget{completely-randomized-design}{%
-\section{Completely randomized design}\label{completely-randomized-design}}
+\hypertarget{analysis-of-variance-anova}{%
+\section{Analysis of Variance (ANOVA)}\label{analysis-of-variance-anova}}
+
+\begin{itemize}
+\item
+  Experimental design in this chapter are analysed statistically by a group of techniques referred to as \textbf{analysis of variance} or (\textbf{ANOVA})
+\item
+  The analysis of variance concepts begin with the notion that individual items being studied, such as employees, machine-produced products, district offices, hospitals ad so on, \textbf{are not all the same}.
+\end{itemize}
+
+\hypertarget{the-completely-randomized-design-one-way-anova}{%
+\section{The completely randomized design (one-way ANOVA)}\label{the-completely-randomized-design-one-way-anova}}
+
+\begin{itemize}
+\item
+  One of the simplest experimental designs is the completely randomized design.
+\item
+  In the \emph{completely randomized design}, subjects are assigned randomly to treatments.
+\item
+  The complete randomized design contains only one independent variable, with two or more treatment levels, or classifications.
+\item
+  If only two treatment levels, or classifications, of the independent variable are present, the design is the same one used to test the difference in means of two independent populations presented in Chapter 3.
+\item
+  In this section we will focus on completely randomized designs with three or more classification levels.
+\item
+  Analysis of variance, or ANOVA will be used to analyse the data that result from the treatments.
+\end{itemize}
+
+\emph{Example}
+
+As an example of a completely randomized design, suppose a researcher decided to analyse the response time of four autonomous mobile robots.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  What is the independent variable in this design? Autonomous mobile robot
+\end{enumerate}
+
+\emph{Now the four autonomous mobile robots are the levels of treatment, or classification of the independent variable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  What is the dependent variable in this design? Response time
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Is there a \textbf{significant} difference in the mean response time of 24 tasks carried out by the four autonomous mobile robots?
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyverse)}
+
+\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}
+  \DataTypeTok{Robot =} \KeywordTok{as.factor}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{5}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{8}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{7}\NormalTok{), }\KeywordTok{rep}\NormalTok{(}\DecValTok{4}\NormalTok{,}\DecValTok{4}\NormalTok{) )), }
+  \DataTypeTok{Reponse_time =} \KeywordTok{c}\NormalTok{(}\FloatTok{6.33}\NormalTok{, }\FloatTok{6.26}\NormalTok{, }\FloatTok{6.31}\NormalTok{, }\FloatTok{6.29}\NormalTok{, }\FloatTok{6.40}\NormalTok{, }\FloatTok{6.26}\NormalTok{,}
+                   \FloatTok{6.36}\NormalTok{, }\FloatTok{6.23}\NormalTok{, }\FloatTok{6.27}\NormalTok{, }\FloatTok{6.19}\NormalTok{, }\FloatTok{6.50}\NormalTok{, }\FloatTok{6.19}\NormalTok{,}
+                   \FloatTok{6.22}\NormalTok{, }\FloatTok{6.44}\NormalTok{, }\FloatTok{6.38}\NormalTok{, }\FloatTok{6.58}\NormalTok{, }\FloatTok{6.54}\NormalTok{, }\FloatTok{6.56}\NormalTok{,}
+                   \FloatTok{6.34}\NormalTok{, }\FloatTok{6.58}\NormalTok{, }\FloatTok{6.29}\NormalTok{, }\FloatTok{6.23}\NormalTok{, }\FloatTok{6.19}\NormalTok{, }\FloatTok{6.21}\NormalTok{ ) )}
+
+\NormalTok{data}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Robot Reponse_time
+## 1      1         6.33
+## 2      1         6.26
+## 3      1         6.31
+## 4      1         6.29
+## 5      1         6.40
+## 6      2         6.26
+## 7      2         6.36
+## 8      2         6.23
+## 9      2         6.27
+## 10     2         6.19
+## 11     2         6.50
+## 12     2         6.19
+## 13     2         6.22
+## 14     3         6.44
+## 15     3         6.38
+## 16     3         6.58
+## 17     3         6.54
+## 18     3         6.56
+## 19     3         6.34
+## 20     3         6.58
+## 21     4         6.29
+## 22     4         6.23
+## 23     4         6.19
+## 24     4         6.21
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data }\OperatorTok{%>%}
+\StringTok{    }\KeywordTok{group_by}\NormalTok{(Robot) }\OperatorTok{%>%}
+\StringTok{    }\KeywordTok{summarise}\NormalTok{(}
+        \DataTypeTok{count_poison =} \KeywordTok{n}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 4 x 2
+##   Robot count_poison
+##   <fct>        <int>
+## 1 1                5
+## 2 2                8
+## 3 3                7
+## 4 4                4
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Compute the mean and standard deviation for each level of the treatment
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# You can check the level of the robots with the}
+\CommentTok{# following code. You should see three character}
+\CommentTok{# values because we converted it to factor variable}
+
+\KeywordTok{levels}\NormalTok{(data}\OperatorTok{$}\NormalTok{Robot)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "1" "2" "3" "4"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data }\OperatorTok{%>%}
+\StringTok{    }\KeywordTok{group_by}\NormalTok{(Robot) }\OperatorTok{%>%}
+\StringTok{    }\KeywordTok{summarise}\NormalTok{(}
+        \DataTypeTok{count_robots =} \KeywordTok{n}\NormalTok{(),}
+        \DataTypeTok{mean_time =} \KeywordTok{mean}\NormalTok{(Reponse_time, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{),}
+        \DataTypeTok{sd_time =} \KeywordTok{sd}\NormalTok{(Reponse_time, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{    )}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 4 x 4
+##   Robot count_robots mean_time sd_time
+##   <fct>        <int>     <dbl>   <dbl>
+## 1 1                5      6.32  0.0526
+## 2 2                8      6.28  0.105 
+## 3 3                7      6.49  0.101 
+## 4 4                4      6.23  0.0432
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Graphically check if there is a difference between the distribution.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Robot , }\DataTypeTok{y =}\NormalTok{ Reponse_time, }\DataTypeTok{fill =}\NormalTok{ Robot)) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}
+\StringTok{    }\KeywordTok{geom_point}\NormalTok{()}
+
+\NormalTok{overall_mean <-}\StringTok{  }\KeywordTok{mean}\NormalTok{(data}\OperatorTok{$}\NormalTok{Reponse_time)}
+
+\NormalTok{p }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_hline}\NormalTok{(}\DataTypeTok{yintercept =}\NormalTok{ overall_mean)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{figure/unnamed-chunk-14-1} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Use one-way ANOVA test to determine whether there is a significant difference in the mean response time of the four autonomous mobile robots .
+\end{enumerate}
+
+\begin{itemize}
+\item
+  The basic syntax for an ANOVA test is
+
+  aov(formula, data)
+  Arguments:\\
+  - formula: The equation you want to estimate
+  - data: The dataset used
+\item
+  The syntax of the formula is:
+\end{itemize}
+
+\texttt{y\ \textasciitilde{}\ X1+\ X2+...+Xn}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{X1+\ X2+...+Xn} refers to the independent variables
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  Write the hypothesis to be tested
+\item
+  Use the p-value to reach a statistical conclusion
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Run the ANOVA test }
+\NormalTok{anova_one_way <-}\StringTok{ }\KeywordTok{aov}\NormalTok{(Reponse_time}\OperatorTok{~}\NormalTok{Robot, }\DataTypeTok{data =}\NormalTok{ data)}
+
+\CommentTok{# Print the summary of the test}
+\KeywordTok{summary}\NormalTok{(anova_one_way)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##             Df Sum Sq Mean Sq F value   Pr(>F)    
+## Robot        3 0.2366 0.07886   10.18 0.000279 ***
+## Residuals   20 0.1549 0.00775                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{itemize}
+\item
+  The p-value is lower than the usual threshold of 0.05.
+\item
+  You are confident to say there is a statistical difference between the groups, indicated by the \(*\).
+\end{itemize}
+
+\hypertarget{pairwise-comparison}{%
+\section{Pairwise comparison}\label{pairwise-comparison}}
+
+\begin{itemize}
+\item
+  The one-way ANOVA test does not inform which robot (group) has a different mean.
+\item
+  Instead, we can perform a Tukey test with the function \texttt{TukeyHSD()}.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{comparison <-}\StringTok{ }\KeywordTok{TukeyHSD}\NormalTok{(anova_one_way)}
+
+\CommentTok{#There are print and plot methods for class "TukeyHSD"}
+\KeywordTok{print}\NormalTok{(comparison)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = Reponse_time ~ Robot, data = data)
+## 
+## $Robot
+##           diff         lwr         upr     p adj
+## 2-1 -0.0405000 -0.18093243  0.09993243 0.8502854
+## 3-1  0.1705714  0.02633255  0.31481031 0.0169205
+## 4-1 -0.0880000 -0.25324639  0.07724639 0.4613461
+## 3-2  0.2110714  0.08358107  0.33856179 0.0008519
+## 4-2 -0.0475000 -0.19834863  0.10334863 0.8144408
+## 4-3 -0.2585714 -0.41296992 -0.10417294 0.0007541
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(comparison)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{figure/unnamed-chunk-16-1} \end{center}
+
+\textbf{Multiple comparison}
+
+\begin{itemize}
+\tightlist
+\item
+  Multiple comparisons are to be used only when the analysis of variance yields an overall significant difference in the treatment means.
+\end{itemize}
+
+\textbf{Tukey's test}
+
+\begin{itemize}
+\tightlist
+\item
+  In analysis of variance, this technique is used for pairwise a posterior multiple comparisons to determine if there is a significant differences between the means of any pair of treatment levels in an experimental design.
+\end{itemize}
+
+\hypertarget{references-2}{%
+\subsection*{References}\label{references-2}}
+\addcontentsline{toc}{subsection}{References}
+
+Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., \& Harris, M. (2007). \emph{Australasian business statistics}. John Wiley \& Sons.
 
 Casella, G., \& Berger, R. L. (2002). Statistical inference (Vol. 2, pp.~337-472).Pacific Grove, CA: Duxbury
 

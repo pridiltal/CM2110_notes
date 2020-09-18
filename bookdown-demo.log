@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.14)  18 SEP 2020 05:04
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.14)  18 SEP 2020 09:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1478,73 +1478,116 @@ Underfull \hbox (badness 10000) in alignment at lines 3841--3846
 
 [3] [4]
 Chapter 4.
-[5
+[1
 
 ]
-Overfull \hbox (55.96489pt too wide) in alignment at lines 3976--3980
+Overfull \hbox (55.96489pt too wide) in alignment at lines 3978--3982
 [] [] [] []
  []
 
 
-Overfull \hbox (55.96489pt too wide) in alignment at lines 3980--3987
+Overfull \hbox (55.96489pt too wide) in alignment at lines 3982--3989
 [] [] [] []
  []
 
-[6]
-Underfull \hbox (badness 10000) in alignment at lines 3997--4001
+[2]
+Underfull \hbox (badness 10000) in alignment at lines 3999--4003
 [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 4001--4010
+Underfull \hbox (badness 10000) in alignment at lines 4003--4012
 [] [] [] [] []
  []
 
-[7]
-Overfull \hbox (55.96489pt too wide) in alignment at lines 4085--4089
+[3]
+Overfull \hbox (55.96489pt too wide) in alignment at lines 4098--4102
 [] [] [] []
  []
 
 
-Overfull \hbox (55.96489pt too wide) in alignment at lines 4089--4096
+Overfull \hbox (55.96489pt too wide) in alignment at lines 4102--4109
 [] [] [] []
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[8]
+[4]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 4115.
-[9]
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 4128.
+[5]
 File: figure/unnamed-chunk-10-1.png Graphic file (type bmp)
 <figure/unnamed-chunk-10-1.png>
 
+Underfull \vbox (badness 2384) has occurred while \output is active []
+
+[6] [7]
+File: figure/chisquaretable.jpg Graphic file (type bmp)
+<figure/chisquaretable.jpg>
+[8]
+Underfull \hbox (badness 10000) in alignment at lines 4269--4273
+[] [] [] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 4273--4279
+[] [] [] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 4289--4293
+[] [] [] [] [] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 4293--4299
+[] [] [] [] [] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 4309--4313
+[] [] [] [] [] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 4313--4319
+[] [] [] [] [] []
+ []
+
+
+Overfull \vbox (9.41577pt too high) has occurred while \output is active []
+
+[1] [2]
+Chapter 5.
+[1
+
+] [2] [3]
+File: figure/unnamed-chunk-14-1.png Graphic file (type bmp)
+<figure/unnamed-chunk-14-1.png>
+[4] [5]
+File: figure/unnamed-chunk-16-1.png Graphic file (type bmp)
+<figure/unnamed-chunk-16-1.png>
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[10] [11] [12
-
-]
-Chapter 5.
+[6]
 No file bookdown-demo.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4252.
-[13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4252.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4682.
+[7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4682.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4252.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4252.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4682.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4682.
 
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
-(rerunfilecheck)             Checksum: 3CF16BF234E69771F2F13F5D36395F0E;8027.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4252.
+(rerunfilecheck)             Checksum: EF25AE81E6C9698ADE51CD6B0D1A8C8B;8493.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4682.
  ) 
 Here is how much of TeX's memory you used:
- 20764 strings out of 481674
- 377647 string characters out of 5929300
- 827795 words of memory out of 5000000
- 37520 multiletter control sequences out of 15000+600000
- 541595 words of font info for 89 fonts, out of 8000000 for 9000
+ 20799 strings out of 481674
+ 378462 string characters out of 5929300
+ 828707 words of memory out of 5000000
+ 37551 multiletter control sequences out of 15000+600000
+ 541603 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  58i,12n,118p,995b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (106 pages).
+Output written on bookdown-demo.pdf (114 pages).

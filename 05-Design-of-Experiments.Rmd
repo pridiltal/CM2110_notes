@@ -1,7 +1,181 @@
 # Design of Experiments
+\pagenumbering{arabic}
 
+<!-- Black's page 412-->
 ## Introduction to experimental design
 
-## Basic principles of experimental design
+- An experimental design is a plan and a structure to test hypothesis in which the researcher either controls or manipulates one or more variables.
 
-## Completely randomized design
+- It contains independent and dependent variables.
+
+- In an experimental design, an independent variable may e either a treatment variable or a classification variable.
+
+- A *treatment variable*  is a variable the experimenter controls or modifies in the experiment. 
+
+- A *classification variable* is some characteristic of the experimental subjects that was present prior to the experiment and is not a result of the experimenter's manipulations or control.
+
+- Independent variables are sometimes referred to as *factors*.
+
+- Each *independent variable* has two or more *levels*, or classifications.
+
+- *Levels*, or classifications, of independent variables are the subcategories of the independent variables used by the researcher in the experimental design.
+
+- The other type of variable in an experimental design is a *dependent variable*.
+
+- A dependent variable is the repose to the different levels of the independent variables. 
+
+- It is the measurement taken under the conditions of the experimental design that reflect the effects of the independent variables(s). 
+
+## Analysis of Variance (ANOVA)
+
+- Experimental design in this chapter are analysed statistically by a group of techniques referred to as **analysis of variance** or (**ANOVA**)
+
+- The analysis of variance concepts begin with the notion that individual items being studied, such as employees, machine-produced products, district offices, hospitals ad so on, **are not all the same**.
+
+## The completely randomized design (one-way ANOVA)
+
+- One of the simplest experimental designs is the completely randomized design.
+
+- In the *completely randomized design*, subjects are assigned randomly to treatments.
+
+- The complete randomized design contains only one independent variable, with two or more treatment levels, or classifications.
+
+- If only two treatment levels, or classifications, of the independent variable are present, the design is the same one used to test the difference in means of two independent populations presented in Chapter 3. 
+
+- In this section we will focus on completely randomized designs with three or more classification levels. 
+
+- Analysis of variance, or ANOVA will be used to analyse the data that result from the treatments.
+
+<!--https://www.guru99.com/r-anova-tutorial.html-->
+*Example*
+
+<!-- Black's page 415. I changed the plot, Autonomous robots are intelligent machines capable of performing tasks in the world by themselves, without explicit human control. Examples range from autonomous helicopters to Roomba, the robot vacuum cleaner.-->
+
+As an example of a completely randomized design, suppose a researcher decided to analyse the response time of four autonomous mobile robots. 
+
+1. What is the independent variable in this design?  Autonomous mobile robot
+
+*Now the four autonomous mobile robots are the levels of treatment, or classification of the independent variable*
+
+2. What is the dependent variable in this design?  Response time
+
+<!-- The response time is defined as the time between the occurrence of an event, its detection by a robot, its recognition, the decision making, and the response-->
+
+3. Is there a **significant** difference in the mean response time of 24 tasks carried out by the four autonomous mobile robots?
+
+```{r echo = TRUE}
+library(tidyverse)
+
+data <- data.frame(
+  Robot = as.factor(c(rep(1,5), rep(2,8), rep(3,7), rep(4,4) )), 
+  Reponse_time = c(6.33, 6.26, 6.31, 6.29, 6.40, 6.26,
+                   6.36, 6.23, 6.27, 6.19, 6.50, 6.19,
+                   6.22, 6.44, 6.38, 6.58, 6.54, 6.56,
+                   6.34, 6.58, 6.29, 6.23, 6.19, 6.21 ) )
+
+data
+
+data %>%
+	group_by(Robot) %>%
+	summarise(
+		count_poison = n())
+```
+
+4. Compute the mean and standard deviation for each level of the treatment
+
+```{r echo =TRUE}
+
+# You can check the level of the robots with the
+# following code. You should see three character
+# values because we converted it to factor variable
+
+levels(data$Robot)
+
+data %>%
+	group_by(Robot) %>%
+	summarise(
+		count_robots = n(),
+		mean_time = mean(Reponse_time, na.rm = TRUE),
+		sd_time = sd(Reponse_time, na.rm = TRUE)
+	)
+```
+
+5. Graphically check if there is a difference between the distribution. 
+
+```{r echo = TRUE}
+p <- ggplot(data, aes(x = Robot , y = Reponse_time, fill = Robot)) +
+    geom_boxplot() +
+    geom_point()
+
+overall_mean <-  mean(data$Reponse_time)
+
+p + geom_hline(yintercept = overall_mean)
+  
+```
+
+6.  Use one-way ANOVA test to determine whether there is a significant difference in  the mean response time of the four autonomous mobile robots . 
+
+- The basic syntax for an ANOVA test is
+
+     aov(formula, data)
+     Arguments:			
+         - formula: The equation you want to estimate
+         - data: The dataset used
+         
+- The syntax of the formula is:
+
+```y ~ X1+ X2+...+Xn``` 
+
+- ```X1+ X2+...+Xn``` refers to the independent variables
+
+a) Write the hypothesis to be tested
+
+b) Use the p-value to reach a statistical conclusion
+
+```{r  echo = TRUE}
+# Run the ANOVA test 
+anova_one_way <- aov(Reponse_time~Robot, data = data)
+
+# Print the summary of the test
+summary(anova_one_way)
+```
+
+- The p-value is lower than the usual threshold of 0.05.
+
+- You are confident to say there is a statistical difference between the groups, indicated by the $*$.
+
+
+## Pairwise comparison
+
+-  The one-way ANOVA test does not inform which robot (group) has a different mean. 
+
+- Instead, we can perform a Tukey test with the function `TukeyHSD()`.
+
+<!--As far as I can tell, the TukeyHSD function uses the Tukey-Kramer procedure. The code for the function can be found on GitHub. See also the example on RPubs.
+
+https://stats.stackexchange.com/questions/437263/does-r-use-tukey-or-tukey-kramer-test-corrected-for-unequal-sample-size-and-does
+
+https://rpubs.com/aaronsc32/post-hoc-analysis-tukey
+
+black's page 426, 430-->
+
+
+```{r echo = TRUE}
+
+comparison <- TukeyHSD(anova_one_way)
+
+#There are print and plot methods for class "TukeyHSD"
+print(comparison)
+plot(comparison)
+```
+
+
+**Multiple comparison**
+
+- Multiple comparisons are to be used only when the analysis of variance yields an overall significant difference in the treatment means.
+
+**Tukey's test**
+
+- In analysis of variance, this technique is used for pairwise a posterior multiple comparisons to determine if there is a significant differences between the means of any pair of treatment levels in an experimental design.
+
+### References {-}

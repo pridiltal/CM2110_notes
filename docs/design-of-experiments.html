@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="contingency-tables.html"/>
-<link rel="next" href="references-2.html"/>
+<link rel="next" href="references-3.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -232,16 +232,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="contingency-tables.html"><a href="contingency-tables.html#contingency-analysis-chi-square-test-of-independence"><i class="fa fa-check"></i><b>4.2</b> Contingency analysis: Chi-square test of independence</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="contingency-tables.html"><a href="contingency-tables.html#contingency-table"><i class="fa fa-check"></i><b>4.2.1</b> Contingency table</a></li>
 <li class="chapter" data-level="4.2.2" data-path="contingency-tables.html"><a href="contingency-tables.html#chi-square-test-of-independence"><i class="fa fa-check"></i><b>4.2.2</b> Chi-square test of independence</a></li>
-<li class="chapter" data-level="4.2.3" data-path="contingency-tables.html"><a href="contingency-tables.html#chi-square-test-of-independence-with-r"><i class="fa fa-check"></i><b>4.2.3</b> Chi-square test of independence with R</a></li>
 </ul></li>
+<li class="chapter" data-level="4.3" data-path="contingency-tables.html"><a href="contingency-tables.html#chi-square-test-of-independence-with-r"><i class="fa fa-check"></i><b>4.3</b> Chi-square test of independence with R</a><ul>
 <li class="chapter" data-level="" data-path="contingency-tables.html"><a href="contingency-tables.html#references-1"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="contingency-tables.html"><a href="contingency-tables.html#tutorial-3"><i class="fa fa-check"></i>Tutorial</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="design-of-experiments.html"><a href="design-of-experiments.html"><i class="fa fa-check"></i><b>5</b> Design of Experiments</a><ul>
 <li class="chapter" data-level="5.1" data-path="design-of-experiments.html"><a href="design-of-experiments.html#introduction-to-experimental-design"><i class="fa fa-check"></i><b>5.1</b> Introduction to experimental design</a></li>
-<li class="chapter" data-level="5.2" data-path="design-of-experiments.html"><a href="design-of-experiments.html#basic-principles-of-experimental-design"><i class="fa fa-check"></i><b>5.2</b> Basic principles of experimental design</a></li>
-<li class="chapter" data-level="5.3" data-path="design-of-experiments.html"><a href="design-of-experiments.html#completely-randomized-design"><i class="fa fa-check"></i><b>5.3</b> Completely randomized design</a></li>
+<li class="chapter" data-level="5.2" data-path="design-of-experiments.html"><a href="design-of-experiments.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>5.2</b> Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="5.3" data-path="design-of-experiments.html"><a href="design-of-experiments.html#the-completely-randomized-design-one-way-anova"><i class="fa fa-check"></i><b>5.3</b> The completely randomized design (one-way ANOVA)</a></li>
+<li class="chapter" data-level="5.4" data-path="design-of-experiments.html"><a href="design-of-experiments.html#pairwise-comparison"><i class="fa fa-check"></i><b>5.4</b> Pairwise comparison</a><ul>
+<li class="chapter" data-level="" data-path="design-of-experiments.html"><a href="design-of-experiments.html#references-2"><i class="fa fa-check"></i>References</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references-2.html"><a href="references-2.html"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-3.html"><a href="references-3.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
       </nav>
@@ -261,15 +266,214 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="design-of-experiments" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> Design of Experiments</h1>
+
+<!-- Black's page 412-->
 <div id="introduction-to-experimental-design" class="section level2">
 <h2><span class="header-section-number">5.1</span> Introduction to experimental design</h2>
+<ul>
+<li><p>An experimental design is a plan and a structure to test hypothesis in which the researcher either controls or manipulates one or more variables.</p></li>
+<li><p>It contains independent and dependent variables.</p></li>
+<li><p>In an experimental design, an independent variable may e either a treatment variable or a classification variable.</p></li>
+<li><p>A <em>treatment variable</em> is a variable the experimenter controls or modifies in the experiment.</p></li>
+<li><p>A <em>classification variable</em> is some characteristic of the experimental subjects that was present prior to the experiment and is not a result of the experimenter’s manipulations or control.</p></li>
+<li><p>Independent variables are sometimes referred to as <em>factors</em>.</p></li>
+<li><p>Each <em>independent variable</em> has two or more <em>levels</em>, or classifications.</p></li>
+<li><p><em>Levels</em>, or classifications, of independent variables are the subcategories of the independent variables used by the researcher in the experimental design.</p></li>
+<li><p>The other type of variable in an experimental design is a <em>dependent variable</em>.</p></li>
+<li><p>A dependent variable is the repose to the different levels of the independent variables.</p></li>
+<li><p>It is the measurement taken under the conditions of the experimental design that reflect the effects of the independent variables(s).</p></li>
+</ul>
 </div>
-<div id="basic-principles-of-experimental-design" class="section level2">
-<h2><span class="header-section-number">5.2</span> Basic principles of experimental design</h2>
+<div id="analysis-of-variance-anova" class="section level2">
+<h2><span class="header-section-number">5.2</span> Analysis of Variance (ANOVA)</h2>
+<ul>
+<li><p>Experimental design in this chapter are analysed statistically by a group of techniques referred to as <strong>analysis of variance</strong> or (<strong>ANOVA</strong>)</p></li>
+<li><p>The analysis of variance concepts begin with the notion that individual items being studied, such as employees, machine-produced products, district offices, hospitals ad so on, <strong>are not all the same</strong>.</p></li>
+</ul>
 </div>
-<div id="completely-randomized-design" class="section level2">
-<h2><span class="header-section-number">5.3</span> Completely randomized design</h2>
+<div id="the-completely-randomized-design-one-way-anova" class="section level2">
+<h2><span class="header-section-number">5.3</span> The completely randomized design (one-way ANOVA)</h2>
+<ul>
+<li><p>One of the simplest experimental designs is the completely randomized design.</p></li>
+<li><p>In the <em>completely randomized design</em>, subjects are assigned randomly to treatments.</p></li>
+<li><p>The complete randomized design contains only one independent variable, with two or more treatment levels, or classifications.</p></li>
+<li><p>If only two treatment levels, or classifications, of the independent variable are present, the design is the same one used to test the difference in means of two independent populations presented in Chapter 3.</p></li>
+<li><p>In this section we will focus on completely randomized designs with three or more classification levels.</p></li>
+<li><p>Analysis of variance, or ANOVA will be used to analyse the data that result from the treatments.</p></li>
+</ul>
+<!--https://www.guru99.com/r-anova-tutorial.html-->
+<p><em>Example</em></p>
+<!-- Black's page 415. I changed the plot, Autonomous robots are intelligent machines capable of performing tasks in the world by themselves, without explicit human control. Examples range from autonomous helicopters to Roomba, the robot vacuum cleaner.-->
+<p>As an example of a completely randomized design, suppose a researcher decided to analyse the response time of four autonomous mobile robots.</p>
+<ol style="list-style-type: decimal">
+<li>What is the independent variable in this design? Autonomous mobile robot</li>
+</ol>
+<p><em>Now the four autonomous mobile robots are the levels of treatment, or classification of the independent variable</em></p>
+<ol start="2" style="list-style-type: decimal">
+<li>What is the dependent variable in this design? Response time</li>
+</ol>
+<!-- The response time is defined as the time between the occurrence of an event, its detection by a robot, its recognition, the decision making, and the response-->
+<ol start="3" style="list-style-type: decimal">
+<li>Is there a <strong>significant</strong> difference in the mean response time of 24 tasks carried out by the four autonomous mobile robots?</li>
+</ol>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb12-2" title="2"></a>
+<a class="sourceLine" id="cb12-3" title="3">data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb12-4" title="4">  <span class="dt">Robot =</span> <span class="kw">as.factor</span>(<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">2</span>,<span class="dv">8</span>), <span class="kw">rep</span>(<span class="dv">3</span>,<span class="dv">7</span>), <span class="kw">rep</span>(<span class="dv">4</span>,<span class="dv">4</span>) )), </a>
+<a class="sourceLine" id="cb12-5" title="5">  <span class="dt">Reponse_time =</span> <span class="kw">c</span>(<span class="fl">6.33</span>, <span class="fl">6.26</span>, <span class="fl">6.31</span>, <span class="fl">6.29</span>, <span class="fl">6.40</span>, <span class="fl">6.26</span>,</a>
+<a class="sourceLine" id="cb12-6" title="6">                   <span class="fl">6.36</span>, <span class="fl">6.23</span>, <span class="fl">6.27</span>, <span class="fl">6.19</span>, <span class="fl">6.50</span>, <span class="fl">6.19</span>,</a>
+<a class="sourceLine" id="cb12-7" title="7">                   <span class="fl">6.22</span>, <span class="fl">6.44</span>, <span class="fl">6.38</span>, <span class="fl">6.58</span>, <span class="fl">6.54</span>, <span class="fl">6.56</span>,</a>
+<a class="sourceLine" id="cb12-8" title="8">                   <span class="fl">6.34</span>, <span class="fl">6.58</span>, <span class="fl">6.29</span>, <span class="fl">6.23</span>, <span class="fl">6.19</span>, <span class="fl">6.21</span> ) )</a>
+<a class="sourceLine" id="cb12-9" title="9"></a>
+<a class="sourceLine" id="cb12-10" title="10">data</a></code></pre></div>
+<pre><code>##    Robot Reponse_time
+## 1      1         6.33
+## 2      1         6.26
+## 3      1         6.31
+## 4      1         6.29
+## 5      1         6.40
+## 6      2         6.26
+## 7      2         6.36
+## 8      2         6.23
+## 9      2         6.27
+## 10     2         6.19
+## 11     2         6.50
+## 12     2         6.19
+## 13     2         6.22
+## 14     3         6.44
+## 15     3         6.38
+## 16     3         6.58
+## 17     3         6.54
+## 18     3         6.56
+## 19     3         6.34
+## 20     3         6.58
+## 21     4         6.29
+## 22     4         6.23
+## 23     4         6.19
+## 24     4         6.21</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">data <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="st">    </span><span class="kw">group_by</span>(Robot) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb14-3" title="3"><span class="st">    </span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb14-4" title="4">        <span class="dt">count_poison =</span> <span class="kw">n</span>())</a></code></pre></div>
+<pre><code>## # A tibble: 4 x 2
+##   Robot count_poison
+##   &lt;fct&gt;        &lt;int&gt;
+## 1 1                5
+## 2 2                8
+## 3 3                7
+## 4 4                4</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Compute the mean and standard deviation for each level of the treatment</li>
+</ol>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="co"># You can check the level of the robots with the</span></a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="co"># following code. You should see three character</span></a>
+<a class="sourceLine" id="cb16-3" title="3"><span class="co"># values because we converted it to factor variable</span></a>
+<a class="sourceLine" id="cb16-4" title="4"></a>
+<a class="sourceLine" id="cb16-5" title="5"><span class="kw">levels</span>(data<span class="op">$</span>Robot)</a></code></pre></div>
+<pre><code>## [1] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot;</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1">data <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb18-2" title="2"><span class="st">    </span><span class="kw">group_by</span>(Robot) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb18-3" title="3"><span class="st">    </span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb18-4" title="4">        <span class="dt">count_robots =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb18-5" title="5">        <span class="dt">mean_time =</span> <span class="kw">mean</span>(Reponse_time, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb18-6" title="6">        <span class="dt">sd_time =</span> <span class="kw">sd</span>(Reponse_time, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb18-7" title="7">    )</a></code></pre></div>
+<pre><code>## # A tibble: 4 x 4
+##   Robot count_robots mean_time sd_time
+##   &lt;fct&gt;        &lt;int&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+## 1 1                5      6.32  0.0526
+## 2 2                8      6.28  0.105 
+## 3 3                7      6.49  0.101 
+## 4 4                4      6.23  0.0432</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Graphically check if there is a difference between the distribution.</li>
+</ol>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1">p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(<span class="dt">x =</span> Robot , <span class="dt">y =</span> Reponse_time, <span class="dt">fill =</span> Robot)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb20-2" title="2"><span class="st">    </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb20-3" title="3"><span class="st">    </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb20-4" title="4"></a>
+<a class="sourceLine" id="cb20-5" title="5">overall_mean &lt;-<span class="st">  </span><span class="kw">mean</span>(data<span class="op">$</span>Reponse_time)</a>
+<a class="sourceLine" id="cb20-6" title="6"></a>
+<a class="sourceLine" id="cb20-7" title="7">p <span class="op">+</span><span class="st"> </span><span class="kw">geom_hline</span>(<span class="dt">yintercept =</span> overall_mean)</a></code></pre></div>
+<p><img src="figure/unnamed-chunk-14-1.png" width="960" style="display: block; margin: auto;" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Use one-way ANOVA test to determine whether there is a significant difference in the mean response time of the four autonomous mobile robots .</li>
+</ol>
+<ul>
+<li><p>The basic syntax for an ANOVA test is</p>
+<p>aov(formula, data)
+Arguments:<br />
+- formula: The equation you want to estimate
+- data: The dataset used</p></li>
+<li><p>The syntax of the formula is:</p></li>
+</ul>
+<p><code>y ~ X1+ X2+...+Xn</code></p>
+<ul>
+<li><code>X1+ X2+...+Xn</code> refers to the independent variables</li>
+</ul>
+<ol style="list-style-type: lower-alpha">
+<li><p>Write the hypothesis to be tested</p></li>
+<li><p>Use the p-value to reach a statistical conclusion</p></li>
+</ol>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1"><span class="co"># Run the ANOVA test </span></a>
+<a class="sourceLine" id="cb21-2" title="2">anova_one_way &lt;-<span class="st"> </span><span class="kw">aov</span>(Reponse_time<span class="op">~</span>Robot, <span class="dt">data =</span> data)</a>
+<a class="sourceLine" id="cb21-3" title="3"></a>
+<a class="sourceLine" id="cb21-4" title="4"><span class="co"># Print the summary of the test</span></a>
+<a class="sourceLine" id="cb21-5" title="5"><span class="kw">summary</span>(anova_one_way)</a></code></pre></div>
+<pre><code>##             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+## Robot        3 0.2366 0.07886   10.18 0.000279 ***
+## Residuals   20 0.1549 0.00775                     
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<ul>
+<li><p>The p-value is lower than the usual threshold of 0.05.</p></li>
+<li><p>You are confident to say there is a statistical difference between the groups, indicated by the <span class="math inline">\(*\)</span>.</p></li>
+</ul>
+</div>
+<div id="pairwise-comparison" class="section level2">
+<h2><span class="header-section-number">5.4</span> Pairwise comparison</h2>
+<ul>
+<li><p>The one-way ANOVA test does not inform which robot (group) has a different mean.</p></li>
+<li><p>Instead, we can perform a Tukey test with the function <code>TukeyHSD()</code>.</p></li>
+</ul>
+<!--As far as I can tell, the TukeyHSD function uses the Tukey-Kramer procedure. The code for the function can be found on GitHub. See also the example on RPubs.
 
+https://stats.stackexchange.com/questions/437263/does-r-use-tukey-or-tukey-kramer-test-corrected-for-unequal-sample-size-and-does
+
+https://rpubs.com/aaronsc32/post-hoc-analysis-tukey
+
+black's page 426, 430-->
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" title="1">comparison &lt;-<span class="st"> </span><span class="kw">TukeyHSD</span>(anova_one_way)</a>
+<a class="sourceLine" id="cb23-2" title="2"></a>
+<a class="sourceLine" id="cb23-3" title="3"><span class="co">#There are print and plot methods for class &quot;TukeyHSD&quot;</span></a>
+<a class="sourceLine" id="cb23-4" title="4"><span class="kw">print</span>(comparison)</a></code></pre></div>
+<pre><code>##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = Reponse_time ~ Robot, data = data)
+## 
+## $Robot
+##           diff         lwr         upr     p adj
+## 2-1 -0.0405000 -0.18093243  0.09993243 0.8502854
+## 3-1  0.1705714  0.02633255  0.31481031 0.0169205
+## 4-1 -0.0880000 -0.25324639  0.07724639 0.4613461
+## 3-2  0.2110714  0.08358107  0.33856179 0.0008519
+## 4-2 -0.0475000 -0.19834863  0.10334863 0.8144408
+## 4-3 -0.2585714 -0.41296992 -0.10417294 0.0007541</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1"><span class="kw">plot</span>(comparison)</a></code></pre></div>
+<p><img src="figure/unnamed-chunk-16-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><strong>Multiple comparison</strong></p>
+<ul>
+<li>Multiple comparisons are to be used only when the analysis of variance yields an overall significant difference in the treatment means.</li>
+</ul>
+<p><strong>Tukey’s test</strong></p>
+<ul>
+<li>In analysis of variance, this technique is used for pairwise a posterior multiple comparisons to determine if there is a significant differences between the means of any pair of treatment levels in an experimental design.</li>
+</ul>
+<div id="references-2" class="section level3 unnumbered">
+<h3>References</h3>
+
+</div>
 </div>
 </div>
             </section>
@@ -278,7 +482,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="contingency-tables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="references-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Contingency Tables | CM 2110 Calculus and Statistical Distributions</title>
-  <meta name="description" content="Chapter 4 Contingency Tables | CM 2110 Calculus and Statistical Distributions" />
+  <title>References | CM 2110 Calculus and Statistical Distributions</title>
+  <meta name="description" content="References | CM 2110 Calculus and Statistical Distributions" />
   <meta name="generator" content="bookdown 0.18.3 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Contingency Tables | CM 2110 Calculus and Statistical Distributions" />
+  <meta property="og:title" content="References | CM 2110 Calculus and Statistical Distributions" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Contingency Tables | CM 2110 Calculus and Statistical Distributions" />
+  <meta name="twitter:title" content="References | CM 2110 Calculus and Statistical Distributions" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="hypothesis-testing.html"/>
-<link rel="next" href="design-of-experiments.html"/>
+<link rel="prev" href="design-of-experiments.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -264,512 +264,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="contingency-tables" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Contingency Tables</h1>
+<div id="references-3" class="section level1 unnumbered">
+<h1>References</h1>
+<p>Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., &amp; Harris, M. (2007). <em>Australasian business statistics</em>. John Wiley &amp; Sons.</p>
+<p>Casella, G., &amp; Berger, R. L. (2002). Statistical inference (Vol. 2, pp. 337-472).Pacific Grove, CA: Duxbury</p>
+<p>Mood, A.M., Graybill, F.A. and Boes, D.C. (2007): Introduction to the Theory of Statistics, 3rd Edn. (Reprint). Tata McGraw-Hill Pub. Co. Ltd.</p>
 
-<!--Black's book page 479 
-
-Chi square test has two cases:
-
-1) Ch-square goodness of fit test
-2)  chi square test of independence - This is called contingency analysis : we cove only this page 479 black's et all book-->
-<!-- Daniel, W. W., & Cross, C. L. (2018). Biostatistics: a foundation for analysis in the health sciences. Wiley.  page 573-->
-<ul>
-<li><p>In Chapters 2 (Estimations) and 3 (Hypothesis Testing) we briefly discussed about the chi-square distribution in the construction of confidence intervals for and the testing of hypotheses concerning a population variance.</p></li>
-<li><p>Chi-square distribution, which is one of the most widely used distributions in statistical applications, has many other uses.</p></li>
-<li><p>The chi-square distribution is the most frequently employed statistical technique for the analysis of categorical data.</p></li>
-</ul>
-<!--Black's book page 479 -->
-<div id="types-of-chi-square-tests" class="section level2">
-<h2><span class="header-section-number">4.1</span> Types of chi-square tests</h2>
-<p>Chi square test has two cases:</p>
-<ol style="list-style-type: decimal">
-<li>Chi-square goodness of fit test</li>
-<li>Chi-square test of independence. This is also known as <em>contingency analysis</em>.</li>
-</ol>
-<ul>
-<li>In this chapter our focus is on <em>chi-square test of independence</em></li>
-</ul>
-</div>
-<div id="contingency-analysis-chi-square-test-of-independence" class="section level2">
-<h2><span class="header-section-number">4.2</span> Contingency analysis: Chi-square test of independence</h2>
-<ul>
-<li><p><strong>Chi-square test of independence</strong> is a statistical test used to analyse the frequencies of two variables with multiple categories to determine whether the two variables are independent.</p></li>
-<li><p>For example, a software developer might want to determine whether the user ranking of user-friendliness (<em>Very Satisfied = 5, Satisfied = 4, Neutral = 3, Dissatisfied = 2, Very Dissatisfied = 1</em>) of the new software product is independent of the user’s education level.</p></li>
-</ul>
-<!-- https://www.eztalks.com/unified-communications/5-best-online-communication-platforms.html-->
-<ul>
-<li><p>A market researcher might want to determine whether the type of online communication platforms (eg:Slack, Zula, ezTalks, HipChat, Yammar) preferred by a user is independent of the user’s age.</p></li>
-<li><p>A software project manager might want to know whether customer overall satisfaction (<em>Very Satisfied = 5, Satisfied = 4, Neutral = 3, Dissatisfied = 2, Very Dissatisfied = 1</em> is independent of the experience of the developer (less than 1 year, 1-5 years, more than 5 years)</p></li>
-</ul>
-<p><em>Example</em></p>
-<p>A software company is planning to develop a new taxi booking and trip scheduling platform that facilitates a real time connection between the commuter and the taxi driver, enabling mutual engagement for the receipt and delivery of a service. Prior to development, the management wants to identify the strength and weakness of the existing services as they may be their potential competitors. Suppose the project manager is interested in determining whether the type of taxi service preferred by a commuter is independent of the commuter’s age.</p>
-<p>On a questionnaire, the following two questions might be used to measure these aspects.</p>
-<!--https://www.readme.lk/exploring-sri-lanka-uber-pickme-taxiyak/-->
-<ol style="list-style-type: decimal">
-<li>What is your most preferred taxi booking and trip scheduling platform?</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li>Uber</li>
-<li>PickMe</li>
-</ol>
-<ol start="2" style="list-style-type: decimal">
-<li>Select your age category?</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(&lt; 30\)</span> years</li>
-<li><span class="math inline">\(30-50\)</span> years</li>
-<li><span class="math inline">\(&gt;50\)</span> years</li>
-</ol>
-<div id="contingency-table" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> Contingency table</h3>
-<ul>
-<li><p>Let the number of responses received were 100.</p></li>
-<li><p>Now the analyst can <em>tally the frequencies of responses</em> to these two questions into a two-way table called <strong>contingency table</strong></p></li>
-</ul>
-<p><em>Contingency table</em></p>
-<table>
-<thead>
-<tr class="header">
-<th align="center"></th>
-<th align="center">Most preferred taxi booking and trip scheduling platform</th>
-<th align="center"></th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Age</td>
-<td align="center">Uber</td>
-<td align="center">PickMe</td>
-<td align="center">Total</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(&lt; 30\)</span> years</td>
-<td align="center">32</td>
-<td align="center">25</td>
-<td align="center">57</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\(30-50\)</span> years</td>
-<td align="center">18</td>
-<td align="center">5</td>
-<td align="center">23</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(&gt; 50\)</span> years</td>
-<td align="center">17</td>
-<td align="center">3</td>
-<td align="center">20</td>
-</tr>
-<tr class="odd">
-<td align="center">Total</td>
-<td align="center">67</td>
-<td align="center">33</td>
-<td align="center">100</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Because the chi-square test of independence uses a contingency table, this test is sometimes referred to as <strong>contingency analysis</strong></li>
-</ul>
-<p><em>Contingency table</em></p>
-<table>
-<thead>
-<tr class="header">
-<th align="center"></th>
-<th align="center">Variable 2</th>
-<th align="center"></th>
-<th align="center"></th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Variable 1</td>
-<td align="center">F</td>
-<td align="center">G</td>
-<td align="center">H</td>
-<td align="center">Total</td>
-</tr>
-<tr class="even">
-<td align="center">A</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><span class="math inline">\(o_{13}\)</span></td>
-<td align="center"><span class="math inline">\(n_A\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center">B</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><span class="math inline">\(n_B\)</span></td>
-</tr>
-<tr class="even">
-<td align="center">C</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><span class="math inline">\(n_C\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center">D</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><span class="math inline">\(n_D\)</span></td>
-</tr>
-<tr class="even">
-<td align="center">E</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><span class="math inline">\(n_E\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center">Total</td>
-<td align="center"><span class="math inline">\(n_F\)</span></td>
-<td align="center"><span class="math inline">\(n_G\)</span></td>
-<td align="center"><span class="math inline">\(n_H\)</span></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>The <strong>observed frequency</strong> for for each cell is denoted as <span class="math inline">\(o_{ij},\)</span> where <span class="math inline">\(i\)</span> is the row and <span class="math inline">\(j\)</span> is the column.</p></li>
-<li><p>The <strong>expected frequencies</strong> are denoted in a similar manner.</p></li>
-<li><p>If two variables are independent, they are not related.</p></li>
-<li><p>In a sense, the chi-square test of independence is a test of whether the variables are related.</p></li>
-<li><p>The null hypothesis for a chi-square test of independence is that the two variables are independent (not related).</p></li>
-<li><p>If the null hypothesis is rejected, the conclusion is that the two variables are not independent and are related.</p></li>
-<li><p>In general, if the two variables are independent, the expected frequency values of each call can be determined by</p></li>
-</ul>
-<p><span class="math display">\[e_{ij} = \frac{n_in_j}{N}\]</span></p>
-<p>where:</p>
-<ul>
-<li><span class="math inline">\(i =\)</span> the row</li>
-<li><span class="math inline">\(j =\)</span> the column</li>
-<li><span class="math inline">\(n_i =\)</span> the total of row <span class="math inline">\(i\)</span></li>
-<li><span class="math inline">\(n_j =\)</span> the total of column <span class="math inline">\(j\)</span></li>
-<li><span class="math inline">\(N =\)</span> the total of all frequencies</li>
-</ul>
-<!-- Discuss why the above equation black's page 480-->
-<ul>
-<li>Using these expected frequency values and the observed frequency value, we can compute a chi-square test of independence to determine whether the variables are independent.</li>
-</ul>
-</div>
-<div id="chi-square-test-of-independence" class="section level3">
-<h3><span class="header-section-number">4.2.2</span> Chi-square test of independence</h3>
-<p><span class="math display">\[\chi^2 =\sum_r\sum_c \frac{(f_0-f_e)^2}{f_e}\]</span></p>
-<p>where
-- <span class="math inline">\(df = (r-1)(c-1)\)</span>
-- <span class="math inline">\(r=\)</span> number of rows
-- <span class="math inline">\(c=\)</span> number few columns
-- <span class="math inline">\(\sum_r=\)</span> sum over row
-- <span class="math inline">\(\sum_c=\)</span> sum over column</p>
-<ul>
-<li><p>The <strong>null hypothesis</strong> for a chi-square test of independence is that <em>the two variables are independent</em>.</p></li>
-<li><p>The <strong>alternative hypothesis</strong> for a chi-square test of independence is that <em>the two variables are not independent</em></p></li>
-<li><p>This test is one one-tailed. <!-- why one tailed black's page 471--></p></li>
-</ul>
-<!--Chi-square test of independence tests are one tailed because a chi-square of zero indicates perfect agreement between expected frquencies and observed frequencies. Any deviation from zero difference occurs in the positive direction only because chi-square is determined by a sum of squared values and can never be negative
-
-For alpha =0.05 and df =2, the critical chi-square value taken from the table is XXX-->
-<ul>
-<li>The degrees of freedom are <span class="math inline">\((r-1)(c-1)\)</span></li>
-</ul>
-<!-- Black page 485-->
-<p><strong>Caution</strong></p>
-<ul>
-<li><p>In chi-square test of independence, small expected frequencies can lead to inordinately large chi-square values.</p></li>
-<li><p>Therefore, contingency tables should not be used with expected cell values of less than 5.</p></li>
-<li><p>One way to avoid small expected values is to combine columns or rows whenever possible and whenever doing so make sense.</p></li>
-</ul>
-<p><em>Example contd…</em></p>
-<p>Suppose the project manager is interested in determining whether the type of taxi service preferred by a commuter is independent of the commuter’s age. He conducted a small survey to determine. He received 100 responses. The resulting <span class="math inline">\(3\times2\)</span> contingency table is
-given below. Using <span class="math inline">\(\alpha =0.05,\)</span> perform the chi-square test of independence to determine whether preferred mode is independent of age.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center"></th>
-<th align="center">Most preferred taxi booking and trip scheduling platform</th>
-<th align="center"></th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Age</td>
-<td align="center">Uber</td>
-<td align="center">PickMe</td>
-<td align="center">Total</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(&lt; 30\)</span> years</td>
-<td align="center">32</td>
-<td align="center">25</td>
-<td align="center">57</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\(30-50\)</span> years</td>
-<td align="center">18</td>
-<td align="center">5</td>
-<td align="center">23</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(&gt; 50\)</span> years</td>
-<td align="center">17</td>
-<td align="center">3</td>
-<td align="center">20</td>
-</tr>
-<tr class="odd">
-<td align="center">Total</td>
-<td align="center">67</td>
-<td align="center">33</td>
-<td align="center">100</td>
-</tr>
-</tbody>
-</table>
-<!-- Black's page 482-->
-</div>
-</div>
-<div id="chi-square-test-of-independence-with-r" class="section level2">
-<h2><span class="header-section-number">4.3</span> Chi-square test of independence with R</h2>
-<ul>
-<li>Let us now see how to perform the Chi-square test of independence using R programming language</li>
-</ul>
-<!--Chi-square test of independence using R programming language
-https://www.datacamp.com/community/tutorials/contingency-analysis-r?utm_source=adwords_ppc&utm_campaignid=1455363063&utm_adgroupid=65083631748&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=278443377092&utm_targetid=aud-390929969673:dsa-429603003980&utm_loc_interest_ms=&utm_loc_physical_ms=1009923&gclid=CjwKCAjwkoz7BRBPEiwAeKw3q5X2ay1j0feMaGONQUlGDBx9qxMKTybQovGpAiz8XKsWrSjNnKuehBoCKv4QAvD_BwE-->
-<ul>
-<li>Following is the observed table.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">observed_table &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">32</span>, <span class="dv">25</span>, <span class="dv">18</span>, <span class="dv">5</span>, <span class="dv">17</span>, <span class="dv">3</span>), <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">byrow =</span> T)</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="kw">rownames</span>(observed_table) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;&lt;30&#39;</span>, <span class="st">&#39;30-50&#39;</span>, <span class="st">&#39;&gt;50&#39;</span>)</a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="kw">colnames</span>(observed_table) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;Uber&#39;</span>, <span class="st">&#39;PickMe&#39;</span>)</a>
-<a class="sourceLine" id="cb1-4" title="4">observed_table</a></code></pre></div>
-<pre><code>##       Uber PickMe
-## &lt;30     32     25
-## 30-50   18      5
-## &gt;50     17      3</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">addmargins</span>(observed_table)</a></code></pre></div>
-<pre><code>##       Uber PickMe Sum
-## &lt;30     32     25  57
-## 30-50   18      5  23
-## &gt;50     17      3  20
-## Sum     67     33 100</code></pre>
-<ul>
-<li>In order to perform the test, we need to apply the <code>chisq.test()</code> function to the observed table.</li>
-</ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">output &lt;-<span class="st"> </span><span class="kw">chisq.test</span>(observed_table)</a>
-<a class="sourceLine" id="cb5-2" title="2">output</a></code></pre></div>
-<pre><code>## 
-##  Pearson&#39;s Chi-squared test
-## 
-## data:  observed_table
-## X-squared = 7.2902, df = 2, p-value = 0.02612</code></pre>
-<ul>
-<li><p>From the above result, we can see that p-value is less than the significance level (0.05). Therefore, we can reject the null hypothesis and conclude that the two variables (age &amp; taxi preference) are not independent</p></li>
-<li><p>If we want to see the expected table, we can also do that.</p></li>
-</ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">output<span class="op">$</span>expected</a></code></pre></div>
-<pre><code>##        Uber PickMe
-## &lt;30   38.19  18.81
-## 30-50 15.41   7.59
-## &gt;50   13.40   6.60</code></pre>
-<ul>
-<li>Visualizing data of Contingency Table with ggplot2 (Side By Side Bar Graph)</li>
-</ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">library</span>(tidyverse)</a>
-<a class="sourceLine" id="cb9-2" title="2"></a>
-<a class="sourceLine" id="cb9-3" title="3">table2 &lt;-<span class="st"> </span>observed_table <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb9-4" title="4"><span class="st">  </span><span class="kw">as.data.frame</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb9-5" title="5"><span class="st">  </span><span class="kw">rownames_to_column</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb9-6" title="6"><span class="st">  </span><span class="kw">gather</span>(Column, Value, <span class="op">-</span>rowname)</a>
-<a class="sourceLine" id="cb9-7" title="7"></a>
-<a class="sourceLine" id="cb9-8" title="8"><span class="kw">colnames</span>(table2) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;Age&#39;</span>, <span class="st">&#39;Mode&#39;</span>, <span class="st">&quot;Count&quot;</span>)</a>
-<a class="sourceLine" id="cb9-9" title="9">table2</a></code></pre></div>
-<pre><code>##     Age   Mode Count
-## 1   &lt;30   Uber    32
-## 2 30-50   Uber    18
-## 3   &gt;50   Uber    17
-## 4   &lt;30 PickMe    25
-## 5 30-50 PickMe     5
-## 6   &gt;50 PickMe     3</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> table2, <span class="kw">aes</span>(<span class="dt">x =</span> Age, <span class="dt">y =</span> Count, <span class="dt">fill =</span> Mode)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb11-2" title="2"><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb11-3" title="3"><span class="st">  </span><span class="kw">scale_fill_grey</span>()</a></code></pre></div>
-<p><img src="figure/unnamed-chunk-10-1.png" width="960" style="display: block; margin: auto;" /></p>
-<div id="references-1" class="section level3 unnumbered">
-<h3>References</h3>
-<ul>
-<li><p>Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., &amp; Harris, M. (2007). <em>Australasian business statistics</em>. John Wiley &amp; Sons.</p></li>
-<li><p>Daniel, W. W., &amp; Cross, C. L. (2018). Biostatistics: a foundation for analysis in the health sciences. Wiley.</p></li>
-</ul>
-<div style="page-break-after: always;"></div>
-<p><strong>Critical values from the chi-square distribution</strong></p>
-<p><img src="figure/chisquaretable.jpg" width="100%" style="display: block; margin: auto;" /></p>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-<div id="tutorial-3" class="section level2 unnumbered">
-<h2>Tutorial</h2>
-
-<!-- Black's page 484-->
-<ol style="list-style-type: decimal">
-<li>A company maintain an online food ordering service. Suppose market researcher wants to know whether the type of beverage ordered with lunch is independent of the food delivery zone (area). A random sample of 309 lunch customers is selected, resulting in the following contingency table of observed values. Use <span class="math inline">\(\alpha = 0.01\)</span> to determine whether the two variables are independent.</li>
-</ol>
-<table>
-<thead>
-<tr class="header">
-<th align="center"></th>
-<th align="center">Preferred beverage</th>
-<th align="center"></th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Zone</td>
-<td align="center">Fresh Fruit Juice</td>
-<td align="center">Soft drink</td>
-<td align="center">Other</td>
-</tr>
-<tr class="even">
-<td align="center">Zone 1</td>
-<td align="center">26</td>
-<td align="center">95</td>
-<td align="center">18</td>
-</tr>
-<tr class="odd">
-<td align="center">Zone 2</td>
-<td align="center">41</td>
-<td align="center">40</td>
-<td align="center">20</td>
-</tr>
-<tr class="even">
-<td align="center">Zone 3</td>
-<td align="center">24</td>
-<td align="center">13</td>
-<td align="center">32</td>
-</tr>
-</tbody>
-</table>
-<!-- Black's page 486 Question 12.5-->
-<ol start="2" style="list-style-type: decimal">
-<li>A computer manufacturer is considering sourcing supplies of an electrical component from four different manufacturers. The director of purchasing asked for samples of 95 from each manufacturer. The numbers of acceptable and unacceptable components from each manufacturer are shown in the following table. Determine whether the quality of the component depends on the type of manufacturer. Let <span class="math inline">\(\alpha =0.05\)</span></li>
-</ol>
-<table>
-<thead>
-<tr class="header">
-<th align="center"></th>
-<th align="center">Manufacturer</th>
-<th align="center"></th>
-<th align="center"></th>
-<th align="center"></th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Quality</td>
-<td align="center">A</td>
-<td align="center">B</td>
-<td align="center">C</td>
-<td align="center">D</td>
-<td align="center">Total</td>
-</tr>
-<tr class="even">
-<td align="center">Unacceptable</td>
-<td align="center">12</td>
-<td align="center">8</td>
-<td align="center">5</td>
-<td align="center">11</td>
-<td align="center">36</td>
-</tr>
-<tr class="odd">
-<td align="center">Acceptable</td>
-<td align="center">83</td>
-<td align="center">87</td>
-<td align="center">90</td>
-<td align="center">84</td>
-<td align="center">344</td>
-</tr>
-<tr class="even">
-<td align="center">Total</td>
-<td align="center">95</td>
-<td align="center">95</td>
-<td align="center">95</td>
-<td align="center">95</td>
-<td align="center">380</td>
-</tr>
-</tbody>
-</table>
-<!-- Black's page 488 Question 12.6-->
-<ol start="3" style="list-style-type: decimal">
-<li>An apparel &amp; clothing market research company conducted a survey in 2019 on social media usage of university students. The frequencies for most frequently used social media platform by male and female students (in thousands) are presented in the following contingency table. Using <span class="math inline">\(\alpha =0.01\)</span>, test the hypothesis that social media preference is independent of gender.</li>
-</ol>
-<table>
-<thead>
-<tr class="header">
-<th align="center"></th>
-<th align="center">Social media platform</th>
-<th align="center"></th>
-<th align="center"></th>
-<th align="center"></th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Gender</td>
-<td align="center">Facebook</td>
-<td align="center">Instagram</td>
-<td align="center">Twitter</td>
-<td align="center">Total</td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center">Male</td>
-<td align="center">687</td>
-<td align="center">327</td>
-<td align="center">82</td>
-<td align="center">1096</td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center">Female</td>
-<td align="center">658</td>
-<td align="center">304</td>
-<td align="center">101</td>
-<td align="center">1063</td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center">Total</td>
-<td align="center">1345</td>
-<td align="center">631</td>
-<td align="center">183</td>
-<td align="center">2159</td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<ol start="4" style="list-style-type: decimal">
-<li><p>Use R to make a decision for Question 1</p></li>
-<li><p>Use R to make a decision for Question 2</p></li>
-<li><p>Use R to make a decision for Question 3</p></li>
-</ol>
-
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="hypothesis-testing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="design-of-experiments.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="design-of-experiments.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -800,7 +308,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-Contingency-Tables.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-references.Rmd",
 "text": "Edit"
 },
 "history": {

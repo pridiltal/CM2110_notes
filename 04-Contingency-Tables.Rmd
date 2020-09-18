@@ -1,4 +1,5 @@
 # Contingency Tables
+\pagenumbering{arabic}
 
 <!--Black's book page 479 
 
@@ -140,6 +141,16 @@ For alpha =0.05 and df =2, the critical chi-square value taken from the table is
 
 - The degrees of freedom are $(r-1)(c-1)$
 
+<!-- Black page 485-->
+
+**Caution**
+
+- In chi-square test of independence, small expected frequencies can lead to inordinately large chi-square values.
+
+- Therefore, contingency tables should not be used with expected cell values of less than 5.
+
+- One way to avoid small expected values is to combine columns or rows whenever possible and whenever doing so make sense.
+
 *Example contd...*
 
 Suppose the project manager is interested in determining whether the type of taxi service preferred by a  commuter is independent of the commuter's age. He conducted a small survey to determine.  He received 100 responses. The resulting $3\times2$ contingency table is
@@ -155,7 +166,7 @@ Suppose the project manager is interested in determining whether the type of tax
 
 <!-- Black's page 482-->
 
-### Chi-square test of independence with R 
+## Chi-square test of independence with R 
 
 - Let us now see how to perform the Chi-square test of independence using R programming language
 
@@ -210,6 +221,58 @@ ggplot(data = table2, aes(x = Age, y = Count, fill = Mode)) +
   
 ```
 
-## References {-}
+
+
+### References {-}
+
+- Black, K., Asafu-Adjaye, J., Khan, N., Perera, N., Edwards, P., & Harris, M. (2007). *Australasian business statistics*. John Wiley & Sons.
 
 - Daniel, W. W., & Cross, C. L. (2018). Biostatistics: a foundation for analysis in the health sciences. Wiley.
+
+\newpage
+**Critical values from the chi-square distribution**
+
+```{r   out.width = "100%", echo = FALSE, fig.align='center'}
+knitr::include_graphics("figure/chisquaretable.jpg")
+```
+
+\newpage
+## Tutorial {-}
+\pagenumbering{arabic}
+
+<!-- Black's page 484-->
+
+1. A company maintain an online food ordering service. Suppose market researcher wants to know whether the type of beverage ordered with lunch is independent of the food delivery zone (area). A random sample of 309 lunch customers is selected, resulting in the following contingency table of observed values. Use $\alpha = 0.01$ to determine whether the two variables are independent.
+
+| |  Preferred beverage|
+|:------------:|:--------------:|:----------------:|:----------:|
+|   Zone       |   Fresh Fruit Juice    |  Soft drink    | Other| 
+|Zone 1   | 26            | 95         | 18|
+|Zone 2  | 41            | 40          | 20|
+|Zone 3   | 24            | 13          | 32|
+
+<!-- Black's page 486 Question 12.5-->
+2. A computer manufacturer is considering sourcing supplies of an electrical component from four different manufacturers. The director of purchasing asked for samples of 95 from each manufacturer. The numbers of acceptable and unacceptable components from each manufacturer are shown in the following table. Determine whether the quality of the component depends on the type of manufacturer. Let $\alpha =0.05$
+
+| |  Manufacturer |
+|:------------:|:--------------:|:----------------:|:----------:|:-------------:|:----------:|
+|   Quality       |   A | B | C | D  | Total|
+|Unacceptable     | 12  | 8 | 5 | 11 | 36 |
+|Acceptable       | 83  | 87 | 90 | 84 | 344 |
+|Total            | 95  | 95 | 95 | 95 | 380 |
+
+<!-- Black's page 488 Question 12.6-->
+3. An apparel & clothing market research company conducted a survey in 2019 on social media usage of university students. The frequencies for most frequently used social media platform  by male and female students (in thousands) are presented in the following contingency table.  Using $\alpha =0.01$, test the hypothesis that social media preference is independent of gender. 
+
+| |  Social media platform |
+|:------------:|:--------------:|:----------------:|:----------:|:-------------:|:----------:|
+|   Gender       |   Facebook | Instagram | Twitter | Total|
+|Male            | 687  | 327 | 82  | 1096 |
+|Female          | 658  | 304 | 101 | 1063 |
+|Total           | 1345 | 631 | 183 | 2159 |
+
+4. Use R to make a decision for Question 1
+
+5. Use R to make a decision for Question 2
+
+6. Use R to make a decision for Question 3
